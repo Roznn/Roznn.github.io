@@ -2109,13 +2109,13 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #116879;
+		color: #3F48CC;
 		text-decoration: none;
 	}
 
 		a:hover {
-			border-bottom-color: #116879;
-			color: #116879 !important;
+			border-bottom-color: #3F48CC;
+			color: #3F48CC !important;
 		}
 
 			a:hover strong {
@@ -2284,7 +2284,7 @@
 	}
 
 	header.major > :last-child {
-		border-bottom: solid 3px #116879;
+		border-bottom: solid 3px #3F48CC;
 		display: inline-block;
 		margin: 0 0 2em 0;
 		padding: 0 0.75em 0.5em 0;
@@ -2351,8 +2351,8 @@
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #116879;
-			box-shadow: 0 0 0 1px #116879;
+			border-color: #3F48CC;
+			box-shadow: 0 0 0 1px #3F48CC;
 		}
 
 	.select-wrapper {
@@ -2465,8 +2465,8 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #116879;
-			box-shadow: 0 0 0 1px #116879;
+			border-color: #3F48CC;
+			box-shadow: 0 0 0 1px #3F48CC;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2720,7 +2720,7 @@ video {
 				}
 
 				ul.contact li:before {
-					color: #116879;
+					color: #3F48CC;
 					display: inline-block;
 					font-size: 1.5em;
 					height: 1.125em;
@@ -2844,12 +2844,12 @@ video {
 				}
 
 					ul.pagination li > .page.active {
-						background-color: #116879;
+						background-color: #3F48CC;
 						color: #ffffff !important;
 					}
 
 						ul.pagination li > .page.active:hover {
-							background-color: #f67878;
+							background-color: #C8BFE7;
 						}
 
 						ul.pagination li > .page.active:active {
@@ -2976,8 +2976,8 @@ video {
 		background-color: transparent;
 		border-radius: 0.375em;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #116879;
-		color: #116879 !important;
+		box-shadow: inset 0 0 0 2px #3F48CC;
+		color: #3F48CC !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Roboto Slab", serif;
@@ -3050,7 +3050,7 @@ video {
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #116879;
+			background-color: #3F48CC;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3060,7 +3060,7 @@ video {
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #f67878;
+				background-color: #C8BFE7;
 			}
 
 			input[type="submit"].special:active,
@@ -3170,7 +3170,7 @@ video {
 			}
 
 				.features article .icon:before {
-					color: #116879;
+					color: #3F48CC;
 					font-size: 2.75rem;
 					position: relative;
 					top: 0.05em;
@@ -3815,7 +3815,7 @@ video {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		border-bottom: solid 5px #116879;
+		border-bottom: solid 5px #3F48CC;
 		padding: 6em 0 1em 0;
 		position: relative;
 	}
@@ -4010,7 +4010,7 @@ video {
 		}
 
 			#menu ul a:hover, #menu ul span:hover {
-				color: #116879;
+				color: #3F48CC;
 			}
 
 			#menu ul a.opener, #menu ul span.opener {
@@ -4044,7 +4044,7 @@ video {
 				}
 
 				#menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
-					color: #116879;
+					color: #3F48CC;
 				}
 
 				#menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
