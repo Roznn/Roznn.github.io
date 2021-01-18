@@ -3753,7 +3753,7 @@ video {
 					left: 0;
 					overflow-x: hidden;
 					overflow-y: auto;
-					position: absolute;
+					position: fixed; /* absolute */
 					top: 0;
 				}
 
