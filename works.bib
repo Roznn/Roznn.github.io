@@ -792,6 +792,7 @@ author= {Denman, Hugh and Doyle, Erika and Kokaram, Anil and Lennon, Daire and D
 title= {Exploiting Temporal Discontinuities for Event Detection and Manipulation in Video Streams}, 
 year= {2005},
 isbn= {1595932445},
+abstract={Discontinuities in any information bearing signal serve to represent much of the vital or interesting content in that signal. A sharp loud noise in a movie could be a gun, or something breaking. In sports like tennis, cricket or snooker/pool it would indicate a point scoring event. In both cases the discontinuity is likely to be semantically relevant without further inference being necessary, once a particular domain is adopted. This paper discusses the importance of temporal motion discontinuities in inferring events in visual media. Two particular application domains are considered: content based audio/video synchronisation and event spotting in observational Psychology.},
 publisher= {Association for Computing Machinery}, address= {New York, NY, USA}, 
 url= {https://doi.org/10.1145/1101826.1101857}, 
 doi= {10.1145/1101826.1101857}, 
@@ -800,21 +801,78 @@ pages= {183-192}, numpages= {10},
 keywords= {event spotting, video retrieval, motion tracking, information retrieval, bayesian inference}, location= {Hilton, Singapore}, series= {MIR 05}}
 
 ,
-@Inproceedings{PitieICCV2005, author= {F. Piti\'{e} and A. C. Kokaram and R. Dahyot}, booktitle= {Tenth IEEE International Conference on Computer Vision (ICCV'05) Volume 1}, title= {N-dimensional probability density function transfer and its application to color transfer}, year= {2005}, volume= {2}, number= {}, pages= {1434-1439 Vol. 2}, keywords= {image colour analysis;probability;1D marginal distribution;automated color grading;color transfer;continuous transformation;probability density function;Color;Computational efficiency;Density functional theory;Distributed computing;Educational institutions;Image converters;Iterative methods;Rendering (computer graphics);Statistical distributions;Statistics}, doi= {https://doi.org/10.1109/ICCV.2005.166}, ISSN= {1550-5499}, month= {Oct}}
+@Inproceedings{PitieICCV2005,
+author= {F. Piti\'{e} and A. C. Kokaram and R. Dahyot}, 
+booktitle= {Tenth IEEE International Conference on Computer Vision (ICCV'05) Volume 1}, 
+title= {N-dimensional probability density function transfer and its application to color transfer}, 
+year= {2005}, volume= {2}, number= {},
+pages= {1434-1439 Vol. 2},
+keywords= {image colour analysis;probability;1D marginal distribution;automated color grading;color transfer;continuous transformation;probability density function;Color;Computational efficiency;Density functional theory;Distributed computing;Educational institutions;Image converters;Iterative methods;Rendering (computer graphics);Statistical distributions;Statistics},
+url={https://github.com/frcs/colour-transfer/blob/master/publications/pitie05iccv.pdf},
+note={Github: https://github.com/frcs/colour-transfer},
+abstract={This article proposes an original method to estimate a
+continuous transformation that maps a N-dimensional distribution
+to another. The method is iterative, non-linear, and
+is shown to converge. Only 1D marginal distributions are
+used in the estimation process, hence involving low computation
+costs. As an illustration this mapping is applied
+to colour transfer between two images of different contents.
+The paper also serves as a central focal point for collecting
+together the research activity in this area and relating it to
+the important problem of Automated Colour Grading.},
+doi= {10.1109/ICCV.2005.166}, 
+ISSN= {1550-5499},
+month= {Oct}}
 
 ,
-@INPROCEEDINGS{PitieICIP05, author= {F. Piti\'{e}  and S. A. Berrani and A. Kokaram and R. Dahyot}, booktitle= {IEEE International Conference on Image Processing 2005}, title= {Off-line multiple object tracking using candidate selection and the Viterbi algorithm}, year= {2005}, volume= {3}, number= {}, pages= {III-109-12}, keywords= {maximum likelihood estimation;object detection;particle filtering (numerical methods);Viterbi algorithm;candidate selection;deterministic solution;off-line multiple object tracking;particle filter methods;probabilistic framework;Data mining;Feature extraction;Image sequences;Indexing;Information retrieval;Particle filters;Particle tracking;Performance analysis;Surveillance;Viterbi algorithm}, doi= {https://doi.org/10.1109/ICIP.2005.1530340}, ISSN= {1522-4880}, month= {Sept}}
-
+@INPROCEEDINGS{PitieICIP05, 
+author= {F. Piti\'{e}  and S. A. Berrani and A. Kokaram and R. Dahyot}, 
+booktitle= {IEEE International Conference on Image Processing 2005}, 
+title= {Off-line multiple object tracking using candidate selection and the Viterbi algorithm}, 
+year= {2005}, volume= {3}, number= {}, pages= {III-109-12}, 
+keywords= {maximum likelihood estimation;object detection;particle filtering (numerical methods);Viterbi algorithm;candidate selection;deterministic solution;off-line multiple object tracking;particle filter methods;probabilistic framework;Data mining;Feature extraction;Image sequences;Indexing;Information retrieval;Particle filters;Particle tracking;Performance analysis;Surveillance;Viterbi algorithm},
+url={http://www.tara.tcd.ie/bitstream/handle/2262/19821/01530340.pdf},
+abstract={This paper presents a probabilistic framework for off-line
+multiple object tracking. At each timestep, a small set of
+deterministic candidates is generated which is guaranteed
+to contain the correct solution. Tracking an object within
+video then becomes possible using the Viterbi algorithm. In
+contrast with particle filter methods where candidates are
+numerous and random, the proposed algorithm involves a
+few candidates and results in a deterministic solution. Moreover, we consider here off-line applications where past and
+future information is exploited. This paper shows that, although basic and very simple, this candidate selection allows the solution of many tracking problems in different
+real-world applications and offers a good alternative to particle filter methods for off-line applications.},
+doi= {10.1109/ICIP.2005.1530340}, 
+ISSN= {1522-4880}, month= {Sept}}
 ,
-@ARTICLE{Dahyot_PAA, author= {Dahyot, Rozenn
+
+@ARTICLE{Dahyot_PAA, 
+author= {Dahyot, Rozenn
 and Charbonnier, Pierre
-and Heitz, Fabrice}, title= {A Bayesian approach to object detection using probabilistic appearance-based models}, journal= {Pattern Analysis and Applications}, year= {2004}, month= {Dec}, day= {01}, volume= {7}, number= {3}, pages= {317--332}, abstract= {In this paper, we introduce a Bayesian approach, inspired by probabilistic principal component analysis (PPCA) (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999), to detect objects in complex scenes using appearance-based models. The originality of the proposed framework is to explicitly take into account general forms of the underlying distributions, both for the in-eigenspace distribution and for the observation model. The approach combines linear data reduction techniques (to preserve computational efficiency), non-linear constraints on the in-eigenspace distribution (to model complex variabilities) and non-linear (robust) observation models (to cope with clutter, outliers and occlusions). The resulting statistical representation generalises most existing PCA-based models (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999; Black and Jepson in Int J Comput Vis 26(1):63--84, 1998; Moghaddam and Pentland in IEEE Trans Pattern Anal Machine Intell 19(7):696--710, 1997) and leads to the definition of a new family of non-linear probabilistic detectors. The performance of the approach is assessed using receiver operating characteristic (ROC) analysis on several representative databases, showing a major improvement in detection performances with respect to the standard methods that have been the references up to now.}, issn= {1433-755X}, doi= {https://doi.org/10.1007/s10044-004-0230-5}, url= {https://doi.org/10.1007/s10044-004-0230-5}}
+and Heitz, Fabrice}, 
+title= {A Bayesian approach to object detection using probabilistic appearance-based models},
+journal= {Pattern Analysis and Applications},
+year= {2004}, month= {Dec}, day= {01}, volume= {7}, number= {3}, pages= {317--332}, 
+abstract= {In this paper, we introduce a Bayesian approach, inspired by probabilistic principal component analysis (PPCA) (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999), to detect objects in complex scenes using appearance-based models. The originality of the proposed framework is to explicitly take into account general forms of the underlying distributions, both for the in-eigenspace distribution and for the observation model. The approach combines linear data reduction techniques (to preserve computational efficiency), non-linear constraints on the in-eigenspace distribution (to model complex variabilities) and non-linear (robust) observation models (to cope with clutter, outliers and occlusions). The resulting statistical representation generalises most existing PCA-based models (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999; Black and Jepson in Int J Comput Vis 26(1):63--84, 1998; Moghaddam and Pentland in IEEE Trans Pattern Anal Machine Intell 19(7):696--710, 1997) and leads to the definition of a new family of non-linear probabilistic detectors. The performance of the approach is assessed using receiver operating characteristic (ROC) analysis on several representative databases, showing a major improvement in detection performances with respect to the standard methods that have been the references up to now.}, issn= {1433-755X},
+doi= {10.1007/s10044-004-0230-5}, 
+url= {https://doi.org/10.1007/s10044-004-0230-5}}
 
 ,
-@INPROCEEDINGS{Pitiesmvp2004, author= {Piti{\'e}, Fran{\c{c}}ois and Dahyot, Rozenn and Kelly, Francis and Kokaram, Anil}, editor= {Comaniciu, Dorin
+@INPROCEEDINGS{Pitiesmvp2004,
+author= {Piti{\'e}, Fran{\c{c}}ois and Dahyot, Rozenn and Kelly, Francis and Kokaram, Anil}, 
+editor= {Comaniciu, Dorin
 and Mester, Rudolf
 and Kanatani, Kenichi
-and Suter, David}, title= {A New Robust Technique for Stabilizing Brightness Fluctuations in Image Sequences}, booktitle= {Statistical Methods in Video Processing}, year= {2004}, publisher= {Springer Berlin Heidelberg}, address= {Berlin, Heidelberg}, pages= {153--164}, abstract= {Temporal random variation of luminance in images can manifest in film and video due to a wide variety of sources. Typical in archived films, it also affects scenes recorded simultaneously with different cameras (e.g. for film special effect), and scenes affected by illumination problems. Many applications in Computer Vision and Image Processing that try to match images (e.g. for motion estimation, stereo vision, etc.) have to cope with this problem. The success of current techniques for dealing with this is limited by the non-linearity of severe distortion, the presence of motion and missing data (yielding outliers in the estimation process) and the lack of fast implementations in reconfigurable systems. This paper proposes a new process for stabilizing brightness fluctuations that improves the existing models. The article also introduces a new estimation method able to cope with outliers in the joint distribution of pairs images. The system implementation is based on the novel use of general purpose PC graphics hardware. The overall system presented here is able to deal with much more severe distortion than previously was the case, and in addition can operate at 7 fps on a 1.6GHz PC with broadcast standard definition images.}, isbn= {978-3-540-30212-4}, doi= {https://doi.org/10.1007/978-3-540-30212-4{\_}14}}
+and Suter, David}, 
+title= {A New Robust Technique for Stabilizing Brightness Fluctuations in Image Sequences}, 
+booktitle= {Statistical Methods in Video Processing},
+year= {2004}, 
+publisher= {Springer Berlin Heidelberg}, 
+address= {Berlin, Heidelberg},
+pages= {153--164},
+abstract= {Temporal random variation of luminance in images can manifest in film and video due to a wide variety of sources. Typical in archived films, it also affects scenes recorded simultaneously with different cameras (e.g. for film special effect), and scenes affected by illumination problems. Many applications in Computer Vision and Image Processing that try to match images (e.g. for motion estimation, stereo vision, etc.) have to cope with this problem. The success of current techniques for dealing with this is limited by the non-linearity of severe distortion, the presence of motion and missing data (yielding outliers in the estimation process) and the lack of fast implementations in reconfigurable systems. This paper proposes a new process for stabilizing brightness fluctuations that improves the existing models. The article also introduces a new estimation method able to cope with outliers in the joint distribution of pairs images. The system implementation is based on the novel use of general purpose PC graphics hardware. The overall system presented here is able to deal with much more severe distortion than previously was the case, and in addition can operate at 7 fps on a 1.6GHz PC with broadcast standard definition images.},
+isbn= {978-3-540-30212-4}, 
+doi= {10.1007/978-3-540-30212-4{\_}14}}
 
 ,
 @INPROCEEDINGS{Dahyot_IMVIP04, author= {R. Dahyot and A. Kokaram}, title= {Comparison of Two Algorithms for Robust M-estimation of Global Motion Parameters }, booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2004)}, month= {September}, year= {2004}, pages= {224-231}, address= {Dublin, Ireland}}
