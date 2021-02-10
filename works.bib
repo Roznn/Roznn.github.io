@@ -445,7 +445,7 @@ url= {http://ceur-ws.org/Vol-2563/aics_34.pdf}}
 	note={Github: https://github.com/vlkryl/streetview_objectmapping},
 	abstract={Many applications such as autonomous navigation, urban planning and asset monitoring, rely on the availability of accurate information about objects and their geolocations. In this paper we propose to automatically detect and compute the GPS coordinates of recurring stationary objects of interest using street view imagery. Our processing pipeline relies on two fully convolutional neural networks: the first segments objects in the images while the second estimates their distance from the camera. To geolocate all the detected objects coherently we propose a novel custom Markov Random Field model to perform objects triangulation. The novelty of the resulting pipeline is the combined use of monocular depth estimation and triangulation to enable automatic mapping of complex scenes with multiple visually similar objects of interest. We validate experimentally the effectiveness of our approach on two object classes: traffic lights and telegraph poles. The experiments report high object recall rates and GPS accuracy within 2 meters, which is comparable with the precision of single-frequency GPS receivers.},
 	year = 2018,
-	month = {apr},
+	month = {April},
 	publisher = {{MDPI} {AG}},
 	volume = {10},
 	number = {5},
@@ -454,6 +454,7 @@ url= {http://ceur-ws.org/Vol-2563/aics_34.pdf}}
 	title = {Automatic Discovery and Geotagging of Objects from Street View Imagery},
 	journal = {Remote Sensing}
 },
+
 @inproceedings{LiuIMVIP2018, 
 title= {3D point cloud segmentation using GIS},
 author= {C.-J. Liu, K. Vladimir and R. Dahyot}, 
@@ -464,35 +465,80 @@ url= {http://hdl.handle.net/2262/89508},
 address= {Ulster University, Northern Ireland}}
 
 ,
-@techreport{DBLP:journals/corr/abs-1812-03205, author= {Matej Ulicny and
-               Vladimir A. Krylov and
-               Rozenn Dahyot}, title= {Harmonic Networks: Integrating Spectral Information into CNNs}, journal= {CoRR}, volume= {abs/1812.03205}, year= {2018}, url= {http://arxiv.org/abs/1812.03205}, archivePrefix= {arXiv}, eprint= {1812.03205}, timestamp= {Tue, 01 Jan 2019 15:01:25 +0100}, biburl= {https://dblp.org/rec/bib/journals/corr/abs-1812-03205}, bibsource= {dblp computer science bibliography, https://dblp.org}}
+@techreport{DBLP:journals/corr/abs-1812-03205, 
+author= {Matej Ulicny and Vladimir A. Krylov and Rozenn Dahyot}, 
+title= {Harmonic Networks: Integrating Spectral Information into CNNs}, 
+journal= {CoRR}, 
+volume= {abs/1812.03205}, 
+year= {2018},
+note={Github: https://github.com/matej-ulicny/harmonic-networks},
+abstract={Convolutional neural networks (CNNs) learn filters in order to capture local correlation patterns in feature space. In contrast, in this paper we propose harmonic blocks that produce features by learning optimal combinations of spectral filters defined by the Discrete Cosine Transform. The harmonic blocks are used to replace conventional convolutional layers to construct partial or fully harmonic CNNs. We extensively validate our approach and show that the introduction of harmonic blocks into state-of-the-art CNN baseline architectures results in comparable or better performance in classification tasks on small NORB, CIFAR10 and CIFAR100 datasets.},
+url= {https://arxiv.org/pdf/1812.03205.pdf}, 
+archivePrefix= {arXiv},
+eprint= {1812.03205} 
+}
 
 ,
-@INPROCEEDINGS{8516983, author= {F. Albluwi and V. A. Krylov and R. Dahyot}, booktitle= {2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP)}, title= {Image Deblurring and Super-Resolution Using Deep Convolutional Neural Networks}, year= {2018}, volume= {}, number= {}, pages= {1-6}, keywords= {convolution;image reconstruction;image resolution;image restoration;learning (artificial intelligence);neural nets;image deblurring;deep convolutional neural networks;multiple high performance algorithms;high-resolution images;low-resolution image input;deep learning algorithms;low-resolution images;deep learning approach;blurred low resolution images;super-resolution convolutional neural network;Training;Image resolution;Pipelines;Image reconstruction;Signal resolution;Feature extraction;Convolutional neural networks;Image super-resolution;deblurring;deep learning;convolutional neural networks}, doi= {10.1109/MLSP.2018.8516983}, ISSN= {1551-2541}, month= {Sept}}
+@INPROCEEDINGS{8516983, 
+author= {F. Albluwi and V. A. Krylov and R. Dahyot},
+booktitle= {2018 IEEE 28th International Workshop on Machine Learning for Signal Processing (MLSP)}, 
+title= {Image Deblurring and Super-Resolution Using Deep Convolutional Neural Networks}, 
+year= {2018},
+volume= {}, 
+number= {}, 
+pages= {1-6},
+abstract={Recently multiple high performance algorithms have been developed to infer high-resolution images from low-resolution
+image input using deep learning algorithms. The related
+problem of super-resolution from blurred or corrupted lowresolution images has however received much less attention.
+In this work, we propose a new deep learning approach that
+simultaneously addresses deblurring and super-resolution
+from blurred low resolution images. We evaluate the stateof-the-art super-resolution convolutional neural network (SRCNN)
+architecture proposed in [1] for the blurred reconstruction scenario and propose a revised deeper architecture that
+proves its superiority experimentally both when the levels of
+blur are known and unknown a priori.},
+note={Github: https://github.com/Fatma-ALbluwi/DBSRCNN},
+keywords= {convolution;image reconstruction;image resolution;image restoration;learning (artificial intelligence);neural nets;image deblurring;deep convolutional neural networks;multiple high performance algorithms;high-resolution images;low-resolution image input;deep learning algorithms;low-resolution images;deep learning approach;blurred low resolution images;super-resolution convolutional neural network;Training;Image resolution;Pipelines;Image reconstruction;Signal resolution;Feature extraction;Convolutional neural networks;Image super-resolution;deblurring;deep learning;convolutional neural networks}, 
+doi= {10.1109/MLSP.2018.8516983},
+ISSN= {1551-2541}, month= {Sept}}
 
 ,
-@INPROCEEDINGS{8451458, author= {V. A. Krylov and R. Dahyot}, booktitle= {2018 25th IEEE International Conference on Image Processing (ICIP)}, title= {Object Geolocation Using MRF Based Multi-Sensor Fusion}, year= {2018}, volume= {}, number= {}, pages= {2745-2749}, keywords= {Laser radar;Three-dimensional displays;Cameras;Geology;Roads;Pipelines;Image segmentation;Object geolocation;street level imagery;LiDAR data;Markov random fields;traffic lights}, doi= {10.1109/ICIP.2018.8451458}, ISSN= {2381-8549}, month= {Oct}}
+@INPROCEEDINGS{8451458,
+author= {V. A. Krylov and R. Dahyot},
+booktitle= {2018 25th IEEE International Conference on Image Processing (ICIP)}, 
+title= {Object Geolocation Using MRF Based Multi-Sensor Fusion}, 
+year= {2018}, 
+abstract={Abundant image and sensory data collected over the last
+decades represents an invaluable source of information for
+cataloging and monitoring of the environment. Fusion of heterogeneous data sources is a challenging but promising tool
+to efficiently leverage such information. In this work we propose a pipeline for automatic detection and geolocation of
+recurring stationary objects deployed on fusion scenario of
+street level imagery and LiDAR point cloud data. The objects
+are geolocated coherently using a fusion procedure formalized as a Markov random field problem. This allows us to efficiently combine information from object segmentation, triangulation, monocular depth estimation and position matching with LiDAR data. The proposed fusion approach produces object mappings robust to scenes reporting multiple
+object instances. We introduce a new challenging dataset of
+over 200 traffic lights in Dublin city centre and demonstrate
+high performance of the proposed methodology and its capacity to perform multi-sensor data fusion.},
+volume= {}, 
+number= {}, 
+pages= {2745-2749}, 
+keywords= {Laser radar;Three-dimensional displays;Cameras;Geology;Roads;Pipelines;Image segmentation;Object geolocation;street level imagery;LiDAR data;Markov random fields;traffic lights}, 
+doi= {10.1109/ICIP.2018.8451458},
+ISSN= {2381-8549}, 
+month= {Oct}}
+,
+@article{GROGAN2018452, 
+title= {Shape registration with directional data},
+journal= {Pattern Recognition}, 
+volume= {79},
+pages= {452 - 466},
+year= {2018},
+issn= {0031-3203},
+abstract={We propose several cost functions for registration of shapes encoded with Euclidean and/or non-Euclidean information (unit vectors). Our framework is assessed for estimation of both rigid and non-rigid transformations between the target and model shapes corresponding to 2D contours and 3D surfaces. The experimental results obtained confirm that using the combination of a point's position and unit normal vector in a cost function can enhance the registration results compared to state of the art methods.},
+doi= {10.1016/j.patcog.2018.02.021},
+url= {https://arxiv.org/pdf/1708.07791.pdf},
+author= {Mairead Grogan and Rozenn Dahyot}, 
+keywords= {Shape registration, Directional information, Von Mises-Fisher,  registration}}
 
 ,
-@article{GROGAN2018452, title= {Shape registration with directional data}, journal= {Pattern Recognition}, volume= {79}, pages= {452 - 466}, year= {2018}, issn= {0031-3203}, doi= {https://doi.org/10.1016/j.patcog.2018.02.021}, url= {http://www.sciencedirect.com/science/article/pii/S003132031830075X}, author= {Mairead Grogan and Rozenn Dahyot}, keywords= {Shape registration, Directional information, Von Mises-Fisher,  registration}}
-
-,
-@techreport{DBLP:journals/corr/abs-1708-08417,
-  author    = {Vladimir A. Krylov and
-               Eamonn Kenny and
-               Rozenn Dahyot},
-  title     = {Automatic Discovery and Geotagging of Objects from Street View Imagery},
-  journal   = {CoRR},
-  volume    = {abs/1708.08417},
-  year      = {2017},
-  url       = {http://arxiv.org/abs/1708.08417},
-  archivePrefix = {arXiv},
-  eprint    = {1708.08417},
-  timestamp = {Tue, 17 Sep 2019 14:15:16 +0200},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1708-08417},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-},
 @inproceedings{Llewellynn:2017:BPO:3075564.3076259, author= {Llewellynn, Tim and Fern\'{a}ndez-Carrobles, M. Milagro and Deniz, Oscar and Fricker, Samuel and Storkey, Amos and Pazos, Nuria and Velikic, Gordana and Leufgen, Kirsten and Dahyot, Rozenn and Koller, Sebastian and Goumas, Georgios and Leitner, Peter and Dasika, Ganesh and Wang, Lei and Tutschku, Kurt}, title= {BONSEYES: Platform for Open Development of Systems of Artificial Intelligence: Invited Paper}, booktitle= {Proceedings of the Computing Frontiers Conference}, series= {CF'17}, year= {2017}, isbn= {978-1-4503-4487-6}, location= {Siena, Italy}, pages= {299--304}, numpages= {6}, url= {http://doi.acm.org/10.1145/3075564.3076259}, doi= {https://doi.org/10.1145/3075564.3076259}, acmid= {3076259}, publisher= {ACM}, address= {New York, NY, USA}, keywords= {Data marketplace, Deep Learning, Internet of things, Smart Cyber-Physical Systems}}
 
 ,
