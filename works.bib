@@ -299,14 +299,50 @@ year= {2019}}
 
 
 ,
-@article{GROGAN2019, title= {L2 Divergence for robust colour transfer}, journal= {Computer Vision and Image Understanding}, year= {2019}, issn= {1077-3142}, doi= {https://doi.org/10.1016/j.cviu.2019.02.002}, url= {http://www.sciencedirect.com/science/article/pii/S1077314219300177}, author= {Mairead Grogan and Rozenn Dahyot}, keywords= {Colour Transfer, L2 Registration, Re-colouring, Colour Grading}, abstract= {Optimal Transport (OT) is a very popular framework for performing colour transfer in images and videos. We have proposed an alternative framework where the cost function used for inferring a parametric transfer function is defined as the robust L2 divergence between two probability density functions (Grogan and Dahyot, 2015). In this paper, we show that our approach combines many advantages of state of the art techniques and outperforms many recent algorithms as measured quantitatively with standard quality metrics, and qualitatively using perceptual studies (Grogan and Dahyot, 2017). Mathematically, our formulation is presented in contrast to the OT cost function that shares similarities with our cost function. Our formulation, however, is more flexible as it allows colour correspondences that may be available to be taken into account and performs well despite potential occurrences of correspondence outlier pairs. Our algorithm is shown to be fast, robust and it easily allows for user interaction providing freedom for artists to fine tune the recoloured images and videos (Grogan et al., 2017).}}
+@article{GROGAN2019, 
+title= {L2 Divergence for robust colour transfer}, 
+journal= {Computer Vision and Image Understanding},
+year= {2019},
+note={Github: https://github.com/groganma/gmm-colour-transfer},
+issn= {1077-3142},
+doi= {https://doi.org/10.1016/j.cviu.2019.02.002}, 
+url= {http://www.sciencedirect.com/science/article/pii/S1077314219300177}, 
+author= {Mairead Grogan and Rozenn Dahyot}, 
+keywords= {Colour Transfer, L2 Registration, Re-colouring, Colour Grading}, 
+abstract= {Optimal Transport (OT) is a very popular framework for performing colour transfer in images and videos. We have proposed an alternative framework where the cost function used for inferring a parametric transfer function is defined as the robust L2 divergence between two probability density functions. In this paper, we show that our approach combines many advantages of state of the art techniques and outperforms many recent algorithms as measured quantitatively with standard quality metrics, and qualitatively using perceptual studies. Mathematically, our formulation is presented in contrast to the OT cost function that shares similarities with our cost function. Our formulation, however, is more flexible as it allows colour correspondences that may be available to be taken into account and performs well despite potential occurrences of correspondence outlier pairs. Our algorithm is shown to be fast, robust and it easily allows for user interaction providing freedom for artists to fine tune the recoloured images and videos.}}
 
 ,
-@INPROCEEDINGS{8904931, author= {R. {Aljuaidi} and J. {Su} and R. {Dahyot}}, booktitle= {2019 30th Irish Signals and Systems Conference (ISSC)}, title= {Mini-Batch VLAD for Visual Place Retrieval}, year= {2019}, volume= {}, number= {}, pages= {1-6}, keywords= {feature extraction;content-based image retrieval;image processing}, doi= {10.1109/ISSC.2019.8904931}, ISSN= {2688-1446}, month= {June}}
+@INPROCEEDINGS{8904931, 
+author= {R. {Aljuaidi} and J. {Su} and R. {Dahyot}}, 
+booktitle= {2019 30th Irish Signals and Systems Conference (ISSC)}, 
+title= {Mini-Batch VLAD for Visual Place Retrieval}, 
+note={Awarded Best Student Paper at ISSC 2019. Github: https://github.com/ReemTCD/Mini_Batch_VLAD},
+year= {2019}, 
+volume= {}, 
+number= {}, 
+pages= {1-6}, 
+abstract={—This study investigates the visual place retrieval of an image query using a geotagged image dataset.
+Vector of Locally Aggregated Descriptors (VLAD) is one of
+the local features that can be used for image place recognition.
+VLAD describes an image by the difference of its local feature
+descriptors from an already computed codebook. Generally, a
+visual codebook is generated from k-means clustering of the
+descriptors. However, the dimensionality of visual features is
+not trivial and the computational load of sample distances in
+a large image dataset is challenging. In order to design an
+accurate image retrieval method with affordable computation
+expenses, we propose to use the mini-batch k-means clustering
+to compute VLAD descriptor(MB-VLAD). The proposed MBVLAD technique shows advantage in retrieval accuracy in
+comparison with the state of the art techniques.},
+keywords= {feature extraction;content-based image retrieval;image processing}, 
+doi= {10.1109/ISSC.2019.8904931}, 
+ISSN= {2688-1446},
+month= {June}}
 
 ,
-@InProceedings{10.1007/978-3-030-13453-2_7, author= {Krylov, Vladimir A.
-and Dahyot, Rozenn}, editor= {Alzate, Carlos
+@InProceedings{10.1007/978-3-030-13453-2_7, 
+author= {Krylov, Vladimir A. and Dahyot, Rozenn}, 
+editor= {Alzate, Carlos
 and Monreale, Anna
 and Assem, Haytham
 and Bifet, Albert
@@ -320,17 +356,87 @@ and Lavesson, Niklas
 and Madden, Michael
 and Molloy, Ian
 and Nicolae, Maria-Irina
-and Sinn, Mathieu}, doi= {https://doi.org/10.1007/978-3-030-13453-2_7}, title= {Object Geolocation from Crowdsourced Street Level Imagery}, booktitle= {ECML PKDD 2018 Workshops}, year= {2019}, publisher= {Springer International Publishing}, address= {Cham}, pages= {79--83}, abstract= {We explore the applicability and limitations of a state-of-the-art object detection and geotagging system [4] applied to crowdsourced image data. Our experiments with imagery from Mapillary crowdsourcing platform demonstrate that with increasing amount of images, the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless, due to excessive camera position noise, the estimated geolocation (position) of the detected object is less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.}, isbn= {978-3-030-13453-2}}
+and Sinn, Mathieu},
+doi= {10.1007/978-3-030-13453-2_7}, 
+title= {Object Geolocation from Crowdsourced Street Level Imagery}, 
+booktitle= {ECML PKDD 2018 Workshops}, 
+year= {2019}, 
+publisher= {Springer International Publishing}, 
+address= {Cham}, 
+pages= {79--83}, 
+abstract= {We explore the applicability and limitations of a state-of-the-art object detection and geotagging system [4] applied to crowdsourced image data. Our experiments with imagery from Mapillary crowdsourcing platform demonstrate that with increasing amount of images, the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless, due to excessive camera position noise, the estimated geolocation (position) of the detected object is less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.}, isbn= {978-3-030-13453-2}}
 
 ,
-@INPROCEEDINGS{8902611, author= {H. {Alghamdi} and M. {Grogan} and R. {Dahyot}}, booktitle= {2019 27th European Signal Processing Conference (EUSIPCO)}, title= {Patch-Based Colour Transfer with Optimal Transport}, year= {2019}, volume= {}, number= {}, pages= {1-5}, keywords= {optimal transport;colour transfer;image enhancement;JPEG compression blocks}, doi= {10.23919/EUSIPCO.2019.8902611}, ISSN= {2219-5491}, month= {Sep.}}
+@INPROCEEDINGS{8902611, 
+author= {H. {Alghamdi} and M. {Grogan} and R. {Dahyot}}, 
+booktitle= {2019 27th European Signal Processing Conference (EUSIPCO)},
+title= {Patch-Based Colour Transfer with Optimal Transport}, 
+url={https://www.eurasip.org/Proceedings/Eusipco/eusipco2019/Proceedings/papers/1570533179.pdf},
+note={Github: https://github.com/leshep/PCT_OT},
+abstract={This paper proposes a new colour transfer method
+with Optimal transport to transfer the colour of a source image to
+match the colour of a target image of the same scene. We propose
+to formulate the problem in higher dimensional spaces (than
+colour spaces) by encoding overlapping neighborhoods of pixels
+containing colour information as well as spatial information.
+Since several recoloured candidates are now generated for each
+pixel in the source image, we define an original procedure
+to efficiently merge these candidates which allows denoising
+and artifact removal as well as colour transfer. Experiments
+show quantitative and qualitative improvements over previous
+colour transfer methods. Our method can be applied to different
+contexts of colour transfer such as transferring colour between
+different camera models, camera settings, illumination conditions
+and colour retouch styles for photographs.},
+year= {2019}, 
+volume= {}, 
+number= {}, 
+pages= {1-5}, 
+keywords= {optimal transport;colour transfer;image enhancement;JPEG compression blocks}, 
+doi= {10.23919/EUSIPCO.2019.8902611},
+ISSN= {2219-5491}, month= {Sep.}}
 
 ,
-@INPROCEEDINGS{8903000, author= {F. {Albluwi} and V. A. {Krylov} and R. {Dahyot}}, booktitle= {2019 27th European Signal Processing Conference (EUSIPCO)}, title= {Super-Resolution on Degraded Low-Resolution Images Using Convolutional Neural Networks}, year= {2019}, volume= {}, number= {}, pages= {1-5}, keywords= {Image super-resolution;image deblurring;deep learning;CNN}, doi= {10.23919/EUSIPCO.2019.8903000}, ISSN= {2219-5491}, month= {Sep.}}
+@INPROCEEDINGS{8903000, 
+author= {F. {Albluwi} and V. A. {Krylov} and R. {Dahyot}}, 
+booktitle= {2019 27th European Signal Processing Conference (EUSIPCO)}, 
+title= {Super-Resolution on Degraded Low-Resolution Images Using Convolutional Neural Networks}, 
+year= {2019}, 
+volume= {}, 
+abstract={Single Image Super-Resolution (SISR) has witnessed
+a dramatic improvement in recent years through the use of deep
+learning and, in particular, convolutional neural networks (CNN).
+In this work we address reconstruction from low-resolution
+images and consider as well degrading factors in images such as
+blurring. To address this challenging problem, we propose a new
+architecture to tackle blur with the down-sampling of images by
+extending the DBSRCNN architecture. We validate our new
+architecture (DBSR) experimentally against several state of the
+art super-resolution techniques.},
+note={Github: https://github.com/Fatma-ALbluwi/DBSR},
+url={https://www.eurasip.org/Proceedings/Eusipco/eusipco2019/Proceedings/papers/1570533420.pdf},
+number= {}, 
+pages= {1-5}, 
+keywords= {Image super-resolution;image deblurring;deep learning;CNN}, 
+doi= {10.23919/EUSIPCO.2019.8903000}, 
+ISSN= {2219-5491}, month= {Sep.}}
 
 ,
-@inproceedings{Bhatia2019, title= {Using WGAN for Improving Imbalanced
- Classification Performance}, author= {S. Bhatia and R. Dahyot}, booktitle= {27th Irish Conference on Artificial Intelligence and Cognitive Science}, address= {Galway, Ireland}, issn= {1613-0073}, year= {2019}, editor= {Edward Curry and Mark Keane and Adegboyega Ojo and Dhaval Salwala}, pages= {365-375}, url= {http://ceur-ws.org/Vol-2563/aics_34.pdf}}
+@inproceedings{Bhatia2019, 
+title= {Using WGAN for Improving Imbalanced  Classification Performance}, 
+author= {S. Bhatia and R. Dahyot}, 
+booktitle= {27th Irish Conference on Artificial Intelligence and Cognitive Science}, 
+address= {Galway, Ireland}, 
+issn= {1613-0073},
+year= {2019}, 
+editor= {Edward Curry and Mark Keane and Adegboyega Ojo and Dhaval Salwala}, 
+pages= {365-375}, 
+abstract={This paper investigates data synthesis with a Generative Adversarial Network (GAN) for augmenting the amount of data used for
+training classifiers (in supervised learning) to compensate for class imbalance (when the classes are not represented equally by the same number of
+training samples). Our data synthesis approach with GAN is compared
+with data augmentation in the context of image classification. Our experimental results show encouraging results in comparison to standard
+data augmentation schemes based on image transforms.},
+url= {http://ceur-ws.org/Vol-2563/aics_34.pdf}}
 
 ,
 @article{Krylov_2018,
