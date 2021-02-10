@@ -109,7 +109,7 @@ year= {2020},
  booktitle= {Motion, Interaction and Games}, 
  articleno= {2}, 
  numpages= {6}, 
- note={Github: https://roznn.github.io/facial-blendshapes/},
+ note={Awarded Best Short Paper Award MIG2020 Github: https://roznn.github.io/facial-blendshapes/},
  keywords= {blendshapes, perception, action units, linear model}, 
  location= {Virtual Event, SC, USA}, series= {MIG '20}}
 ,
@@ -119,7 +119,13 @@ title= {Iterative Nadaraya-Watson Distribution Transfer for Colour Grading},
 booktitle= {2020 IEEE 22nd International Workshop on Multimedia Signal Processing (MMSP)},
 volume= {},
 pages={1-6},
-abstract={We propose a new method with Nadaraya-Watson that maps one N-dimensional distribution to another, taking into account available information about correspondences. We extend the 2D/3D problem to higher dimensions by encoding overlapping neighborhoods of data points and solve the high-dimensional problem in 1D space using an iterative projection approach. To show the potentials of this mapping, we apply it to colour transfer between two images that exhibit overlapped scenes. Experiments show quantitative and qualitative improvements over the previous state of the art colour transfer methods.},
+abstract={We propose a new method with Nadaraya-Watson that maps one N-dimensional distribution to another,
+ taking into account available information about correspondences. 
+ We extend the 2D/3D problem to higher dimensions by encoding overlapping neighborhoods 
+ of data points and solve the high-dimensional problem in 1D space using an iterative projection
+ approach. To show the potentials of this mapping, we apply it to colour transfer between two images
+ that exhibit overlapped scenes. Experiments show quantitative and qualitative improvements
+ over the previous state of the art colour transfer methods.},
 note={Github: https://github.com/leshep/INWDT},
 doi={10.1109/MMSP48831.2020.9287097},
 year= {2020}, 
@@ -132,7 +138,16 @@ title= {Patch based Colour Transfer using {SIFT} Flow},
 booktitle= {Irish Machine Vision and Image Processing (IMVIP 2020)},
 volume= {abs/2005.09015},
 year= {2020},
-abstract={We propose a new colour transfer method with Optimal Transport (OT) to transfer the colour of a sourceimage to match the colour of a target image of the same scene that may exhibit large motion changes betweenimages. By definition OT does not take into account any available information about correspondences whencomputing the optimal solution. To tackle this problem we propose to encode overlapping neighborhoodsof pixels using both their colour and spatial correspondences estimated using motion estimation. We solvethe high dimensional problem in 1D space using an iterative projection approach. We further introducesmoothing as part of the iterative algorithms for solving optimal transport namely Iterative DistributionTransport (IDT) and its variant the Sliced Wasserstein Distance (SWD). Experiments show quantitative andqualitative improvements over previous state of the art colour transfer methods.},
+abstract={We propose a new colour transfer method with Optimal Transport (OT) to
+ transfer the colour of a sourceimage to match the colour of a target image of the same scene 
+ that may exhibit large motion changes betweenimages. By definition OT does not take into account
+ any available information about correspondences whencomputing the optimal solution. To tackle 
+ this problem we propose to encode overlapping neighborhoodsof pixels using both their colour and 
+ spatial correspondences estimated using motion estimation. We solvethe high dimensional problem 
+ in 1D space using an iterative projection approach. We further introducesmoothing as part of 
+ the iterative algorithms for solving optimal transport namely Iterative DistributionTransport (IDT) and
+ its variant the Sliced Wasserstein Distance (SWD). Experiments show quantitative andqualitative 
+ improvements over previous state of the art colour transfer methods.},
 url= {https://arxiv.org/pdf/2005.09015.pdf}, 
 note={Best Paper Award, Book Open Access http://research.thea.ie/handle/20.500.12065/3429},
 archivePrefix= {arXiv}, 
@@ -153,7 +168,7 @@ note={Book Open Access http://research.thea.ie/handle/20.500.12065/3429},
 }
 ,
 @inproceedings{YadavIMVIP2020,
-author= {R. Yadav, A. Samir, H. Rashed, S. Yogamani and R. Dahyot}, 
+author= {R. Yadav and A. Samir and H. Rashed and S. Yogamani and R. Dahyot}, 
 title= {CNN based Color and Thermal Image Fusion for Object Detection in Automated Driving},
 booktitle= {Irish Machine Vision and Image Processing (IMVIP 2020)},
 year= {2020},
@@ -171,7 +186,15 @@ year= {2020},
 volume= {}, 
 number= {}, 
 pages= {1-6}, 
-abstract= {We propose a method for semantic image segmentation, combining a deep neural network and spatial relationships between image regions, encoded in a graph representation of the scene. Our proposal is based on inexact graph matching, formulated as a quadratic assignment problem applied to the output of the neural network. The proposed method is evaluated on a public dataset used for segmentation of images of faces, and compared to the U-Net deep neural network that is widely used for semantic segmentation. Preliminary results show that our approach is promising. In terms of Intersection-over-Union of region bounding boxes, the improvement is of 2.4% in average, compared to U-Net, and up to 24.4% for some regions. Further improvements are observed when reducing the size of the training dataset (up to 8.5% in average).}, 
+abstract= {We propose a method for semantic image segmentation, 
+combining a deep neural network and spatial relationships between image regions, 
+encoded in a graph representation of the scene. Our proposal is based on inexact graph matching, 
+formulated as a quadratic assignment problem applied to the output of the neural network.
+ The proposed method is evaluated on a public dataset used for segmentation of images of faces, 
+ and compared to the U-Net deep neural network that is widely used for semantic segmentation. 
+ Preliminary results show that our approach is promising. In terms of Intersection-over-Union of region bounding boxes, 
+ the improvement is of 2.4% in average, compared to U-Net, and up to 24.4% for some regions.
+ Further improvements are observed when reducing the size of the training dataset (up to 8.5% in average).}, 
 keywords= {Computer vision;Deep learning;Inexact graph matching;Quadratic assignment problem},
 doi= {10.1109/IPTA50016.2020.9286611}, 
 url={https://hal.archives-ouvertes.fr/hal-02916165/file/2020IPTA.pdf},
@@ -240,6 +263,16 @@ author= {Miguel de Prado and
                algorithms and deployment tools},
 			   booktitle= {HiPEAC 2019 workshop Emerging Deep Learning Accelerator}, 
 			   url={https://arxiv.org/pdf/1901.05049v1.pdf},
+			   abstract={Next generation of embedded Information and Communication Technology (ICT) systems are interconnected collaborative intelligent systems able to perform autonomous tasks. Training and deployment
+of such systems on Edge devices however require a fine-grained integration of data and tools to
+achieve high accuracy and overcome functional and non-functional requirements.
+In this work, we present a modular AI pipeline as an integrating framework to bring data, algorithms
+and deployment tools together. By these means, we are able to interconnect the different entities or
+stages of particular systems and provide an end-to-end development of AI products. We demonstrate
+the effectiveness of the AI pipeline by solving an Automatic Speech Recognition challenge and we
+show that all the steps leading to an end-to-end development for Key-word Spotting tasks: importing,
+partitioning and pre-processing of speech data, training of different neural network architectures and
+their deployment on heterogeneous embedded platforms.},
 			   volume= {abs/1901.05049v1}, 
 			   year= {2019}, 
 			   archivePrefix= {arXiv}, 
@@ -309,7 +342,16 @@ doi= {https://doi.org/10.1016/j.cviu.2019.02.002},
 url= {http://www.sciencedirect.com/science/article/pii/S1077314219300177}, 
 author= {Mairead Grogan and Rozenn Dahyot}, 
 keywords= {Colour Transfer, L2 Registration, Re-colouring, Colour Grading}, 
-abstract= {Optimal Transport (OT) is a very popular framework for performing colour transfer in images and videos. We have proposed an alternative framework where the cost function used for inferring a parametric transfer function is defined as the robust L2 divergence between two probability density functions. In this paper, we show that our approach combines many advantages of state of the art techniques and outperforms many recent algorithms as measured quantitatively with standard quality metrics, and qualitatively using perceptual studies. Mathematically, our formulation is presented in contrast to the OT cost function that shares similarities with our cost function. Our formulation, however, is more flexible as it allows colour correspondences that may be available to be taken into account and performs well despite potential occurrences of correspondence outlier pairs. Our algorithm is shown to be fast, robust and it easily allows for user interaction providing freedom for artists to fine tune the recoloured images and videos.}}
+abstract= {Optimal Transport (OT) is a very popular framework for performing colour transfer 
+in images and videos. We have proposed an alternative framework where the cost function used for 
+inferring a parametric transfer function is defined as the robust L2 divergence between two 
+probability density functions. In this paper, we show that our approach combines many advantages 
+of state of the art techniques and outperforms many recent algorithms as measured quantitatively 
+with standard quality metrics, and qualitatively using perceptual studies. Mathematically, our 
+formulation is presented in contrast to the OT cost function that shares similarities with our cost function. 
+Our formulation, however, is more flexible as it allows colour correspondences that may be available to be taken 
+into account and performs well despite potential occurrences of correspondence outlier pairs. Our algorithm is shown to be 
+fast, robust and it easily allows for user interaction providing freedom for artists to fine tune the recoloured images and videos.}}
 
 ,
 @INPROCEEDINGS{8904931, 
@@ -364,7 +406,13 @@ year= {2019},
 publisher= {Springer International Publishing}, 
 address= {Cham}, 
 pages= {79--83}, 
-abstract= {We explore the applicability and limitations of a state-of-the-art object detection and geotagging system [4] applied to crowdsourced image data. Our experiments with imagery from Mapillary crowdsourcing platform demonstrate that with increasing amount of images, the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless, due to excessive camera position noise, the estimated geolocation (position) of the detected object is less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.}, isbn= {978-3-030-13453-2}}
+abstract= {We explore the applicability and limitations of a state-of-the-art object 
+detection and geotagging system [4] applied to crowdsourced image data. Our experiments with 
+imagery from Mapillary crowdsourcing platform demonstrate that with increasing amount of images,
+ the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless,
+ due to excessive camera position noise, the estimated geolocation (position) of the detected object is 
+ less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.},
+ isbn= {978-3-030-13453-2}}
 
 ,
 @INPROCEEDINGS{8902611, 
@@ -472,7 +520,13 @@ journal= {CoRR},
 volume= {abs/1812.03205}, 
 year= {2018},
 note={Github: https://github.com/matej-ulicny/harmonic-networks},
-abstract={Convolutional neural networks (CNNs) learn filters in order to capture local correlation patterns in feature space. In contrast, in this paper we propose harmonic blocks that produce features by learning optimal combinations of spectral filters defined by the Discrete Cosine Transform. The harmonic blocks are used to replace conventional convolutional layers to construct partial or fully harmonic CNNs. We extensively validate our approach and show that the introduction of harmonic blocks into state-of-the-art CNN baseline architectures results in comparable or better performance in classification tasks on small NORB, CIFAR10 and CIFAR100 datasets.},
+abstract={Convolutional neural networks (CNNs) learn filters in order to 
+capture local correlation patterns in feature space. In contrast, in this paper 
+we propose harmonic blocks that produce features by learning optimal combinations 
+of spectral filters defined by the Discrete Cosine Transform. The harmonic blocks 
+are used to replace conventional convolutional layers to construct partial or fully harmonic CNNs. 
+We extensively validate our approach and show that the introduction of harmonic blocks into state-of-the-art 
+CNN baseline architectures results in comparable or better performance in classification tasks on small NORB, CIFAR10 and CIFAR100 datasets.},
 url= {https://arxiv.org/pdf/1812.03205.pdf}, 
 archivePrefix= {arXiv},
 eprint= {1812.03205} 
@@ -532,23 +586,96 @@ volume= {79},
 pages= {452 - 466},
 year= {2018},
 issn= {0031-3203},
-abstract={We propose several cost functions for registration of shapes encoded with Euclidean and/or non-Euclidean information (unit vectors). Our framework is assessed for estimation of both rigid and non-rigid transformations between the target and model shapes corresponding to 2D contours and 3D surfaces. The experimental results obtained confirm that using the combination of a point's position and unit normal vector in a cost function can enhance the registration results compared to state of the art methods.},
+abstract={We propose several cost functions for registration of 
+shapes encoded with Euclidean and/or non-Euclidean information (unit vectors). 
+Our framework is assessed for estimation of both rigid and non-rigid transformations between 
+the target and model shapes corresponding to 2D contours and 3D surfaces. The experimental results obtained 
+confirm that using the combination of a point's position and unit normal vector in a cost function can enhance 
+the registration results compared to state of the art methods.},
 doi= {10.1016/j.patcog.2018.02.021},
 url= {https://arxiv.org/pdf/1708.07791.pdf},
 author= {Mairead Grogan and Rozenn Dahyot}, 
 keywords= {Shape registration, Directional information, Von Mises-Fisher,  registration}}
 
 ,
-@inproceedings{Llewellynn:2017:BPO:3075564.3076259, author= {Llewellynn, Tim and Fern\'{a}ndez-Carrobles, M. Milagro and Deniz, Oscar and Fricker, Samuel and Storkey, Amos and Pazos, Nuria and Velikic, Gordana and Leufgen, Kirsten and Dahyot, Rozenn and Koller, Sebastian and Goumas, Georgios and Leitner, Peter and Dasika, Ganesh and Wang, Lei and Tutschku, Kurt}, title= {BONSEYES: Platform for Open Development of Systems of Artificial Intelligence: Invited Paper}, booktitle= {Proceedings of the Computing Frontiers Conference}, series= {CF'17}, year= {2017}, isbn= {978-1-4503-4487-6}, location= {Siena, Italy}, pages= {299--304}, numpages= {6}, url= {http://doi.acm.org/10.1145/3075564.3076259}, doi= {https://doi.org/10.1145/3075564.3076259}, acmid= {3076259}, publisher= {ACM}, address= {New York, NY, USA}, keywords= {Data marketplace, Deep Learning, Internet of things, Smart Cyber-Physical Systems}}
+@inproceedings{Llewellynn:2017:BPO:3075564.3076259,
+ author= {Llewellynn, Tim and Fern\'{a}ndez-Carrobles, M. Milagro and Deniz, Oscar and Fricker, Samuel and Storkey, Amos and Pazos, Nuria and Velikic, Gordana and Leufgen, Kirsten and Dahyot, Rozenn and Koller, Sebastian and Goumas, Georgios and Leitner, Peter and Dasika, Ganesh and Wang, Lei and Tutschku, Kurt}, 
+ title= {BONSEYES: Platform for Open Development of Systems of Artificial Intelligence: Invited Paper}, 
+ booktitle= {Proceedings of the Computing Frontiers Conference}, series= {CF'17}, 
+ year= {2017}, isbn= {978-1-4503-4487-6}, 
+ location= {Siena, Italy}, pages= {299--304}, 
+ numpages= {6}, 
+ url= {http://doi.acm.org/10.1145/3075564.3076259}, 
+ doi= {10.1145/3075564.3076259},
+ abstract={The Bonseyes EU H2020 collaborative project aims to develop a platform consisting of a Data Marketplace, 
+ a Deep Learning Toolbox, and Developer Reference Platforms for organizations wanting to adopt Artificial Intelligence. 
+ The project will be focused on using artificial intelligence in low power Internet of Things (IoT) devices ("edge computing"), 
+ embedded computing systems, and data center servers ("cloud computing"). It will bring about orders of magnitude improvements in efficiency,
+ performance, reliability, security, and productivity in the design and programming of systems of artificial intelligence 
+ that incorporate Smart Cyber-Physical Systems (CPS). In addition, it will solve a causality problem for organizations who lack 
+ access to Data and Models. Its open software architecture will facilitate adoption of the whole concept on a wider scale.
+ To evaluate the effectiveness, technical feasibility, and to quantify the real-world improvements in efficiency, security, performance,
+ effort and cost of adding AI to products and services using the Bonseyes platform, four complementary demonstrators will be built. 
+ Bonseyes platform capabilities are aimed at being aligned with the European FI-PPP activities and take advantage of its flagship project FIWARE.
+ This paper provides a description of the project motivation, goals and preliminary work.},
+ acmid= {3076259}, publisher= {ACM},
+ address= {New York, NY, USA}, 
+ keywords= {Data marketplace, Deep Learning, Internet of things, Smart Cyber-Physical Systems}}
 
 ,
-@inproceedings{MatejIMVIP2017, title= {On Using CNN with Compressed (DCT Based) Image Data}, author= {M. Ulicny and R. Dahyot}, booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2017)}, year= {2017}, pages= {44-51}, volume= {e-book of proceedings with ISBN 978-0-9934207-2-6}, url= {http://eprints.maynoothuniversity.ie/8841/}, address= {Maynooth University}}
+@inproceedings{MatejIMVIP2017, 
+title= {On Using CNN with Compressed (DCT Based) Image Data}, 
+author= {M. Ulicny and R. Dahyot}, 
+booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2017)}, 
+year= {2017}, 
+pages= {44-51}, 
+volume= {e-book of proceedings with ISBN 978-0-9934207-2-6},
+ url= {http://eprints.maynoothuniversity.ie/8841/}, 
+ abstract={This paper investigates the use of Convolutional Neural Networks (CNN) to classify images encoded
+in compressible form using Discrete Cosine Tranform (DCT) as an alternative to raw image format. We
+show experimentally that DCT features, that are directly available from JPEG format for instance, can be
+processed as efficiently as raw image data using the same CNN architectures.
+},
+ address= {Maynooth University}}
 
 ,
-@article{BulbulCAVW2016, author= {Bulbul, Abdullah and Dahyot, Rozenn}, title= {Populating virtual cities using social media}, journal= {Computer Animation and Virtual Worlds}, volume= {28}, number= {5}, pages= {e1742}, year= {2017}, keywords= {computer animation, crowd simulations, social media, virtual worlds}, doi= {http://doi.org/10.1002/cav.1742}, url= {https://onlinelibrary.wiley.com/doi/abs/10.1002/cav.1742}, eprint= {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.1742}, abstract= {Abstract: We propose to automatically populate geo‐located virtual cities by harvesting and analyzing online contents shared on social networks and websites. We show how pose and motion paths of agents can be realistically rendered using information gathered from social media. 3D cities are automatically generated using open‐source information available online. To provide our final rendering of both static and dynamic urban scenes, we use Unreal game engine.}}
-
+@article{BulbulCAVW2016, 
+author= {Bulbul, Abdullah and Dahyot, Rozenn},
+ title= {Populating virtual cities using social media},
+ journal= {Computer Animation and Virtual Worlds}, 
+ volume= {28}, 
+ number= {5}, 
+ pages= {e1742}, 
+ year= {2017}, 
+ keywords= {computer animation, crowd simulations, social media, virtual worlds}, 
+ doi= {10.1002/cav.1742}, 
+ url= {https://onlinelibrary.wiley.com/doi/abs/10.1002/cav.1742}, 
+ eprint= {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.1742}, 
+ abstract= {We propose to automatically populate geo‐located virtual cities by harvesting and 
+ analyzing online contents shared on social networks and websites. We show how pose and motion paths 
+ of agents can be realistically rendered using information gathered from social media. 3D cities are 
+ automatically generated using open‐source information available online. To provide our final rendering 
+ of both static and dynamic urban scenes, we use Unreal game engine.}}
 ,
-@techreport{DBLP:journals/corr/GroganD17, author= {Mair{\'{e}}ad Grogan and Rozenn Dahyot}, title= {Robust Registration of Gaussian Mixtures for Colour Transfer}, journal= {CoRR}, volume= {abs/1705.06091}, year= {2017}, url= {http://arxiv.org/abs/1705.06091}, archivePrefix= {arXiv}, eprint= {1705.06091}, timestamp= {Wed, 07 Jun 2017 14:41:30 +0200}, biburl= {https://dblp.org/rec/bib/journals/corr/GroganD17}, bibsource= {dblp computer science bibliography, https://dblp.org}}
+@techreport{DBLP:journals/corr/GroganD17, 
+author= {Mair{\'{e}}ad Grogan and Rozenn Dahyot}, 
+title= {Robust Registration of Gaussian Mixtures for Colour Transfer},
+ journal= {CoRR},
+ abstract={We present a flexible approach to colour transfer inspired by techniques 
+ recently proposed for shape registration. Colour distributions of the palette and target 
+ images are modelled with Gaussian Mixture Models (GMMs) that are robustly registered to 
+ infer a non linear parametric transfer function. We show experimentally that our approach compares 
+ well to current techniques both quantitatively and qualitatively. Moreover, our technique is 
+ computationally the fastest and can take efficient advantage of parallel processing architectures 
+ for recolouring images and videos. Our transfer function is parametric and hence can be stored in memory 
+ for later usage and also combined with other computed transfer functions to create interesting visual effects. 
+ Overall this paper provides a fast user friendly approach to recolouring of image and video materials.},
+ volume= {abs/1705.06091}, 
+ year= {2017}, 
+ url= {https://arxiv.org/pdf/1705.06091.pdf}, 
+ archivePrefix= {arXiv}, 
+ eprint= {1705.06091},
+ timestamp= {Wed, 07 Jun 2017 14:41:30 +0200} }
 
 ,
 @article{BulbulCAG2016, title= {Social media based 3D visual popularity }, journal= {Computers \& Graphics }, volume= {63}, number= {}, pages= {28 - 36}, year= {2017}, note= {}, issn= {0097-8493}, doi= {https://doi.org/10.1016/j.cag.2017.01.005}, url= {http://www.sciencedirect.com/science/article/pii/S0097849317300146}, author= {Abdullah Bulbul and Rozenn Dahyot}, keywords= {3D cities }, abstract= {Abstract: This paper proposes to use a geotagged virtual world for the visualization of people’s visual interest and their sentiment as captured from their social network activities. Using mobile devices, people widely share their experiences and the things they find interesting through social networks. We experimentally show that accumulating information over a period of time from multiple social network users allows to efficiently map and visualize popular landmarks as found in cities such as Rome in Italy and Dublin in Ireland. The proposed approach is also sensitive to temporal and spatial events that attract visual attention. We visualize the calculated popularity on 3D virtual cities using game engine technologies. }}
