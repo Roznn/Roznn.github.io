@@ -18,17 +18,58 @@ abstract = {Next generation of embedded Information and Communication Technology
 keywords= {deep learning, AI pipeline, keyword spotting, fragmentation}}
 
 ,
-@inproceedings{chopin:hal-02882043, TITLE= {{M{\'e}thode d'analyse s{\'e}mantique d'images combinant apprentissage profond et relations structurelles par appariement de graphes}}, AUTHOR= {Chopin, J{\'e}r{\'e}my and Fasquel, Jean-Baptiste and Mouch{\`e}re, Harold and Bloch, Isabelle and Dahyot, Rozenn}, URL= {https://hal.archives-ouvertes.fr/hal-02882043}, BOOKTITLE= {{Rencontres des Jeunes Chercheur$\times$ses en Intelligence Artificielle (RJCIA 2020)}}, ADDRESS= {Angers, France}, HAL_LOCAL_REFERENCE= {ISISV}, YEAR= {2020}, MONTH= {jun}, HAL_ID= {hal-02882043}, HAL_VERSION= {v1}}
+@inproceedings{chopin:hal-02882043,
+TITLE= {{M{\'e}thode d'analyse s{\'e}mantique d'images combinant apprentissage profond et relations structurelles par appariement de graphes}}, 
+AUTHOR= {Chopin, J{\'e}r{\'e}my and Fasquel, Jean-Baptiste and Mouch{\`e}re, Harold and Bloch, Isabelle and Dahyot, Rozenn}, 
+URL= {https://hal.archives-ouvertes.fr/hal-02882043}, 
+BOOKTITLE= {{Rencontres des Jeunes Chercheur$\times$ses en Intelligence Artificielle (RJCIA 2020)}}, 
+ADDRESS= {Angers, France}, 
+abstract={We propose a method for semantic image segmentation,
+combining a deep neural network and spatial relationships
+between image regions, encoded in a graph representation
+of the scene. Our proposal is based on inexact graph matching, applied to the output of a deep neural network. The
+proposed method is evaluated on a public dataset used for
+segmentation of images of faces. Preliminary results show
+that, in terms of IoU of region bounding boxes, the use of
+spatial relationships lead to an improvement of 2.4% in
+average, and up to 24.4% for some regions.},
+HAL_LOCAL_REFERENCE= {ISISV},
+YEAR= {2020}, 
+MONTH= {jun},
+HAL_ID= {hal-02882043}, 
+HAL_VERSION= {v1}}
 
 ,
-@techreport{DBLP:journals/corr/abs-2001-06570, author= {Matej Ulicny and
-               Vladimir A. Krylov and
-               Rozenn Dahyot}, title= {Harmonic Convolutional Networks based on Discrete Cosine Transform}, journal= {CoRR}, volume= {abs/2001.06570}, year= {2020}, url= {https://arxiv.org/abs/2001.06570}, archivePrefix= {arXiv}, eprint= {2001.06570}, timestamp= {Fri, 24 Jan 2020 15:00:57 +0100}, biburl= {https://dblp.org/rec/journals/corr/abs-2001-06570.bib}, bibsource= {dblp computer science bibliography, https://dblp.org}}
+@techreport{DBLP:journals/corr/abs-2001-06570, 
+author= {Matej Ulicny and Vladimir A. Krylov and Rozenn Dahyot}, 
+title= {Harmonic Convolutional Networks based on Discrete Cosine Transform}, 
+journal= {CoRR},
+abstract={Convolutional neural networks (CNNs) learn filters in order to capture local correlation patterns in feature space. We propose to learn these filters as combinations of preset spectral filters defined by the Discrete Cosine Transform (DCT). Our proposed DCT-based harmonic blocks replace conventional convolutional layers to produce partially or fully harmonic versions of new or existing CNN architectures. Using DCT energy compaction properties, we demonstrate how the harmonic networks can be efficiently compressed by truncating high-frequency information in harmonic blocks thanks to the redundancies in the spectral domain. We report extensive experimental validation demonstrating benefits of the introduction of harmonic blocks into state-of-the-art CNN models in image classification, object detection and semantic segmentation applications.},
+volume= {abs/2001.06570}, 
+year= {2020}, 
+url= {https://arxiv.org/pdf/2001.06570.pdf}, 
+archivePrefix= {arXiv}, eprint= {2001.06570}, 
+timestamp= {Fri, 24 Jan 2020 15:00:57 +0100}, 
+biburl= {https://dblp.org/rec/journals/corr/abs-2001-06570.bib},
+bibsource= {dblp computer science bibliography, https://dblp.org}}
 
 ,
-@article{Smile2020, doi= {10.3390/rs12172719}, url= {https://doi.org/10.3390/rs12172719}, year= {2020}, month= {August}, publisher= {{MDPI} {AG}}, volume= {12}, number= {17}, pages= {2719}, author= {C.-J. Liu and V. A. Krylov and P. Kane and G. Kavanagh and R. Dahyot}, title= {IM2ELEVATION: Building Height Estimation from Single-View Aerial Imagery}, journal= {Remote Sensing}}
-
+@article{Smile2020, 
+note={Github: https://github.com/speed8928/IMELE},
+abstract={Estimation of the Digital Surface Model (DSM) and building heights from single-view aerial imagery is a challenging inherently ill-posed problem that we address in this paper by resorting to machine learning. We propose an end-to-end trainable convolutional-deconvolutional deep neural network architecture that enables learning mapping from a single aerial imagery to a DSM for analysis of urban scenes. We perform multisensor fusion of aerial optical and aerial light detection and ranging (Lidar) data to prepare the training data for our pipeline. The dataset quality is key to successful estimation performance. Typically, a substantial amount of misregistration artifacts are present due to georeferencing/projection errors, sensor calibration inaccuracies, and scene changes between acquisitions. To overcome these issues, we propose a registration procedure to improve Lidar and optical data alignment that relies on Mutual Information, followed by Hough transform-based validation step to adjust misregistered image patches. We validate our building height estimation model on a high-resolution dataset captured over central Dublin, Ireland: Lidar point cloud of 2015 and optical aerial images from 2017. These data allow us to validate the proposed registration procedure and perform 3D model reconstruction from single-view aerial imagery. We also report state-of-the-art performance of our proposed architecture on several popular DSM estimation datasets},
+doi= {10.3390/rs12172719}, 
+url= {https://www.mdpi.com/2072-4292/12/17/2719/pdf}, 
+year= {2020}, 
+month= {August}, 
+publisher= {{MDPI} {AG}}, 
+volume= {12}, 
+number= {17}, 
+pages= {2719},
+author= {C.-J. Liu and V. A. Krylov and P. Kane and G. Kavanagh and R. Dahyot}, 
+title= {IM2ELEVATION: Building Height Estimation from Single-View Aerial Imagery}, 
+journal= {Remote Sensing}}
 ,
+
 @inproceedings{10.1145/3424636.3426904, 
 author= {Carrigan, Emma and Zibrek, Katja and Dahyot, Rozenn and McDonnell, Rachel}, 
 title= {Investigating Perceptually Based Models to Predict Importance of Facial Blendshapes}, 
@@ -36,7 +77,8 @@ year= {2020},
  isbn= {9781450381710}, 
  publisher= {Association for Computing Machinery},
  address= {New York, NY, USA},
- url= {https://roznn.github.io/facial-blendshapes/}, 
+ url= {https://roznn.github.io/facial-blendshapes/MIG2020.pdf}, 
+ note={Github: https://github.com/Roznn/facial-blendshapes},
  doi= {10.1145/3424636.3426904}, 
  abstract= {Blendshape facial rigs are used extensively in the industry for facial 
  animation of virtual humans. However, storing and manipulating large numbers of facial 
