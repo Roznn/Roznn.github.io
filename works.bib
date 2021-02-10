@@ -1159,37 +1159,144 @@ author= {D. Kim and  J. Ruttle and R. Dahyot},
 booktitle= {IEEE International Conference on Acoustics Speech and Signal Processing (ICASSP 2010) }, 
 title= {3D shape estimation from silhouettes using Mean-shift}, 
 year= {2010}, month= {March}, volume= {}, number= {}, pages= {1430 -1433}, keywords= {},
- doi= {http://doi.org/10.1109/ICASSP.2010.5495474}, 
+ doi= {10.1109/ICASSP.2010.5495474}, 
+ abstract={In this article, a novel method to accurately estimate 3D surface of objects of interest is proposed. 
+ Each ray projected from 2D image plane to 3D space is modelled with the Gaussian kernel function. 
+ Then a mean shift algorithm with an annealing scheme is used to find maximums of the probability density function and recovers the 3D surface. 
+ Experimental results show that our method is more accurate to estimate 3D surface than the Radon transform-based approach.},
  ISSN= {1520-6149}}
 
 ,
-@inbook{LCPC2010, Chapter= {D\'{e}tection et Reconnaissance de la signalisation verticale par analyse d'images}, author= {P. Charbonnier and R. Dahyot and T. Vik and F. Heitz}, title= {Detection et reconnaissance de la signalisation verticale par analyse d’images (Ed: P. Foucher)}, publisher= {Etudes et Recherches des laboratoires des Ponts et Chaussées, CR53 ( ISBN 978-2-7208-2578-1)}, month= {July}, year= {2010}, }
+@inbook{LCPC2010, 
+Chapter= {D\'{e}tection et Reconnaissance de la signalisation verticale par analyse d'images}, 
+author= {P. Charbonnier and R. Dahyot and T. Vik and F. Heitz},
+ title= {Detection et reconnaissance de la signalisation verticale par analyse d’images (Ed: P. Foucher)},
+ publisher= {Etudes et Recherches des laboratoires des Ponts et Chaussées, CR53 ( ISBN 978-2-7208-2578-1)},
+ month= {July}, year= {2010}, }
 ,
-@inproceedings{Direkoglu2010, title= {Skeleton Extraction via Anisotropic Heat Flow}, author= {Direkoglu, Cem and Dahyot, Rozenn and Manzke, Michael}, year= {2010}, pages= {61.1--61.11}, booktitle= {Proceedings of the British Machine Vision Conference}, publisher= {BMVA Press}, editors= {Labrosse, Fr\'ed\'eric and Zwiggelaar, Reyer and Liu, Yonghuai and Tiddeman, Bernie}, isbn= {1-901725-40-5}, doi= {http://doi.org/10.5244/C.24.61}}
+@inproceedings{Direkoglu2010,
+ title= {Skeleton Extraction via Anisotropic Heat Flow},
+ author= {Direkoglu, Cem and Dahyot, Rozenn and Manzke, Michael}, 
+ year= {2010}, pages= {61.1--61.11},
+ booktitle= {Proceedings of the British Machine Vision Conference},
+ publisher= {BMVA Press},
+ editors= {Labrosse, Fr\'ed\'eric and Zwiggelaar, Reyer and Liu, Yonghuai and Tiddeman, Bernie}, isbn= {1-901725-40-5},
+ url={http://www.bmva.org/bmvc/2010/conference/paper61/paper61.pdf},
+ abstract={We introduce a novel skeleton extraction algorithm in binary and gray-scale images,
+based on the anisotropic heat diffusion analogy. We propose to diffuse image in the dominance of direction normal to the feature boundaries and also allow tangential diffusion
+to contribute slightly. The proposed anisotropic diffusion provides a high quality medial function in the image, since it removes noise and preserves prominent curvatures
+of the shape along the level-sets (skeleton locations). Then the skeleton strength map,
+which provides the likelihood to be a skeleton point, is obtained by computing the mean
+curvature of level-sets. The overall process is completed by non-maxima suppression
+and hysteresis thresholding to obtain thin and binary skeleton. Results indicate that this
+approach has advantages in handling noise in the image and in obtaining smooth shape
+skeleton because of the directional averaging inherent of our new anisotropic heat flow.},
+ doi= {10.5244/C.24.61}}
 
 ,
-@inproceedings{Ruttle2010CVMP, title= {Smooth Kernel Density Estimate for Multiple View Reconstruction}, author= {J. Ruttle and M. Manzke and R. Dahyot}, booktitle= {proceedings of The 7th European Conference for Visual Media Production, CVMP 2010}, location= {London UK}, month= {17 - 18 November}, pages= {74 -81}, year= {2010}, doi= {http://doi.org/10.1109/CVMP.2010.17}}
+@inproceedings{Ruttle2010CVMP, 
+title= {Smooth Kernel Density Estimate for Multiple View Reconstruction}, 
+author= {J. Ruttle and M. Manzke and R. Dahyot},
+ booktitle= {proceedings of The 7th European Conference for Visual Media Production, CVMP 2010}, 
+ location= {London UK}, month= {17 - 18 November}, 
+ pages= {74 -81}, 
+ year= {2010},
+ abstract={We present a statistical framework to merge the information from silhouettes segmented in multiple view images to infer the 3D shape of an object. 
+ The approach is generalising the robust but discrete modelling of the visual hull by using the concept of averaged likelihoods.
+ One resulting advantage of our framework is that the objective function is continuous and therefore an iterative gradient ascent algorithm
+ can be defined to efficiently search the space. Moreover this results in a method which is less memory demanding and one that is very suitable 
+ to a parallel processing architecture.
+ Experimental results shows that this approach is efficient for getting a robust initial guess to the 3D shape of an object in view.},
+ doi= {10.1109/CVMP.2010.17}}
 
 ,
-@inproceedings{Arellano2010, title= {Stereo Images for 3D Face Applications: A Literature Review}, author= {C. Arellano and R. Dahyot}, booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2010)}, address= {Limerick Ireland}, month= {September}, year= {2010}, url= {http://www.cambridgescholars.com/14th-international-machine-vision-and-image-processing-conference-21}}
+@inproceedings{Arellano2010, 
+title= {Stereo Images for 3D Face Applications: A Literature Review}, 
+author= {C. Arellano and R. Dahyot}, 
+booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2010)}, 
+address= {Limerick Ireland}, 
+month= {September}, year= {2010}, 
+url= {http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.394.4985&rep=rep1&type=pdf}}
 
 ,
-@inproceedings{Kim09IMVIP, title= {3D Head Reconstruction using Multi-camera Stream}, author= {D. Kim and R. Dahyot}, booktitle= {International Machine Vision and Image Processing conference (IMVIP 2009)}, pages= {156-161}, address= {Dublin, Ireland}, month= {September}, year= {2009}, url= {https://ieeexplore.ieee.org/document/5319298/}, doi= {https://doi.org/10.1109/IMVIP.2009.35}}
+@inproceedings{Kim09IMVIP,
+ title= {3D Head Reconstruction using Multi-camera Stream},
+ author= {D. Kim and R. Dahyot},
+ booktitle= {International Machine Vision and Image Processing conference (IMVIP 2009)}, 
+ pages= {156-161}, address= {Dublin, Ireland}, month= {September},
+ year= {2009},
+ abstract={Given information from many cameras, one can hope to get a complete 3D representation of an object. 
+ Pintavirooj and Sangworasil exploit this idea and present a system that records sequentially images from multiple view points
+ to reconstruct a 3D shape of a static object of interest [1]. For instance, using a 60 angle of view on the image, 
+ they manage to get its accurate 3D reconstruction [1]. Unfortunately, when considering application such as video surveillance,
+ it is not reasonable to expect that 60 cameras will give simultaneous images of a person of interest. However, we can expect that 
+ the person will move over time and show sequentially different poses of her/his head to at least one or a few cameras.
+ This article proposes a technique for recovering an accurate 3D shape by combining views recorded at different times.},
+ url= {https://ieeexplore.ieee.org/document/5319298/}, 
+ doi= {10.1109/IMVIP.2009.35}}
 
 ,
-@inproceedings{Ruttle09Imvip, title= {Estimating 3D Scene Flow from Multiple 2D Optical Flows}, author= {J. Ruttle and M. Manzke and R. Dahyot}, booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2009)}, pages= {6-11}, address= {Dublin, Ireland}, month= {September}, year= {2009}, url= {https://ieeexplore.ieee.org/document/5319350/}, doi= {https://doi.org/10.1109/IMVIP.2009.8}}
+@inproceedings{Ruttle09Imvip, 
+title= {Estimating 3D Scene Flow from Multiple 2D Optical Flows}, 
+author= {J. Ruttle and M. Manzke and R. Dahyot}, 
+booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2009)}, 
+pages= {6-11}, address= {Dublin, Ireland}, month= {September},
+year= {2009}, 
+abstract={Scene flow is the motion of the surface points in the 3D world. For a camera,
+ it is seen as a 2D optical flow in the image plane. Knowing the scene flow can be very useful as it gives an idea of 
+ the surface geometry of the objects in the scene and how those objects are moving. Four methods for calculating the scene 
+ flow given multiple optical flows have been explored and detailed in this paper along with the basic mathematics surrounding 
+ multi-view geometry. It was found that given multiple optical flows
+ it is possible to estimate the scene flow to different levels of detail depending on the level of prior information present.},
+url= {https://ieeexplore.ieee.org/document/5319350/},
+ doi= {10.1109/IMVIP.2009.8}}
 
 ,
-@techreport{Dahyot09TR, title= {Mean-shift for Statistical Hough Transform}, author= {R. Dahyot}, number= {01/09}, institution= {School of Computer Science and Statistics, Trinity College Dublin}, month= {April}, year= {2009}, url= {https://www.scss.tcd.ie/disciplines/statistics/tech-reports/09-01.pdf}}
+@techreport{Dahyot09TR, 
+title= {Mean-shift for Statistical Hough Transform},
+ author= {R. Dahyot},
+ number= {01/09}, 
+ institution= {School of Computer Science and Statistics, Trinity College Dublin},
+ month= {April}, 
+ year= {2009},
+ url= {https://www.scss.tcd.ie/disciplines/statistics/tech-reports/09-01.pdf}}
+
 
 ,
-@techreport{Dahyot09TR, title= {Mean-shift for Statistical Hough Transform}, author= {R. Dahyot}, number= {01/09}, institution= {School of Computer Science and Statistics, Trinity College Dublin}, month= {April}, year= {2009}, url= {https://www.scss.tcd.ie/disciplines/statistics/tech-reports/09-01.pdf}}
+@inproceedings{Zdziarski09Imvip,
+ title= {Robust Panning Analysis for Slideshow Detection in Video Databases}, 
+ author= {Z. Zdziarski and R. Dahyot}, 
+ booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2009)}, 
+ pages= {89-93}, 
+ address= {Dublin, Ireland}, 
+ month= {September}, year= {2009}, 
+ abstract={We present an algorithm for slideshow detection in video databases such as YouTube or Blip.TV.
+ Our solution is based around feature tracking to extract movement between sequentially captured frames.
+ This movement is then analysed through the use of the Hough transform and compared against behaviour commonly exhibited 
+ by slideshows: still and panning static images.
+ We show experimentally the effectiveness of this novel idea and approach.},
+ url= {https://ieeexplore.ieee.org/document/5319322/},
+ doi= {10.1109/IMVIP.2009.23}}
 
 ,
-@inproceedings{Zdziarski09Imvip, title= {Robust Panning Analysis for Slideshow Detection in Video Databases}, author= {Z. Zdziarski and R. Dahyot}, booktitle= {International Machine Vision and Image Processing Conference (IMVIP 2009)}, pages= {89-93}, address= {Dublin, Ireland}, month= {September}, year= {2009}, url= {https://ieeexplore.ieee.org/document/5319322/}, doi= {https://doi.org/10.1109/IMVIP.2009.23}}
-
-,
-@article{Dahyot08pami, author= {R. Dahyot}, journal= {IEEE Transactions on Pattern Analysis and Machine Intelligence}, title= {Statistical Hough Transform}, year= {2009}, volume= {31}, number= {8}, pages= {1502-1509}, keywords= {Hough transforms;object detection;statistical analysis;continuous kernel estimate;image processing;line detection;spatial domain coordinate;statistical Hough transform;Hough transform;Image Processing and Computer Vision;Radon transform;Transform methods;kernel probability density function;line detection.;uncertainty}, doi= {https://doi.org/10.1109/TPAMI.2008.288}, ISSN= {0162-8828}, month= {Aug}}
+@article{Dahyot08pami, 
+author= {R. Dahyot}, 
+journal= {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ title= {Statistical Hough Transform},
+ year= {2009}, volume= {31}, number= {8},
+ pages= {1502-1509}, 
+ note={Github: https://github.com/Roznn/Statistical-Hough-Transform},
+ url={http://www.tara.tcd.ie/bitstream/handle/2262/31106/Statistical%20Hough%20Transform.pdf},
+ abstract={The standard Hough transform is a popular method in image processing and is traditionally estimated using histograms.
+ Densities modeled with histograms in high dimensional space and/or with few observations, can be very sparse and highly demanding in memory.
+ In this paper, we propose first to extend the formulation to continuous kernel estimates. Second, when dependencies in between variables are well
+ taken into account, the estimated density is also robust to noise and insensitive to the choice of the origin of the spatial coordinates.
+ Finally, our new statistical framework is unsupervised (all needed parameters are automatically estimated) and flexible
+ (priors can easily be attached to the observations). We show experimentally that our new modeling encodes better the alignment content of images.},
+ keywords= {Hough transforms;object detection;statistical analysis;continuous kernel estimate;image processing;line detection;spatial domain coordinate;statistical Hough transform;Hough transform;Image Processing and Computer Vision;Radon transform;Transform methods;kernel probability density function;line detection.;uncertainty},
+ doi= {https://doi.org/10.1109/TPAMI.2008.288},
+ eprint={http://www.tara.tcd.ie/handle/2262/31106},
+ ISSN= {0162-8828}, month= {Aug}}
 
 ,
 @inproceedings{Ruttle09Siggraph, author= {J. Ruttle and M. Manzke and M. Prazak and R. Dahyot}, title= {Synchronized real-time multi-sensor motion capture system}, booktitle= {SIGGRAPH ASIA '09: ACM SIGGRAPH ASIA 2009 Posters}, year= {2009}, pages= {1--1}, location= {Yokohama, Japan}, doi= {http://doi.acm.org/10.1145/1666778.1666828}, publisher= {ACM}, address= {New York, NY, USA}}
