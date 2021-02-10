@@ -1382,23 +1382,68 @@ journal= {EURASIP Journal on Image and Video Processing},
  eprint= {https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2008/139429}}
 
 ,
-@Inbook{Wilson2008, author= {Wilson, Simon P.
-and Dahyot, Rozenn
-and Cunningham, P{\'a}draig}, chapter= {Introduction to Bayesian Methods and Decision Theory}, title= {Machine Learning Techniques for Multimedia: Case Studies on Organization and Retrieval }, year= {2008}, publisher= {Springer Berlin Heidelberg (Eds: Cord, Matthieu
-and Cunningham, P{\'a}draig)}, address= {Berlin, Heidelberg}, pages= {3--19}, abstract= {Bayesian methods are a class of statistical methods that have some appealing properties for solving problems in machine learning, particularly when the process being modelled has uncertain or random aspects. In this chapter we look at the mathematical and philosophical basis for Bayesian methods and how they relate to machine learning problems in multimedia. We also discuss the notion of decision theory, for making decisions under uncertainty, that is closely related to Bayesian methods. The numerical methods needed to implement Bayesian solutions are also discussed. Two specific applications of the Bayesian approach that are often used in machine learning -- na{\"i}ve Bayes and Bayesian networks -- are then described in more detail.}, isbn= {978-3-540-75171-7}, doi= {https://doi.org/10.1007/978-3-540-75171-7{\_1}}, url= {https://doi.org/10.1007/978-3-540-75171-7_1}}
+@Inbook{Wilson2008, author= {Wilson, Simon P. and Dahyot, Rozenn
+and Cunningham, P{\'a}draig}, 
+chapter= {Introduction to Bayesian Methods and Decision Theory}, 
+title= {Machine Learning Techniques for Multimedia: Case Studies on Organization and Retrieval },
+ year= {2008}, publisher= {Springer Berlin Heidelberg (Eds: Cord, Matthieu
+and Cunningham, P{\'a}draig)}, 
+address= {Berlin, Heidelberg}, pages= {3--19}, 
+abstract= {Bayesian methods are a class of statistical methods that have some appealing properties for solving problems in machine learning, 
+particularly when the process being modelled has uncertain or random aspects. In this chapter we look at the mathematical and philosophical basis
+ for Bayesian methods and how they relate to machine learning problems in multimedia. We also discuss the notion of decision theory, for making decisions 
+ under uncertainty, that is closely related to Bayesian methods. The numerical methods needed to implement Bayesian solutions are also discussed.
+ Two specific applications of the Bayesian approach that are often used in machine learning -- na{\"i}ve Bayes and Bayesian networks -- are then described
+ in more detail.}, isbn= {978-3-540-75171-7}, 
+ doi= {10.1007/978-3-540-75171-7{\_1}}, 
+ url= {https://doi.org/10.1007/978-3-540-75171-7_1}}
 
 ,
 @Inbook{DahyotChapter2008, author= {Dahyot, Rozenn
 and Piti{\'e}, Fran{\c{c}}ois
 and Lennon, Daire
 and Harte, Naomi
-and Kokaram, Anil}, chapter= {Action Recognition in Multimedia Streams}, title= {Multimodal Processing and Interaction: Audio, Video, Text}, year= {2008}, publisher= {Springer US (Eds: Maragos, Petros and Potamianos, Alexandros and Gros, Patrick)}, address= {Boston, MA}, isbn= {978-0-387-76316-3}, doi= {https://doi.org/10.1007/978-0-387-76316-3{\_}5}, url= {https://doi.org/10.1007/978-0-387-76316-3_5}}
+and Kokaram, Anil},
+ chapter= {Action Recognition in Multimedia Streams},
+ title= {Multimodal Processing and Interaction: Audio, Video, Text}, 
+ year= {2008}, 
+ publisher= {Springer US (Eds: Maragos, Petros and Potamianos, Alexandros and Gros, Patrick)}, address= {Boston, MA}, 
+ isbn= {978-0-387-76316-3},
+ doi= {10.1007/978-0-387-76316-3{\_}5}, 
+ url= {https://doi.org/10.1007/978-0-387-76316-3_5}}
 
 ,
-@Inbook{PitieCRC2008, title= {Single-Sensor Imaging: Methods and Applications for Digital Cameras}, chapter= {Enhancement of Digital Photographs Using Color Transfer Techniques}, author= {F. Pitie and A. Kokaram and R. Dahyot}, publisher= {CRC Press Image Processing Series, Rastislav Lukac (Ed.) ISBN: 9781420054521}, month= {October}, year= {2008}, doi= {https://doi.org/10.1201/9781420054538.ch11}}
+@Inbook{PitieCRC2008, 
+title= {Single-Sensor Imaging: Methods and Applications for Digital Cameras}, 
+chapter= {Enhancement of Digital Photographs Using Color Transfer Techniques},
+ author= {F. Pitie and A. Kokaram and R. Dahyot}, 
+ publisher= {CRC Press Image Processing Series, Rastislav Lukac (Ed.) ISBN: 9781420054521}, 
+ month= {October}, 
+ year= {2008}, 
+ note={Github: https://github.com/frcs/colour-transfer },
+ url={https://github.com/frcs/colour-transfer/blob/master/publications/pitie08bookchapter.pdf},
+ doi= {10.1201/9781420054538.ch11}}
 
 ,
-@article{Pitie_CVIU2007, title= {Automated colour grading using colour distribution transfer}, journal= {Computer Vision and Image Understanding}, volume= {107}, number= {1}, pages= {123 - 137}, year= {2007}, note= {Special issue on color image processing}, issn= {1077-3142}, doi= {https://doi.org/10.1016/j.cviu.2006.11.011}, url= {http://www.sciencedirect.com/science/article/pii/S1077314206002189}, author= {François Pitié and Anil C. Kokaram and Rozenn Dahyot}, keywords= {Colour grading, Colour transfer, Re-colouring, Distribution transfer}}
+@article{Pitie_CVIU2007, 
+title= {Automated colour grading using colour distribution transfer}, 
+journal= {Computer Vision and Image Understanding},
+ volume= {107}, number= {1}, pages= {123 - 137},
+ year= {2007}, note= {Special issue on color image processing},
+ issn= {1077-3142}, 
+ doi= {10.1016/j.cviu.2006.11.011}, 
+  note={Github: https://github.com/frcs/colour-transfer },
+ abstract={This article proposes an original method for grading the colours between different images or shots.
+ The first stage of the method is to find a one-to-one colour mapping that transfers the palette of an example target picture to the original picture.
+ This is performed using an original and parameter free algorithm that is able to transform any N-dimensional probability density function into another one.
+ The proposed algorithm is iterative, non-linear and has a low computational cost. Applying the colour mapping on the original picture allows reproducing
+ the same ‘feel’ as the target picture, but can also increase the graininess of the original picture, especially if the colour dynamic of the two pictures
+ is very different. The second stage of the method is to reduce
+ this grain artefact through an efficient post-processing algorithm that intends to preserve the gradient field of the original picture.},
+ url={https://github.com/frcs/colour-transfer/blob/master/publications/pitie07cviu.pdf},
+ eprint= {http://www.sciencedirect.com/science/article/pii/S1077314206002189},
+ author= {François Pitié and Anil C. Kokaram and Rozenn Dahyot}, 
+ keywords= {Colour grading, Colour transfer, Re-colouring, Distribution transfer}}
 
 ,
 @techreport{Dahyot07, title= {Statistical Hough Transform}, author= {R. Dahyot}, number= {TCD-CS-2007-37}, institution= {School of Computer Science and Statistics, Trinity College Dublin}, month= {July}, year= {2007}, url= {https://www.cs.tcd.ie/publications/tech-reports/reports.07/TCD-CS-2007-37.pdf}}
