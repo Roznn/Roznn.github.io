@@ -962,22 +962,91 @@ note= {Depth Image Analysis}, issn= {0167-8655},
  keywords= {3D reconstruction from multiple view images, Shape-from-silhouettes, Kernel density estimates, K-nearest neighbours, Principal component analysis}}
 
 ,
-@article{PR2012Dahyot, title= {Generalised relaxed Radon transform (GR2T) for robust inference}, journal= {Pattern Recognition}, volume= {46}, number= {3}, pages= {788 - 794}, year= {2013}, issn= {0031-3203}, doi= {https://doi.org/10.1016/j.patcog.2012.09.026}, url= {http://www.sciencedirect.com/science/article/pii/S0031320312004347}, author= {Rozenn Dahyot and Jonathan Ruttle}, keywords= {Generalised Radon transform, Hough transform, Robust inference, M-estimator, Generalised projection based M-estimator}}
+@article{PR2012Dahyot,
+ title= {Generalised relaxed Radon transform (GR2T) for robust inference}, 
+ journal= {Pattern Recognition}, 
+ volume= {46}, number= {3},
+ pages= {788 - 794}, 
+ year= {2013}, 
+ issn= {0031-3203}, 
+ doi= {10.1016/j.patcog.2012.09.026}, 
+ abstract={This paper introduces the generalised relaxed Radon transform (GR2T) as an extension to the generalised radon transform (GRT) .
+ This new modelling allows us to define a new framework for robust inference. The resulting objective functions are probability density functions 
+ that can be chosen differentiable and that can be optimised using gradient methods. One of this cost function is already widely used in the 
+ forms of the Hough transform and generalised projection based M-estimator, and it is interpreted as a conditional density function on the latent variables
+ of interest. In addition the joint density function of the latent variables is also proposed as a cost function and it has the advantage of including
+ a prior about the latent variable. Several applications, including lines detection in images and volume reconstruction 
+ from silhouettes captured from multiple views, are presented to underline the versatility of this framework.},
+ url= {http://www.sciencedirect.com/science/article/pii/S0031320312004347}, 
+ author= {Rozenn Dahyot and Jonathan Ruttle}, 
+ keywords= {Generalised Radon transform, Hough transform, Robust inference, M-estimator, Generalised projection based M-estimator}}
+
 
 ,
-@inproceedings{Zdziarski:2013:ACM:SAP, author= {Zdziarski, Z. and Dahyot, R.}, title= {On Creating a 2D \& 3D Visual Saliency Dataset}, booktitle= {Proceedings of the ACM Symposium on Applied Perception}, series= {SAP '13}, year= {2013}, isbn= {978-1-4503-2262-1}, location= {Dublin, Ireland}, pages= {132--132}, numpages= {1}, url= {http://doi.acm.org/10.1145/2492494.2501889}, doi= {http://doi.org/10.1145/2492494.2501889}, acmid= {2501889}, publisher= {ACM}, address= {New York, NY, USA}}
+@inproceedings{Zdziarski:2013:ACM:SAP, 
+author= {Zdziarski, Z. and Dahyot, R.},
+ title= {On Creating a 2D \& 3D Visual Saliency Dataset}, 
+ booktitle= {Proceedings of the ACM Symposium on Applied Perception}, 
+ series= {SAP '13}, year= {2013}, isbn= {978-1-4503-2262-1}, 
+ location= {Dublin, Ireland}, pages= {132--132}, numpages= {1}, 
+ url= {http://doi.acm.org/10.1145/2492494.2501889}, 
+ doi= {http://doi.org/10.1145/2492494.2501889}, 
+ acmid= {2501889}, 
+ publisher= {ACM},
+ address= {New York, NY, USA}}
+,
+@inproceedings{CVMP2013Arellano, 
+author= {C. Arellano and R. Dahyot}, 
+title= {Robust Bayesian Fitting of 3D Morphable Model}, 
+booktitle= {Proceedings of the 10th European Conference on Visual Media Production},
+ series= {CVMP '13}, year= {2013}, 
+ isbn= {978-1-4503-2589-9}, location= {London, United Kingdom}, 
+ pages= {9:1--9:10}, articleno= {9}, numpages= {10}, 
+ url= {http://doi.acm.org/10.1145/2534008.2534013},
+ doi= {10.1145/2534008.2534013}, 
+ abstract={We propose to fit automatically a 3D morphable face model to a point cloud captured with a RGB-D sensor. 
+ Both data sets, the shape model and the target point cloud are modelled as two probability density functions (pdfs). 
+ Rigid registration (rotation and translation) and reconstruction on the model is performed by minimising the Euclidean distance 
+ between these two pdfs augmented with a multivariate Gaussian prior. Our resulting process is robust and it does not require point to point correspondence.
+ Experimental results on synthetic and real data illustrates the performance of this novel approach.},
+ acmid= {2534013}, publisher= {ACM}, address= {New York, NY, USA}, 
+ keywords= {3D face reconstruction, L2E, RGB-D sensor, computer vision, divergence, morphable models, registration, shape fitting}}
 
 ,
-@inproceedings{CVMP2013Arellano, author= {C. Arellano and R. Dahyot}, title= {Robust Bayesian Fitting of 3D Morphable Model}, booktitle= {Proceedings of the 10th European Conference on Visual Media Production}, series= {CVMP '13}, year= {2013}, isbn= {978-1-4503-2589-9}, location= {London, United Kingdom}, pages= {9:1--9:10}, articleno= {9}, numpages= {10}, url= {http://doi.acm.org/10.1145/2534008.2534013}, doi= {http://doi.org/10.1145/2534008.2534013}, acmid= {2534013}, publisher= {ACM}, address= {New York, NY, USA}, keywords= {3D face reconstruction, L2E, RGB-D sensor, computer vision, divergence, morphable models, registration, shape fitting}}
-
-,
-@InProceedings{KimMuscle2011, author= {Kim, Donghoon
-and Dahyot, Rozenn}, editor= {Salerno, Emanuele
+@InProceedings{KimMuscle2011, 
+author= {Kim, Donghoon
+and Dahyot, Rozenn}, 
+editor= {Salerno, Emanuele
 and {\c{C}}etin, A. Enis
-and Salvetti, Ovidio}, title= {Bayesian Shape from Silhouettes}, booktitle= {Computational Intelligence for Multimedia Understanding}, year= {2012}, publisher= {Springer Berlin Heidelberg}, address= {Berlin, Heidelberg}, pages= {78--89}, abstract= {This paper extends the likelihood kernel density estimate of the visual hull proposed by Kim et al [1] by introducing a prior. Inference of the shape is performed using a meanshift algorithm over a posterior kernel density function that is refined iteratively using both a multiresolution framework (to avoid local maxima) and using KNN for selecting the best reconstruction basis at each iteration. This approach allows us to recover concave areas of the shape that are usually lost when estimating the visual hull.}, isbn= {978-3-642-32436-9}, doi= {http://doi.org/10.1007/978-3-642-32436-9}}
+and Salvetti, Ovidio},
+ title= {Bayesian Shape from Silhouettes}, 
+ booktitle= {Computational Intelligence for Multimedia Understanding}, 
+ year= {2012}, publisher= {Springer Berlin Heidelberg}, address= {Berlin, Heidelberg},
+ pages= {78--89},
+ abstract= {This paper extends the likelihood kernel density estimate of the visual hull proposed by Kim et al [1] by introducing a prior.
+ Inference of the shape is performed using a meanshift algorithm over a posterior kernel density function that is refined iteratively using
+ both a multiresolution framework (to avoid local maxima) and using KNN for selecting the best reconstruction basis at each iteration. 
+ This approach allows us to recover concave areas of the shape that are usually lost when estimating the visual hull.}, 
+ isbn= {978-3-642-32436-9}, 
+ doi= {10.1007/978-3-642-32436-9}}
 
 ,
-@INPROCEEDINGS{6334154, author= {J. {Ruttle} and C. {Arellano} and R. {Dahyot}}, booktitle= {2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)}, title= {Extrinsic camera parameters estimation for shape-from-depths}, year= {2012}, volume= {}, number= {}, pages= {1985-1989}, keywords= {calibration;cameras;correlation methods;image reconstruction;parameter estimation;extrinsic camera parameter estimation;shape-from-depths;3D reconstruction;multiple view images;standard camera calibration techniques;kinect depth camera;recorded depth images;Cameras;Calibration;Cost function;Shape;Probability density function;Computational modeling;Correlation;Shape-from-Silhouettes (SfS);Shape-from-Depths (SfD);Multiview geometry}, ISSN= {2219-5491}, month= {Aug}}
+@INPROCEEDINGS{6334154, 
+author= {J. {Ruttle} and C. {Arellano} and R. {Dahyot}}, 
+booktitle= {2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)}, 
+title= {Extrinsic camera parameters estimation for shape-from-depths}, 
+url={https://www.eurasip.org/Proceedings/Eusipco/Eusipco2012/Conference/papers/1569583097.pdf},
+eprint={https://ieeexplore.ieee.org/document/6334154},
+abstract={3D reconstruction from multiple view images requires that
+camera parameters are very accurately known and standard
+camera calibration techniques [1] often fail to provide the required level of accuracy for the extrinsic camera parameters.
+Using the Kinect depth camera, we propose to estimate camera parameters by minimising the cross correlation between
+density functions modelled for each recorded depth images.
+We illustrate experimentally how this improves the modelling
+for estimating 3D shape from Depths.},
+year= {2012}, volume= {}, number= {}, pages= {1985-1989}, 
+keywords= {calibration;cameras;correlation methods;image reconstruction;parameter estimation;extrinsic camera parameter estimation;shape-from-depths;3D reconstruction;multiple view images;standard camera calibration techniques;kinect depth camera;recorded depth images;Cameras;Calibration;Cost function;Shape;Probability density function;Computational modeling;Correlation;Shape-from-Silhouettes (SfS);Shape-from-Depths (SfD);Multiview geometry},
+ ISSN= {2219-5491}, month= {Aug}}
 
 ,
 @Inproceedings{ISSC2012Ziggy, title= {Feature Selection Using Visual Saliency for Content-Based Image Retrieval}, author= {Z. Zdziarski and R. Dahyot}, booktitle= {23nd IET Irish Signals and Systems Conference}, month= {June, 28-29}, year= {2012}, address= {Maynooth, Ireland}, doi= {https://doi.org/10.1049/ic.2012.0194}, url= {https://ieeexplore.ieee.org/document/6621173/}}
