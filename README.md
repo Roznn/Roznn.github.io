@@ -1,6 +1,6 @@
 # Roznn.github.io
 
-This repo has the file for my website  [https://roznn.github.io/](https://roznn.github.io/)
+This repo has the files for my website  [https://roznn.github.io/](https://roznn.github.io/)
 
 Using icons from [https://jpswalsh.github.io/academicons/](https://jpswalsh.github.io/academicons/)
 
