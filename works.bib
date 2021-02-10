@@ -1294,26 +1294,92 @@ journal= {IEEE Transactions on Pattern Analysis and Machine Intelligence},
  Finally, our new statistical framework is unsupervised (all needed parameters are automatically estimated) and flexible
  (priors can easily be attached to the observations). We show experimentally that our new modeling encodes better the alignment content of images.},
  keywords= {Hough transforms;object detection;statistical analysis;continuous kernel estimate;image processing;line detection;spatial domain coordinate;statistical Hough transform;Hough transform;Image Processing and Computer Vision;Radon transform;Transform methods;kernel probability density function;line detection.;uncertainty},
- doi= {https://doi.org/10.1109/TPAMI.2008.288},
+ doi= {10.1109/TPAMI.2008.288},
  eprint={http://www.tara.tcd.ie/handle/2262/31106},
  ISSN= {0162-8828}, month= {Aug}}
 
 ,
-@inproceedings{Ruttle09Siggraph, author= {J. Ruttle and M. Manzke and M. Prazak and R. Dahyot}, title= {Synchronized real-time multi-sensor motion capture system}, booktitle= {SIGGRAPH ASIA '09: ACM SIGGRAPH ASIA 2009 Posters}, year= {2009}, pages= {1--1}, location= {Yokohama, Japan}, doi= {http://doi.acm.org/10.1145/1666778.1666828}, publisher= {ACM}, address= {New York, NY, USA}}
+@inproceedings{Ruttle09Siggraph, 
+author= {J. Ruttle and M. Manzke and M. Prazak and R. Dahyot}, 
+title= {Synchronized real-time multi-sensor motion capture system},
+ booktitle= {SIGGRAPH ASIA '09: ACM SIGGRAPH ASIA 2009 Posters},
+ year= {2009}, pages= {1--1}, location= {Yokohama, Japan}, 
+ abstract={This work addresses the challenge of synchronizing multiple sources of visible and audible information from a variety of devices,
+ while capturing human motion in realtime. Video and audio data will be used to augment and enrich a motion capture database
+ that will be released to the research community. While other such augmented motion capture databases exist [Black and Sigal 2006], 
+ the goal of this work is to build on these previous works. Critical areas of improvement are in the synchronization between cameras 
+ and synchronization between devices. Adding an array of audio recording devices to the setup will greatly expand the research
+ potential of the database, and the positioning of the cameras will be varied to give greater flexibility. The augmented database will 
+ facilitate the testing and validation of human pose estimation and motion tracking techniques, among other applications. 
+ This sketch briefly describes some of the interesting
+ challenges faced in setting up the pipeline for capturing the synchronized data and the novel approaches proposed to solve them.},
+ doi= {10.1145/1666778.1666828}, 
+ publisher= {ACM}, address= {New York, NY, USA}}
 
 ,
-@inproceedings{KearneyAES08, title= {Audio-Visual Processing Tools for Auditory Scene Synthesis}, author= {G. Kearney and R. Dahyot and F. Boland}, booktitle= {Audio Engineering Society 134th Convention}, month= {May}, year= {2008}, url= {http://www.aes.org/e-lib/browse.cfm?elib=14495}}
+@inproceedings{KearneyAES08,
+ title= {Audio-Visual Processing Tools for Auditory Scene Synthesis}, 
+author= {G. Kearney and R. Dahyot and F. Boland}, 
+booktitle= {Audio Engineering Society 134th Convention}, 
+month= {May}, year= {2008}, 
+abstract={We present an integrated set of audio-visual tracking and synthesis tools to aid matching of the audio to the video position
+ in both horizontal and periphonic sound reinforcement systems. Compensation for screen size and loudspeaker layout for high definition formats 
+ is incorporated and the spatial localisation of the source is rendered using advanced spatialisation techniques. A subjective comparison 
+ of several original and enhanced film sequences using the Vector Base Amplitude Panning (VBAP) method is presented. The results show that
+ the encoding of non-contradictory audio-visual spatial information,
+ for presentation on different loudspeaker layouts significantly improves the naturalness of the listening/viewing experience.},
+url= {http://www.aes.org/e-lib/browse.cfm?elib=14495}}
 
 ,
-@inproceedings{Dahyoticpr08, title= {Bayesian Classification for the Statistical Hough Transform}, author= {R. Dahyot}, booktitle= {2008 19th International Conference on Pattern Recognition}, month= {December}, address= {Tampa, Florida}, year= {2008}, keywords= {Bayes methods;Hough transforms;Radon transforms;image classification;image segmentation;statistical analysis;2D accumulator histogram;Bayesian classification scheme;image space;inverse Radon transform;kernel mixture;statistical Hough transform;Bandwidth;Bayesian methods;Computer science;Discrete transforms;Educational institutions;Histograms;Image segmentation;Kernel;Robustness;Statistics}, pages= {1 -4}, doi= {https://doi.org/10.1109/ICPR.2008.4761109}, ISSN= {1051-4651}}
+@inproceedings{Dahyoticpr08,
+ title= {Bayesian Classification for the Statistical Hough Transform}, 
+ author= {R. Dahyot},
+ booktitle= {2008 19th International Conference on Pattern Recognition},
+ month= {December}, 
+ address= {Tampa, Florida}, 
+ year= {2008},
+ keywords= {Bayes methods;Hough transforms;Radon transforms;image classification;image segmentation;statistical analysis;2D accumulator histogram;Bayesian classification scheme;image space;inverse Radon transform;kernel mixture;statistical Hough transform;Bandwidth;Bayesian methods;Computer science;Discrete transforms;Educational institutions;Histograms;Image segmentation;Kernel;Robustness;Statistics}, 
+ pages= {1 -4}, 
+ abstract={We have introduced the statistical Hough transform that extends the standard Hough transform by using a kernel mixture 
+ as a robust alternative to the 2 dimensional accumulator histogram. This work develops further this framework by proposing a 
+ Bayesian classification scheme to associate the spatial coordinates (x, y) to one particular class defined in the Hough space. 
+ In a first step, we segment the Hough space into meaningful classes. Then using the inverse Radon transform,
+ we backproject the different classes into the image space. We illustrate our approach on a synthetic image and on real images.},
+ doi= {10.1109/ICPR.2008.4761109},
+ ISSN= {1051-4651}}
 
 ,
-@inproceedings{Donghoon08imvip, author= {D. Kim and R. Dahyot}, title= {Face components detection using SURF descriptor and SVMs}, booktitle= {International Machine Vision and Image Processing conference (IMVIP 2008)}, year= {2008}, doi= {https://doi.org/10.1109/IMVIP.2008.15}, url= {https://ieeexplore.ieee.org/document/4624384/}}
+@inproceedings{Donghoon08imvip, 
+author= {D. Kim and R. Dahyot},
+ title= {Face components detection using SURF descriptor and SVMs},
+ booktitle= {International Machine Vision and Image Processing conference (IMVIP 2008)},
+ year= {2008}, 
+ abstract={We present a feature-based method to classify salient points as belonging to objects in the face or background classes.
+ We use SURF local descriptors (speeded up robust features) to generate feature vectors and use SVMs (support vector machines) as classifiers. Our system consists of a two-layer hierarchy of SVMs classifiers. On the first layer, a single classifier checks whether feature vectors are from face images or not. On the second layer, component labeling is operated using each component classifier of eye, mouth, and nose. This approach has the advantage about operating time because windows scanning procedure is not needed. 
+ Finally, this system performs the procedure to apply geometrical constraints to labeled descriptors.
+ We show experimentally the efficiency of our approach.},
+ doi= {10.1109/IMVIP.2008.15}, 
+ url= {https://ieeexplore.ieee.org/document/4624384/}}
 
 ,
-@article{Dahyot08, author= {Dahyot, Rozenn
+@article{Dahyot08,
+ author= {Dahyot, Rozenn 
 and Vilari{\~{n}}o, Fernando
-and Lacey, Gerard}, title= {Improving the Quality of Color Colonoscopy Videos}, journal= {EURASIP Journal on Image and Video Processing}, year= {2008}, month= {Jan}, day= {22}, volume= {2008}, number= {1}, pages= {139429}, abstract= {Colonoscopy is currently one of the best methods to detect colorectal cancer. Nowadays, one of the widely used colonoscopes has a monochrome chipset recording successively at 60{\thinspace}Hz                                                                          and                                                                          components merged into one color video stream. Misalignments of the channels occur each time the camera moves, and this artefact impedes both online visual inspection by doctors and offline computer analysis of the image data. We propose to restore this artefact by first equalizing the color channels and then performing a robust camera motion estimation and compensation.}, issn= {1687-5281}, doi= {https://doi.org/10.1155/2008/139429}, url= {https://doi.org/10.1155/2008/139429}}
+and Lacey, Gerard}, 
+title= {Improving the Quality of Color Colonoscopy Videos}, 
+journal= {EURASIP Journal on Image and Video Processing},
+ year= {2008}, month= {Jan}, day= {22},
+ ume= {2008}, number= {1},
+ pages= {139429},
+ abstract= {Colonoscopy is currently one of the best methods to detect colorectal cancer. 
+ Nowadays, one of the widely used colonoscopes has a monochrome chipset recording successively at 60Hz  and 
+ components merged into one color video stream. Misalignments of the channels occur each time the camera moves, 
+ and this artefact impedes both online visual inspection by doctors and offline computer analysis of the image data.
+ We propose to restore this artefact by first equalizing the color channels and then performing a robust camera motion estimation and compensation.},
+ issn= {1687-5281}, 
+ doi= {10.1155/2008/139429},
+ url={https://jivp-eurasipjournals.springeropen.com/track/pdf/10.1155/2008/139429.pdf},
+ eprint= {https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2008/139429}}
 
 ,
 @Inbook{Wilson2008, author= {Wilson, Simon P.
