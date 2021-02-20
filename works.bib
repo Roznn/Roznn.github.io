@@ -52,7 +52,7 @@ keywords= {deep learning, AI pipeline, keyword spotting, fragmentation}}
 @inproceedings{chopin:hal-02882043,
 TITLE= {{M{\'e}thode d'analyse s{\'e}mantique d'images combinant apprentissage profond et relations structurelles par appariement de graphes}}, 
 AUTHOR= {Chopin, J{\'e}r{\'e}my and Fasquel, Jean-Baptiste and Mouch{\`e}re, Harold and Bloch, Isabelle and Dahyot, Rozenn}, 
-URL={https://hal.archives-ouvertes.fr/hal-02882043}, 
+URL={http://pfia2020.fr/wp-content/uploads/2020/08/actes_RJCIA_CH_PFIA2020.pdf}, 
 BOOKTITLE= {Rencontres des Jeunes Chercheurs en Intelligence Artificielle (RJCIA 2020)}, 
 ADDRESS= {Angers, France}, 
 abstract={We propose a method for semantic image segmentation,
@@ -185,8 +185,21 @@ author= {R. Yadav and A. Samir and H. Rashed and S. Yogamani and R. Dahyot},
 title= {CNN based Color and Thermal Image Fusion for Object Detection in Automated Driving},
 booktitle= {Irish Machine Vision and Image Processing (IMVIP 2020)},
 year= {2020},
-abstract={},
-url= {http://research.thea.ie/handle/20.500.12065/3429}, 
+abstract={Visual spectrum camera is a primary sensor in an automated driving system. It provides a high information
+density at a low cost. Visual perception is extensively studied in the literature and it is a mature
+component deployed in existing commercial vehicles. Its main disadvantage is the performance degradation
+in low light scenarios. Thermal cameras are increasingly being used to complement cameras for dark conditions
+like night time or driving through a tunnel. In this paper, we explore CNN based fusion architecture
+for object detection. We explore two automotive datasets which provide data for both these sensors namely
+KAIST multispectral pedestrian dataset and FLIR thermal object detection dataset. We train baseline Faster-
+RCNN models for color only and thermal only models on KAIST dataset. Color model outperforms Thermal
+in day conditions and Thermal model outperforms color in night conditions illustrating their complementary
+nature. We construct a simple mid-level CNN fusion architecture which performs significantly better than
+the baseline models. We observe an improvement of 0.62% in miss rate compared to existing methods.
+We also explored the more recent FLIR dataset. Because of the vastly different resolution, aspect ratio and
+field of view of the color and thermal images provided, our simple fusion architecture did not perform well
+pointing out the need for further research in this area.},
+url= {https://research.thea.ie/bitstream/handle/20.500.12065/3429/IMVIP2020Proceedings.pdf}, 
 note={Book Open Access http://research.thea.ie/handle/20.500.12065/3429},
 }
 ,
@@ -351,7 +364,7 @@ journal= {Computer Vision and Image Understanding},
 year= {2019},
 note={Github: https://github.com/groganma/gmm-colour-transfer},
 issn= {1077-3142},
-doi= {https://doi.org/10.1016/j.cviu.2019.02.002}, 
+doi= {10.1016/j.cviu.2019.02.002}, 
 url= {http://www.sciencedirect.com/science/article/pii/S1077314219300177}, 
 author= {Mairead Grogan and Rozenn Dahyot}, 
 keywords= {Colour Transfer, L2 Registration, Re-colouring, Colour Grading}, 
@@ -643,15 +656,51 @@ booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2017)},
 year= {2017}, 
 pages= {44-51}, 
 volume= {e-book of proceedings with ISBN 978-0-9934207-2-6},
- url= {http://eprints.maynoothuniversity.ie/8841/}, 
+ url= {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+ note={http://mural.maynoothuniversity.ie/8841/},
  abstract={This paper investigates the use of Convolutional Neural Networks (CNN) to classify images encoded
 in compressible form using Discrete Cosine Tranform (DCT) as an alternative to raw image format. We
 show experimentally that DCT features, that are directly available from JPEG format for instance, can be
 processed as efficiently as raw image data using the same CNN architectures.
 },
  address= {Maynooth University}}
-
 ,
+@inproceedings{ImanIMVIP2017, 
+title= {Stitching Skin Images of Scars}, 
+author= {S. M. I. Zolanvari and R. Dahyot}, 
+booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2017)}, 
+year= {2017}, 
+pages= {265-268}, 
+volume= {e-book of proceedings with ISBN 978-0-9934207-2-6},
+ url= {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+ note={http://mural.maynoothuniversity.ie/8841/},
+ abstract={This paper introduces an automatic procedure for aligning and stitching the medical images of skin scars
+that have the various amount of overlapping into one single registered image. The alignment procedure is
+based on the rigid transformation of the pair of images regarding detected matched features. The proposed
+paper compares four different feature detection methods and evaluates the methods on several clinical cases.
+For each case, the initial image is divided into four smaller sub-images with the different dimension. The result
+shows that the Harris Corner Detector algorithm achieves nearly 99% accurate result with the minimum
+overlapping of 160 pixels as the fastest method.},
+ address= {Maynooth University}}
+ ,
+ @inproceedings{HanaIMVIP2017, 
+title= {IDT Vs L2 Distance for Point Set Registration}, 
+author= {H. Alghamdi and M. Grogan and R. Dahyot}, 
+booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2017)}, 
+year= {2017}, 
+pages= {91-98}, 
+volume= {e-book of proceedings with ISBN 978-0-9934207-2-6},
+ url= {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+ note={http://mural.maynoothuniversity.ie/8841/},
+ abstract={Registration techniques have many applications such as 3D scans alignment, panoramic image mosaic
+creation or shape matching. This paper focuses on (2D) point cloud registration using novel iterative algorithms
+that are inspired by the Iterative Distribution Transfer (IDT) algorithm originally proposed to solve
+colour transfer [Pitié et al., 2005, Pitié et al., 2007]. We propose three variants to IDT algorithm that we
+compare with the standard L2 shape registration technique [Jian and Vemuri, 2011]. We show that our IDT
+algorithms perform well against L2 for finding correspondences between model and target shapes.},
+ address= {Maynooth University}}
+ ,
+ 
 @article{BulbulCAVW2016, 
 author= {Bulbul, Abdullah and Dahyot, Rozenn},
  title= {Populating virtual cities using social media},
@@ -715,7 +764,8 @@ title= {Robust Registration of Gaussian Mixtures for Colour Transfer},
  author= {J. Byrne and J. Connelly and  J. Su and V. Krylov and M. Bourke and D. Moloney and R. Dahyot},
  school= {School of Computer Science and Statistics, Trinity College Dublin}, 
  year= {2017},
- url= {http://hdl.handle.net/2262/81836}}
+ note={Tech report, mesh  and Drone Images available URI: http://hdl.handle.net/2262/81836},
+ url= {http://www.tara.tcd.ie/bitstream/handle/2262/81836/tcd3dintelmovidius2017-drone-imagery%5b2%5d.pdf}}
 
 ,
 @inproceedings{Grogan:2017:UII:3150165.3150171, 
@@ -762,8 +812,16 @@ title= {Recent techniques for (re)colouring},
 author= {M. Grogan and J. Carvalho and R. Dahyot},
  booktitle= {Irish Machine Vision and Image Processing Conference (IMVIP 2016)},
  month= {August}, 
+ abstract={This paper investigates how several techniques can be used together for colouring frames in grey level sequences.
+A trained deep neural network is used to colour a grey level image coherently [Iizuka et al., 2016],
+and this colour image can be recoloured further to change its feel [Grogan et al., 2015]. When considering
+videos however, artifacts are created in the first step when the same semantic object can occasionally
+be given different colours from frame to frame in the sequence creating a flicker in the resulting coloured
+sequence.},
+keywords={colour transfer, colouring, deep learning, flicker},
  address= {Galway, Ireland}, year= {2016}, 
- url= {http://hdl.handle.net/10379/6136}}
+ note={URI http://hdl.handle.net/10379/6136},
+ url= {https://aran.library.nuigalway.ie/bitstream/handle/10379/6136/IMVIP2016Book.pdf}}
 
 ,
 @article{ArellanoPR2015, 
@@ -777,7 +835,8 @@ abstract={The Euclidian distance between Gaussian Mixtures has been shown to be 
 We propose to extend this idea for robustly matching a family of shapes (ellipses). Optimisation is performed with an annealing strategy, 
 and the search for occurrences is repeated several times to detect multiple instances of the shape of interest. We compare experimentally our approach
  to other state-of-the-art techniques on a benchmark database for ellipses, and demonstrate the good performance of our approach.},
-url= {http://www.sciencedirect.com/science/article/pii/S0031320316000388},
+url= {https://roznn.github.io/PDF/2016PR.pdf},
+note={Github https://github.com/clarella/L2-Ellipse-Fitting},
  author= {Claudia Arellano and Rozenn Dahyot}, 
  keywords= {Ellipse detection, L2 distance, GMM, Parameter estimation}}
 
@@ -788,16 +847,35 @@ url= {http://www.sciencedirect.com/science/article/pii/S0031320316000388},
  booktitle= {Irish Machine Vision and Image Processing Conference (IMVIP 2015)}, 
  month= {August}, year= {2015},
  address= {Dublin, Ireland},
- url= {http://hdl.handle.net/2262/74714}}
+ pages={19-26},
+ abstract={Despite the recent advances in 3D reconstruction from images, the state of the art methods fail to ac-
+curately reconstruct objects with reflective materials. The underlying reason for this inaccuracy is that the
+detected image features belong to the reflected scene instead of the reconstructed object and do not lie on
+the surface of the object. In this study, we propose a method to refine the 3D reconstruction of reflective
+convex surfaces. This method utilizes the geometrical distortion of the reflected scenes behind a spherical
+surface.},
+keywords={3D reconstruction, Shape from images, Hough Transform, Specular surface},
+url={http://www.tara.tcd.ie/bitstream/handle/2262/74714/IMVIP2015Book.pdf},
+note= {URI http://hdl.handle.net/2262/74714}}
 ,
 @inproceedings{XiaIMVIP2015, 
 title= {Hand Hygiene Poses Recognition with RGB-D Videos}, 
 author= {B. Xia and R. Dahyot and J. Ruttle and D. Caulfield and G. Lacey}, 
 booktitle= {Irish Machine Vision and Image Processing Conference (IMVIP 2015)}, 
+pages={43-50},
+abstract={Hand hygiene is the most effective way in preventing the health care-associated infection. In this work,
+we propose to investigate the automatic recognition of the hand hygiene poses with RGB-D videos. Different
+classifiers are experimented with the Histogram of Oriented Gradient (HOG) features extracted from
+the hand regions. With a frame-level classification rate of more than 95\%, and with 100\% video-level classification
+rate, we demonstrate the effectiveness of our method for recognizing these hand hygiene poses.
+Also, we demonstrate that using the temporal information, and combining the color with depth information
+can improve the recognition accuracy.},
+keywords={Hand Hygiene, Poses Recognition, RGB-D},
 month= {August},
  address= {Dublin, Ireland},
  year= {2015},
- url= {http://hdl.handle.net/2262/74714}}
+ url={http://www.tara.tcd.ie/bitstream/handle/2262/74714/IMVIP2015Book.pdf},
+ note= {URI http://hdl.handle.net/2262/74714}}
 ,
 @inproceedings{DahyotIWCIM2015, 
 title= {Information visualisation for social media analytics},
@@ -811,7 +889,7 @@ title= {Information visualisation for social media analytics},
  These datasets are noisy, multimodal and heterogeneous by nature, providing different fields of information. 
  We focus here on the information of location (GPS), time (timestamp) and text from tweets from which sentiment is extracted. 
  We provide two ways for visualising datasets and for which demos can be seen online.},
- url= {https://ieeexplore.ieee.org/document/7347082/}, 
+ url= {https://roznn.github.io/PDF/RzDIWCIM2015.pdf}, 
  doi= {10.1109/IWCIM.2015.7347082}}
 
 ,
@@ -895,7 +973,8 @@ title= {An Architecture for Social Media Summarisation},
  booktitle= {Irish Machine Vision and Image Processing Conference (IMVIP 2014)},
  address= {Derry-Londonderry, Northern Ireland},
  pages= {187-188}, year= {2014}, month= {27-29 August},
- url= {http://hdl.handle.net/2262/71411}}
+ url={http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf},
+ note= {URI http://hdl.handle.net/2262/71411}}
 
 ,
 @INPROCEEDINGS{Zdziarski:SIU:2014, 
@@ -916,6 +995,7 @@ author= {Zdziarski, Z. and Dahyot, R.},
 author= {R. Dahyot}, 
 booktitle= {2014 22nd International Conference on Pattern Recognition}, 
 title= {GR2T vs L2E with Nuisance Scale}, year= {2014}, volume= {}, 
+url={https://roznn.github.io/PDF/RzDICPR2014.pdf},
 number= {}, pages= {3857-3861}, 
 keywords= {Radon transforms;regression analysis;GR2T;L2E;generalized relaxed Radon transform;nuisance scale;regression analysis;robust parameter estimation;scale parameter;Equations;Estimation;Mathematical model;Noise;Pattern recognition;Robustness;Transforms},
  doi= {10.1109/ICPR.2014.662},
@@ -932,9 +1012,16 @@ title= {Mesh from Depth Images Using GR2T},
 author= {M. Grogan and R. Dahyot}, 
 booktitle= {Irish Machine Vision and Image Processing Conference}, 
 address= {Derry-Londonderry, Northern Ireland}, 
+abstract={This paper proposes an algorithm for inferring a 3D mesh using the robust cost function
+proposed by Ruttle et al. Our contribution is in proposing a new algorithm for
+inference that is very suitable for parallel architecture. The cost function also provides
+a goodness of fit for each element of the mesh which is correlated to the distance to the
+ground truth, hence providing informative feedback to users.},
+keywords={3D reconstruction, Depth images, Generalised Relaxed Radon Transform},
 pages= {15-20}, month= {27-29 August},
  year= {2014},
- url= {http://hdl.handle.net/2262/71411}}
+ note={URI: http://hdl.handle.net/2262/71411},
+ url= {http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf}}
 
 ,
 @inproceedings{graisearchCIMU2014, 
@@ -1000,6 +1087,7 @@ note= {Depth Image Analysis}, issn= {0167-8655},
  pages= {788 - 794}, 
  year= {2013}, 
  issn= {0031-3203}, 
+ url={https://roznn.github.io/PDF/RzDPR2013.pdf},
  doi= {10.1016/j.patcog.2012.09.026}, 
  abstract={This paper introduces the generalised relaxed Radon transform (GR2T) as an extension to the generalised radon transform (GRT) .
  This new modelling allows us to define a new framework for robust inference. The resulting objective functions are probability density functions 
@@ -1033,7 +1121,8 @@ booktitle= {Proceedings of the 10th European Conference on Visual Media Producti
  series= {CVMP '13}, year= {2013}, 
  isbn= {978-1-4503-2589-9}, location= {London, United Kingdom}, 
  pages= {9:1--9:10}, articleno= {9}, numpages= {10}, 
- url= {http://doi.acm.org/10.1145/2534008.2534013},
+ note= {http://doi.acm.org/10.1145/2534008.2534013},
+ url={https://roznn.github.io/PDF/RzDCVMP2013.pdf},
  doi= {10.1145/2534008.2534013}, 
  abstract={We propose to fit automatically a 3D morphable face model to a point cloud captured with a RGB-D sensor. 
  Both data sets, the shape model and the target point cloud are modelled as two probability density functions (pdfs). 
@@ -1119,7 +1208,8 @@ and Dahyot, Rozenn
 and Manzke, Michael},
  title= {On Using Anisotropic Diffusion for Skeleton Extraction}, 
  journal= {International Journal of Computer Vision}, 
- year= {2012}, month= {Nov}, day= {01}, volume= {100}, number= {2}, pages= {170--189}, 
+ year= {2012}, 
+ month= {Nov}, day= {01}, volume= {100}, number= {2}, pages= {170--189}, 
  abstract= {We present a novel and effective skeletonization algorithm for binary and gray-scale images, 
  based on the anisotropic heat diffusion analogy. We diffuse the image in the direction normal to the feature 
  boundaries and also allow tangential diffusion (curvature decreasing diffusion) to contribute slightly. 
@@ -1131,7 +1221,7 @@ and Manzke, Michael},
  is better at handling noise in images and preserving the skeleton features at the centerline of the shape.},
  issn= {1573-1405}, 
  doi= {10.1007/s11263-012-0540-9},
- url= {https://doi.org/10.1007/s11263-012-0540-9}}
+ url= {https://roznn.github.io/PDF/2012IJCV.pdf}}
 
 ,
 @Inproceedings{ISSC2012Claudia,
@@ -1392,7 +1482,7 @@ author= {D. Kim and R. Dahyot},
  Finally, this system performs the procedure to apply geometrical constraints to labeled descriptors.
  We show experimentally the efficiency of our approach.},
  doi= {10.1109/IMVIP.2008.15}, 
- url= {https://ieeexplore.ieee.org/document/4624384/}}
+ url= {https://roznn.github.io/PDF/IMVIP2008_Final.pdf}}
 
 ,
 @article{Dahyot08,
@@ -1488,6 +1578,16 @@ url= {https://www.cs.tcd.ie/publications/tech-reports/reports.07/TCD-CS-2007-37.
 
 
 ,
+@techreport{DahyotPIYRA07, 
+title= {Optimal Mass Transport for Understanding and Synthesis of Visual Data}, 
+author= {R. Dahyot}, 
+institution= {School of Computer Science and Statistics, 
+Trinity College Dublin}, 
+year= {2007}, 
+note={First stage proposal TCD selection to PIYRA (not funded)},
+url= {https://roznn.github.io/PDF/RzDPIYRA2007.pdf}}
+,
+
 @techreport{DahyotLacey07, 
 title= {Restoration of colour channel misalignments in colonoscopy videos}, 
 author= {R. Dahyot and G. Lacey}, 
@@ -1510,6 +1610,7 @@ author= {R. Dahyot and C. Kelly and G. Kearney},
  The result of the analysis is illustrated by a visual OpenGL 3-D animation illustrating the synchronous audio-visual events occurring in the musical piece.},
  booktitle= {31st International Conference Audio Engineering Society }, 
  eprint={https://www.aes.org/e-lib/browse.cfm?elib=13947},
+url={https://www.aes.org/e-lib/browse.cfm?elib=13947},
  year= {2007}, address= {London, UK}, month= {June}}
 
 ,
@@ -1725,6 +1826,13 @@ author= {R. Dahyot and A. Kokaram},
 title= {Comparison of Two Algorithms for Robust M-estimation of Global Motion Parameters },
 booktitle= {Irish Machine Vision and Image Processing conference (IMVIP 2004)}, 
 month= {September}, 
+abstract={The estimation of Global or Camera motion from image sequences is important both for video
+retrieval and compression (MPEG4). This is frequently performed using robust M-estimators with
+the widely used Iterative Reweighted Least Squares algorithm. This article presents an investigation
+of the use of an alternative robust estimation algorithm and illustrates its improved computationnal
+efficiency. The paper also introduces two new confidence measures which can be used to validate
+camera motion measurements in the context of information retrieval.},
+keywords={Camera motion, M-estimators, Video analysis},
 year= {2004}, 
 pages= {224-231},
 address= {Dublin, Ireland}}
@@ -1835,7 +1943,7 @@ booktitle= {Proc.SPIE Visual Communications and Image Processing},
 volume= {5022}, number= {}, pages= {5022 - 5022 - 12}, year= {2003},
 doi= {10.1117/12.476584}, 
 abstract={Temporal and spatial random variation of luminance in images, or 'flicker' is a typical degradation observed in archived film and video. The underlying premise in typical flicker reduction algorithms is that each image must be corrected for a spatially varying gain and offset. These parameters are estimated in the stationary region of the image. Hence the performance of that algorithm depends crucially on the identification of stationary image regions. Position fluctuations are also a common artefact resulting in a random 'shake' of each film frame. For removing both, the key is to reject regions showing local motion or other outlier activity. Parameters are then estimated mostly on that part of the image undergoing the dominant motion. A new algorithm that simultaneously deals with global motion estimation and flicker is presented. The final process is based on a robust application of weighted least-squares, in which the weights also classify portions of the image as local or global. The paper presents results on severely degraded sequences showing evidence of both Flicker and random shake.},
-URL= {https://doi.org/10.1117/12.476584}, 
+url= {https://roznn.github.io/PDF/vcip2003_kokaram_pitie.pdf}, 
 eprint= {}}
 
 ,
@@ -1855,9 +1963,10 @@ title= {Suppression du bruit de pompage dans les videos},
 author= {F. Pitie and R. Dahyot and A. Kokaram},
 booktitle= {proceedings of GRETSI conference on signal and image processing}, 
 month= {September}, year= {2003},
+abstract={La variation temporelle de la luminance dans les sequences d'images, ou effet de pompage, est une dégradation typique des archives videos et cinematographiques. Nous proposons ici un nouveau procede qui vise à supprimer ces perturbations visuellement désagréables. Plusieurs améliorations sont proposées à la fois sur le modèle de pompage, l'estimation des paramètres correspondants et sur la méthode de compensation des images. Les expériences menées sur des videos, dont l'une est particulièrement dégradée, permettent de montrer l'apport de notre système de restauration par rapport aux méthodes existantes.},
 address= {Paris, France},
 doi= {2042/13630}, 
-url= {http://hdl.handle.net/2042/13630}}
+url= {http://documents.irevues.inist.fr/bitstream/handle/2042/13630/A275.pdf}}
 
 ,
 @INPROCEEDINGS{Dahyot_ISS02, 
