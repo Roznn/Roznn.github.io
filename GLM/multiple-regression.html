@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 10 Multiple Regression | Lecturenotes: Generalized Linear Models</title>
+  <meta name="description" content="Lecturenotes">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 10 Multiple Regression | Lecturenotes: Generalized Linear Models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecturenotes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Multiple Regression | Lecturenotes: Generalized Linear Models" />
+  
+  <meta name="twitter:description" content="Lecturenotes" />
+  
+
+<meta name="author" content="Rozenn Dahyot">
+
+
+<meta name="date" content="2019-03-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="sec-survival.html">
+<link rel="next" href="sec-multinomial.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Generalized Linear Models</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forewords</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#sec:LR:reminder"><i class="fa fa-check"></i><b>2.1</b> Linear Regression - Reminder</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sec:LR:new"><i class="fa fa-check"></i><b>2.2</b> Linear Regression - Reformulation</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#sec:intro:glm"><i class="fa fa-check"></i><b>2.3</b> Generalised Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html"><i class="fa fa-check"></i><b>3</b> Distributions for response variable <span class="math inline">\(y\)</span></a><ul>
+<li class="chapter" data-level="3.1" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#sec:exponential:family"><i class="fa fa-check"></i><b>3.1</b> Exponential family of distributions</a></li>
+<li class="chapter" data-level="3.2" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#some-members-of-the-exponential-family"><i class="fa fa-check"></i><b>3.2</b> Some members of the exponential family</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html"><i class="fa fa-check"></i><b>4</b> Generalized Linear Models</a><ul>
+<li class="chapter" data-level="4.1" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#formal-structure-for-the-class-of-generalized-linear-models"><i class="fa fa-check"></i><b>4.1</b> Formal structure for the class of generalized Linear Models</a></li>
+<li class="chapter" data-level="4.2" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#statistical-analysis-with-gmls"><i class="fa fa-check"></i><b>4.2</b> Statistical analysis with GMLs</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="binomialpoisson.html"><a href="binomialpoisson.html"><i class="fa fa-check"></i><b>5</b> Binomial &amp; Poisson Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:offset:exposure"><i class="fa fa-check"></i><b>5.1</b> Offset and Exposure</a></li>
+<li class="chapter" data-level="5.2" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:poisson:binomial:n:infty"><i class="fa fa-check"></i><b>5.2</b> Relation between Poisson and Binomial distributions when <span class="math inline">\(n\rightarrow +\infty\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-AIC.html"><a href="sec-AIC.html"><i class="fa fa-check"></i><b>6</b> Akaike Information Criterion</a><ul>
+<li class="chapter" data-level="6.1" data-path="sec-AIC.html"><a href="sec-AIC.html#likelihood-and-log-likelihood"><i class="fa fa-check"></i><b>6.1</b> Likelihood and log-likelihood</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-AIC.html"><a href="sec-AIC.html#comparing-working-models-with-the-aic"><i class="fa fa-check"></i><b>6.2</b> Comparing working models with the AIC</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-deviance.html"><a href="sec-deviance.html"><i class="fa fa-check"></i><b>7</b> Deviance</a><ul>
+<li class="chapter" data-level="7.1" data-path="sec-deviance.html"><a href="sec-deviance.html#deviance"><i class="fa fa-check"></i><b>7.1</b> Deviance</a></li>
+<li class="chapter" data-level="7.2" data-path="sec-deviance.html"><a href="sec-deviance.html#approximation-of-the-log-likelihood-function-near-its-maximum"><i class="fa fa-check"></i><b>7.2</b> Approximation of the log likelihood function near its maximum</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-deviance.html"><a href="sec-deviance.html#sampling-distribution-for-the-deviance"><i class="fa fa-check"></i><b>7.3</b> Sampling distribution for the deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html"><i class="fa fa-check"></i><b>8</b> Explanatory variables in GLMs</a><ul>
+<li class="chapter" data-level="8.1" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#nature-of-variables"><i class="fa fa-check"></i><b>8.1</b> Nature of variables</a></li>
+<li class="chapter" data-level="8.2" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#generalized-mixed-linear-models"><i class="fa fa-check"></i><b>8.2</b> Generalized Mixed Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sec-survival.html"><a href="sec-survival.html"><i class="fa fa-check"></i><b>9</b> Survival Analysis</a><ul>
+<li class="chapter" data-level="9.1" data-path="sec-survival.html"><a href="sec-survival.html#distributions"><i class="fa fa-check"></i><b>9.1</b> Distributions</a></li>
+<li class="chapter" data-level="9.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions"><i class="fa fa-check"></i><b>9.2</b> Survivor and hazard functions</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-exponential-distribution"><i class="fa fa-check"></i><b>9.2.1</b> Survivor and hazard functions for the exponential distribution</a></li>
+<li class="chapter" data-level="9.2.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-weibull-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Survivor and hazard functions for the Weibull distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="sec-survival.html"><a href="sec-survival.html#link-function"><i class="fa fa-check"></i><b>9.3</b> Link function</a></li>
+<li class="chapter" data-level="9.4" data-path="sec-survival.html"><a href="sec-survival.html#estimation-of-beta-with-the-likelihood"><i class="fa fa-check"></i><b>9.4</b> Estimation of <span class="math inline">\(\beta\)</span> with the Likelihood</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="sec-survival.html"><a href="sec-survival.html#with-uncensored-data"><i class="fa fa-check"></i><b>9.4.1</b> With uncensored data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="sec-survival.html"><a href="sec-survival.html#with-censored-data"><i class="fa fa-check"></i><b>9.4.2</b> With censored data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="sec-survival.html"><a href="sec-survival.html#proportional-hazard-models"><i class="fa fa-check"></i><b>9.5</b> Proportional hazard models</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>10</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="multiple-regression.html"><a href="multiple-regression.html#reminder-least-squares-algorithm"><i class="fa fa-check"></i><b>10.1</b> Reminder: Least Squares algorithm</a></li>
+<li class="chapter" data-level="10.2" data-path="multiple-regression.html"><a href="multiple-regression.html#covariance-of-hatbeta"><i class="fa fa-check"></i><b>10.2</b> Covariance of <span class="math inline">\(\hat{\beta}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="multiple-regression.html"><a href="multiple-regression.html#case-study-carbohydrate-diet"><i class="fa fa-check"></i><b>10.3</b> Case study : Carbohydrate Diet</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="multiple-regression.html"><a href="multiple-regression.html#fitting-with-lm-and-glm"><i class="fa fa-check"></i><b>10.3.1</b> Fitting with lm() and glm()</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multiple-regression.html"><a href="multiple-regression.html#using-math"><i class="fa fa-check"></i><b>10.3.2</b> Using Math</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sec-multinomial.html"><a href="sec-multinomial.html"><i class="fa fa-check"></i><b>11</b> Multinomial Distribution</a><ul>
+<li class="chapter" data-level="11.1" data-path="sec-multinomial.html"><a href="sec-multinomial.html#from-binomial-distribution-to-multinomial-distribution"><i class="fa fa-check"></i><b>11.1</b> From Binomial Distribution to Multinomial Distribution</a></li>
+<li class="chapter" data-level="11.2" data-path="sec-multinomial.html"><a href="sec-multinomial.html#multinomial-distribution-poisson-random-variables"><i class="fa fa-check"></i><b>11.2</b> Multinomial Distribution &amp; Poisson random variables</a></li>
+<li class="chapter" data-level="11.3" data-path="sec-multinomial.html"><a href="sec-multinomial.html#nominal-logistic-regression"><i class="fa fa-check"></i><b>11.3</b> Nominal logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.scss.tcd.ie/Rozenn.Dahyot/" target="blank">Rozenn Dahyot</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturenotes: Generalized Linear Models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="multiple-regression" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Multiple Regression</h1>
+<div id="reminder-least-squares-algorithm" class="section level2">
+<h2><span class="header-section-number">10.1</span> Reminder: Least Squares algorithm</h2>
+<p>Here, we look only at the case of</p>
+<ul>
+<li><p>a Normal distribution</p></li>
+<li><p>with the identity link function</p></li>
+</ul>
+<p>In this case, having collected <span class="math inline">\(N\)</span> independent responses <span class="math inline">\(\lbrace y_i \rbrace_{i=1,\cdots,N}\)</span>, the likelihood function is: <span class="math display">\[f(y_1, y_2,\cdots, y_N;\theta_1,\theta_2,\cdots,\theta_N)=\prod_{i=1}^N  f(y_i;\theta_i)=\prod_{i=1}^N \frac{1}{\sqrt{2\pi}\sigma} \exp\left(  \frac{-(y_i-\theta_i)^2}{2\sigma^2}\right)\quad \text{(independence)}\]</span> Now considering the link <span class="math inline">\(\theta_i=\mathbf{x}_i^{T}\pmb{\beta}=\beta_1+\beta_2\ x_{1,i}+\cdots+\beta_p\ x_{p-1,i}\)</span> then the likelihood becomes: <span class="math display">\[f(y_1, y_2,\cdots, y_N;\pmb{\beta})=\prod_{i=1}^N \frac{1}{\sqrt{2\pi}\sigma} \exp\left(  \frac{-(y_i-\mathbf{x}_i^{T}\pmb{\beta})^2}{2\sigma^2}\right)\]</span> The log likelihood function is: <span class="math display">\[\log f(y_1, y_2,\cdots, y_N;\pmb{\beta} )=- N\log\left (\sqrt{2\pi}\sigma \right)-\sum_{i=1}^N\frac{(y_i-\mathbf{x}_i^{T}\pmb{\beta})^2}{2\sigma^2}\]</span> Finding the estimate <span class="math inline">\(\pmb{\hat{\beta}}\)</span> that maximises the likelihood is equivalent to finding the estimate <span class="math inline">\(\pmb{\hat{\beta}}\)</span> that minimises the negative of the log-likelihood function. So <span class="math inline">\(\pmb{\hat{\beta}}\)</span> is found by making the derivative of <span class="math inline">\(-\log f(y_1, y_2,\cdots, y_N;\pmb{\beta} )\)</span> equal to 0, which is equivalent to: <span class="math display">\[\frac{\partial}{\partial \pmb{\beta}} \sum_{i=1}^N (y_i-\mathbf{x}_i^{T}\pmb{\beta})^2=0\]</span> So maximising the likelihood is equivalent to minimising the sum of square error (SSE) when defining the error to be <span class="math inline">\(\epsilon_i=y_i-\mathbf{x}_i^{T}\pmb{\beta}\)</span>. Lets define the vector <span class="math inline">\(\pmb{\epsilon}\)</span> concatenating <span class="math inline">\(\epsilon_1, \cdots,\epsilon_N\)</span>, the vector <span class="math inline">\(\mathbf{y}=[y_1,\cdots,y_N]^T\)</span> and the matrix <span class="math inline">\(\mathrm{X}\)</span>: <span class="math display">\[\mathrm{X}=
+\left\lbrack
+\begin{array}{cccc}
+1 &amp; x_{1,1} &amp;\cdots &amp; x_{p-1,1}\\
+1 &amp; x_{1,2} &amp;\cdots &amp; x_{p-1,2}\\
+\vdots &amp;\vdots &amp; &amp;\vdots\\
+11 &amp; x_{1,N} &amp;\cdots &amp; x_{p-1,N}\\
+\end{array}\right\rbrack\]</span> Then <span class="math inline">\(\pmb{\epsilon}=\mathbf{y}-\mathrm{X} \pmb{\beta}\)</span>. Minimising the SSE corresponds to finding <span class="math inline">\(\pmb{\beta}\)</span>: <span class="math display">\[\begin{array}{ll}
+\pmb{\hat{\beta}}&amp;=\arg\min_{\pmb{\beta}} \left\lbrace SSE=\sum_{i=1}^{n}\epsilon_i^2=\|\pmb{\epsilon}\|^2\right\rbrace\\
+&amp;=\arg\min_{\pmb{\beta}} \left\lbrace SSE=\|\mathbf{y}-\mathrm{X}\pmb{\beta}\|^2\right\rbrace\\
+&amp;=\arg\min_{\pmb{\beta}} \left\lbrace SSE=(\mathbf{y}-\mathrm{X}\pmb{\beta})^{T}(\mathbf{y}-\mathrm{X}\pmb{\beta})\right\rbrace\\
+&amp;=\arg\min_{\pmb{\beta}} \left\lbrace SSE=\mathbf{y}^{T}\mathbf{y}-\mathbf{y}^{T}\mathrm{X}\pmb{\beta}-\pmb{\beta}^{T}\mathrm{X}^{T}\mathbf{y}-\pmb{\beta}^{T}\mathrm{X}^{T}\mathrm{X}\pmb{\beta}\right\rbrace\\
+\end{array}\]</span> The derivative of the SSE w.r.t. <span class="math inline">\(\pmb{\beta}\)</span> is is: <span class="math display">\[\begin{array}{ll}
+\frac{\partial}{\partial \pmb{\beta}} SSE &amp;=\frac{\partial}{\partial \pmb{\beta}} \left\lbrace \mathbf{y}^{T}\mathbf{y}-\mathbf{y}^{T}\mathrm{X}\pmb{\beta}-\pmb{\beta}^{T}\mathrm{X}^{T}\mathbf{y}-\pmb{\beta}^{T}\mathrm{X}^{T}\mathrm{X}\pmb{\beta}\right\rbrace\\
+ &amp;=0-(\mathbf{y}^{T}\mathrm{X})^T -\mathrm{X}^{T}\mathbf{y}+\mathrm{X}^{T}\mathrm{X}\pmb{\beta}+(\mathrm{X}^{T}\mathrm{X})^T\pmb{\beta}\\
+&amp;= -2\mathrm{X}^T\mathbf{y}+2\mathrm{X}^{T}\mathrm{X}\pmb{\beta}\\
+\end{array}\]</span> So the solution <span class="math inline">\(\pmb{\hat{\beta}}\)</span> for which this derivative is 0 is <span class="math display">\[\pmb{\hat{\beta}}=(\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathbf{y} \quad \text{(Least Square estimate)}
+\label{eq:LS}\]</span> This is the maximum likelihood estimate when considering a Normal distribution with the identity link function.</p>
+</div>
+<div id="covariance-of-hatbeta" class="section level2">
+<h2><span class="header-section-number">10.2</span> Covariance of <span class="math inline">\(\hat{\beta}\)</span></h2>
+<p>Expectation of <span class="math inline">\(\hat{\beta}\)</span> <span class="math display">\[\mathbb{E}[\hat{\beta}]=\mathbb{E}\left\lbrack(\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathbf{y} \right\rbrack=(\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathbb{E}\left\lbrack\mathbf{y} \right\rbrack =(\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathrm{X}\beta=\beta\]</span></p>
+<p>Covariance of <span class="math inline">\(\hat{\beta}\)</span> <span class="math display">\[\mathbb{C}[\hat{\beta}]=\mathbb{E} \left\lbrack(\hat{\beta}-\beta)(\hat{\beta}-\beta)^T\right\rbrack=\mathbb{E} \left\lbrack((\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathbf{y}-\beta)((\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T}\mathbf{y}-\beta)^T\right\rbrack\]</span> with <span class="math inline">\(\mathbf{y}=\mathrm{X}\beta+\epsilon\)</span>, we get <span class="math display">\[\mathbb{C}[\hat{\beta}]=\mathbb{E} \left\lbrack
+((\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T} \epsilon)((\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T} \epsilon)^T
+\right\rbrack  
+=\mathbb{E} \left\lbrack
+ (\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T} \epsilon  \epsilon^T ((\mathrm{X}^{T}\mathrm{X})^{-1}\mathrm{X}^{T})^T 
+\right\rbrack\]</span> or <span class="math display">\[\mathbb{C}[\hat{\beta}] =\sigma^2  (\mathrm{X}^{T}\mathrm{X})^{-1}(\mathrm{X}^{T}\mathrm{X})  ((\mathrm{X}^{T}\mathrm{X})^{-1})^{T} =\sigma^2 (\mathrm{X}^{T}\mathrm{X})^{-1}\]</span></p>
+<p>Remark <span class="math inline">\(\nabla_{\hat{\beta}}=0\)</span>: <span class="math display">\[\mathcal{L}(\beta) = \mathcal{L}(\hat{\beta}) +\frac{1}{2}\ (\beta-\hat{\beta}) \ \mathrm{H}_{\hat{\beta}}\ (\beta-\hat{\beta})^T\]</span> in comparison to Gaussian approximation at <span class="math inline">\(\hat{\beta}\)</span> <span class="math display">\[\mathcal{L}(\beta) =\text{constant}-\frac{1}{2}\ (\beta-\hat{\beta}) \ \Sigma^{-1}\ (\beta-\hat{\beta})^T\]</span> <span class="math inline">\(-\mathrm{H}_{\hat{\beta}}\)</span> is called the observed information matrix and approximates <span class="math inline">\(\Sigma^{-1}\)</span>. Hence diagonal values of <span class="math inline">\(-\mathrm{H}_{\hat{\beta}}^{-1}\)</span> approximate the standard errors squared of <span class="math inline">\(\hat{\beta}\)</span>.</p>
+</div>
+<div id="case-study-carbohydrate-diet" class="section level2">
+<h2><span class="header-section-number">10.3</span> Case study : Carbohydrate Diet</h2>
+<p>In this dataset <span class="citation">(Dobson and Barnett <a href="#ref-DobsonBook08">2008</a>)</span> ( p.96), the response variable <span class="math inline">\(y\)</span> corresponds to the percentage of total calories obtained from complex carbohydrates for 20 male insulin-dependent diabetics who have been on a high carbohydrate diet for six months. Additional information is collected about the individuals taking part in the study including age (in years), weight (relative to ideal weight) and other calories intake from protein (as percentage).</p>
+<div id="fitting-with-lm-and-glm" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Fitting with lm() and glm()</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">carbohydrate=<span class="kw">c</span>(<span class="dv">33</span>,<span class="dv">40</span>,<span class="dv">37</span>,<span class="dv">27</span>,<span class="dv">30</span>,<span class="dv">43</span>,<span class="dv">34</span>,<span class="dv">48</span>,<span class="dv">30</span>,<span class="dv">38</span>,<span class="dv">50</span>,<span class="dv">51</span>,<span class="dv">30</span>,<span class="dv">36</span>,<span class="dv">41</span>,<span class="dv">42</span>,<span class="dv">46</span>,<span class="dv">24</span>,<span class="dv">35</span>,<span class="dv">37</span>)
+age=<span class="kw">c</span>(<span class="dv">33</span>,<span class="dv">47</span>,<span class="dv">49</span>,<span class="dv">35</span>,<span class="dv">46</span>,<span class="dv">52</span>,<span class="dv">62</span>,<span class="dv">23</span>,<span class="dv">32</span>,<span class="dv">42</span>,<span class="dv">31</span>,<span class="dv">61</span>,<span class="dv">63</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">64</span>,<span class="dv">56</span>,<span class="dv">61</span>,<span class="dv">48</span>,<span class="dv">28</span>)
+weight=<span class="kw">c</span>(<span class="dv">100</span>,<span class="dv">92</span>,<span class="dv">135</span>,<span class="dv">144</span>,<span class="dv">140</span>,<span class="dv">101</span>,<span class="dv">95</span>,<span class="dv">101</span>,<span class="dv">98</span>,<span class="dv">105</span>,<span class="dv">108</span>,<span class="dv">85</span>,<span class="dv">130</span>,<span class="dv">127</span>,<span class="dv">109</span>,<span class="dv">107</span>,<span class="dv">117</span>,<span class="dv">100</span>,<span class="dv">118</span>,<span class="dv">102</span>)
+protein=<span class="kw">c</span>(<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">18</span>,<span class="dv">12</span>,<span class="dv">15</span>,<span class="dv">15</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">15</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">19</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">13</span>,<span class="dv">18</span>,<span class="dv">14</span>)
+
+data=<span class="kw">cbind</span>(carbohydrate,age,weight,protein)
+knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">t</span>(data), <span class="dt">caption =</span> <span class="st">&quot;Carbohydrate diet data&quot;</span>)</code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 10.1: </span>Carbohydrate diet data</caption>
+<tbody>
+<tr class="odd">
+<td align="left">carbohydrate</td>
+<td align="right">33</td>
+<td align="right">40</td>
+<td align="right">37</td>
+<td align="right">27</td>
+<td align="right">30</td>
+<td align="right">43</td>
+<td align="right">34</td>
+<td align="right">48</td>
+<td align="right">30</td>
+<td align="right">38</td>
+<td align="right">50</td>
+<td align="right">51</td>
+<td align="right">30</td>
+<td align="right">36</td>
+<td align="right">41</td>
+<td align="right">42</td>
+<td align="right">46</td>
+<td align="right">24</td>
+<td align="right">35</td>
+<td align="right">37</td>
+</tr>
+<tr class="even">
+<td align="left">age</td>
+<td align="right">33</td>
+<td align="right">47</td>
+<td align="right">49</td>
+<td align="right">35</td>
+<td align="right">46</td>
+<td align="right">52</td>
+<td align="right">62</td>
+<td align="right">23</td>
+<td align="right">32</td>
+<td align="right">42</td>
+<td align="right">31</td>
+<td align="right">61</td>
+<td align="right">63</td>
+<td align="right">40</td>
+<td align="right">50</td>
+<td align="right">64</td>
+<td align="right">56</td>
+<td align="right">61</td>
+<td align="right">48</td>
+<td align="right">28</td>
+</tr>
+<tr class="odd">
+<td align="left">weight</td>
+<td align="right">100</td>
+<td align="right">92</td>
+<td align="right">135</td>
+<td align="right">144</td>
+<td align="right">140</td>
+<td align="right">101</td>
+<td align="right">95</td>
+<td align="right">101</td>
+<td align="right">98</td>
+<td align="right">105</td>
+<td align="right">108</td>
+<td align="right">85</td>
+<td align="right">130</td>
+<td align="right">127</td>
+<td align="right">109</td>
+<td align="right">107</td>
+<td align="right">117</td>
+<td align="right">100</td>
+<td align="right">118</td>
+<td align="right">102</td>
+</tr>
+<tr class="even">
+<td align="left">protein</td>
+<td align="right">14</td>
+<td align="right">15</td>
+<td align="right">18</td>
+<td align="right">12</td>
+<td align="right">15</td>
+<td align="right">15</td>
+<td align="right">14</td>
+<td align="right">17</td>
+<td align="right">15</td>
+<td align="right">14</td>
+<td align="right">17</td>
+<td align="right">19</td>
+<td align="right">19</td>
+<td align="right">20</td>
+<td align="right">15</td>
+<td align="right">16</td>
+<td align="right">18</td>
+<td align="right">13</td>
+<td align="right">18</td>
+<td align="right">14</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#using lm</span>
+res.lm=<span class="kw">lm</span>(carbohydrate<span class="op">~</span>age<span class="op">+</span>weight<span class="op">+</span>protein)
+<span class="kw">summary</span>(res.lm)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = carbohydrate ~ age + weight + protein)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -10.3424  -4.8203   0.9897   3.8553   7.9087 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept) 36.96006   13.07128   2.828  0.01213 * 
+## age         -0.11368    0.10933  -1.040  0.31389   
+## weight      -0.22802    0.08329  -2.738  0.01460 * 
+## protein      1.95771    0.63489   3.084  0.00712 **
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.956 on 16 degrees of freedom
+## Multiple R-squared:  0.4805, Adjusted R-squared:  0.3831 
+## F-statistic: 4.934 on 3 and 16 DF,  p-value: 0.01297</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#using glm</span>
+
+res.glm=<span class="kw">glm</span>(carbohydrate<span class="op">~</span>age<span class="op">+</span>weight<span class="op">+</span>protein,<span class="dt">family=</span>gaussian)
+<span class="kw">summary</span>(res.glm)</code></pre></div>
+<pre><code>## 
+## Call:
+## glm(formula = carbohydrate ~ age + weight + protein, family = gaussian)
+## 
+## Deviance Residuals: 
+##      Min        1Q    Median        3Q       Max  
+## -10.3424   -4.8203    0.9897    3.8553    7.9087  
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept) 36.96006   13.07128   2.828  0.01213 * 
+## age         -0.11368    0.10933  -1.040  0.31389   
+## weight      -0.22802    0.08329  -2.738  0.01460 * 
+## protein      1.95771    0.63489   3.084  0.00712 **
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for gaussian family taken to be 35.47893)
+## 
+##     Null deviance: 1092.80  on 19  degrees of freedom
+## Residual deviance:  567.66  on 16  degrees of freedom
+## AIC: 133.67
+## 
+## Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+<div id="using-math" class="section level3">
+<h3><span class="header-section-number">10.3.2</span> Using Math</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">carbohydrate=<span class="kw">c</span>(<span class="dv">33</span>,<span class="dv">40</span>,<span class="dv">37</span>,<span class="dv">27</span>,<span class="dv">30</span>,<span class="dv">43</span>,<span class="dv">34</span>,<span class="dv">48</span>,<span class="dv">30</span>,<span class="dv">38</span>,<span class="dv">50</span>,<span class="dv">51</span>,<span class="dv">30</span>,<span class="dv">36</span>,<span class="dv">41</span>,<span class="dv">42</span>,<span class="dv">46</span>,<span class="dv">24</span>,<span class="dv">35</span>,<span class="dv">37</span>) <span class="co"># response vector</span>
+age=<span class="kw">c</span>(<span class="dv">33</span>,<span class="dv">47</span>,<span class="dv">49</span>,<span class="dv">35</span>,<span class="dv">46</span>,<span class="dv">52</span>,<span class="dv">62</span>,<span class="dv">23</span>,<span class="dv">32</span>,<span class="dv">42</span>,<span class="dv">31</span>,<span class="dv">61</span>,<span class="dv">63</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">64</span>,<span class="dv">56</span>,<span class="dv">61</span>,<span class="dv">48</span>,<span class="dv">28</span>)
+weight=<span class="kw">c</span>(<span class="dv">100</span>,<span class="dv">92</span>,<span class="dv">135</span>,<span class="dv">144</span>,<span class="dv">140</span>,<span class="dv">101</span>,<span class="dv">95</span>,<span class="dv">101</span>,<span class="dv">98</span>,<span class="dv">105</span>,<span class="dv">108</span>,<span class="dv">85</span>,<span class="dv">130</span>,<span class="dv">127</span>,<span class="dv">109</span>,<span class="dv">107</span>,<span class="dv">117</span>,<span class="dv">100</span>,<span class="dv">118</span>,<span class="dv">102</span>)
+protein=<span class="kw">c</span>(<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">18</span>,<span class="dv">12</span>,<span class="dv">15</span>,<span class="dv">15</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">15</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">19</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">13</span>,<span class="dv">18</span>,<span class="dv">14</span>)
+
+<span class="co">#</span>
+X=<span class="kw">matrix</span>(<span class="dv">1</span>,<span class="dv">20</span>,<span class="dv">4</span>)
+X[,<span class="dv">1</span>]=<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)
+X[,<span class="dv">2</span>]=age
+X[,<span class="dv">3</span>]=weight
+X[,<span class="dv">4</span>]=protein
+
+<span class="co"># least square estimate</span>
+BetaHat=<span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X)<span class="op">%*%</span><span class="kw">t</span>(X)<span class="op">%*%</span>carbohydrate</code></pre></div>
+<p>Compare the estimated parameters <span class="math inline">\(\hat{\beta}\)</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">BetaHat</code></pre></div>
+<pre><code>##            [,1]
+## [1,] 36.9600559
+## [2,] -0.1136764
+## [3,] -0.2280174
+## [4,]  1.9577126</code></pre>
+<p>with those computed with <code>glm</code> and <code>lm</code> earlier.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res.lm<span class="op">$</span>coefficients</code></pre></div>
+<pre><code>## (Intercept)         age      weight     protein 
+##  36.9600559  -0.1136764  -0.2280174   1.9577126</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res.glm<span class="op">$</span>coefficients</code></pre></div>
+<pre><code>## (Intercept)         age      weight     protein 
+##  36.9600559  -0.1136764  -0.2280174   1.9577126</code></pre>
+<p>So we have our Math right for computing estimate <span class="math inline">\(\hat{\beta}\)</span> !</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fitted =X <span class="op">%*%</span><span class="st"> </span>BetaHat
+residuals=carbohydrate<span class="op">-</span>fitted
+SSE=<span class="kw">t</span>(residuals)<span class="op">%*%</span>residuals
+sigmahatsq=SSE<span class="op">/</span>(<span class="kw">length</span>(carbohydrate)<span class="op">-</span><span class="kw">length</span>(BetaHat))
+<span class="co">#Residual standard error </span>
+<span class="kw">sqrt</span>(sigmahatsq)</code></pre></div>
+<pre><code>##          [,1]
+## [1,] 5.956419</code></pre>
+<p>Compare this estimate with the Residual standard error computed with <code>lm</code> .</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># uncertainty of BetaHat (standard error)</span>
+CovBetaHat=<span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X)<span class="op">*</span><span class="kw">as.numeric</span>(sigmahatsq)
+Std.Error.BetaHat=<span class="kw">sqrt</span>(<span class="kw">diag</span>(CovBetaHat))
+Std.Error.BetaHat</code></pre></div>
+<pre><code>## [1] 13.07128293  0.10932548  0.08328895  0.63489286</code></pre>
+<p>Compare these standard errors with those reported in <code>summary(res.lm)</code> and <code>summary(res.glm)</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Multiple R-squared: (coefficient of determination) </span>
+S0=<span class="kw">sum</span>((carbohydrate<span class="op">-</span><span class="kw">mean</span>(carbohydrate))<span class="op">*</span>(carbohydrate<span class="op">-</span><span class="kw">mean</span>(carbohydrate)))
+Rsq=(S0<span class="op">-</span>SSE)<span class="op">/</span>S0
+Rsq</code></pre></div>
+<pre><code>##           [,1]
+## [1,] 0.4805428</code></pre>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-DobsonBook08">
+<p>Dobson, A. J., and A. G. Barnett. 2008. <em>An Introduction to Generalized Linear Models</em>. CRC Press, Third Edition.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sec-survival.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-multinomial.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["GLM2.pdf", "GLM2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

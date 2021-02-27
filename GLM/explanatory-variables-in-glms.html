@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 8 Explanatory variables in GLMs | Lecturenotes: Generalized Linear Models</title>
+  <meta name="description" content="Lecturenotes">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 8 Explanatory variables in GLMs | Lecturenotes: Generalized Linear Models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecturenotes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Explanatory variables in GLMs | Lecturenotes: Generalized Linear Models" />
+  
+  <meta name="twitter:description" content="Lecturenotes" />
+  
+
+<meta name="author" content="Rozenn Dahyot">
+
+
+<meta name="date" content="2019-03-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="sec-deviance.html">
+<link rel="next" href="sec-survival.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Generalized Linear Models</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forewords</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#sec:LR:reminder"><i class="fa fa-check"></i><b>2.1</b> Linear Regression - Reminder</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sec:LR:new"><i class="fa fa-check"></i><b>2.2</b> Linear Regression - Reformulation</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#sec:intro:glm"><i class="fa fa-check"></i><b>2.3</b> Generalised Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html"><i class="fa fa-check"></i><b>3</b> Distributions for response variable <span class="math inline">\(y\)</span></a><ul>
+<li class="chapter" data-level="3.1" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#sec:exponential:family"><i class="fa fa-check"></i><b>3.1</b> Exponential family of distributions</a></li>
+<li class="chapter" data-level="3.2" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#some-members-of-the-exponential-family"><i class="fa fa-check"></i><b>3.2</b> Some members of the exponential family</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html"><i class="fa fa-check"></i><b>4</b> Generalized Linear Models</a><ul>
+<li class="chapter" data-level="4.1" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#formal-structure-for-the-class-of-generalized-linear-models"><i class="fa fa-check"></i><b>4.1</b> Formal structure for the class of generalized Linear Models</a></li>
+<li class="chapter" data-level="4.2" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#statistical-analysis-with-gmls"><i class="fa fa-check"></i><b>4.2</b> Statistical analysis with GMLs</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="binomialpoisson.html"><a href="binomialpoisson.html"><i class="fa fa-check"></i><b>5</b> Binomial &amp; Poisson Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:offset:exposure"><i class="fa fa-check"></i><b>5.1</b> Offset and Exposure</a></li>
+<li class="chapter" data-level="5.2" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:poisson:binomial:n:infty"><i class="fa fa-check"></i><b>5.2</b> Relation between Poisson and Binomial distributions when <span class="math inline">\(n\rightarrow +\infty\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-AIC.html"><a href="sec-AIC.html"><i class="fa fa-check"></i><b>6</b> Akaike Information Criterion</a><ul>
+<li class="chapter" data-level="6.1" data-path="sec-AIC.html"><a href="sec-AIC.html#likelihood-and-log-likelihood"><i class="fa fa-check"></i><b>6.1</b> Likelihood and log-likelihood</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-AIC.html"><a href="sec-AIC.html#comparing-working-models-with-the-aic"><i class="fa fa-check"></i><b>6.2</b> Comparing working models with the AIC</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-deviance.html"><a href="sec-deviance.html"><i class="fa fa-check"></i><b>7</b> Deviance</a><ul>
+<li class="chapter" data-level="7.1" data-path="sec-deviance.html"><a href="sec-deviance.html#deviance"><i class="fa fa-check"></i><b>7.1</b> Deviance</a></li>
+<li class="chapter" data-level="7.2" data-path="sec-deviance.html"><a href="sec-deviance.html#approximation-of-the-log-likelihood-function-near-its-maximum"><i class="fa fa-check"></i><b>7.2</b> Approximation of the log likelihood function near its maximum</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-deviance.html"><a href="sec-deviance.html#sampling-distribution-for-the-deviance"><i class="fa fa-check"></i><b>7.3</b> Sampling distribution for the deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html"><i class="fa fa-check"></i><b>8</b> Explanatory variables in GLMs</a><ul>
+<li class="chapter" data-level="8.1" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#nature-of-variables"><i class="fa fa-check"></i><b>8.1</b> Nature of variables</a></li>
+<li class="chapter" data-level="8.2" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#generalized-mixed-linear-models"><i class="fa fa-check"></i><b>8.2</b> Generalized Mixed Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sec-survival.html"><a href="sec-survival.html"><i class="fa fa-check"></i><b>9</b> Survival Analysis</a><ul>
+<li class="chapter" data-level="9.1" data-path="sec-survival.html"><a href="sec-survival.html#distributions"><i class="fa fa-check"></i><b>9.1</b> Distributions</a></li>
+<li class="chapter" data-level="9.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions"><i class="fa fa-check"></i><b>9.2</b> Survivor and hazard functions</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-exponential-distribution"><i class="fa fa-check"></i><b>9.2.1</b> Survivor and hazard functions for the exponential distribution</a></li>
+<li class="chapter" data-level="9.2.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-weibull-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Survivor and hazard functions for the Weibull distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="sec-survival.html"><a href="sec-survival.html#link-function"><i class="fa fa-check"></i><b>9.3</b> Link function</a></li>
+<li class="chapter" data-level="9.4" data-path="sec-survival.html"><a href="sec-survival.html#estimation-of-beta-with-the-likelihood"><i class="fa fa-check"></i><b>9.4</b> Estimation of <span class="math inline">\(\beta\)</span> with the Likelihood</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="sec-survival.html"><a href="sec-survival.html#with-uncensored-data"><i class="fa fa-check"></i><b>9.4.1</b> With uncensored data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="sec-survival.html"><a href="sec-survival.html#with-censored-data"><i class="fa fa-check"></i><b>9.4.2</b> With censored data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="sec-survival.html"><a href="sec-survival.html#proportional-hazard-models"><i class="fa fa-check"></i><b>9.5</b> Proportional hazard models</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>10</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="multiple-regression.html"><a href="multiple-regression.html#reminder-least-squares-algorithm"><i class="fa fa-check"></i><b>10.1</b> Reminder: Least Squares algorithm</a></li>
+<li class="chapter" data-level="10.2" data-path="multiple-regression.html"><a href="multiple-regression.html#covariance-of-hatbeta"><i class="fa fa-check"></i><b>10.2</b> Covariance of <span class="math inline">\(\hat{\beta}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="multiple-regression.html"><a href="multiple-regression.html#case-study-carbohydrate-diet"><i class="fa fa-check"></i><b>10.3</b> Case study : Carbohydrate Diet</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="multiple-regression.html"><a href="multiple-regression.html#fitting-with-lm-and-glm"><i class="fa fa-check"></i><b>10.3.1</b> Fitting with lm() and glm()</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multiple-regression.html"><a href="multiple-regression.html#using-math"><i class="fa fa-check"></i><b>10.3.2</b> Using Math</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sec-multinomial.html"><a href="sec-multinomial.html"><i class="fa fa-check"></i><b>11</b> Multinomial Distribution</a><ul>
+<li class="chapter" data-level="11.1" data-path="sec-multinomial.html"><a href="sec-multinomial.html#from-binomial-distribution-to-multinomial-distribution"><i class="fa fa-check"></i><b>11.1</b> From Binomial Distribution to Multinomial Distribution</a></li>
+<li class="chapter" data-level="11.2" data-path="sec-multinomial.html"><a href="sec-multinomial.html#multinomial-distribution-poisson-random-variables"><i class="fa fa-check"></i><b>11.2</b> Multinomial Distribution &amp; Poisson random variables</a></li>
+<li class="chapter" data-level="11.3" data-path="sec-multinomial.html"><a href="sec-multinomial.html#nominal-logistic-regression"><i class="fa fa-check"></i><b>11.3</b> Nominal logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.scss.tcd.ie/Rozenn.Dahyot/" target="blank">Rozenn Dahyot</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturenotes: Generalized Linear Models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="explanatory-variables-in-glms" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Explanatory variables in GLMs</h1>
+<p>So far, we have found that various GLMs for analysing data can be defined by selecting various distributions, and various link functions. In this chapter, we focus on the design of the linear relation <span class="math inline">\(\beta^{T}x\)</span>.</p>
+<div id="nature-of-variables" class="section level2">
+<h2><span class="header-section-number">8.1</span> Nature of variables</h2>
+<p>Responses and explanatory variables can be:</p>
+<ul>
+<li><p>nominal e.g. (red,green,blue); (dead,alive), (male, female)</p></li>
+<li><p>ordinal in which there is a natural order or ranking e.g. age categories</p></li>
+<li><p>continuous e.g. time, weight, temperature etc.</p></li>
+</ul>
+<p>Categorical variables refer to nominal and ordinal data. When considering a linear form with a continuous variable <span class="math inline">\(x\)</span>, additionnal polynomial explanatory variables can be considered in the model e.g.:</p>
+<ul>
+<li><p>using <span class="math inline">\(x\)</span> as explanatory variable: <span class="math inline">\(\beta_0+\beta_1 \ x\)</span> (<span class="math inline">\(\dim(\beta)=2\)</span>), <span class="math inline">\(\beta_1 \ x\)</span> (<span class="math inline">\(\dim(\beta)=1\)</span>)</p></li>
+<li><p>using <span class="math inline">\(x^2\)</span> as explanatory variable: <span class="math inline">\(\beta_0+\beta_2 \ x^2\)</span> (<span class="math inline">\(\dim(\beta)=2\)</span>), <span class="math inline">\(\beta_2 \ x^2\)</span> (<span class="math inline">\(\dim(\beta)=3\)</span>)</p></li>
+<li><p>using <span class="math inline">\(x\)</span> and <span class="math inline">\(x^2\)</span> as explanatory variables: <span class="math inline">\(\beta_0+\beta_1 x+\beta_2 \ x^2\)</span> (<span class="math inline">\(\dim(\beta)=3\)</span>), <span class="math inline">\(\beta_1 x+\beta_2 \ x^2\)</span> (<span class="math inline">\(\dim(\beta)=2\)</span>)</p></li>
+</ul>
+</div>
+<div id="generalized-mixed-linear-models" class="section level2">
+<h2><span class="header-section-number">8.2</span> Generalized Mixed Linear Models</h2>
+
+<div class="definition">
+<p><span id="def:mixed" class="definition"><strong>Definition 8.1  </strong></span><strong>(Mixed models)</strong> Consider the scenario of having <span class="math inline">\(m\)</span> clusters of data where the response is modeled as a function of a single regressor <span class="math inline">\(x\)</span>. The generalized linear mixed model is: <span class="math display">\[g(\mathbb{E}[y])=\beta_0+\beta_1\ x+ \sum_{j=1}^m  \delta_j \ ( \alpha_j +  \gamma_j  \ x )\]</span> with</p>
+<ul>
+<li><p><span class="math inline">\(x\)</span> continuous explanatory variable,</p></li>
+<li><p><span class="math inline">\(\delta_j\)</span> is the indicator variable for the <span class="math inline">\(j^{th}\)</span> cluster,</p></li>
+<li><span class="math inline">\(\alpha_j\)</span> is the intercept and <span class="math inline">\(\gamma_j\)</span> is the slope for the <span class="math inline">\(j^{th}\)</span> cluster.
+</div>
+</li>
+</ul>
+<!-- 
+
+**Example.**
+
+In the case study Brit doctors, the model is
+$$g(\mathbb{E}[y])=\beta_0+\beta_1\ x +\beta_2\ x^2 + \delta \ ( \alpha_1   + \gamma_1\  x)$$
+with $\delta=1$ for smokers and $\delta=0$ for non-smokers (categorical
+data), and $x$ is the age. This allows us to model a linear relation for
+non-smokers ($\delta=0$):
+$$g(\mathbb{E}[y])=\beta_0+\beta_1\ x +\beta_2\ x^2$$ and for smokers
+($\delta=1$):
+$$g(\mathbb{E}[y])=(\beta_0+\alpha_1)+(\beta_1+\gamma_1)\ x +\beta_2\ x^2$$
+-->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sec-deviance.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-survival.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["GLM2.pdf", "GLM2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

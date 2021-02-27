@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 11 Multinomial Distribution | Lecturenotes: Generalized Linear Models</title>
+  <meta name="description" content="Lecturenotes">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 11 Multinomial Distribution | Lecturenotes: Generalized Linear Models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecturenotes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Multinomial Distribution | Lecturenotes: Generalized Linear Models" />
+  
+  <meta name="twitter:description" content="Lecturenotes" />
+  
+
+<meta name="author" content="Rozenn Dahyot">
+
+
+<meta name="date" content="2019-03-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="multiple-regression.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Generalized Linear Models</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forewords</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#sec:LR:reminder"><i class="fa fa-check"></i><b>2.1</b> Linear Regression - Reminder</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sec:LR:new"><i class="fa fa-check"></i><b>2.2</b> Linear Regression - Reformulation</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#sec:intro:glm"><i class="fa fa-check"></i><b>2.3</b> Generalised Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html"><i class="fa fa-check"></i><b>3</b> Distributions for response variable <span class="math inline">\(y\)</span></a><ul>
+<li class="chapter" data-level="3.1" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#sec:exponential:family"><i class="fa fa-check"></i><b>3.1</b> Exponential family of distributions</a></li>
+<li class="chapter" data-level="3.2" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#some-members-of-the-exponential-family"><i class="fa fa-check"></i><b>3.2</b> Some members of the exponential family</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html"><i class="fa fa-check"></i><b>4</b> Generalized Linear Models</a><ul>
+<li class="chapter" data-level="4.1" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#formal-structure-for-the-class-of-generalized-linear-models"><i class="fa fa-check"></i><b>4.1</b> Formal structure for the class of generalized Linear Models</a></li>
+<li class="chapter" data-level="4.2" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#statistical-analysis-with-gmls"><i class="fa fa-check"></i><b>4.2</b> Statistical analysis with GMLs</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="binomialpoisson.html"><a href="binomialpoisson.html"><i class="fa fa-check"></i><b>5</b> Binomial &amp; Poisson Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:offset:exposure"><i class="fa fa-check"></i><b>5.1</b> Offset and Exposure</a></li>
+<li class="chapter" data-level="5.2" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:poisson:binomial:n:infty"><i class="fa fa-check"></i><b>5.2</b> Relation between Poisson and Binomial distributions when <span class="math inline">\(n\rightarrow +\infty\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-AIC.html"><a href="sec-AIC.html"><i class="fa fa-check"></i><b>6</b> Akaike Information Criterion</a><ul>
+<li class="chapter" data-level="6.1" data-path="sec-AIC.html"><a href="sec-AIC.html#likelihood-and-log-likelihood"><i class="fa fa-check"></i><b>6.1</b> Likelihood and log-likelihood</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-AIC.html"><a href="sec-AIC.html#comparing-working-models-with-the-aic"><i class="fa fa-check"></i><b>6.2</b> Comparing working models with the AIC</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-deviance.html"><a href="sec-deviance.html"><i class="fa fa-check"></i><b>7</b> Deviance</a><ul>
+<li class="chapter" data-level="7.1" data-path="sec-deviance.html"><a href="sec-deviance.html#deviance"><i class="fa fa-check"></i><b>7.1</b> Deviance</a></li>
+<li class="chapter" data-level="7.2" data-path="sec-deviance.html"><a href="sec-deviance.html#approximation-of-the-log-likelihood-function-near-its-maximum"><i class="fa fa-check"></i><b>7.2</b> Approximation of the log likelihood function near its maximum</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-deviance.html"><a href="sec-deviance.html#sampling-distribution-for-the-deviance"><i class="fa fa-check"></i><b>7.3</b> Sampling distribution for the deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html"><i class="fa fa-check"></i><b>8</b> Explanatory variables in GLMs</a><ul>
+<li class="chapter" data-level="8.1" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#nature-of-variables"><i class="fa fa-check"></i><b>8.1</b> Nature of variables</a></li>
+<li class="chapter" data-level="8.2" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#generalized-mixed-linear-models"><i class="fa fa-check"></i><b>8.2</b> Generalized Mixed Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sec-survival.html"><a href="sec-survival.html"><i class="fa fa-check"></i><b>9</b> Survival Analysis</a><ul>
+<li class="chapter" data-level="9.1" data-path="sec-survival.html"><a href="sec-survival.html#distributions"><i class="fa fa-check"></i><b>9.1</b> Distributions</a></li>
+<li class="chapter" data-level="9.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions"><i class="fa fa-check"></i><b>9.2</b> Survivor and hazard functions</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-exponential-distribution"><i class="fa fa-check"></i><b>9.2.1</b> Survivor and hazard functions for the exponential distribution</a></li>
+<li class="chapter" data-level="9.2.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-weibull-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Survivor and hazard functions for the Weibull distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="sec-survival.html"><a href="sec-survival.html#link-function"><i class="fa fa-check"></i><b>9.3</b> Link function</a></li>
+<li class="chapter" data-level="9.4" data-path="sec-survival.html"><a href="sec-survival.html#estimation-of-beta-with-the-likelihood"><i class="fa fa-check"></i><b>9.4</b> Estimation of <span class="math inline">\(\beta\)</span> with the Likelihood</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="sec-survival.html"><a href="sec-survival.html#with-uncensored-data"><i class="fa fa-check"></i><b>9.4.1</b> With uncensored data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="sec-survival.html"><a href="sec-survival.html#with-censored-data"><i class="fa fa-check"></i><b>9.4.2</b> With censored data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="sec-survival.html"><a href="sec-survival.html#proportional-hazard-models"><i class="fa fa-check"></i><b>9.5</b> Proportional hazard models</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>10</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="multiple-regression.html"><a href="multiple-regression.html#reminder-least-squares-algorithm"><i class="fa fa-check"></i><b>10.1</b> Reminder: Least Squares algorithm</a></li>
+<li class="chapter" data-level="10.2" data-path="multiple-regression.html"><a href="multiple-regression.html#covariance-of-hatbeta"><i class="fa fa-check"></i><b>10.2</b> Covariance of <span class="math inline">\(\hat{\beta}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="multiple-regression.html"><a href="multiple-regression.html#case-study-carbohydrate-diet"><i class="fa fa-check"></i><b>10.3</b> Case study : Carbohydrate Diet</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="multiple-regression.html"><a href="multiple-regression.html#fitting-with-lm-and-glm"><i class="fa fa-check"></i><b>10.3.1</b> Fitting with lm() and glm()</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multiple-regression.html"><a href="multiple-regression.html#using-math"><i class="fa fa-check"></i><b>10.3.2</b> Using Math</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sec-multinomial.html"><a href="sec-multinomial.html"><i class="fa fa-check"></i><b>11</b> Multinomial Distribution</a><ul>
+<li class="chapter" data-level="11.1" data-path="sec-multinomial.html"><a href="sec-multinomial.html#from-binomial-distribution-to-multinomial-distribution"><i class="fa fa-check"></i><b>11.1</b> From Binomial Distribution to Multinomial Distribution</a></li>
+<li class="chapter" data-level="11.2" data-path="sec-multinomial.html"><a href="sec-multinomial.html#multinomial-distribution-poisson-random-variables"><i class="fa fa-check"></i><b>11.2</b> Multinomial Distribution &amp; Poisson random variables</a></li>
+<li class="chapter" data-level="11.3" data-path="sec-multinomial.html"><a href="sec-multinomial.html#nominal-logistic-regression"><i class="fa fa-check"></i><b>11.3</b> Nominal logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.scss.tcd.ie/Rozenn.Dahyot/" target="blank">Rozenn Dahyot</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturenotes: Generalized Linear Models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec:multinomial" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Multinomial Distribution</h1>
+<div id="from-binomial-distribution-to-multinomial-distribution" class="section level2">
+<h2><span class="header-section-number">11.1</span> From Binomial Distribution to Multinomial Distribution</h2>
+<p>The Binomial distribution has been defined as the joint distribution of Bernouilli random variables. Bernouilli variables have only two possible outcomes (e.g. success and failure, or yes and no). The Multinomial Distribution defined below extends the number of categories for the outcomes from 2 to <span class="math inline">\(J\)</span> (e.g. for <span class="math inline">\(J=3\)</span>: yes, maybe, no).</p>
+
+<div class="definition">
+<span id="def:Multinomial" class="definition"><strong>Definition 11.1  </strong></span><strong>(Multinomial distribution)</strong> Consider <span class="math inline">\(J\)</span> categories. Having collected the outcomes of <span class="math inline">\(n\)</span> experiments, <span class="math inline">\(y_1\)</span> indicates the number of experiments with outcomes in category 1, <span class="math inline">\(y_2\)</span> indicates the number of experiments with outcomes in category 2, ..., <span class="math inline">\(y_J\)</span> indicates the number of experiments with outcomes in category <span class="math inline">\(J\)</span>. Then the joint density function of <span class="math inline">\((y_1,\ y_2,\cdots, \ y_J)\)</span> is: <span class="math display">\[p(y_1,y_2,\cdots, y_J;\theta_1,\cdots,\theta_J,n)=\frac{n!}{y_1!\ y_2!\ \cdots y_{J}! } \ \theta_1^{y_1} \  \theta_2^{y_2}\ \cdots \theta_J^{y_J}\]</span> with <span class="math inline">\(\theta_1, \cdots,\ \theta_{J}\)</span> are the respective probabilities of the categories then <span class="math inline">\(\theta_1+\theta_2+\cdots+\theta_J=1\)</span>. and <span class="math inline">\(n=y_1+y_2+\cdots+y_J\)</span>. The Multinomial Distribution is noted: <span class="math display">\[\mathrm{Multinomial}(n,\theta_1,\cdots,\theta_J)\]</span> and when <span class="math inline">\(J=2\)</span>, we get the Binomial distribution.
+</div>
+
+<p><strong>Is the multinomial distribution a member of the exponential family of distribution?</strong></p>
+<p>no, it is not.</p>
+<p><strong>Notation conventions.</strong></p>
+<p>The data collected for analysis are now <span class="math inline">\(\lbrace (y_{i,1}, \cdots,y_{i,J}, x_i,n_i)\rbrace_{i=1,\cdots,N}\)</span> for <span class="math inline">\(N\)</span> groups (we can use the vectorial notation <span class="math inline">\(\mathbf{y}_i=(y_{i,1}, \cdots,y_{i,J})\)</span> leading equivalently to the observations <span class="math inline">\(\lbrace (\mathbf{y}_i, x_i,n_i)\rbrace_{i=1,\cdots,N}\)</span>). The likelihood function for the saturated model is then: <span class="math display">\[\mathcal{L}\left (  \lbrace\theta_{i,1}, \cdots \theta_{i,J}\rbrace_{i=1,\cdots,N} \right)= \prod_{i=1}^N \mathrm{Multinomial}(n_i,\theta_{i,1},\cdots,\theta_{i,J})= \prod_{i=1}^N \frac{n_i !}{y_{i,1}!\ y_{i,2}!\ \cdots y_{i,J}! } \ \theta_{i,1}^{y_{i,1}} \  \theta_{i,2}^{y_{i,2}}\ \cdots \theta_{i,J}^{y_{i,J}}\]</span> The degree of freedom for this saturated model is <span class="math inline">\((J-1)\ N\)</span> (remember that we have the constraints <span class="math inline">\(\theta_{i,1}+\theta_{i,2}+\cdots+\theta_{i,J}=1, \ \forall i\)</span> ).</p>
+</div>
+<div id="multinomial-distribution-poisson-random-variables" class="section level2">
+<h2><span class="header-section-number">11.2</span> Multinomial Distribution &amp; Poisson random variables</h2>
+<p><strong>Preliminary exercise:</strong></p>
+<p>consider two independent random variables that follow a Poisson distribution i.e. <span class="math inline">\(y_1\sim\mathcal{P}_o(\lambda_1)\)</span> and <span class="math inline">\(y_2\sim\mathcal{P}_o(\lambda_2)\)</span>. Show that <span class="math inline">\(n=y_1+y_2\)</span> follows a Poisson distribution with parameter <span class="math inline">\(\lambda_1+\lambda_2\)</span> (or <span class="math inline">\(n\sim\mathcal{P}_o(\lambda_1+\lambda_2\)</span> ).</p>
+<p><strong>Multinomial distribution &amp; joint distribution of Poisson variables.</strong></p>
+<p>Consider <span class="math inline">\(y_1, y_2,\cdots, y_J\)</span> independent random variables with distributions: <span class="math display">\[y_j\sim\mathcal{P}_o(\lambda_j) , \ \forall j=1,\cdots,J\]</span> Then the joint density function of <span class="math inline">\((y_1, y_2,\cdots, y_J )\)</span> is: <span class="math display">\[p(y_1, y_2,\cdots, y_J; \lambda_1,\cdots,\lambda_J )=\prod_{j=1}^J \frac{\lambda_j^{y_j}}{y_j!} \exp(-\lambda_j)\]</span> Lets define <span class="math inline">\(n=y_1+y_2+\cdots+y_J\)</span> then <span class="math inline">\(n\sim\mathcal{P}_o(\lambda_1+\lambda_2+\cdots+\lambda_J)\)</span> (see exercise). Using Bayes, and ignoring the parameters of the distributions for now: <span class="math display">\[p(y_1, y_2,\cdots, y_J|n)=\frac{p(n|y_1,\cdots,y_J)\ p(y_1, y_2,\cdots, y_J)}{p(n)}\]</span> with <span class="math inline">\(p(n|y_1,\cdots,y_J)=\delta(n-y_1-\cdots-y_J)\)</span> (the Kronecker delta) since <span class="math inline">\(n=y_1+y_2+\cdots+y_J\)</span>. Hence <span class="math display">\[\begin{array}{ll}
+p(y_1, y_2,\cdots, y_J|n)&amp;=\frac{\delta(n-y_1-\cdots-y_J) \ \prod_{j=1}^J \frac{\lambda_j^{y_j}}{y_j!} \exp(-\lambda_j)}{\frac{(\sum_{j=1}^J \lambda_j)^n  }{n!} \exp(-\sum_{j=1}^J \lambda_j)}\\
+&amp;\\
+&amp;=\delta(n-y_1-\cdots-y_J)\ n! \ \prod_{j=1}^J \frac{1}{y_j!}\left( \frac{\lambda_j}{\sum_{j=1}^J \lambda_j} \right)^{y_j}\\
+\end{array}\]</span> This is equivalent to the multinomial distribution: <span class="math display">\[p(y_1, y_2,\cdots, y_J|n)= \frac{n!}{y_1! \cdots y_J!}  \theta_1^{y_1}\cdots \theta_J^{y_J}\]</span> with the convention <span class="math inline">\(\theta_j=\frac{\lambda_j}{\sum_{j=1}^J \lambda_j}\)</span> and the constraint <span class="math inline">\(n=y_1+\cdots+y_J\)</span> (this is when the kronecker delta is 1, otherwise it is 0). So the Multinomial distribution can be regarded as the joint distribution of Poisson random variables conditionnal upon their sum <span class="math inline">\(n\)</span>. This justifies the use of generalized linear models.</p>
+</div>
+<div id="nominal-logistic-regression" class="section level2">
+<h2><span class="header-section-number">11.3</span> Nominal logistic regression</h2>
+
+<div class="definition">
+<span id="def:nomlog" class="definition"><strong>Definition 11.2  </strong></span><strong>(Nominal logistic Regression)</strong> The outcomes of experiments are in <span class="math inline">\(J\)</span> categories and there is no natural order amongst the response categories. One category is arbitrarily chosen as the reference category e.g. <span class="math inline">\(\theta_1\)</span>. Then the logits for the other categories are defined by: <span class="math display">\[\mathrm{logit}(\theta_j)=\log\left( \frac{\theta_j}{\theta_1}\right) = x^T \beta_j \quad,\ \forall j=2,\cdots, J\]</span> having the constraints <span class="math inline">\(\sum_{j=1}^J\theta_j=1\)</span>. When the estimates <span class="math inline">\(\hat{\beta}_j\)</span> are computed, then <span class="math display">\[\left\lbrace
+\begin{array}{l}
+\hat{\theta}_j = \hat{\theta}_1\ \exp\left(x^T\hat{\beta}_j\right)\quad \forall j=2,\cdots,J\\
+\\
+\hat{\theta}_1= \frac{1}{1+\sum_{j=2}^J \exp\left( x^T \hat{\beta}_j\right)}\\
+\end{array}
+\right.\]</span> or <span class="math display">\[\hat{\theta}_j =\frac{ \exp\left(x^T\hat{\beta}_j\right) }{1+\sum_{j=2}^J \exp\left( x^T \hat{\beta}_j\right)}\quad \forall j=2,\cdots,J\]</span>
+</div>
+
+<p>Having observations <span class="math inline">\(\lbrace (y_{i,1}, \cdots,y_{i,J}, x_i,n_i)\rbrace_{i=1,\cdots,N}\)</span> for <span class="math inline">\(N\)</span> groups then the estimates of the proportions using the model are: <span class="math display">\[\hat{\theta}_{i,j} =\frac{ \exp\left(x_{i}^T\hat{\beta}_j\right) }{1+\sum_{j=2}^J \exp\left( x_{i}^T \hat{\beta}_j\right)}\quad \forall j=2,\cdots,J\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="multiple-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["GLM2.pdf", "GLM2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

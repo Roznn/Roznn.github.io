@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 2 Introduction | Lecturenotes: Generalized Linear Models</title>
+  <meta name="description" content="Lecturenotes">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 2 Introduction | Lecturenotes: Generalized Linear Models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecturenotes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Lecturenotes: Generalized Linear Models" />
+  
+  <meta name="twitter:description" content="Lecturenotes" />
+  
+
+<meta name="author" content="Rozenn Dahyot">
+
+
+<meta name="date" content="2019-04-02">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="distributions-for-response-variable-y.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Generalized Linear Models</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forewords</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#sec:LR:reminder"><i class="fa fa-check"></i><b>2.1</b> Linear Regression - Reminder</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sec:LR:new"><i class="fa fa-check"></i><b>2.2</b> Linear Regression - Reformulation</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#sec:intro:glm"><i class="fa fa-check"></i><b>2.3</b> Generalised Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html"><i class="fa fa-check"></i><b>3</b> Distributions for response variable <span class="math inline">\(y\)</span></a></li>
+<li class="chapter" data-level="4" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html"><i class="fa fa-check"></i><b>4</b> Generalized Linear Models</a></li>
+<li class="chapter" data-level="5" data-path="binomialpoisson.html"><a href="binomialpoisson.html"><i class="fa fa-check"></i><b>5</b> Binomial &amp; Poisson Distributions</a></li>
+<li class="chapter" data-level="6" data-path="sec-AIC.html"><a href="sec-AIC.html"><i class="fa fa-check"></i><b>6</b> Akaike Information Criterion</a></li>
+<li class="chapter" data-level="7" data-path="sec-deviance.html"><a href="sec-deviance.html"><i class="fa fa-check"></i><b>7</b> Deviance</a><ul>
+<li class="chapter" data-level="" data-path="sec-deviance.html"><a href="sec-deviance.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+<li class="chapter" data-level="" data-path="sec-deviance.html"><a href="sec-deviance.html#solutions"><i class="fa fa-check"></i>Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html"><i class="fa fa-check"></i><b>8</b> Explanatory variables in GLMs</a></li>
+<li class="chapter" data-level="9" data-path="sec-survival.html"><a href="sec-survival.html"><i class="fa fa-check"></i><b>9</b> Survival Analysis</a><ul>
+<li class="chapter" data-level="9.0.1" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-exponential-distribution"><i class="fa fa-check"></i><b>9.0.1</b> Survivor and hazard functions for the exponential distribution</a></li>
+<li class="chapter" data-level="9.0.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-weibull-distribution"><i class="fa fa-check"></i><b>9.0.2</b> Survivor and hazard functions for the Weibull distribution</a></li>
+<li class="chapter" data-level="9.0.3" data-path="sec-survival.html"><a href="sec-survival.html#with-uncensored-data"><i class="fa fa-check"></i><b>9.0.3</b> With uncensored data</a></li>
+<li class="chapter" data-level="9.0.4" data-path="sec-survival.html"><a href="sec-survival.html#with-censored-data"><i class="fa fa-check"></i><b>9.0.4</b> With censored data</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>10</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="multiple-regression.html"><a href="multiple-regression.html#case-study-carbohydrate-diet"><i class="fa fa-check"></i><b>10.1</b> Case study : Carbohydrate Diet</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="multiple-regression.html"><a href="multiple-regression.html#fitting-with-lm-and-glm"><i class="fa fa-check"></i><b>10.1.1</b> Fitting with lm() and glm()</a></li>
+<li class="chapter" data-level="10.1.2" data-path="multiple-regression.html"><a href="multiple-regression.html#using-math"><i class="fa fa-check"></i><b>10.1.2</b> Using Math</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sec-multinomial.html"><a href="sec-multinomial.html"><i class="fa fa-check"></i><b>11</b> Multinomial Distribution</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.scss.tcd.ie/Rozenn.Dahyot/" target="blank">Rozenn Dahyot</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturenotes: Generalized Linear Models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
+<p>Problems in Statistics (or Data Science) often start with a dataset of <span class="math inline">\(N\)</span> observations <span class="math inline">\(\lbrace y^{(i)},x^{(i)}\rbrace_{i=1,\cdots,N}\)</span> and Mathematics provide several abstract objects (e.g. variable, vector, functions) in which one can plug-in this data. In the models seen in this course, for each observations <span class="math inline">\((y^{(i)},x^{(i)})\)</span> we associate <span class="math inline">\((y_{i},x_{i})\)</span> with <span class="math inline">\(y_i\)</span> a variable (called response variable) and <span class="math inline">\(x_i\)</span> a vector made up of several variables (called explanatory variables). This one-to-one mapping between data point <span class="math inline">\((y^{(i)},x^{(i)})\)</span> and variables <span class="math inline">\((y_{i},x_{i})\)</span> makes it pointless to differentiate them in the notations - we only use notation <span class="math inline">\((y_{i},x_{i})\)</span> confusing the two meanings. It is worth however pointing out that the likelihood function <span class="math inline">\(p(y_1,y_2,\cdots,y_N|x_1,x_2,\cdots,x_N,\beta)\)</span> is a positive function defined on a <span class="math inline">\(N\)</span> dimensional space such that <span class="math display">\[\int\int \cdots\int
+p(y_1,y_2,\cdots,y_N|x_1,x_2,\cdots,x_N,\beta)\ dy_1 \ dy_2\cdots
+dy_N=1\]</span> and such writing only make sense when considering variables (e.g. <span class="math inline">\(y_i\)</span>) and not data (e.g. <span class="math inline">\(y^{(i)}\)</span>). This chapter gives a <a href="intro.html#sec:LR:reminder">quick overview of Linear Regression</a> and <a href="intro.html#sec:LR:new">how its premises can be reformulated</a>. We give then a <a href="intro.html#sec:intro:glm">quick introduction of this course</a> pointing out how the premises of Linear Regression will be extended.</p>
+<div id="sec:LR:reminder" class="section level2">
+<h2><span class="header-section-number">2.1</span> Linear Regression - Reminder</h2>
+<p>In Linear Regression, we have a set of observations <span class="math inline">\(\lbrace (y_i,x_i)\rbrace_{i=1,\cdots,N}\)</span> such that the following linear relationship holds <span class="math inline">\(\forall i\)</span>: <span class="math display">\[\begin{array}{ll}
+y_i&amp;=\beta_0+\beta_1 \ x_{1i}+\cdots + \beta_{k}\  x_{ki}+\epsilon_i\\
+&amp;= \beta^{T}x_i +\epsilon_i \\
+\end{array}
+\label{eq:LR}\]</span> where</p>
+<ul>
+<li><p><span class="math inline">\(y_i\in \mathbb{R}\)</span> is the outcome or the observed value for the response variable,</p></li>
+<li><p><span class="math inline">\(x_i=(1, x_{1i},\cdots,x_{ki})^T \in \mathbb{R}^{k+1}\)</span> is a vector collating the values of the explanatory variables associated with the outcome <span class="math inline">\(y_i\)</span>,</p></li>
+<li><p><span class="math inline">\(\epsilon_i\)</span> is the noise, residual or error associated with the outcome <span class="math inline">\(y_i\)</span>. It is assumed that the error <span class="math inline">\(\epsilon\)</span> has a Normal distribution with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(\sigma^2\)</span>: <span class="math display">\[p_{\epsilon}(\epsilon)=\frac{\exp\left(\frac{-\epsilon^2}{2\sigma^2}\right)}{\sqrt{2\pi} \sigma}\]</span></p></li>
+</ul>
+<p>The best parameters <span class="math inline">\(\beta\)</span> are then estimated as the ones that maximise the joint probability density function of all the residuals: <span class="math display">\[\hat{\beta} =\arg\max_{\beta} p(\epsilon_1,\cdots,\epsilon_N)
+\label{eq:LR:ML}\]</span> Because the residuals are independent and all follow the same distribution <span class="math inline">\(p_{\epsilon}\)</span>, the joint density function of the residuals corresponds to: <span class="math display">\[p(\epsilon_1,\cdots,\epsilon_N)=\prod_{i=1}^N p_{\epsilon}(\epsilon_i) 
+=\prod_{i=1}^N   \left(  \frac{\exp\left(\frac{-\epsilon_i^2}{2\sigma^2}\right)}{\sqrt{2\pi} \sigma} \right)
+=\prod_{i=1}^N   \left(\frac{\exp\left(\frac{-(y_i- \beta^{T} x_i)^2}{2\sigma^2}\right)}{\sqrt{2\pi} \sigma}\right)\]</span> Using the log transformation of the joint density function of the residuals, the maximum likelihood estimate of the parameters [<span class="math inline">\(\beta\)</span>] (#eq:LR:ML) is in fact computed by minimising the sum of square errors: <span class="math display">\[\hat{\beta} =\arg\min_{\beta} \left\lbrace \sum_{i=1}^N \epsilon_i^2
+  =\sum_{i=1}^N (y_i- \beta^{T} x_i)^2 \right\rbrace\]</span> and a forecast for output response <span class="math inline">\(\hat{y}=\hat{\beta}^{T}x\)</span> can be computed for any chosen input <span class="math inline">\(x\)</span> - confidence intervals can also be computed for modelling uncertainty associated with <span class="math inline">\(\hat{y}\)</span>.</p>
+</div>
+<div id="sec:LR:new" class="section level2">
+<h2><span class="header-section-number">2.2</span> Linear Regression - Reformulation</h2>
+<p>Consider the equation <span class="math inline">\(y=\beta^Tx+\epsilon\)</span> (without the index <span class="math inline">\(i\)</span>) for a moment, if <span class="math inline">\(x\)</span> and <span class="math inline">\(\beta\)</span> are <em>given</em>, then the only uncertainty related to the response <span class="math inline">\(y\)</span> is having the same properties as the uncertainty defined for <span class="math inline">\(\epsilon\)</span>. In other words, we have: <span class="math display">\[p_{y|\beta,x}(y|\beta,x)=p_{\epsilon}(y-\beta^Tx)\]</span> where <span class="math inline">\(p_{y|\beta,x}\)</span> is the probability density function of <span class="math inline">\(y\)</span> <em>given</em> <span class="math inline">\(x\)</span> and <span class="math inline">\(\beta\)</span> (this can be understood as a change of variable <span class="math inline">\(\epsilon=y-\beta^Tx\)</span>). So saying that the error has a Normal distribution with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(\sigma^2\)</span> is the same as assuming that the conditional probability density function of the response <span class="math inline">\(y\)</span> given the parameters <span class="math inline">\(\beta\)</span> and the explanatory variables <span class="math inline">\(x\)</span> is: <span class="math display">\[p_{y|\beta,x}(y|\beta,x)=\frac{\exp\left(\frac{-(y-\beta^Tx)^2}{2\sigma^2}\right)}{\sqrt{2\pi} \sigma}\]</span> which is a Normal distribution with mean <span class="math inline">\(\beta^T x\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. So we can in fact define the Linear Regression problem without introducing explicitly a variable <span class="math inline">\(\epsilon\)</span> as follow:</p>
+
+<div class="definition">
+<p><span id="def:PremisesLinearRegression" class="definition"><strong>Definition 2.1  </strong></span><strong>Premises Linear Regression</strong>. Consider a set of observations <span class="math inline">\(\lbrace (y_i,x_i)\rbrace_{i=1,\cdots,N}\)</span> collected independently, such that <span class="math inline">\(\forall i\)</span></p>
+<ul>
+<li><p>the response <span class="math inline">\(y_i\)</span> is normally distributed</p></li>
+<li><p>with mean <span class="math inline">\(\mathbb{E}[y_i]=\beta^{T}x_i\)</span> (and variance <span class="math inline">\(\mathbb{E}[(y_i-\beta^{T}x_i)^2]=\sigma^2\)</span>).</p></li>
+</ul>
+so <span class="math inline">\(y_i \sim p_{y|x,\beta}(y_i|x_i,\beta)\)</span> is fully defined and the parameters can be estimated using the likelihood function: <span class="math display">\[\hat{\beta}=\arg\max_{\beta} \left \lbrace \mathcal{L}(\beta)=p(y_1,\cdots,y_N|x_1,\cdots,x_N,\beta)
+= \prod_{i=1}^N p_{y|x,\beta}(y_i|x_i,\beta) \right\rbrace\]</span> providing a parametric model <span class="math inline">\(p_{y|x,\beta}(y|x,\hat{\beta})\)</span>.
+</div>
+
+<!-- \@ref(thm:PremisesLinearRegression) -->
+</div>
+<div id="sec:intro:glm" class="section level2">
+<h2><span class="header-section-number">2.3</span> Generalised Linear Models</h2>
+<p>In a nutshell, this course will generalise these premises used for Linear Regression as follow:</p>
+<ul>
+<li><p>The probability density function <span class="math inline">\(p_{y|x,\beta}\)</span> is a member of the exponential family of distributions. The Normal distribution is a member of that family, but other distributions are also available to deal with various situations such as when the outcome <span class="math inline">\(y\)</span> is not an element of <span class="math inline">\(\mathbb{R}\)</span> (as assumed by the Normal distribution) but is for instance in binary form (e.g. the outcome <span class="math inline">\(y\)</span> indicates a failure <span class="math inline">\(0\)</span> or success <span class="math inline">\(1\)</span>).</p></li>
+<li><p>The expectation of <span class="math inline">\(y\)</span> given <span class="math inline">\(x\)</span> and <span class="math inline">\(\beta\)</span> that is defined by: <span class="math display">\[\mathbb{E}[y]=\int_{\mathbb{Y}} y \ p_{y|x\beta}(y|x\beta) \  dy, \quad \text{with }  \mathbb{Y} \text{ domain of definition  of the outcome $y$ }\]</span> is now related to the explanatory variables with a link function <span class="math inline">\(g\)</span> such that <span class="math display">\[g\left(\mathbb{E}[y]\right)=\beta^{T}x\]</span> For instance in the case of Linear Regression, the link function <span class="math inline">\(g\)</span> that we used is the identity function <span class="math inline">\(g\)</span> defined for <span class="math inline">\(z\in\mathbb{R} \rightarrow g(z)=z\in\mathbb{R}\)</span>. <span class="math inline">\(g\)</span> is a link function that will be chosen such that it is bijective and its inverse <span class="math inline">\(g^{-1}\)</span> exists. In general, this function maps the space of the expectation <span class="math inline">\(\mathbb{E}[y]\)</span> to the space <span class="math inline">\(\mathbb{R}\)</span> where <span class="math inline">\(\beta^T x\)</span> takes its value.</p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="distributions-for-response-variable-y.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["GLM2.pdf", "GLM2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 9 Survival Analysis | Lecturenotes: Generalized Linear Models</title>
+  <meta name="description" content="Lecturenotes">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 9 Survival Analysis | Lecturenotes: Generalized Linear Models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecturenotes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Survival Analysis | Lecturenotes: Generalized Linear Models" />
+  
+  <meta name="twitter:description" content="Lecturenotes" />
+  
+
+<meta name="author" content="Rozenn Dahyot">
+
+
+<meta name="date" content="2019-03-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="explanatory-variables-in-glms.html">
+<link rel="next" href="multiple-regression.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Generalized Linear Models</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forewords</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#sec:LR:reminder"><i class="fa fa-check"></i><b>2.1</b> Linear Regression - Reminder</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sec:LR:new"><i class="fa fa-check"></i><b>2.2</b> Linear Regression - Reformulation</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#sec:intro:glm"><i class="fa fa-check"></i><b>2.3</b> Generalised Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html"><i class="fa fa-check"></i><b>3</b> Distributions for response variable <span class="math inline">\(y\)</span></a><ul>
+<li class="chapter" data-level="3.1" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#sec:exponential:family"><i class="fa fa-check"></i><b>3.1</b> Exponential family of distributions</a></li>
+<li class="chapter" data-level="3.2" data-path="distributions-for-response-variable-y.html"><a href="distributions-for-response-variable-y.html#some-members-of-the-exponential-family"><i class="fa fa-check"></i><b>3.2</b> Some members of the exponential family</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html"><i class="fa fa-check"></i><b>4</b> Generalized Linear Models</a><ul>
+<li class="chapter" data-level="4.1" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#formal-structure-for-the-class-of-generalized-linear-models"><i class="fa fa-check"></i><b>4.1</b> Formal structure for the class of generalized Linear Models</a></li>
+<li class="chapter" data-level="4.2" data-path="generalized-linear-models.html"><a href="generalized-linear-models.html#statistical-analysis-with-gmls"><i class="fa fa-check"></i><b>4.2</b> Statistical analysis with GMLs</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="binomialpoisson.html"><a href="binomialpoisson.html"><i class="fa fa-check"></i><b>5</b> Binomial &amp; Poisson Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:offset:exposure"><i class="fa fa-check"></i><b>5.1</b> Offset and Exposure</a></li>
+<li class="chapter" data-level="5.2" data-path="binomialpoisson.html"><a href="binomialpoisson.html#sec:poisson:binomial:n:infty"><i class="fa fa-check"></i><b>5.2</b> Relation between Poisson and Binomial distributions when <span class="math inline">\(n\rightarrow +\infty\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-AIC.html"><a href="sec-AIC.html"><i class="fa fa-check"></i><b>6</b> Akaike Information Criterion</a><ul>
+<li class="chapter" data-level="6.1" data-path="sec-AIC.html"><a href="sec-AIC.html#likelihood-and-log-likelihood"><i class="fa fa-check"></i><b>6.1</b> Likelihood and log-likelihood</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-AIC.html"><a href="sec-AIC.html#comparing-working-models-with-the-aic"><i class="fa fa-check"></i><b>6.2</b> Comparing working models with the AIC</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sec-deviance.html"><a href="sec-deviance.html"><i class="fa fa-check"></i><b>7</b> Deviance</a><ul>
+<li class="chapter" data-level="7.1" data-path="sec-deviance.html"><a href="sec-deviance.html#deviance"><i class="fa fa-check"></i><b>7.1</b> Deviance</a></li>
+<li class="chapter" data-level="7.2" data-path="sec-deviance.html"><a href="sec-deviance.html#approximation-of-the-log-likelihood-function-near-its-maximum"><i class="fa fa-check"></i><b>7.2</b> Approximation of the log likelihood function near its maximum</a></li>
+<li class="chapter" data-level="7.3" data-path="sec-deviance.html"><a href="sec-deviance.html#sampling-distribution-for-the-deviance"><i class="fa fa-check"></i><b>7.3</b> Sampling distribution for the deviance</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html"><i class="fa fa-check"></i><b>8</b> Explanatory variables in GLMs</a><ul>
+<li class="chapter" data-level="8.1" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#nature-of-variables"><i class="fa fa-check"></i><b>8.1</b> Nature of variables</a></li>
+<li class="chapter" data-level="8.2" data-path="explanatory-variables-in-glms.html"><a href="explanatory-variables-in-glms.html#generalized-mixed-linear-models"><i class="fa fa-check"></i><b>8.2</b> Generalized Mixed Linear Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sec-survival.html"><a href="sec-survival.html"><i class="fa fa-check"></i><b>9</b> Survival Analysis</a><ul>
+<li class="chapter" data-level="9.1" data-path="sec-survival.html"><a href="sec-survival.html#distributions"><i class="fa fa-check"></i><b>9.1</b> Distributions</a></li>
+<li class="chapter" data-level="9.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions"><i class="fa fa-check"></i><b>9.2</b> Survivor and hazard functions</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-exponential-distribution"><i class="fa fa-check"></i><b>9.2.1</b> Survivor and hazard functions for the exponential distribution</a></li>
+<li class="chapter" data-level="9.2.2" data-path="sec-survival.html"><a href="sec-survival.html#survivor-and-hazard-functions-for-the-weibull-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Survivor and hazard functions for the Weibull distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="sec-survival.html"><a href="sec-survival.html#link-function"><i class="fa fa-check"></i><b>9.3</b> Link function</a></li>
+<li class="chapter" data-level="9.4" data-path="sec-survival.html"><a href="sec-survival.html#estimation-of-beta-with-the-likelihood"><i class="fa fa-check"></i><b>9.4</b> Estimation of <span class="math inline">\(\beta\)</span> with the Likelihood</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="sec-survival.html"><a href="sec-survival.html#with-uncensored-data"><i class="fa fa-check"></i><b>9.4.1</b> With uncensored data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="sec-survival.html"><a href="sec-survival.html#with-censored-data"><i class="fa fa-check"></i><b>9.4.2</b> With censored data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="sec-survival.html"><a href="sec-survival.html#proportional-hazard-models"><i class="fa fa-check"></i><b>9.5</b> Proportional hazard models</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>10</b> Multiple Regression</a><ul>
+<li class="chapter" data-level="10.1" data-path="multiple-regression.html"><a href="multiple-regression.html#reminder-least-squares-algorithm"><i class="fa fa-check"></i><b>10.1</b> Reminder: Least Squares algorithm</a></li>
+<li class="chapter" data-level="10.2" data-path="multiple-regression.html"><a href="multiple-regression.html#covariance-of-hatbeta"><i class="fa fa-check"></i><b>10.2</b> Covariance of <span class="math inline">\(\hat{\beta}\)</span></a></li>
+<li class="chapter" data-level="10.3" data-path="multiple-regression.html"><a href="multiple-regression.html#case-study-carbohydrate-diet"><i class="fa fa-check"></i><b>10.3</b> Case study : Carbohydrate Diet</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="multiple-regression.html"><a href="multiple-regression.html#fitting-with-lm-and-glm"><i class="fa fa-check"></i><b>10.3.1</b> Fitting with lm() and glm()</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multiple-regression.html"><a href="multiple-regression.html#using-math"><i class="fa fa-check"></i><b>10.3.2</b> Using Math</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sec-multinomial.html"><a href="sec-multinomial.html"><i class="fa fa-check"></i><b>11</b> Multinomial Distribution</a><ul>
+<li class="chapter" data-level="11.1" data-path="sec-multinomial.html"><a href="sec-multinomial.html#from-binomial-distribution-to-multinomial-distribution"><i class="fa fa-check"></i><b>11.1</b> From Binomial Distribution to Multinomial Distribution</a></li>
+<li class="chapter" data-level="11.2" data-path="sec-multinomial.html"><a href="sec-multinomial.html#multinomial-distribution-poisson-random-variables"><i class="fa fa-check"></i><b>11.2</b> Multinomial Distribution &amp; Poisson random variables</a></li>
+<li class="chapter" data-level="11.3" data-path="sec-multinomial.html"><a href="sec-multinomial.html#nominal-logistic-regression"><i class="fa fa-check"></i><b>11.3</b> Nominal logistic regression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.scss.tcd.ie/Rozenn.Dahyot/" target="blank">Rozenn Dahyot</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturenotes: Generalized Linear Models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec:survival" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Survival Analysis</h1>
+<p>Survival analysis is concerned by the statistical modelling of the time to ‘failure’ from a well defined origin or starting point. For instance:</p>
+<ul>
+<li><p>time of hard-drive to fail from the time it has been built or bought (computer science),</p></li>
+<li><p>time of a patient to die from the time the disease has been diagnosed (medicine).</p></li>
+</ul>
+<div id="distributions" class="section level2">
+<h2><span class="header-section-number">9.1</span> Distributions</h2>
+<p>Specificity of survival times:</p>
+<ul>
+<li><p>the times are non-negative and have skewed distributions with long tails,</p></li>
+<li><p>some subjects may survive beyond the study and their failure time is not observed. In this case, the data are said to be censored.</p></li>
+</ul>
+
+<div class="definition">
+<span id="def:ExpDist" class="definition"><strong>Definition 9.1  </strong></span><strong>(Exponential Distribution)</strong> The exponential distribution is defined as <span class="math display">\[p_{y|\theta}(y|\theta) =\theta\ \exp\left(-\theta\ y \right) , \quad \text{with}\   y\in\mathbb{R}^+, \ \theta\in\mathbb{R}^{+*}\]</span>
+</div>
+
+<p><strong>Exercise:</strong></p>
+<p>Show that <span class="math inline">\(\mathbb{E}[y]=\frac{1}{\theta}\)</span> for the exponential distribution.</p>
+
+<div class="definition">
+<span id="def:WeibDist" class="definition"><strong>Definition 9.2  </strong></span><strong>(Weibull distribution)</strong> The Weibull distribution is defined as <span class="math display">\[p_{y|\lambda\theta}(y|\lambda,\theta) = \lambda\ \theta \ y^{\lambda-1}  \exp\left  \lbrack -\theta\ y^{\lambda}  \right \rbrack  ,\quad \text{width}\ y\in\mathbb{R}^+, \ \theta\in\mathbb{R}^{+*} , \ \lambda\in\mathbb{R}^{+*}\]</span> Note that the exponential distribution is a special case of the Weibull distribution with <span class="math inline">\(\lambda=1\)</span>. The Weibull distribution can be rewritten: <span class="math display">\[p_{y|\theta\lambda}(y|\lambda,\theta) = \exp\left  \lbrack -\theta\ y^{\lambda}+\log(\lambda)+\log{\theta}+(\lambda-1) \log(y)  \right \rbrack\]</span>
+</div>
+
+<p><strong>Exercise:</strong></p>
+<p>Show that <span class="math inline">\(\mathbb{E}[y]=\left(\frac{1}{\theta}\right)^{1/\lambda} \Gamma(1+\frac{1}{\lambda})\)</span> for the Weibull distribution with <span class="math inline">\(\Gamma(u)=\int_0^{+\infty} s^{u-1}\ \exp(-s) \ ds\)</span>.</p>
+</div>
+<div id="survivor-and-hazard-functions" class="section level2">
+<h2><span class="header-section-number">9.2</span> Survivor and hazard functions</h2>
+<p>The random variable <span class="math inline">\(y\)</span> denotes the survival time and <span class="math inline">\(f(\cdot)\)</span> is its p.d.f. (i.e. either the exponential <span class="math inline">\(p_{y|\theta}\)</span> or Weibull <span class="math inline">\(p_{y|\lambda\theta}\)</span>).</p>
+<ul>
+<li><p>The <strong>probability of failure</strong> before a specific time is: <span class="math display">\[F(y)=\mathbb{P}(0 \leq t\leq y)=\int_{0}^{y} f(t) \ dt\]</span> The <strong>median survival time</strong> is given by the solution of the equation <span class="math inline">\(F(y)=.5\)</span> and it serves as the <em>average survival time</em>.</p></li>
+<li><p>The <strong>survivor function</strong> is the probability of survival beyond time <span class="math inline">\(y\)</span>: <span class="math display">\[S(y)=\int_{y}^{+\infty} f(t) \ dt  =1-F(y)\]</span></p></li>
+<li><p>The <strong>hazard function</strong> is defined as: <span class="math display">\[h(y)=\frac{f(y)}{S(y)}=-\frac{d \log(S(y))}{dy}\]</span> <span class="math inline">\(h(y)\)</span> can be understood as the probability of failure in between time <span class="math inline">\(y\)</span> and <span class="math inline">\(y+\delta y\)</span> (with <span class="math inline">\(\delta y \rightarrow 0\)</span>) given that the subject has survived up to time <span class="math inline">\(y\)</span>. The primitive <span class="math inline">\(H(y)=-\log(S(y)\)</span> is called the <strong>cumulative hazard function</strong>.</p></li>
+</ul>
+<div id="survivor-and-hazard-functions-for-the-exponential-distribution" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Survivor and hazard functions for the exponential distribution</h3>
+<ul>
+<li><p><span class="math inline">\(F_{\theta}(y)=1-\exp(-\theta \ y)\)</span> . The median survival time is <span class="math inline">\(\log(2)/\theta\)</span> and this is a more appropriate description of the average survival time than <span class="math inline">\(\mathbb{E}(y)=1/\theta\)</span> because of the skewness of the exponential distribution.</p></li>
+<li><p><span class="math inline">\(S_{\theta}(y)=\exp(-\theta \ y)\)</span></p></li>
+<li><p><span class="math inline">\(h_{\theta}(y)=\theta\)</span>. The hazard function does not depend on <span class="math inline">\(y\)</span> so the probability of failure in the interval <span class="math inline">\([y;y+\delta y]\)</span> is not related to how long the subject has already survived. This lack of memory property may be a limitation in some cases when probability of failure increases with time.</p></li>
+<li><p><span class="math inline">\(H_{\theta}(y)=\theta\ y\)</span></p></li>
+</ul>
+</div>
+<div id="survivor-and-hazard-functions-for-the-weibull-distribution" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Survivor and hazard functions for the Weibull distribution</h3>
+<ul>
+<li><p><span class="math inline">\(F_{\theta,\lambda}(y)=1-\exp\left( -\theta\ y^\lambda \right)\)</span>. The median survival time is then <span class="math inline">\(\theta^{-1/\lambda}\ (\log(2))^{1/\lambda}\)</span>.</p></li>
+<li><p><span class="math inline">\(S_{\theta,\lambda}(y)=\exp\left( -\theta\ y^\lambda \right)\)</span></p></li>
+<li><p><span class="math inline">\(h_{\theta,\lambda}(y)=\lambda\ \theta\ y^{\lambda-1}\)</span>. When <span class="math inline">\(\lambda\neq 1\)</span>, the hazard function does depend on <span class="math inline">\(y\)</span> so the probability of failure in the interval <span class="math inline">\([y;y+\delta y]\)</span> is related to how long the subject has already survived. This allows for <strong>accelerated failure time</strong>.</p></li>
+<li><p><span class="math inline">\(H_{\theta,\lambda}(y)=\theta\ y^\lambda\)</span></p></li>
+</ul>
+</div>
+</div>
+<div id="link-function" class="section level2">
+<h2><span class="header-section-number">9.3</span> Link function</h2>
+<p>The expectation of the survival time, <span class="math inline">\(\mathbb{E}[y]=\left(\frac{1}{\theta}\right)^{1/\lambda} \Gamma(1+\frac{1}{\lambda})\)</span>, is an element of <span class="math inline">\(\mathbb{R}^{+}\)</span>. Hence a convenient link (invertible) function <span class="math inline">\(g\)</span> to map <span class="math inline">\(\mathbb{R}^{+}\)</span> to <span class="math inline">\(\mathbb{R}\)</span> where <span class="math inline">\(x^T\beta\)</span> is, is the <span class="math inline">\(\log\)</span> function: <span class="math display">\[g\left(\mathbb{E}[y]\right)=\log\left(\mathbb{E}[y]\right)=x^T\beta\]</span> or <span class="math display">\[\theta\propto \exp \left(x^T\beta\right)\]</span></p>
+</div>
+<div id="estimation-of-beta-with-the-likelihood" class="section level2">
+<h2><span class="header-section-number">9.4</span> Estimation of <span class="math inline">\(\beta\)</span> with the Likelihood</h2>
+<p>The likelihood function can be used as an objective function to maximise to estimate the <em>best</em> parameters <span class="math inline">\(\beta\)</span>.</p>
+<div id="with-uncensored-data" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> With uncensored data</h3>
+<p>Having collected <span class="math inline">\(N\)</span> responses with their explanatory variables values <span class="math inline">\(\lbrace (y_i,x_i) \rbrace_{i=1,\cdots,N}\)</span>, the likelihood is: <span class="math display">\[\mathcal{L}(\beta)=\prod_{i=1}^N p(y_i|\theta_i,\lambda) \quad \text{contrained by } \theta_i=\exp(x_i^{T}\beta)\]</span></p>
+</div>
+<div id="with-censored-data" class="section level3">
+<h3><span class="header-section-number">9.4.2</span> With censored data</h3>
+<p>Unfortunatly, in many applications, the values of some responses can be only partially known. For instance, when the study is ending before failure time has been observed or when a subject is not followed up during study period. In this case, the collected responses are censored. For a censored response, the survival time is at least <span class="math inline">\(y_i\)</span> and the probability associated to this response is then <span class="math inline">\(S(y_i)\)</span> (ie probability to have survived behond time <span class="math inline">\(y_i\)</span>). Lets define <span class="math inline">\(\delta_i\)</span> an indicator variable that is 0 when the response <span class="math inline">\(y_i\)</span> is censored and 1 if it is not censored. The likelihood can then be written: <span class="math display">\[\mathcal{L}(\pmb{\beta})=\prod_{i=1}^N  p(y_i|\theta_i,\lambda) ^{\delta_i}\ S(y_i)^{1-\delta_i} \quad \text{with } \theta_i=\exp(x_i^{T}\beta)\]</span> The data to analyse is then better expressed as <span class="math inline">\(\left\lbrace \left((y_i,\delta_i),x_i\right)\right \rbrace_{i=1,\cdots,N}\)</span> and, in R using <code>survreg</code> for fitting the data the expression is written as <span class="math inline">\((y,\delta)\sim x\)</span> (the indicator variable <span class="math inline">\(\delta\)</span> is encapsulated with the response).</p>
+</div>
+</div>
+<div id="proportional-hazard-models" class="section level2">
+<h2><span class="header-section-number">9.5</span> Proportional hazard models</h2>
+<p>For the Exponential distribution, with <span class="math inline">\(x\)</span> is an indicator variable, the hazard function: <span class="math display">\[h(y)=\theta=\exp(x^{T}\beta)=\exp(\beta_0+\beta_1 \ x)\propto \exp(\beta_1 \ x)\]</span> For the Weibull distribution, the hazard function is: <span class="math display">\[h(y)\propto\lambda \theta y^{\lambda-1}=\lambda  y^{\lambda-1} \ \exp(\beta_0+\beta_1 \ x)=h_0(y)\ \exp(\beta_1 \ x)\]</span> The ratio <span class="math display">\[\frac{h^{(x=1)}(y)}{h^{(x=0)}(y)}=\frac{\exp(\beta_1 \ 1)}{\exp(\beta_1 \ 0)}=\exp(\beta_1)\]</span> is called the hazard ratio for presence or absence of exposure to <span class="math inline">\(x\)</span>.</p>
+<p><strong>Example of remission time.</strong></p>
+<p><span class="math inline">\(x=0\)</span> indicates that placebo has been given to the patient and <span class="math inline">\(x=1\)</span> indicates that a treatment (specific drug) has been given to the patient. The hazard ratio <span class="math inline">\(\frac{h^{(x=1)}(y)}{h^{(x=0)}(y)} \simeq 1/4\)</span> indicates that the drugs is helping patients as they are 4 times more likely to ‘Fail’ (i.e. remission time ending) when they take the placebo.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="explanatory-variables-in-glms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="multiple-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["GLM2.pdf", "GLM2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
