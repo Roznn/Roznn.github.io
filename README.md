@@ -8,6 +8,31 @@ The file [works.bib](works.bib) is exported from/imported to my [Orcid](https://
 The script created by [bibbase](https://bibbase.org/) is included  in the publication section of my webpage [index.html](index.html) to create the list of publications. Updating  [works.bib](works.bib) automatically update the list of publications in [index.html](index.html).
 
 
+## Alternative to bibbase 
+
+
+Using pandoc the bib file can be converted in html: 
+```
+pandoc test.tex -o pub.html --bibliography works.bib
+```
+or in PDF
+```
+pandoc test.tex -o pub.pdf --bibliography works.bib
+```
+
+## with tex4ht
+
+https://www.tug.org/tex4ht/
+
+```
+pdflatex test
+biber test
+make4ht  test.tex 
+```
+
+
+
+
 ## Author: 
 
 [Rozenn Dahyot](https://roznn.github.io/)
