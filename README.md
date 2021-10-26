@@ -30,6 +30,8 @@ biber test
 make4ht  test.tex 
 ```
 
+used to create publications.html
+
 
 
 
