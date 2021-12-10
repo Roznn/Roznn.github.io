@@ -25,6 +25,9 @@ class: center, middle, title-slide
 
 
 
+```r
+options(htmltools.dir.version = FALSE)
+```
 
 
 
@@ -257,7 +260,7 @@ $$
 
 **Exercise:** 
 
-1. Compute the forward and backward pass values for a  training sample `\((x,t)=(1,1)\)` and starting with initial guess 
+1. Compute the forward and backward pass values for a  training sample `\((x,y)=(1,1)\)` and starting with initial guess 
 `$$\theta^{(0)}=(w^{(0)},b^{(0)})=(0,0)$$`
 using the identity activation function `\(\sigma(x)=x\)`.
 
@@ -269,8 +272,20 @@ using the identity activation function `\(\sigma(x)=x\)`.
 &lt;img src=&quot;data:image/png;base64,#images/backpropagation.drawio.svg&quot; width=&quot;50%&quot; /&gt;
 &lt;/center&gt;
 
+???
 
-
+`$$\theta^{(1)} = \theta^{(0)} -  \eta \ \nabla_{\theta}  \mathcal{L}\left(f_{\theta}(x_i),y_i \right)$$`
+`$$\left(
+\begin{array}{c} 
+w^{(1)}\\ 
+b^{(1)}\\ 
+\end{array}\right)=\left(\begin{array}{c} 
+w^{(0)}\\ 
+b^{(0)}\\ 
+\end{array}\right)-\eta \left(\begin{array}{c} 
+-1 \\
+-1\\ 
+\end{array}\right)$$`
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
