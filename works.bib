@@ -1,3 +1,50 @@
+@inproceedings{ChopinICPRAI2022a,
+title={Improving semantic segmentation with graph-based structural knowledge},
+author={J. Chopin and J.-B. Fasquel and H. Mouchere and R. Dahyot and I. Bloch},
+abstract={Deep learning based pipelines for semantic segmentation often
+ignore structural information available on annotated images used for
+training. We propose a novel post-processing module enforcing structural
+knowledge about the objects of interest to improve segmentation
+results provided by deep learning. This module corresponds to a “manyto-
+one-or-none” inexact graph matching approach, and is formulated as
+a quadratic assignment problem. Using two standard measures for evaluation,
+we show experimentally that our pipeline for segmentation of
+3D MRI data of the brain outperforms the baseline CNN (U-Net) used
+alone. In addition, our approach is shown to be resilient to small training
+datasets that often limit the performance of deep learning.},
+doi={},
+booktitle={to appear ICPRAI International Conference on Pattern Recognition and Artificial Intelligence},
+year={2022},
+url= {}, 
+}
+
+@inproceedings{ChopinICPRAI2022b,
+title={QAP Optimisation with Reinforcement Learning for Faster Graph Matching in Sequential Semantic Image Analysis},
+author={J. Chopin and J.-B. Fasquel and H. Mouchere and R. Dahyot and I. Bloch},
+abstract={The paper addresses the fundamental task of semantic image
+analysis by exploiting structural information (spatial relationships
+between image regions). We propose to perform such semantic image
+analysis by combining a deep neural network (CNN) with graph matching
+where graphs encode efficiently structural information related to regions
+segmented by the CNN. Our novel approach solves the quadratic assignment
+problem (QAP) sequentially for matching graphs. The optimal
+sequence for graph matching is conveniently defined using reinforcementlearning
+(RL) based on the region membership probabilities produced by
+the CNN and their structural relationships. Our RL based strategy for
+solving QAP sequentially allows us to significantly reduce the combinatioral
+complexity for graph matching. Preliminary experiments are performed
+on both a synthetic dataset and a public dataset dedicated to the
+semantic segmentation of face images. Results show that the proposed
+RL-based ordering dramatically outperforms random ordering, and that
+our strategy is about 386 times faster than a global QAP-based approach,
+while preserving similar segmentation accuracy.},
+doi={},
+booktitle={to appear ICPRAI International Conference on Pattern Recognition and Artificial Intelligence},
+year={2022},
+url= {}, 
+}
+
+
 @inproceedings{karaali2022drvnet,
       title={DR-VNet: Retinal Vessel Segmentation via Dense Residual UNet}, 
       author={Ali Karaali and Rozenn Dahyot and Donal J. Sexton},
@@ -295,6 +342,7 @@ formulated as a quadratic assignment problem applied to the output of the neural
  Further improvements are observed when reducing the size of the training dataset (up to 8.5\% in average).}, 
 keywords= {Computer vision;Deep learning;Inexact graph matching;Quadratic assignment problem},
 doi= {10.1109/IPTA50016.2020.9286611}, 
+note={https://github.com/Jeremy-Chopin/FASSEG-instances},
 url={https://hal.archives-ouvertes.fr/hal-02916165/file/2020IPTA.pdf},
 ISSN= {2154-512X}, month= {Nov}}
 ,
