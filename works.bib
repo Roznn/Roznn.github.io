@@ -1,11 +1,109 @@
-@techreport{karaali2021drvnet,
+@article{ULICNY2022108707, 
+author= {Matej Ulicny and Vladimir A. Krylov and Rozenn Dahyot}, 
+title= {Harmonic Convolutional Networks based on Discrete Cosine Transform}, 
+journal={Pattern Recognition},
+abstract={Convolutional neural networks (CNNs) learn filters in order to capture local correlation patterns in feature space. We propose to learn these filters as combinations of preset spectral filters defined by the Discrete Cosine Transform (DCT). Our proposed DCT-based harmonic blocks replace conventional convolutional layers to produce partially or fully harmonic versions of new or existing CNN architectures. Using DCT energy compaction properties, we demonstrate how the harmonic networks can be efficiently compressed by truncating high-frequency information in harmonic blocks thanks to the redundancies in the spectral domain. We report extensive experimental validation demonstrating benefits of the introduction of harmonic blocks into state-of-the-art CNN models in image classification, object detection and semantic segmentation applications.},
+volume= {129},
+pages={1-12},
+year= {2022}, 
+issn = {0031-3203},
+url= {https://arxiv.org/pdf/2001.06570.pdf},
+doi={10.1016/j.patcog.2022.108707},
+note={arXiv.2001.06570  Github: https://github.com/matej-ulicny/harmonic-networks},
+}
+,
+@inproceedings{ChopinICPRAI2022a,
+title={Improving semantic segmentation with graph-based structural knowledge},
+author={J. Chopin and J.-B. Fasquel and H. Mouchere and R. Dahyot and I. Bloch},
+abstract={Deep learning based pipelines for semantic segmentation often
+ignore structural information available on annotated images used for
+training. We propose a novel post-processing module enforcing structural
+knowledge about the objects of interest to improve segmentation
+results provided by deep learning. This module corresponds to a “manyto-
+one-or-none” inexact graph matching approach, and is formulated as
+a quadratic assignment problem. Using two standard measures for evaluation,
+we show experimentally that our pipeline for segmentation of
+3D MRI data of the brain outperforms the baseline CNN (U-Net) used
+alone. In addition, our approach is shown to be resilient to small training
+datasets that often limit the performance of deep learning.},
+doi={10.1007/978-3-031-09037-0_15},
+url= {https://hal.inria.fr/hal-03633029}, 
+note={hal-03633029},
+booktitle={Pattern Recognition and Artificial Intelligence},
+year={2022},
+publisher={Springer International Publishing},
+editor={El Yacoubi, Moun{\^i}m
+and Granger, Eric
+and Yuen, Pong Chi
+and Pal, Umapada
+and Vincent, Nicole},
+month={June},
+HAL_ID = {hal-03633029},
+address={Paris, France},
+isbn={978-3-031-09037-0},
+pages={173--184},
+},
+
+
+
+
+@inproceedings{ChopinICPRAI2022b,
+title={QAP Optimisation with Reinforcement Learning for Faster Graph Matching in Sequential Semantic Image Analysis},
+author={J. Chopin and J.-B. Fasquel and H. Mouchere and R. Dahyot and I. Bloch},
+abstract={The paper addresses the fundamental task of semantic image
+analysis by exploiting structural information (spatial relationships
+between image regions). We propose to perform such semantic image
+analysis by combining a deep neural network (CNN) with graph matching
+where graphs encode efficiently structural information related to regions
+segmented by the CNN. Our novel approach solves the quadratic assignment
+problem (QAP) sequentially for matching graphs. The optimal
+sequence for graph matching is conveniently defined using reinforcementlearning
+(RL) based on the region membership probabilities produced by
+the CNN and their structural relationships. Our RL based strategy for
+solving QAP sequentially allows us to significantly reduce the combinatioral
+complexity for graph matching. Preliminary experiments are performed
+on both a synthetic dataset and a public dataset dedicated to the
+semantic segmentation of face images. Results show that the proposed
+RL-based ordering dramatically outperforms random ordering, and that
+our strategy is about 386 times faster than a global QAP-based approach,
+while preserving similar segmentation accuracy.},
+publisher={Springer International Publishing},
+editor={El Yacoubi, Moun{\^i}m
+and Granger, Eric
+and Yuen, Pong Chi
+and Pal, Umapada
+and Vincent, Nicole},
+isbn={978-3-031-09037-0},
+doi={10.1007/978-3-031-09037-0_5},
+url= {https://hal.inria.fr/hal-03633036/}, 
+note={hal-03633036},
+booktitle={Pattern Recognition and Artificial Intelligence},
+year={2022},
+month={June},
+pages={47--58},
+address={Paris, France},
+},
+
+
+@inproceedings{karaali2022drvnet,
       title={DR-VNet: Retinal Vessel Segmentation via Dense Residual UNet}, 
       author={Ali Karaali and Rozenn Dahyot and Donal J. Sexton},
-      year={2021},
-	  institution= {Arxiv},
+      year={2022},
+	  booktitle={Pattern Recognition and Artificial Intelligence},
+	  doi={10.1007/978-3-031-09037-0_17},
+	  note={Github https://github.com/alikaraali/DR-VNet, ArXivDOI:10.48550/arXiv.2111.04739},
 	  url= {https://arxiv.org/pdf/2111.04739.pdf}, 
 	  abstract={Accurate retinal vessel segmentation is an important task for many computer-aided diagnosis systems. Yet, it is still a challenging problem due to the complex vessel structures of an eye. Numerous vessel segmentation methods have been proposed recently, however more research is needed to deal with poor segmentation of thin and tiny vessels. To address this, we propose a new deep learning pipeline combining the efficiency of residual dense net blocks and, residual squeeze and excitation blocks. We validate experimentally our approach on three datasets and show that our pipeline outperforms current state of the art techniques on the sensitivity metric relevant to assess capture of small vessels.},
+	  publisher={Springer International Publishing},
+editor={El Yacoubi, Moun{\^i}m
+and Granger, Eric
+and Yuen, Pong Chi
+and Pal, Umapada
+and Vincent, Nicole},
+isbn={978-3-031-09037-0},
       volume= {abs/2111.04739},
+	  month={June},
+address={Paris, France},
       archivePrefix={arXiv},
       primaryClass={eess.IV}
 }
@@ -26,7 +124,7 @@ Structure from Motion, and by using contextual geographic information extracted
 from OpenStreetMap. Our pipeline is validated experimentally against the state of
  the art approaches for geotagging traffic lights.},
 url= {https://arxiv.org/pdf/2108.06302.pdf},
-doi={},
+doi={10.48550/arXiv.2108.06302},
 note={},
 archivePrefix= {arXiv}, 
 eprint= {},
@@ -136,23 +234,10 @@ abstract={We propose a method for semantic image segmentation, combining a deep 
 spatial relationships lead to an improvement of 2.4 percent in average, and up to 24.4 percent for some regions.},
 YEAR= {2020}, 
 MONTH= {jun},
-note= {hal-02882043}}
+note= {https://hal.archives-ouvertes.fr/hal-02882043}
+}
 
-,
-@techreport{DBLP:journals/corr/abs-2001-06570, 
-author= {Matej Ulicny and Vladimir A. Krylov and Rozenn Dahyot}, 
-title= {Harmonic Convolutional Networks based on Discrete Cosine Transform}, 
-Journal={Corr},
-institution= {Trinity College Dublin Ireland},
-abstract={Convolutional neural networks (CNNs) learn filters in order to capture local correlation patterns in feature space. We propose to learn these filters as combinations of preset spectral filters defined by the Discrete Cosine Transform (DCT). Our proposed DCT-based harmonic blocks replace conventional convolutional layers to produce partially or fully harmonic versions of new or existing CNN architectures. Using DCT energy compaction properties, we demonstrate how the harmonic networks can be efficiently compressed by truncating high-frequency information in harmonic blocks thanks to the redundancies in the spectral domain. We report extensive experimental validation demonstrating benefits of the introduction of harmonic blocks into state-of-the-art CNN models in image classification, object detection and semantic segmentation applications.},
-volume= {abs/2001.06570}, 
-year= {2020}, 
-url= {https://arxiv.org/pdf/2001.06570.pdf}, 
-note={Github: https://github.com/matej-ulicny/harmonic-networks},
-archivePrefix= {arXiv}, eprint= {2001.06570}, 
-timestamp= {Fri, 24 Jan 2020 15:00:57 +0100}, 
-biburl= {https://dblp.org/rec/journals/corr/abs-2001-06570.bib},
-bibsource= {dblp computer science bibliography, https://dblp.org}}
+
 
 ,
 @article{Smile2020, 
@@ -291,6 +376,7 @@ formulated as a quadratic assignment problem applied to the output of the neural
  Further improvements are observed when reducing the size of the training dataset (up to 8.5\% in average).}, 
 keywords= {Computer vision;Deep learning;Inexact graph matching;Quadratic assignment problem},
 doi= {10.1109/IPTA50016.2020.9286611}, 
+note={https://github.com/Jeremy-Chopin/FASSEG-instances},
 url={https://hal.archives-ouvertes.fr/hal-02916165/file/2020IPTA.pdf},
 ISSN= {2154-512X}, month= {Nov}}
 ,
