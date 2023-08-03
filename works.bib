@@ -1,3 +1,19 @@
+@inproceedings{Panahi2023,
+author= {Solmaz Panahi and Jeremy Chopin and Matej Ulicny and Rozenn Dahyot}, 
+title= {Improving  GMM  registration with class encoding},
+booktitle= {Irish Machine Vision and Image Processing (IMVIP 2023)},
+volume= {},
+year= {2023},
+abstract={Point set registration is critical in many applications such as  computer vision, pattern recognition, or in fields like robotics and medical imaging.
+This paper focuses on reformulating point set registration using Gaussian Mixture Models while considering attributes associated with each point. Our approach introduces class score vectors as additional features 
+to the spatial data information. By incorporating these attributes, we enhance the optimization process by penalizing incorrect matching terms. Experimental results show that our approach 
+with class scores outperforms the original algorithm  in both accuracy and speed.},
+url= {https://github.com/solmak97/GMMReg_Extension},
+doi={},
+note={},
+
+}
+
 @INPROCEEDINGS{KoteyInterSpeech2023,
   author={Kotey, Samantha and Dahyot, Rozenn and Harte, Naomi},
   booktitle={2023 Interspeech}, 
@@ -26,24 +42,19 @@
       primaryClass={cs.CV}
 }
 
-@article{Chopin2023,
-  author = {Chopin, Jérémy and Fasquel, Jean-Baptiste and Mouchère, Harold and Dahyot, Rozenn and Bloch, Isabelle},
-  title = {Model-based inexact graph matching on top of CNNs for semantic scene understanding},
-  
-  abstract={Deep learning based pipelines for semantic segmentation often ignore structural information available on annotated images used for training. We propose a novel post-processing module enforcing structural knowledge about the objects of interest to improve segmentation results provided by deep learning. This module corresponds to a "many-to-one-or-none" inexact graph matching approach, and is formulated as a quadratic assignment problem. Our approach is compared to a CNN-based segmentation (for various CNN backbones) on two public datasets, one for face segmentation from 2D RGB images (FASSEG), and the other for brain segmentation from 3D MRIs (IBSR). Evaluations are performed using two types of structural information (distances and directional relations, , this choice being a hyper-parameter of our generic framework). On FASSEG data, results show that our module improves accuracy of the CNN by about 6.3% (the Hausdorff distance decreases from 22.11 to 20.71). On IBSR data, the improvement is of 51% (the Hausdorff distance decreases from 11.01 to 5.4). In addition, our approach is shown to be resilient to small training datasets that often limit the performance of deep learning methods: the improvement increases as the size of the training dataset decreases.},
-  
-     
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences, I.4.5},
-    
-  publisher = {arXiv},
-  
-  journal={accepted Computer Vision and Image Understanding},
-  doi = {10.48550/ARXIV.2301.07468},
-  
-  url = {https://arxiv.org/pdf/2301.07468.pdf},
-  year = {2023},
-  
+@article{CHOPIN2023103744,
+title = {Model-based inexact graph matching on top of DNNs for semantic scene understanding},
+journal = {Computer Vision and Image Understanding},
+pages = {103744},
+year = {2023},
+issn = {1077-3142},
+doi = {10.1016/j.cviu.2023.103744},
+url = {https://arxiv.org/pdf/2301.07468.pdf},
+author = {Jeremy Chopin and Jean-Baptiste Fasquel and Harold Mouchère and Rozenn Dahyot and Isabelle Bloch},
+keywords = {Graph matching, Deep learning, Image segmentation, Volume segmentation, Quadratic assignment problem},
+abstract = {Deep learning based pipelines for semantic segmentation often ignore structural information available on annotated images used for training. We propose a novel post-processing module enforcing structural knowledge about the objects of interest to improve segmentation results provided by deep neural networks (DNNs). This module corresponds to a “many-to-one-or-none” inexact graph matching approach, and is formulated as a quadratic assignment problem. Our approach is compared to a DNN-based segmentation on two public datasets, one for face segmentation from 2D RGB images (FASSEG), and the other for brain segmentation from 3D MRIs (IBSR). Evaluations are performed using two types of structural information: distances and directional relations that are user defined, this choice being a hyper-parameter of our proposed generic framework. On FASSEG data, results show that our module improves accuracy of the DNN by about 6.3% i.e. the Hausdorff distance (HD) decreases from 22.11 to 20.71 on average. With IBSR data, the improvement is of 51% better accuracy with HD decreasing from 11.01 to 5.4. Finally, our approach is shown to be resilient to small training datasets that often limit the performance of deep learning methods: the improvement increases as the size of the training dataset decreases.}
 }
+
 
 @techreport{Dahyot_PCC2022,
  
