@@ -2,6 +2,7 @@
 author  =  {Solmaz Panahi and Jeremy Chopin and Matej Ulicny and Rozenn Dahyot}, 
 title  =  {Improving  GMM  registration with class encoding},
 booktitle  =  {Irish Machine Vision and Image Processing (IMVIP 2023)},
+address =  {Galway, Ireland},
 volume  =  {},
 year  =  {2023},
 abstract  =  {Point set registration is critical in many applications such as  computer vision, pattern recognition, or in fields like robotics and medical imaging.
@@ -10,45 +11,52 @@ to the spatial data information. By incorporating these attributes, we enhance t
 with class scores outperforms the original algorithm  in both accuracy and speed.},
 url  =  {https://github.com/solmak97/GMMReg_Extension},
 doi  =  {10.5281/zenodo.8205096},
+keywords = {registration, GMM, class encoding},
 note  =  {}
 }
 
 
 @inproceedings{KoteyInterSpeech2023,
-  author  =  {Samantha Kotey and Rozenn Dahyot and Naomi Harte},
-   title  =  {Query Based Acoustic Summarization for Podcasts}, 
-    booktitle = {Proceedings INTERSPEECH 2023},
-  year  =  {2023},
-  volume  =  {},
-  number  =  {},
- pages  =  {1483--1487},
-  abstract  =  {Podcasts are a rich storytelling medium of long diverse conversations. 
-  Typically, listeners preview an episode through an audio clip, before deciding to consume the content. 
-  An automatic system that produces promotional clips, by supporting acoustic queries would greatly benefit podcasters. 
-  Previous text based methods do not use the acoustic signal directly or incorporate acoustic defined queries.
-   Therefore, we propose a query based summarization approach, to produce audio clip summaries from podcast data. 
-   Leveraging unsupervised clustering methods, we apply our framework to the Spotify podcasts dataset.
-    Audio signals are transformed into acoustic word embeddings, along with a pre-selected candidate query.
-     We initiate the cluster centroids with the query vector and obtain the final snippets by computing a global and local similarity score. 
-     Additionally, we apply our framework to the AMI meeting dataset and demonstrate how audio can successfully be utilized to perform summarization.},
-  keywords  =  {query-based summarization, unsupervised speech summarization, clustering, acoustic word embeddings},
-   doi  =  {10.21437/Interspeech.2023-864},
-  url  =  {https://www.isca-speech.org/archive/pdfs/interspeech_2023/kotey23_interspeech.pdf},
-  ISSN  =  {},
-  address  =  {Dublin, Ireland},
-  month  =  {August}
-  }
-  
+author  =  {Samantha Kotey and Rozenn Dahyot and Naomi Harte},
+title  =  {Query Based Acoustic Summarization for Podcasts}, 
+booktitle = {Proceedings INTERSPEECH 2023},
+year  =  {2023},
+volume  =  {},
+number  =  {},
+pages  =  {1483--1487},
+abstract  =  {Podcasts are a rich storytelling medium of long diverse conversations. 
+Typically, listeners preview an episode through an audio clip, before deciding to consume the content. 
+An automatic system that produces promotional clips, by supporting acoustic queries would greatly benefit podcasters. 
+Previous text based methods do not use the acoustic signal directly or incorporate acoustic defined queries.
+Therefore, we propose a query based summarization approach, to produce audio clip summaries from podcast data. 
+Leveraging unsupervised clustering methods, we apply our framework to the Spotify podcasts dataset.
+Audio signals are transformed into acoustic word embeddings, along with a pre-selected candidate query.
+We initiate the cluster centroids with the query vector and obtain the final snippets by computing a global and local similarity score. 
+Additionally, we apply our framework to the AMI meeting dataset and demonstrate how audio can successfully be utilized to perform summarization.},
+keywords  =  {query-based summarization, unsupervised speech summarization, clustering, acoustic word embeddings},
+doi  =  {10.21437/Interspeech.2023-864},
+url  =  {https://www.isca-speech.org/archive/pdfs/interspeech_2023/kotey23_interspeech.pdf},
+ISSN  =  {},
+address  =  {Dublin, Ireland},
+month  =  {August}
+}
+
 @techreport{ulicny2023combining,
-       doi = {10.48550/arXiv.2305.08232},
-	   url = {https://arxiv.org/pdf/2305.08232.pdf},
-	   abstract = {We propose a pipeline for combined multi-class object geolocation and height estimation from street level RGB imagery, which is considered as a single available input data modality. Our solution is formulated via Markov Random Field optimization with deterministic output. The proposed technique uses image metadata along with coordinates of objects detected in the image plane as found by a custom-trained Convolutional Neural Network. Computing the object height using our methodology, in addition to object geolocation, has negligible effect on the overall computational cost. Accuracy is demonstrated experimentally for water drains and road signs on which we achieve average elevation estimation error lower than 20cm.},
-      title = {Combining geolocation and height estimation of objects from street level imagery}, 
-      author  =  {Matej Ulicny and Vladimir A. Krylov and Julie Connelly and Rozenn Dahyot},
-      year = {2023},
-      eprint = {2305.08232},
-      archivePrefix = {arXiv},
-      primaryClass = {cs.CV}
+doi = {10.48550/arXiv.2305.08232},
+url = {https://arxiv.org/pdf/2305.08232.pdf},
+abstract = {We propose a pipeline for combined multi-class object geolocation and 
+height estimation from street level RGB imagery, which is considered as a single available input data modality. 
+Our solution is formulated via Markov Random Field optimization with deterministic output. 
+The proposed technique uses image metadata along with coordinates of objects detected in the image plane as 
+found by a custom-trained Convolutional Neural Network. Computing the object height using our methodology, 
+in addition to object geolocation, has negligible effect on the overall computational cost. 
+Accuracy is demonstrated experimentally for water drains and road signs on which we achieve average elevation estimation error lower than 20cm.},
+title = {Combining geolocation and height estimation of objects from street level imagery}, 
+author  =  {Matej Ulicny and Vladimir A. Krylov and Julie Connelly and Rozenn Dahyot},
+year = {2023},
+eprint = {2305.08232},
+archivePrefix = {arXiv},
+primaryClass = {cs.CV}
 }
 
 @article{CHOPIN2023103744,
@@ -61,45 +69,57 @@ doi  =  {10.1016/j.cviu.2023.103744},
 url  =  {https://arxiv.org/pdf/2301.07468.pdf},
 author  =  {Jeremy Chopin and Jean-Baptiste Fasquel and Harold Mouchère and Rozenn Dahyot and Isabelle Bloch},
 keywords  =  {Graph matching, Deep learning, Image segmentation, Volume segmentation, Quadratic assignment problem},
-abstract  =  {Deep learning based pipelines for semantic segmentation often ignore structural information available on annotated images used for training. We propose a novel post-processing module enforcing structural knowledge about the objects of interest to improve segmentation results provided by deep neural networks (DNNs). This module corresponds to a “many-to-one-or-none” inexact graph matching approach, and is formulated as a quadratic assignment problem. Our approach is compared to a DNN-based segmentation on two public datasets, one for face segmentation from 2D RGB images (FASSEG), and the other for brain segmentation from 3D MRIs (IBSR). Evaluations are performed using two types of structural information: distances and directional relations that are user defined, this choice being a hyper-parameter of our proposed generic framework. On FASSEG data, results show that our module improves accuracy of the DNN by about 6.3% i.e. the Hausdorff distance (HD) decreases from 22.11 to 20.71 on average. With IBSR data, the improvement is of 51% better accuracy with HD decreasing from 11.01 to 5.4. Finally, our approach is shown to be resilient to small training datasets that often limit the performance of deep learning methods: the improvement increases as the size of the training dataset decreases.}
+abstract  =  {Deep learning based pipelines for semantic segmentation often ignore structural information available 
+on annotated images used for training. We propose a novel post-processing module enforcing structural knowledge about
+ the objects of interest to improve segmentation results provided by deep neural networks (DNNs). This module corresponds
+  to a “many-to-one-or-none” inexact graph matching approach, and is formulated as a quadratic assignment problem.
+   Our approach is compared to a DNN-based segmentation on two public datasets, one for face segmentation from 2D RGB images
+    (FASSEG), and the other for brain segmentation from 3D MRIs (IBSR). Evaluations are performed using two types of structural information: 
+    distances and directional relations that are user defined, this choice being a hyper-parameter of our proposed generic framework. 
+    On FASSEG data, results show that our module improves accuracy of the DNN by about 6.3\% 
+    i.e. the Hausdorff distance (HD) decreases from 22.11 to 20.71 on average. With IBSR data, the improvement is of 51\% 
+    better accuracy with HD decreasing from 11.01 to 5.4. Finally, our approach is shown to be resilient to small training 
+    datasets that often limit the performance of deep learning methods: the improvement increases as the size of the training dataset decreases.}
 }
 
 
 @techreport{Dahyot_PCC2022,
- 
-  author  =  {Rozenn Dahyot},
-  
-  keywords  =  {Supervised Learning, PCA, classification, metric learning, deep learning, class encoding},
-  abstract = {We propose to directly compute classification estimates
+author  =  {Rozenn Dahyot},
+keywords  =  {Supervised Learning, PCA, classification, metric learning, deep learning, class encoding},
+abstract = {We propose to directly compute classification estimates
 by learning features encoded with their class scores. 
-Our resulting model has a encoder-decoder structure suitable for supervised learning, it is computationally efficient and performs well for classification on several datasets.},
-
-  title  =  {Principal Component Classification},
-  
-  publisher  =  {arXiv},
-  
-  year  =  {2022},
-   doi  =  {10.48550/ARXIV.2210.12746},
-  
-  url  =  {https://arxiv.org/pdf/2210.12746.pdf},
-  
-  copyright  =  {Creative Commons Attribution 4.0 International},
+Our resulting model has a encoder-decoder structure suitable for supervised learning, 
+it is computationally efficient and performs well for classification on several datasets.},
+title  =  {Principal Component Classification},
+publisher  =  {arXiv},
+year  =  {2022},
+doi  =  {10.48550/ARXIV.2210.12746},
+url  =  {https://arxiv.org/pdf/2210.12746.pdf},
+copyright  =  {Creative Commons Attribution 4.0 International}
 }
 
 @INPROCEEDINGS{KoteySLT2023,
-  author = {Kotey, Samantha and Dahyot, Rozenn and Harte, Naomi},
-  booktitle = {2022 IEEE Spoken Language Technology Workshop (SLT)}, 
-  title = {Fine Grained Spoken Document Summarization Through Text Segmentation}, 
-  year = {2023},
-  volume = {},
-  number = {},
-  pages = {647-654},
-  abstract = {Podcast transcripts are long spoken documents of conversational dialogue. Challenging to summarize, podcasts cover a diverse range of topics, vary in length, and have uniquely different linguistic styles. Previous studies in podcast summarization have generated short, concise dialogue summaries. In contrast, we propose a method to generate long fine-grained summaries, which describe details of sub-topic narratives. Leveraging a readability formula, we curate a data subset to train a long sequence transformer for abstractive summarization. Through text segmentation, we filter the evaluation data and exclude specific segments of text. We apply the model to segmented data, producing different types of fine grained summaries. We show that appropriate filtering creates comparable results on ROUGE and serves as an alternative method to truncation. Experiments show our model outperforms previous studies on the Spotify podcast dataset when tasked with generating longer sequences of text.},
-  keywords = {},
-  doi = {10.1109/SLT54892.2023.10022829},
-  url = {https://roznn.github.io/PDF/STL2022Kotey.pdf},
-  ISSN = {},
-  month = {Jan},}
+author = {Kotey, Samantha and Dahyot, Rozenn and Harte, Naomi},
+booktitle = {2022 IEEE Spoken Language Technology Workshop (SLT)}, 
+title = {Fine Grained Spoken Document Summarization Through Text Segmentation}, 
+year = {2023},
+volume = {},
+number = {},
+pages = {647-654},
+abstract = {Podcast transcripts are long spoken documents of conversational dialogue. 
+Challenging to summarize, podcasts cover a diverse range of topics, vary in length, and 
+have uniquely different linguistic styles. Previous studies in podcast summarization have generated short,
+concise dialogue summaries. In contrast, we propose a method to generate long fine-grained summaries, which describe details of 
+sub-topic narratives. Leveraging a readability formula, we curate a data subset to train a long sequence transformer for abstractive summarization.
+Through text segmentation, we filter the evaluation data and exclude specific segments of text. 
+We apply the model to segmented data, producing different types of fine grained summaries. We show that appropriate filtering 
+creates comparable results on ROUGE and serves as an alternative method to truncation. Experiments show our model outperforms 
+previous studies on the Spotify podcast dataset when tasked with generating longer sequences of text.},
+keywords = {},
+doi = {10.1109/SLT54892.2023.10022829},
+url = {https://roznn.github.io/PDF/STL2022Kotey.pdf},
+ISSN = {},
+month = {Jan},}
 
 
 @article{ULICNY2022108707, 
@@ -190,26 +210,26 @@ address = {Paris, France},
 
 
 @inproceedings{karaali2022drvnet,
-      title = {DR-VNet: Retinal Vessel Segmentation via Dense Residual UNet}, 
-      author = {Ali Karaali and Rozenn Dahyot and Donal J. Sexton},
-      year = {2022},
-	  booktitle = {Pattern Recognition and Artificial Intelligence},
-	  doi = {10.1007/978-3-031-09037-0_17},
-	  note = {Github https://github.com/alikaraali/DR-VNet, ArXivDOI:10.48550/arXiv.2111.04739},
-	  url =  {https://arxiv.org/pdf/2111.04739.pdf}, 
-	  abstract = {Accurate retinal vessel segmentation is an important task for many computer-aided diagnosis systems. Yet, it is still a challenging problem due to the complex vessel structures of an eye. Numerous vessel segmentation methods have been proposed recently, however more research is needed to deal with poor segmentation of thin and tiny vessels. To address this, we propose a new deep learning pipeline combining the efficiency of residual dense net blocks and, residual squeeze and excitation blocks. We validate experimentally our approach on three datasets and show that our pipeline outperforms current state of the art techniques on the sensitivity metric relevant to assess capture of small vessels.},
-	  publisher = {Springer International Publishing},
+title = {DR-VNet: Retinal Vessel Segmentation via Dense Residual UNet}, 
+author = {Ali Karaali and Rozenn Dahyot and Donal J. Sexton},
+year = {2022},
+booktitle = {Pattern Recognition and Artificial Intelligence},
+doi = {10.1007/978-3-031-09037-0_17},
+note = {Github https://github.com/alikaraali/DR-VNet, ArXivDOI:10.48550/arXiv.2111.04739},
+url =  {https://arxiv.org/pdf/2111.04739.pdf}, 
+abstract = {Accurate retinal vessel segmentation is an important task for many computer-aided diagnosis systems. Yet, it is still a challenging problem due to the complex vessel structures of an eye. Numerous vessel segmentation methods have been proposed recently, however more research is needed to deal with poor segmentation of thin and tiny vessels. To address this, we propose a new deep learning pipeline combining the efficiency of residual dense net blocks and, residual squeeze and excitation blocks. We validate experimentally our approach on three datasets and show that our pipeline outperforms current state of the art techniques on the sensitivity metric relevant to assess capture of small vessels.},
+publisher = {Springer International Publishing},
 editor = {El Yacoubi, Moun{\^i}m
 and Granger, Eric
 and Yuen, Pong Chi
 and Pal, Umapada
 and Vincent, Nicole},
 isbn = {978-3-031-09037-0},
-      volume =  {abs/2111.04739},
-	  month = {June},
+volume =  {abs/2111.04739},
+month = {June},
 address = {Paris, France},
-      archivePrefix = {arXiv},
-      primaryClass = {eess.IV}
+archivePrefix = {arXiv},
+primaryClass = {eess.IV}
 }
 ,
 
@@ -226,7 +246,7 @@ abstract = {We propose an approach for geolocating assets from street view image
 by improving the quality of the metadata associated with the images using 
 Structure from Motion, and by using contextual geographic information extracted 
 from OpenStreetMap. Our pipeline is validated experimentally against the state of
- the art approaches for geotagging traffic lights.},
+the art approaches for geotagging traffic lights.},
 url =  {https://arxiv.org/pdf/2108.06302.pdf},
 doi = {10.48550/arXiv.2108.06302},
 note = {},
@@ -238,18 +258,18 @@ bibsource =  {}
 },
 
 @article{McDonnell2021,
- title =  {Model for predicting perception of facial action unit activation using virtual humans},
- journal =  {Computers \& Graphics }, 
+title =  {Model for predicting perception of facial action unit activation using virtual humans},
+journal =  {Computers \& Graphics }, 
 doi  =  {10.1016/j.cag.2021.07.022},
- volume =  {100}, 
- pages =  {81-92}, 
- year =  {2021}, 
- note =  {Winner 2022 Graphics Replicability Stamp Initiative (GRSI) best paper award; Github: https://github.com/Roznn/facial-blendshapes}, 
- issn =  {0097-8493},
- url =  {https://roznn.github.io/facial-blendshapes/CAG2021.pdf}, 
- author =  {Rachel McDonnell and Katja Zibrek and Emma Carrigan and Rozenn Dahyot}, 
- keywords =  {facial action unit, perception, virtual character},
- abstract =  {Blendshape facial rigs are used extensively in the industry for facial animation of
+volume =  {100}, 
+pages =  {81-92}, 
+year =  {2021}, 
+note =  {Winner 2022 Graphics Replicability Stamp Initiative (GRSI) best paper award; Github: https://github.com/Roznn/facial-blendshapes}, 
+issn =  {0097-8493},
+url =  {https://roznn.github.io/facial-blendshapes/CAG2021.pdf}, 
+author =  {Rachel McDonnell and Katja Zibrek and Emma Carrigan and Rozenn Dahyot}, 
+keywords =  {facial action unit, perception, virtual character},
+abstract =  {Blendshape facial rigs are used extensively in the industry for facial animation of
 virtual humans. However, storing and manipulating large numbers of facial meshes
 (blendshapes) is costly in terms of memory and computation for gaming applications.
 Blendshape rigs are comprised of sets of semantically-meaningful expressions, which
@@ -262,28 +282,28 @@ perception of blendshape visibility will not be reliably predicted by numerical 
 explore the noticeability of blendshapes under different activation levels, and present
 new perceptually-based models to predict perceptual importance of blendshapes. The
 models predict visibility based on commonly-used geometry and image-based metrics.}
- },
+},
 
 
 @inproceedings{alghamdi2021sliced,
-      title  =  {Sliced L2 Distance for Colour Grading}, 
-      author  =  {Hana Alghamdi and Rozenn Dahyot},
-	  booktitle  =  {2021 29th European Signal Processing Conference (EUSIPCO)},
-	  doi  =  {10.23919/EUSIPCO54536.2021.9616260},
-      year  =  {2021},
-	  volume = {},
-      number = {},
-      pages = {671-675},
-      eprint  =  {2102.09297},
-	  archivePrefix  =  {arXiv},
-      primaryClass  =  {cs.CV},
-	  abstract  =  {We propose a new method with L2 distance that maps one N-dimensional distribution to another,
-	  taking into account available information about correspondences. We solve the high-dimensional problem 
-	  in 1D space using an iterative projection approach. To show the potentials of this mapping, we apply it
-	  to colour transfer between two images that exhibit overlapped scenes. Experiments show quantitative and 
-	  qualitative competitive results as compared with the state of the art colour transfer methods.},
-	  note = {https://eurasip.org/Proceedings/Eusipco/Eusipco2021/pdfs/0000671.pdf},
-	  url  =  {https://arxiv.org/pdf/2102.09297.pdf}
+title  =  {Sliced L2 Distance for Colour Grading}, 
+author  =  {Hana Alghamdi and Rozenn Dahyot},
+booktitle  =  {2021 29th European Signal Processing Conference (EUSIPCO)},
+doi  =  {10.23919/EUSIPCO54536.2021.9616260},
+year  =  {2021},
+volume = {},
+number = {},
+pages = {671-675},
+eprint  =  {2102.09297},
+archivePrefix  =  {arXiv},
+primaryClass  =  {cs.CV},
+abstract  =  {We propose a new method with L2 distance that maps one N-dimensional distribution to another,
+taking into account available information about correspondences. We solve the high-dimensional problem 
+in 1D space using an iterative projection approach. To show the potentials of this mapping, we apply it
+to colour transfer between two images that exhibit overlapped scenes. Experiments show quantitative and 
+qualitative competitive results as compared with the state of the art colour transfer methods.},
+note = {https://eurasip.org/Proceedings/Eusipco/Eusipco2021/pdfs/0000671.pdf},
+url  =  {https://arxiv.org/pdf/2102.09297.pdf}
 },
 
 
@@ -291,9 +311,9 @@ models predict visibility based on commonly-used geometry and image-based metric
 @inproceedings{ulicny2020tensor,
 title = {Tensor Reordering for CNN Compression}, 
 author = {Matej Ulicny and Vladimir A. Krylov and Rozenn Dahyot},
- booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+booktitle = {ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
 doi = {10.1109/ICASSP39728.2021.9413944},
- pages = {3930-3934},
+pages = {3930-3934},
 note = {Github: https://github.com/matej-ulicny/reorder-cnn-compression},
 abstract = {We show how parameter redundancy in Convolutional Neural Network (CNN) filters can be effectively reduced by pruning in spectral domain. Specifically, the representation extracted via Discrete Cosine Transform (DCT) is more conducive for pruning than the original space. By relying on a combination of weight tensor reshaping and reordering we achieve high levels of layer compression with just minor accuracy loss. Our approach is applied to compress pretrained CNNs and we show that minor additional fine-tuning allows our method to recover the original model performance after a significant parameter reduction. We validate our approach on ResNet-50 and MobileNet-V2 architectures for ImageNet classification task.},
 url = {https://arxiv.org/pdf/2010.12110.pdf},
@@ -364,25 +384,25 @@ journal =  {Remote Sensing}}
 author =  {Carrigan, Emma and Zibrek, Katja and Dahyot, Rozenn and McDonnell, Rachel}, 
 title =  {Investigating Perceptually Based Models to Predict Importance of Facial Blendshapes}, 
 year =  {2020},
- isbn =  {9781450381710}, 
- publisher =  {Association for Computing Machinery},
- address =  {New York, NY, USA},
- url =  {https://roznn.github.io/facial-blendshapes/MIG2020.pdf}, 
- note = {Github: https://github.com/Roznn/facial-blendshapes},
- doi =  {10.1145/3424636.3426904}, 
- abstract =  {Blendshape facial rigs are used extensively in the industry for facial 
- animation of virtual humans. However, storing and manipulating large numbers of facial 
- meshes is costly in terms of memory and computation for gaming applications, yet the relative perceptual importance of blendshapes has not yet been investigated.
- Research in Psychology and Neuroscience has shown that our brains process faces differently than other objects, so we postulate that 
- the perception of facial expressions will be feature-dependent rather than based purely on the amount of movement required to make the expression. 
- In this paper, we explore the noticeability of blendshapes under different activation levels, and present new perceptually based models to predict
- perceptual importance of blendshapes. The models predict visibility based on commonly-used geometry and image-based metrics. },
- booktitle =  {Motion, Interaction and Games}, 
- articleno =  {2}, 
- numpages =  {6}, 
- note = {Awarded Best Short Paper Award MIG2020 Github: https://roznn.github.io/facial-blendshapes/},
- keywords =  {blendshapes, perception, action units, linear model}, 
- location =  {Virtual Event, SC, USA}, series =  {MIG '20}}
+isbn =  {9781450381710}, 
+publisher =  {Association for Computing Machinery},
+address =  {New York, NY, USA},
+url =  {https://roznn.github.io/facial-blendshapes/MIG2020.pdf}, 
+note = {Github: https://github.com/Roznn/facial-blendshapes},
+doi =  {10.1145/3424636.3426904}, 
+abstract =  {Blendshape facial rigs are used extensively in the industry for facial 
+animation of virtual humans. However, storing and manipulating large numbers of facial 
+meshes is costly in terms of memory and computation for gaming applications, yet the relative perceptual importance of blendshapes has not yet been investigated.
+Research in Psychology and Neuroscience has shown that our brains process faces differently than other objects, so we postulate that 
+the perception of facial expressions will be feature-dependent rather than based purely on the amount of movement required to make the expression. 
+In this paper, we explore the noticeability of blendshapes under different activation levels, and present new perceptually based models to predict
+perceptual importance of blendshapes. The models predict visibility based on commonly-used geometry and image-based metrics. },
+booktitle =  {Motion, Interaction and Games}, 
+articleno =  {2}, 
+numpages =  {6}, 
+note = {Awarded Best Short Paper Award MIG2020 Github: https://roznn.github.io/facial-blendshapes/},
+keywords =  {blendshapes, perception, action units, linear model}, 
+location =  {Virtual Event, SC, USA}, series =  {MIG '20}}
 ,
 @inproceedings{DBLP:journals/corr/abs-2006-09208, 
 author =  {Hana Alghamdi and  Rozenn Dahyot}, 
@@ -391,12 +411,12 @@ booktitle =  {2020 IEEE 22nd International Workshop on Multimedia Signal Process
 volume =  {},
 pages = {1-6},
 abstract = {We propose a new method with Nadaraya-Watson that maps one N-dimensional distribution to another,
- taking into account available information about correspondences. 
- We extend the 2D/3D problem to higher dimensions by encoding overlapping neighborhoods 
- of data points and solve the high-dimensional problem in 1D space using an iterative projection
- approach. To show the potentials of this mapping, we apply it to colour transfer between two images
- that exhibit overlapped scenes. Experiments show quantitative and qualitative improvements
- over the previous state of the art colour transfer methods.},
+taking into account available information about correspondences. 
+We extend the 2D/3D problem to higher dimensions by encoding overlapping neighborhoods 
+of data points and solve the high-dimensional problem in 1D space using an iterative projection
+approach. To show the potentials of this mapping, we apply it to colour transfer between two images
+that exhibit overlapped scenes. Experiments show quantitative and qualitative improvements
+over the previous state of the art colour transfer methods.},
 note = {Github: https://github.com/leshep/INWDT},
 doi = {10.1109/MMSP48831.2020.9287097},
 year =  {2020}, 
@@ -410,15 +430,15 @@ booktitle =  {Irish Machine Vision and Image Processing (IMVIP 2020)},
 volume =  {abs/2005.09015},
 year =  {2020},
 abstract = {We propose a new colour transfer method with Optimal Transport (OT) to
- transfer the colour of a sourceimage to match the colour of a target image of the same scene 
- that may exhibit large motion changes betweenimages. By definition OT does not take into account
- any available information about correspondences whencomputing the optimal solution. To tackle 
- this problem we propose to encode overlapping neighborhoodsof pixels using both their colour and 
- spatial correspondences estimated using motion estimation. We solvethe high dimensional problem 
- in 1D space using an iterative projection approach. We further introducesmoothing as part of 
- the iterative algorithms for solving optimal transport namely Iterative DistributionTransport (IDT) and
- its variant the Sliced Wasserstein Distance (SWD). Experiments show quantitative andqualitative 
- improvements over previous state of the art colour transfer methods.},
+transfer the colour of a sourceimage to match the colour of a target image of the same scene 
+that may exhibit large motion changes betweenimages. By definition OT does not take into account
+any available information about correspondences whencomputing the optimal solution. To tackle 
+this problem we propose to encode overlapping neighborhoodsof pixels using both their colour and 
+spatial correspondences estimated using motion estimation. We solvethe high dimensional problem 
+in 1D space using an iterative projection approach. We further introducesmoothing as part of 
+the iterative algorithms for solving optimal transport namely Iterative DistributionTransport (IDT) and
+its variant the Sliced Wasserstein Distance (SWD). Experiments show quantitative andqualitative 
+improvements over previous state of the art colour transfer methods.},
 url =  {https://arxiv.org/pdf/2005.09015.pdf}, 
 note = {Best Paper Award, Book Open Access http://research.thea.ie/handle/20.500.12065/3429},
 archivePrefix =  {arXiv}, 
@@ -473,11 +493,11 @@ pages =  {1-6},
 abstract =  {We propose a method for semantic image segmentation,  combining a deep neural network and spatial relationships between image regions, 
 encoded in a graph representation of the scene. Our proposal is based on inexact graph matching, 
 formulated as a quadratic assignment problem applied to the output of the neural network.
- The proposed method is evaluated on a public dataset used for segmentation of images of faces, 
- and compared to the U-Net deep neural network that is widely used for semantic segmentation. 
- Preliminary results show that our approach is promising. In terms of Intersection-over-Union of region bounding boxes, 
- the improvement is of 2.4\% in average, compared to U-Net, and up to 24.4\% for some regions.
- Further improvements are observed when reducing the size of the training dataset (up to 8.5\% in average).}, 
+The proposed method is evaluated on a public dataset used for segmentation of images of faces, 
+and compared to the U-Net deep neural network that is widely used for semantic segmentation. 
+Preliminary results show that our approach is promising. In terms of Intersection-over-Union of region bounding boxes, 
+the improvement is of 2.4\% in average, compared to U-Net, and up to 24.4\% for some regions.
+Further improvements are observed when reducing the size of the training dataset (up to 8.5\% in average).}, 
 keywords =  {Computer vision;Deep learning;Inexact graph matching;Quadratic assignment problem},
 doi =  {10.1109/IPTA50016.2020.9286611}, 
 note = {https://github.com/Jeremy-Chopin/FASSEG-instances},
@@ -485,36 +505,36 @@ url = {https://hal.archives-ouvertes.fr/hal-02916165/file/2020IPTA.pdf},
 ISSN =  {2154-512X}, month =  {Nov}}
 ,
 @INPROCEEDINGS{9188213,
-  author = {A. {Anderson} and J. {Su} and R. {Dahyot} and D. {Gregg}},
-  booktitle = {2019 International Conference on High Performance Computing   Simulation (HPCS)}, 
-  title = {Performance-Oriented Neural Architecture Search}, 
-  year = {2019},
-  url = {https://arxiv.org/pdf/2001.02976.pdf},
-  abstract = {Hardware-Software Co-Design is a highly successful strategy for improving performance of domain-specific computing systems. We argue for the application of the same methodology to deep learning; specifically, we propose to extend neural architecture search with information about the hardware to ensure that the model designs produced are highly efficient in addition to the typical criteria around accuracy. Using the task of keyword spotting in audio on edge computing devices, we demonstrate that our approach results in neural architecture that is not only highly accurate, but also efficiently mapped to the computing platform which will perform the inference. Using our modified neural architecture search, we demonstrate 0.88\% increase in TOP-1 accuracy with 1.85× reduction in latency for keyword spotting in audio on an embedded SoC, and 1.59× on a high-end GPU.},
-  eprint =  {2001.02976}, 
-  archivePrefix =  {arXiv}, 
-  volume = {},
-  number = {},
-  pages = {177-184},
-  doi = {10.1109/HPCS48598.2019.9188213}}
-  ,
-  
+author = {A. {Anderson} and J. {Su} and R. {Dahyot} and D. {Gregg}},
+booktitle = {2019 International Conference on High Performance Computing   Simulation (HPCS)}, 
+title = {Performance-Oriented Neural Architecture Search}, 
+year = {2019},
+url = {https://arxiv.org/pdf/2001.02976.pdf},
+abstract = {Hardware-Software Co-Design is a highly successful strategy for improving performance of domain-specific computing systems. We argue for the application of the same methodology to deep learning; specifically, we propose to extend neural architecture search with information about the hardware to ensure that the model designs produced are highly efficient in addition to the typical criteria around accuracy. Using the task of keyword spotting in audio on edge computing devices, we demonstrate that our approach results in neural architecture that is not only highly accurate, but also efficiently mapped to the computing platform which will perform the inference. Using our modified neural architecture search, we demonstrate 0.88\% increase in TOP-1 accuracy with 1.85× reduction in latency for keyword spotting in audio on an embedded SoC, and 1.59× on a high-end GPU.},
+eprint =  {2001.02976}, 
+archivePrefix =  {arXiv}, 
+volume = {},
+number = {},
+pages = {177-184},
+doi = {10.1109/HPCS48598.2019.9188213}}
+,
+
 @inproceedings{DBLP:journals/corr/abs-1905-12678,
 author     =  {Rozenn Dahyot and
-               Hana Alghamdi and
-               Mair{\'{e}}ad Grogan},
-  title      =  {Entropic Regularisation of Robust Optimal Transport},
-  abstract = {Grogan et al have recently proposed a solution to colour transfer by minimising the Euclidean distance L2 between two probability density functions capturing the colour distributions of two images (palette and target). It was shown to be very competitive to alternative solutions based on Optimal Transport for colour transfer. We show that in fact Grogan et al's formulation can also be understood as a new robust Optimal Transport based framework with entropy regularisation over marginals.},
-  booktitle   =  {Irish Machine Vision and Image Processing conference 2019},
-  volume     =  {abs/1905.12678},
-  year       =  {2019},
-  url        =  {https://arxiv.org/pdf/1905.12678.pdf},
-  archivePrefix  =  {arXiv},
-  doi = {10.21427/w611-mb37},
-  eprint     =  {1905.12678},
-  timestamp  =  {Mon, 03 Jun 2019 13:42:33 +0200},
-  biburl     =  {https://dblp.org/rec/bib/journals/corr/abs-1905-12678},
-  bibsource  =  {dblp computer science bibliography, https://dblp.org},
+Hana Alghamdi and
+Mair{\'{e}}ad Grogan},
+title      =  {Entropic Regularisation of Robust Optimal Transport},
+abstract = {Grogan et al have recently proposed a solution to colour transfer by minimising the Euclidean distance L2 between two probability density functions capturing the colour distributions of two images (palette and target). It was shown to be very competitive to alternative solutions based on Optimal Transport for colour transfer. We show that in fact Grogan et al's formulation can also be understood as a new robust Optimal Transport based framework with entropy regularisation over marginals.},
+booktitle   =  {Irish Machine Vision and Image Processing conference 2019},
+volume     =  {abs/1905.12678},
+year       =  {2019},
+url        =  {https://arxiv.org/pdf/1905.12678.pdf},
+archivePrefix  =  {arXiv},
+doi = {10.21427/w611-mb37},
+eprint     =  {1905.12678},
+timestamp  =  {Mon, 03 Jun 2019 13:42:33 +0200},
+biburl     =  {https://dblp.org/rec/bib/journals/corr/abs-1905-12678},
+bibsource  =  {dblp computer science bibliography, https://dblp.org},
 },
 
 ,
@@ -538,16 +558,16 @@ ISSN =  {2219-5491}, month =  {Sep.}}
 
 @inproceedings{DBLP:journals/corr/abs-1901-05049, 
 author =  {Miguel de Prado and
-               Jing Su and
-               Rozenn Dahyot and
-               Rabia Saeed and
-               Lorenzo Keller and
-               Noelia V{\'{a}}llez}, 
-			   title =  {{AI} Pipeline - bringing {AI} to you. End-to-end integration of data,
-               algorithms and deployment tools},
-			   booktitle =  {HiPEAC 2019 workshop Emerging Deep Learning Accelerator}, 
-			   url = {https://arxiv.org/pdf/1901.05049v1.pdf},
-			   abstract = {Next generation of embedded Information and Communication Technology (ICT) systems are interconnected collaborative intelligent systems able to perform autonomous tasks. Training and deployment
+Jing Su and
+Rozenn Dahyot and
+Rabia Saeed and
+Lorenzo Keller and
+Noelia V{\'{a}}llez}, 
+title =  {{AI} Pipeline - bringing {AI} to you. End-to-end integration of data,
+algorithms and deployment tools},
+booktitle =  {HiPEAC 2019 workshop Emerging Deep Learning Accelerator}, 
+url = {https://arxiv.org/pdf/1901.05049v1.pdf},
+abstract = {Next generation of embedded Information and Communication Technology (ICT) systems are interconnected collaborative intelligent systems able to perform autonomous tasks. Training and deployment
 of such systems on Edge devices however require a fine-grained integration of data and tools to
 achieve high accuracy and overcome functional and non-functional requirements.
 In this work, we present a modular AI pipeline as an integrating framework to bring data, algorithms
@@ -557,11 +577,11 @@ the effectiveness of the AI pipeline by solving an Automatic Speech Recognition 
 show that all the steps leading to an end-to-end development for Key-word Spotting tasks: importing,
 partitioning and pre-processing of speech data, training of different neural network architectures and
 their deployment on heterogeneous embedded platforms.},
-			   volume =  {abs/1901.05049v1}, 
-			   year =  {2019}, 
-			   archivePrefix =  {arXiv}, 
-			   eprint =  {1901.05049v1}, 
-			 			   }
+volume =  {abs/1901.05049v1}, 
+year =  {2019}, 
+archivePrefix =  {arXiv}, 
+eprint =  {1901.05049v1}, 
+}
 
 ,
 @article{AHMAD2019110,
@@ -694,10 +714,10 @@ pages =  {79--83},
 abstract =  {We explore the applicability and limitations of a state-of-the-art object 
 detection and geotagging system [4] applied to crowdsourced image data. Our experiments with 
 imagery from Mapillary crowdsourcing platform demonstrate that with increasing amount of images,
- the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless,
- due to excessive camera position noise, the estimated geolocation (position) of the detected object is 
- less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.},
- isbn =  {978-3-030-13453-2}}
+the detection accuracy is getting close to that obtained with high-end street level data. Nevertheless,
+due to excessive camera position noise, the estimated geolocation (position) of the detected object is 
+less accurate on crowdsourced Mapillary imagery than with high-end street level imagery obtained by Google Street View.},
+isbn =  {978-3-030-13453-2}}
 
 ,
 @INPROCEEDINGS{8902611, 
@@ -773,19 +793,19 @@ url =  {http://ceur-ws.org/Vol-2563/aics_34.pdf}}
 
 ,
 @article{Krylov_2018,
-	doi  =  {10.3390/rs10050661},
-	url  =  {https://arxiv.org/pdf/1708.08417.pdf},
-	note = {Github: https://github.com/vlkryl/streetview_objectmapping - URI: http://hdl.handle.net/2262/89654},
-	abstract = {Many applications such as autonomous navigation, urban planning and asset monitoring, rely on the availability of accurate information about objects and their geolocations. In this paper we propose to automatically detect and compute the GPS coordinates of recurring stationary objects of interest using street view imagery. Our processing pipeline relies on two fully convolutional neural networks: the first segments objects in the images while the second estimates their distance from the camera. To geolocate all the detected objects coherently we propose a novel custom Markov Random Field model to perform objects triangulation. The novelty of the resulting pipeline is the combined use of monocular depth estimation and triangulation to enable automatic mapping of complex scenes with multiple visually similar objects of interest. We validate experimentally the effectiveness of our approach on two object classes: traffic lights and telegraph poles. The experiments report high object recall rates and GPS accuracy within 2 meters, which is comparable with the precision of single-frequency GPS receivers.},
-	year  =  2018,
-	month  =  {April},
-	publisher  =  {{MDPI} {AG}},
-	volume  =  {10},
-	number  =  {5},
-	pages  =  {661},
-	author  =  {Vladimir Krylov and Eamonn Kenny and Rozenn Dahyot},
-	title  =  {Automatic Discovery and Geotagging of Objects from Street View Imagery},
-	journal  =  {Remote Sensing}
+doi  =  {10.3390/rs10050661},
+url  =  {https://arxiv.org/pdf/1708.08417.pdf},
+note = {Github: https://github.com/vlkryl/streetview_objectmapping - URI: http://hdl.handle.net/2262/89654},
+abstract = {Many applications such as autonomous navigation, urban planning and asset monitoring, rely on the availability of accurate information about objects and their geolocations. In this paper we propose to automatically detect and compute the GPS coordinates of recurring stationary objects of interest using street view imagery. Our processing pipeline relies on two fully convolutional neural networks: the first segments objects in the images while the second estimates their distance from the camera. To geolocate all the detected objects coherently we propose a novel custom Markov Random Field model to perform objects triangulation. The novelty of the resulting pipeline is the combined use of monocular depth estimation and triangulation to enable automatic mapping of complex scenes with multiple visually similar objects of interest. We validate experimentally the effectiveness of our approach on two object classes: traffic lights and telegraph poles. The experiments report high object recall rates and GPS accuracy within 2 meters, which is comparable with the precision of single-frequency GPS receivers.},
+year  =  2018,
+month  =  {April},
+publisher  =  {{MDPI} {AG}},
+volume  =  {10},
+number  =  {5},
+pages  =  {661},
+author  =  {Vladimir Krylov and Eamonn Kenny and Rozenn Dahyot},
+title  =  {Automatic Discovery and Geotagging of Objects from Street View Imagery},
+journal  =  {Remote Sensing}
 },
 
 @inproceedings{LiuIMVIP2018, 
@@ -887,28 +907,32 @@ keywords =  {Shape registration, Directional information, Von Mises-Fisher,  reg
 
 ,
 @inproceedings{Llewellynn:2017:BPO:3075564.3076259,
- author =  {Llewellynn, Tim and Fern\'{a}ndez-Carrobles, M. Milagro and Deniz, Oscar and Fricker, Samuel and Storkey, Amos and Pazos, Nuria and Velikic, Gordana and Leufgen, Kirsten and Dahyot, Rozenn and Koller, Sebastian and Goumas, Georgios and Leitner, Peter and Dasika, Ganesh and Wang, Lei and Tutschku, Kurt}, 
- title =  {BONSEYES: Platform for Open Development of Systems of Artificial Intelligence: Invited Paper}, 
- booktitle =  {Proceedings of the Computing Frontiers Conference}, series =  {CF'17}, 
- year =  {2017}, isbn =  {978-1-4503-4487-6}, 
- location =  {Siena, Italy}, pages =  {299--304}, 
- numpages =  {6}, 
- url =  {http://doi.acm.org/10.1145/3075564.3076259}, 
- doi =  {10.1145/3075564.3076259},
- abstract = {The Bonseyes EU H2020 collaborative project aims to develop a platform consisting of a Data Marketplace, 
- a Deep Learning Toolbox, and Developer Reference Platforms for organizations wanting to adopt Artificial Intelligence. 
- The project will be focused on using artificial intelligence in low power Internet of Things (IoT) devices ("edge computing"), 
- embedded computing systems, and data center servers ("cloud computing"). It will bring about orders of magnitude improvements in efficiency,
- performance, reliability, security, and productivity in the design and programming of systems of artificial intelligence 
- that incorporate Smart Cyber-Physical Systems (CPS). In addition, it will solve a causality problem for organizations who lack 
- access to Data and Models. Its open software architecture will facilitate adoption of the whole concept on a wider scale.
- To evaluate the effectiveness, technical feasibility, and to quantify the real-world improvements in efficiency, security, performance,
- effort and cost of adding AI to products and services using the Bonseyes platform, four complementary demonstrators will be built. 
- Bonseyes platform capabilities are aimed at being aligned with the European FI-PPP activities and take advantage of its flagship project FIWARE.
- This paper provides a description of the project motivation, goals and preliminary work.},
- acmid =  {3076259}, publisher =  {ACM},
- address =  {New York, NY, USA}, 
- keywords =  {Data marketplace, Deep Learning, Internet of things, Smart Cyber-Physical Systems}}
+author =  {Llewellynn, Tim and Fern\'{a}ndez-Carrobles, M. Milagro and Deniz, Oscar and Fricker, Samuel and Storkey, Amos and Pazos, Nuria and Velikic, Gordana and Leufgen, Kirsten and Dahyot, Rozenn and Koller, Sebastian and Goumas, Georgios and Leitner, Peter and Dasika, Ganesh and Wang, Lei and Tutschku, Kurt}, 
+title =  {BONSEYES: Platform for Open Development of Systems of Artificial Intelligence: Invited Paper}, 
+booktitle =  {Proceedings of the Computing Frontiers Conference}, 
+series =  {CF'17}, 
+year =  {2017}, 
+isbn =  {978-1-4503-4487-6}, 
+location =  {Siena, Italy}, 
+pages =  {299--304}, 
+numpages =  {6}, 
+url =  {http://doi.acm.org/10.1145/3075564.3076259}, 
+doi =  {10.1145/3075564.3076259},
+abstract = {The Bonseyes EU H2020 collaborative project aims to develop a platform consisting of a Data Marketplace, 
+a Deep Learning Toolbox, and Developer Reference Platforms for organizations wanting to adopt Artificial Intelligence. 
+The project will be focused on using artificial intelligence in low power Internet of Things (IoT) devices ("edge computing"), 
+embedded computing systems, and data center servers ("cloud computing"). It will bring about orders of magnitude improvements in efficiency,
+performance, reliability, security, and productivity in the design and programming of systems of artificial intelligence 
+that incorporate Smart Cyber-Physical Systems (CPS). In addition, it will solve a causality problem for organizations who lack 
+access to Data and Models. Its open software architecture will facilitate adoption of the whole concept on a wider scale.
+To evaluate the effectiveness, technical feasibility, and to quantify the real-world improvements in efficiency, security, performance,
+effort and cost of adding AI to products and services using the Bonseyes platform, four complementary demonstrators will be built. 
+Bonseyes platform capabilities are aimed at being aligned with the European FI-PPP activities and take advantage of its flagship project FIWARE.
+This paper provides a description of the project motivation, goals and preliminary work.},
+acmid =  {3076259}, 
+publisher =  {ACM},
+address =  {New York, NY, USA}, 
+keywords =  {Data marketplace, Deep Learning, Internet of things, Smart Cyber-Physical Systems}}
 
 ,
 @inproceedings{MatejIMVIP2017, 
@@ -918,13 +942,13 @@ booktitle =  {Irish Machine Vision and Image Processing conference (IMVIP 2017)}
 year =  {2017}, 
 pages =  {44-51}, 
 volume =  {e-book of proceedings with ISBN 978-0-9934207-2-6},
- url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
- note = {http://mural.maynoothuniversity.ie/8841/},
- abstract = {This paper investigates the use of Convolutional Neural Networks (CNN) to classify images encoded
+url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+note = {http://mural.maynoothuniversity.ie/8841/},
+abstract = {This paper investigates the use of Convolutional Neural Networks (CNN) to classify images encoded
 in compressible form using Discrete Cosine Tranform (DCT) as an alternative to raw image format. We
 show experimentally that DCT features, that are directly available from JPEG format for instance, can be
 processed as efficiently as raw image data using the same CNN architectures.},
- address =  {Maynooth University}}
+address =  {Maynooth University}}
 ,
 @inproceedings{ImanIMVIP2017, 
 title =  {Stitching Skin Images of Scars}, 
@@ -933,187 +957,200 @@ booktitle =  {Irish Machine Vision and Image Processing conference (IMVIP 2017)}
 year =  {2017}, 
 pages =  {265-268}, 
 volume =  {e-book of proceedings with ISBN 978-0-9934207-2-6},
- url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
- note = {http://mural.maynoothuniversity.ie/8841/},
- abstract = {This paper introduces an automatic procedure for aligning and stitching the medical images of skin scars
+url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+note = {http://mural.maynoothuniversity.ie/8841/},
+abstract = {This paper introduces an automatic procedure for aligning and stitching the medical images of skin scars
 that have the various amount of overlapping into one single registered image. The alignment procedure is
 based on the rigid transformation of the pair of images regarding detected matched features. The proposed
 paper compares four different feature detection methods and evaluates the methods on several clinical cases.
 For each case, the initial image is divided into four smaller sub-images with the different dimension. The result
 shows that the Harris Corner Detector algorithm achieves nearly 99\% accurate result with the minimum
 overlapping of 160 pixels as the fastest method.},
- address =  {Maynooth University}}
- ,
- @inproceedings{HanaIMVIP2017, 
+address =  {Maynooth University}}
+,
+@inproceedings{HanaIMVIP2017, 
 title =  {IDT Vs L2 Distance for Point Set Registration}, 
 author =  {H. Alghamdi and M. Grogan and R. Dahyot}, 
 booktitle =  {Irish Machine Vision and Image Processing conference (IMVIP 2017)}, 
 year =  {2017}, 
 pages =  {91-98}, 
 volume =  {e-book of proceedings with ISBN 978-0-9934207-2-6},
- url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
- note = {http://mural.maynoothuniversity.ie/8841/},
- abstract = {Registration techniques have many applications such as 3D scans alignment, panoramic image mosaic
+url =  {http://mural.maynoothuniversity.ie/8841/1/IMVIP2017_Proceedings.pdf},
+note = {http://mural.maynoothuniversity.ie/8841/},
+abstract = {Registration techniques have many applications such as 3D scans alignment, panoramic image mosaic
 creation or shape matching. This paper focuses on (2D) point cloud registration using novel iterative algorithms
 that are inspired by the Iterative Distribution Transfer (IDT) algorithm originally proposed to solve
 colour transfer [Pitié et al., 2005, Pitié et al., 2007]. We propose three variants to IDT algorithm that we
 compare with the standard L2 shape registration technique [Jian and Vemuri, 2011]. We show that our IDT
 algorithms perform well against L2 for finding correspondences between model and target shapes.},
- address =  {Maynooth University}}
- ,
- 
+address =  {Maynooth University}}
+,
+
 @article{BulbulCAVW2016, 
 author =  {Bulbul, Abdullah and Dahyot, Rozenn},
- title =  {Populating virtual cities using social media},
- journal =  {Computer Animation and Virtual Worlds}, 
- volume =  {28}, 
- number =  {5}, 
- pages =  {e1742}, 
- year =  {2017}, 
- keywords =  {computer animation, crowd simulations, social media, virtual worlds}, 
- doi =  {10.1002/cav.1742}, 
- url =  {https://roznn.github.io/PDF/Bulbul_CAVW2017.pdf}, 
- eprint =  {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.1742}, 
- abstract =  {We propose to automatically populate geo‐located virtual cities by harvesting and 
- analyzing online contents shared on social networks and websites. We show how pose and motion paths 
- of agents can be realistically rendered using information gathered from social media. 3D cities are 
- automatically generated using open‐source information available online. To provide our final rendering 
- of both static and dynamic urban scenes, we use Unreal game engine.}}
+title =  {Populating virtual cities using social media},
+journal =  {Computer Animation and Virtual Worlds}, 
+volume =  {28}, 
+number =  {5}, 
+pages =  {e1742}, 
+year =  {2017}, 
+keywords =  {computer animation, crowd simulations, social media, virtual worlds}, 
+doi =  {10.1002/cav.1742}, 
+url =  {https://roznn.github.io/PDF/Bulbul_CAVW2017.pdf}, 
+eprint =  {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cav.1742}, 
+abstract =  {We propose to automatically populate geo‐located virtual cities by harvesting and 
+analyzing online contents shared on social networks and websites. We show how pose and motion paths 
+of agents can be realistically rendered using information gathered from social media. 3D cities are 
+automatically generated using open‐source information available online. To provide our final rendering 
+of both static and dynamic urban scenes, we use Unreal game engine.}}
 ,
 @techreport{DBLP:journals/corr/GroganD17, 
 author =  {Mair{\'{e}}ad Grogan and Rozenn Dahyot}, 
 title =  {Robust Registration of Gaussian Mixtures for Colour Transfer},
- journal =  {CoRR},
- institution =  {Trinity College Dublin Ireland},
- abstract = {We present a flexible approach to colour transfer inspired by techniques 
- recently proposed for shape registration. Colour distributions of the palette and target 
- images are modelled with Gaussian Mixture Models (GMMs) that are robustly registered to 
- infer a non linear parametric transfer function. We show experimentally that our approach compares 
- well to current techniques both quantitatively and qualitatively. Moreover, our technique is 
- computationally the fastest and can take efficient advantage of parallel processing architectures 
- for recolouring images and videos. Our transfer function is parametric and hence can be stored in memory 
- for later usage and also combined with other computed transfer functions to create interesting visual effects. 
- Overall this paper provides a fast user friendly approach to recolouring of image and video materials.},
- volume =  {abs/1705.06091}, 
- year =  {2017}, 
- url =  {https://arxiv.org/pdf/1705.06091.pdf}, 
- archivePrefix =  {arXiv}, 
- eprint =  {1705.06091},
- timestamp =  {Wed, 07 Jun 2017 14:41:30 +0200} }
+journal =  {CoRR},
+institution =  {Trinity College Dublin Ireland},
+abstract = {We present a flexible approach to colour transfer inspired by techniques 
+recently proposed for shape registration. Colour distributions of the palette and target 
+images are modelled with Gaussian Mixture Models (GMMs) that are robustly registered to 
+infer a non linear parametric transfer function. We show experimentally that our approach compares 
+well to current techniques both quantitatively and qualitatively. Moreover, our technique is 
+computationally the fastest and can take efficient advantage of parallel processing architectures 
+for recolouring images and videos. Our transfer function is parametric and hence can be stored in memory 
+for later usage and also combined with other computed transfer functions to create interesting visual effects. 
+Overall this paper provides a fast user friendly approach to recolouring of image and video materials.},
+volume =  {abs/1705.06091}, 
+year =  {2017}, 
+url =  {https://arxiv.org/pdf/1705.06091.pdf}, 
+archivePrefix =  {arXiv}, 
+eprint =  {1705.06091},
+timestamp =  {Wed, 07 Jun 2017 14:41:30 +0200} }
 
 ,
 @article{BulbulCAG2016,
- title =  {Social media based 3D visual popularity },
- journal =  {Computers \& Graphics }, 
- volume =  {63}, 
- number =  {},
- pages =  {28 - 36}, 
- year =  {2017}, 
- note =  {}, 
- issn =  {0097-8493},
- doi =  {10.1016/j.cag.2017.01.005}, 
- url =  {https://roznn.github.io/PDF/2017_CAG_Bulbul.pdf}, 
- author =  {Abdullah Bulbul and Rozenn Dahyot}, 
- keywords =  {3D cities },
- abstract =  {This paper proposes to use a geotagged virtual world for the visualization of people’s visual interest
- and their sentiment as captured from their social network activities. Using mobile devices, people widely 
- share their experiences and the things they find interesting through social networks. We experimentally show
- that accumulating information over a period of time from multiple social network users allows to efficiently map
- and visualize popular landmarks as found in cities such as Rome in Italy and Dublin in Ireland. The proposed approach 
- is also sensitive to temporal and spatial events that attract visual attention. We visualize the calculated popularity on
- 3D virtual cities using game engine technologies. }
- },
+title =  {Social media based 3D visual popularity },
+journal =  {Computers \& Graphics }, 
+volume =  {63}, 
+number =  {},
+pages =  {28 - 36}, 
+year =  {2017}, 
+note =  {}, 
+issn =  {0097-8493},
+doi =  {10.1016/j.cag.2017.01.005}, 
+url =  {https://roznn.github.io/PDF/2017_CAG_Bulbul.pdf}, 
+author =  {Abdullah Bulbul and Rozenn Dahyot}, 
+keywords =  {3D cities },
+abstract =  {This paper proposes to use a geotagged virtual world for the visualization of people’s visual interest
+and their sentiment as captured from their social network activities. Using mobile devices, people widely 
+share their experiences and the things they find interesting through social networks. We experimentally show
+that accumulating information over a period of time from multiple social network users allows to efficiently map
+and visualize popular landmarks as found in cities such as Rome in Italy and Dublin in Ireland. The proposed approach 
+is also sensitive to temporal and spatial events that attract visual attention. We visualize the calculated popularity on
+3D virtual cities using game engine technologies. }
+},
 
 @techreport{Drone2017,
- title =  {Trinity College Dublin Drone Survey Dataset}, 
- author =  {J. Byrne and J. Connelly and  J. Su and V. Krylov and M. Bourke and D. Moloney and R. Dahyot},
+title =  {Trinity College Dublin Drone Survey Dataset}, 
+author =  {J. Byrne and J. Connelly and  J. Su and V. Krylov and M. Bourke and D. Moloney and R. Dahyot},
 institution =  {School of Computer Science and Statistics, Trinity College Dublin}, 
- year =  {2017},
- note = {Tech report, mesh  and Drone Images available URI: http://hdl.handle.net/2262/81836},
- url =  {http://www.tara.tcd.ie/bitstream/handle/2262/81836/tcd3dintelmovidius2017-drone-imagery%5b2%5d.pdf}}
+year =  {2017},
+note = {Tech report, mesh  and Drone Images available URI: http://hdl.handle.net/2262/81836},
+url =  {http://www.tara.tcd.ie/bitstream/handle/2262/81836/tcd3dintelmovidius2017-drone-imagery%5b2%5d.pdf}}
 
 ,
 @inproceedings{Grogan:2017:UII:3150165.3150171, 
 author =  {Grogan, Mair{\'e}ad and Dahyot, Rozenn and Smolic, Aljosa},
- title =  {User Interaction for Image Recolouring Using L2}, 
- booktitle =  {Proceedings of the 14th European Conference on Visual Media Production (CVMP 2017)}, 
- series =  {CVMP 2017}, year =  {2017}, isbn =  {978-1-4503-5329-8},
- location =  {London, United Kingdom}, pages =  {6:1--6:10}, articleno =  {6}, numpages =  {10},
- note =  {Awarded best paper CVMP 2017}, 
- url =  {http://doi.acm.org/10.1145/3150165.3150171}, 
- doi =  {10.1145/3150165.3150171},
- abstract = {Recently, an example based colour transfer approach proposed modelling the colour distributions of a palette and target image
- using Gaussian Mixture Models, and registers them by minimising the robust £2 distance between the mixtures. 
- In this paper we propose to extend this approach to allow for user interaction. We present two interactive recolouring applications,
- the first allowing the user to select colour correspondences between a target and palette image, while the second palette based application 
- allows the user to edit a palette of colours to determine the image recolouring. We modify the £2 based cost function to improve 
- results when an interactive interface is used, and take measures to ensure that even when minimal input is given by the user, 
- good colour transfer results are created. 
- Both applications are available through a web interface and qualitatively assessed against recent recolouring techniques.},
- acmid =  {3150171}, publisher =  {ACM}, 
- address =  {New York, NY, USA}, 
- keywords =  {L2 Registration, Colour transfer, palette based image recoloring}}
+title =  {User Interaction for Image Recolouring Using L2}, 
+booktitle =  {Proceedings of the 14th European Conference on Visual Media Production (CVMP 2017)}, 
+series =  {CVMP 2017}, 
+year =  {2017}, 
+isbn =  {978-1-4503-5329-8},
+location =  {London, United Kingdom}, 
+pages =  {6:1--6:10}, 
+articleno =  {6}, 
+numpages =  {10},
+note =  {Awarded best paper CVMP 2017}, 
+url =  {http://doi.acm.org/10.1145/3150165.3150171}, 
+doi =  {10.1145/3150165.3150171},
+abstract = {Recently, an example based colour transfer approach proposed modelling the colour distributions of a palette and target image
+using Gaussian Mixture Models, and registers them by minimising the robust £2 distance between the mixtures. 
+In this paper we propose to extend this approach to allow for user interaction. We present two interactive recolouring applications,
+the first allowing the user to select colour correspondences between a target and palette image, while the second palette based application 
+allows the user to edit a palette of colours to determine the image recolouring. We modify the £2 based cost function to improve 
+results when an interactive interface is used, and take measures to ensure that even when minimal input is given by the user, 
+good colour transfer results are created. 
+Both applications are available through a web interface and qualitatively assessed against recent recolouring techniques.},
+acmid =  {3150171}, 
+publisher =  {ACM}, 
+address =  {New York, NY, USA}, 
+keywords =  {L2 Registration, Colour transfer, palette based image recoloring}}
 ,
+
 @InProceedings{DiECCV2016, 
 author =  {Di, Xinhan and Dahyot, Rozenn and Prasad, Mukta}, 
 editor =  {Hua, Gang and J{\'e}gou, Herv{\'e}}, 
 title =  {Deep Shape from a Low Number of Silhouettes},
- booktitle =  {Computer Vision -- ECCV 2016 Workshops}, 
- year =  {2016}, publisher =  {Springer International Publishing},
- address =  {Cham}, pages =  {251--265},
- abstract =  {Despite strong progress in the field of 3D reconstruction from multiple views, 
- holes on objects, transparency of objects and textureless scenes, continue to be open challenges. 
- On the other hand, silhouette based reconstruction techniques ease the dependency of 3d reconstruction on image pixels 
- but need a large number of silhouettes to be available from multiple views. In this paper, a novel end to end pipeline
- is proposed to produce high quality reconstruction from a low number of silhouettes, 
- the core of which is a deep shape reconstruction architecture. Evaluations on ShapeNet [1] show good quality 
- of reconstruction compared with ground truth.}, isbn =  {978-3-319-49409-8}, 
- url =  {https://link.springer.com/chapter/10.1007/978-3-319-49409-8_21}, 
- doi =  {10.1007/978-3-319-49409-8}}
+booktitle =  {Computer Vision -- ECCV 2016 Workshops}, 
+year =  {2016}, 
+publisher =  {Springer International Publishing},
+address =  {Cham}, 
+pages =  {251--265},
+abstract =  {Despite strong progress in the field of 3D reconstruction from multiple views, 
+holes on objects, transparency of objects and textureless scenes, continue to be open challenges. 
+On the other hand, silhouette based reconstruction techniques ease the dependency of 3d reconstruction on image pixels 
+but need a large number of silhouettes to be available from multiple views. In this paper, a novel end to end pipeline
+is proposed to produce high quality reconstruction from a low number of silhouettes, 
+the core of which is a deep shape reconstruction architecture. Evaluations on ShapeNet [1] show good quality 
+of reconstruction compared with ground truth.}, 
+isbn =  {978-3-319-49409-8}, 
+url =  {https://link.springer.com/chapter/10.1007/978-3-319-49409-8_21}, 
+doi =  {10.1007/978-3-319-49409-8}}
 
 ,
 @inproceedings{GroganIMVIP2016, 
 title =  {Recent techniques for (re)colouring}, 
 author =  {M. Grogan and J. Carvalho and R. Dahyot},
- booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2016)},
- month =  {August}, 
- abstract = {This paper investigates how several techniques can be used together for colouring frames in grey level sequences.
+booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2016)},
+month =  {August}, 
+abstract = {This paper investigates how several techniques can be used together for colouring frames in grey level sequences.
 A trained deep neural network is used to colour a grey level image coherently ,
 and this colour image can be recoloured further to change its feel. When considering
 videos however, artifacts are created in the first step when the same semantic object can occasionally
 be given different colours from frame to frame in the sequence creating a flicker in the resulting coloured
 sequence.},
 keywords = {colour transfer, colouring, deep learning, flicker},
- address =  {Galway, Ireland}, year =  {2016}, 
- note = {URI http://hdl.handle.net/10379/6136},
- url =  {https://aran.library.nuigalway.ie/bitstream/handle/10379/6136/IMVIP2016Book.pdf}}
+address =  {Galway, Ireland}, 
+year =  {2016}, 
+note = {URI http://hdl.handle.net/10379/6136},
+url =  {https://aran.library.nuigalway.ie/bitstream/handle/10379/6136/IMVIP2016Book.pdf}}
 
 ,
 @article{ArellanoPR2015, 
 title =  {Robust ellipse detection with Gaussian mixture models}, 
 journal =  {Pattern Recognition}, 
-volume =  {58}, pages =  {12 - 26},
- year =  {2016}, 
+volume =  {58},
+pages =  {12 - 26},
+year =  {2016}, 
 issn =  {0031-3203}, 
 doi =  {10.1016/j.patcog.2016.01.017}, 
 abstract = {The Euclidian distance between Gaussian Mixtures has been shown to be robust to perform point set registration (Jian and Vemuri, 2011). 
 We propose to extend this idea for robustly matching a family of shapes (ellipses). Optimisation is performed with an annealing strategy, 
 and the search for occurrences is repeated several times to detect multiple instances of the shape of interest. We compare experimentally our approach
- to other state-of-the-art techniques on a benchmark database for ellipses, and demonstrate the good performance of our approach.},
+to other state-of-the-art techniques on a benchmark database for ellipses, and demonstrate the good performance of our approach.},
 url =  {https://roznn.github.io/PDF/2016PR.pdf},
 note = {Github https://github.com/clarella/L2-Ellipse-Fitting},
- author =  {Claudia Arellano and Rozenn Dahyot}, 
- keywords =  {Ellipse detection, L2 distance, GMM, Parameter estimation}}
+author =  {Claudia Arellano and Rozenn Dahyot}, 
+keywords =  {Ellipse detection, L2 distance, GMM, Parameter estimation}}
 
 ,
 @inproceedings{BulbulIMVIP2015,
- title =  {3D Reconstruction of Reflective Spherical Surfaces from Multiple Images}, 
- author =  {A. Bulbul and M. Grogan and R. Dahyot}, 
- booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2015)}, 
- month =  {August}, year =  {2015},
- address =  {Dublin, Ireland},
- pages = {19-26},
- abstract = {Despite the recent advances in 3D reconstruction from images, the state of the art methods fail to ac-
+title =  {3D Reconstruction of Reflective Spherical Surfaces from Multiple Images}, 
+author =  {A. Bulbul and M. Grogan and R. Dahyot}, 
+booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2015)}, 
+month =  {August}, 
+year =  {2015},
+address =  {Dublin, Ireland},
+pages = {19-26},
+abstract = {Despite the recent advances in 3D reconstruction from images, the state of the art methods fail to ac-
 curately reconstruct objects with reflective materials. The underlying reason for this inaccuracy is that the
 detected image features belong to the reflected scene instead of the reconstructed object and do not lie on
 the surface of the object. In this study, we propose a method to refine the 3D reconstruction of reflective
@@ -1137,32 +1174,33 @@ Also, we demonstrate that using the temporal information, and combining the colo
 can improve the recognition accuracy.},
 keywords = {Hand Hygiene, Poses Recognition, RGB-D},
 month =  {August},
- address =  {Dublin, Ireland},
- year =  {2015},
- url = {http://www.tara.tcd.ie/bitstream/handle/2262/74714/IMVIP2015Book.pdf},
- note =  {URI http://hdl.handle.net/2262/74714}}
+address =  {Dublin, Ireland},
+year =  {2015},
+url = {http://www.tara.tcd.ie/bitstream/handle/2262/74714/IMVIP2015Book.pdf},
+note =  {URI http://hdl.handle.net/2262/74714}}
 ,
 @inproceedings{DahyotIWCIM2015, 
 title =  {Information visualisation for social media analytics},
- author =  {R. Dahyot and C. Brady and C. Bourges and A. Bulbul}, 
- booktitle =  {2015 International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM)}, 
- keywords =  {Global Positioning System;data visualisation;rendering (computer graphics);social networking (online);GPS;audio visual rendering;dataset visualization;geolocated datasets;information visualisation;location information;sentiment extraction;social media analytics;social networks;timestamp;Geology;Google;Heating;Media;Silicon;Visualization;Social Media Analytics;Visualisation}, 
- address =  {Prague, Czech Republic}, 
- month =  {29-30 October}, 
- year =  {2015}, 
- abstract = {This paper tackles the audio visual renderings of geolocated datasets harvested from social networks. 
- These datasets are noisy, multimodal and heterogeneous by nature, providing different fields of information. 
- We focus here on the information of location (GPS), time (timestamp) and text from tweets from which sentiment is extracted. 
- We provide two ways for visualising datasets and for which demos can be seen online.},
- url =  {https://roznn.github.io/PDF/RzDIWCIM2015.pdf}, 
- doi =  {10.1109/IWCIM.2015.7347082}}
+author =  {R. Dahyot and C. Brady and C. Bourges and A. Bulbul}, 
+booktitle =  {2015 International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM)}, 
+keywords =  {Global Positioning System;data visualisation;rendering (computer graphics);social networking (online);GPS;audio visual rendering;dataset visualization;geolocated datasets;information visualisation;location information;sentiment extraction;social media analytics;social networks;timestamp;Geology;Google;Heating;Media;Silicon;Visualization;Social Media Analytics;Visualisation}, 
+address =  {Prague, Czech Republic}, 
+month =  {29-30 October}, 
+year =  {2015}, 
+abstract = {This paper tackles the audio visual renderings of geolocated datasets harvested from social networks. 
+These datasets are noisy, multimodal and heterogeneous by nature, providing different fields of information. 
+We focus here on the information of location (GPS), time (timestamp) and text from tweets from which sentiment is extracted. 
+We provide two ways for visualising datasets and for which demos can be seen online.},
+url =  {https://roznn.github.io/PDF/RzDIWCIM2015.pdf}, 
+doi =  {10.1109/IWCIM.2015.7347082}}
 
 ,
 @INPROCEEDINGS{GroganEusipco2015, 
 title =  {L2 Registration for Colour Transfer}, 
 author =  {M. Grogan and M. Prasad and R. Dahyot}, 
 booktitle =  {European Signal Processing Conference (Eusipco)}, 
-address =  {Nice France}, month =  {September}, 
+address =  {Nice France}, 
+month =  {September}, 
 year =  {2015}, 
 abstract = {This paper proposes to perform colour transfer by minimising a divergence (the L2 distance) between two colour distributions. 
 We propose to model each dataset by a compact
@@ -1173,8 +1211,8 @@ the estimated transformation is used for transferring colour statistics from one
 results show that this is a very promising approach for transferring colour and it performs very well against an alternative
 reference approach.},
 doi =  {10.1109/EUSIPCO.2015.7362799},
- url =  {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2015/papers/1570102575.pdf}
- }
+url =  {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2015/papers/1570102575.pdf}
+}
 
 ,
 
@@ -1198,78 +1236,97 @@ year = {2015}}
 author =  {Grogan, Mairead and Dahyot, Rozenn}, 
 title =  {L2 Registration for Colour Transfer in Videos}, 
 booktitle =  {Proceedings of the 12th European Conference on Visual Media Production}, 
-series =  {CVMP '15}, year =  {2015}, isbn =  {978-1-4503-3560-7}, 
-location =  {London, United Kingdom}, pages =  {16:1--16:1}, articleno =  {16}, numpages =  {1},
- url =  {http://doi.acm.org/10.1145/2824840.2824862}, 
- note = {Awarded Best Student Poster at CVMP 2015 },
- acmid =  {2824862}, publisher =  {ACM},
- address =  {New York, NY, USA}, 
- abstract = {We propose a method for colour transfer by minimising the L2 distance between two colour distributions.
- We use Gaussian Mixture Models (GMMs) to model the colour distribution of the target and palette images and use L2 to find a transformation φ 
- which register the GMM's. The L2 distance has been shown to be robust for shape registration application [2]. The function φ is modelled as either 
- an affine or Thin Plate Spline transformation controlled by a latent vector θ.
- The affine function consists of a 3x3 matrix A and 3D vector offset o.},
- doi =  {10.1145/2824840.2824862}}
+series =  {CVMP '15}, 
+year =  {2015}, 
+isbn =  {978-1-4503-3560-7}, 
+location =  {London, United Kingdom}, 
+pages =  {16:1--16:1}, 
+articleno =  {16}, 
+numpages =  {1},
+url =  {http://doi.acm.org/10.1145/2824840.2824862}, 
+note = {Awarded Best Student Poster at CVMP 2015 },
+acmid =  {2824862}, 
+publisher =  {ACM},
+address =  {New York, NY, USA}, 
+abstract = {We propose a method for colour transfer by minimising the L2 distance between two colour distributions.
+We use Gaussian Mixture Models (GMMs) to model the colour distribution of the target and palette images and use L2 to find a transformation φ 
+which register the GMM's. The L2 distance has been shown to be robust for shape registration application [2]. The function φ is modelled as either 
+an affine or Thin Plate Spline transformation controlled by a latent vector θ.
+The affine function consists of a 3x3 matrix A and 3D vector offset o.},
+doi =  {10.1145/2824840.2824862}}
 
 ,
 @inproceedings{BulbulCVMP2015, 
 author =  {Bulbul, Abdullah and Dahyot, Rozenn}, 
 title =  {Social Media Based 3D Modeling and Visualization}, 
 booktitle =  {Proceedings of the 12th European Conference on Visual Media Production}, 
-series =  {CVMP '15}, year =  {2015},
- isbn =  {978-1-4503-3560-7},
- location =  {London, United Kingdom}, 
- pages =  {20:1--20:1}, articleno =  {20}, numpages =  {1},
- url =  {http://doi.acm.org/10.1145/2824840.2824860}, 
- doi =  {10.1145/2824840.2824860},
- abstract = {Social Media is a very rich source of up-to-date localized information. 
- In recent years, image collections from photo sharing websites (e.g. Flicker) have been effectively used for 3D reconstruction of objects,
- buildings and even cities. While 3D reconstruction techniques are highly improved in terms of accuracy, performance, and parallelism 
- there are still means to utilize the up-to-date information available from public social sharing websites such as Twitter and
- Instagram for continuous refinement of the 3D models and information visualization. Our emphasis is on utilizing the information for detecting 
- and refining the changes in the scene, 
- adding new structures and visualizing saliency/popularity information in 3D.},
- acmid =  {2824860}, publisher =  {ACM}, address =  {New York, NY, USA}}
+series =  {CVMP '15}, 
+year =  {2015},
+isbn =  {978-1-4503-3560-7},
+location =  {London, United Kingdom}, 
+pages =  {20:1--20:1}, 
+articleno =  {20}, 
+numpages =  {1},
+url =  {http://doi.acm.org/10.1145/2824840.2824860}, 
+doi =  {10.1145/2824840.2824860},
+abstract = {Social Media is a very rich source of up-to-date localized information. 
+In recent years, image collections from photo sharing websites (e.g. Flicker) have been effectively used for 3D reconstruction of objects,
+buildings and even cities. While 3D reconstruction techniques are highly improved in terms of accuracy, performance, and parallelism 
+there are still means to utilize the up-to-date information available from public social sharing websites such as Twitter and
+Instagram for continuous refinement of the 3D models and information visualization. Our emphasis is on utilizing the information for detecting 
+and refining the changes in the scene, 
+adding new structures and visualizing saliency/popularity information in 3D.},
+acmid =  {2824860}, 
+publisher =  {ACM}, 
+address =  {New York, NY, USA}}
 
 ,
 @inproceedings{graisearchIMVIP2014, 
 title =  {An Architecture for Social Media Summarisation},
- author =  {Z. Zdziarski and J. Mitchell and P. Houdyer and D. Johnson and C. Bourges and R. Dahyot}, 
- booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2014)},
- address =  {Derry-Londonderry, Northern Ireland},
- pages =  {187-188}, year =  {2014}, month =  {27-29 August},
- url = {http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf},
- note =  {URI http://hdl.handle.net/2262/71411}}
+author =  {Z. Zdziarski and J. Mitchell and P. Houdyer and D. Johnson and C. Bourges and R. Dahyot}, 
+booktitle =  {Irish Machine Vision and Image Processing Conference (IMVIP 2014)},
+address =  {Derry-Londonderry, Northern Ireland},
+pages =  {187-188}, 
+year =  {2014}, 
+month =  {27-29 August},
+url = {http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf},
+note =  {URI http://hdl.handle.net/2262/71411}}
 
 ,
 @INPROCEEDINGS{Zdziarski:SIU:2014, 
 author =  {Zdziarski, Z. and Dahyot, R.},
- booktitle =  {Signal Processing and Communications Applications Conference (SIU), 2014 22nd},
- title =  {Extension of GBVS to 3D media},
- year =  {2014}, month =  {April}, pages =  {2296-2300}, 
- keywords =  {computer vision;object tracking;2D displays;3D media;GBVS algorithm;GBVS extension;eye tracking technologies;graph-based visual saliency algorithm;Algorithm design and analysis;Computational modeling;Conferences;Signal processing algorithms;Stereo image processing;Three-dimensional displays;Visualization;3D media;Visual saliency}, 
- abstract = {Visual saliency has been studied extensively in the past decades through perceptual studies using eye tracking technologies
- and 2D displays. Visual saliency algorithms have been successfully developed to mimick the human ability to quickly spot informative local areas in images. 
- This paper proposes to investigate the extension of visual saliency algorithms to media displayed in 3D. We show first that the Graph-Based Visual 
- Saliency (GBVS) algorithm outperforms all the other common 2D algorithms as well as their 3D extensions.
- This paper then extends GBVS to 3D and shows that these new 3D GBVS based algorithms outperform other past algorithms.},
- doi =  {10.1109/SIU.2014.6830723}}
+booktitle =  {Signal Processing and Communications Applications Conference (SIU), 2014 22nd},
+title =  {Extension of GBVS to 3D media},
+year =  {2014}, 
+month =  {April}, 
+pages =  {2296-2300}, 
+keywords =  {computer vision;object tracking;2D displays;3D media;GBVS algorithm;GBVS extension;eye tracking technologies;graph-based visual saliency algorithm;Algorithm design and analysis;Computational modeling;Conferences;Signal processing algorithms;Stereo image processing;Three-dimensional displays;Visualization;3D media;Visual saliency}, 
+abstract = {Visual saliency has been studied extensively in the past decades through perceptual studies using eye tracking technologies
+and 2D displays. Visual saliency algorithms have been successfully developed to mimick the human ability to quickly spot informative local areas in images. 
+This paper proposes to investigate the extension of visual saliency algorithms to media displayed in 3D. We show first that the Graph-Based Visual 
+Saliency (GBVS) algorithm outperforms all the other common 2D algorithms as well as their 3D extensions.
+This paper then extends GBVS to 3D and shows that these new 3D GBVS based algorithms outperform other past algorithms.},
+doi =  {10.1109/SIU.2014.6830723}}
 
 ,
 @inproceedings{ICPR2014Dahyot, 
 author =  {R. Dahyot}, 
 booktitle =  {2014 22nd International Conference on Pattern Recognition}, 
-title =  {GR2T vs L2E with Nuisance Scale}, year =  {2014}, volume =  {}, 
+title =  {GR2T vs L2E with Nuisance Scale}, 
+year =  {2014}, 
+volume =  {}, 
 url = {https://roznn.github.io/PDF/RzDICPR2014.pdf},
-number =  {}, pages =  {3857-3861}, 
+number =  {}, 
+pages =  {3857-3861}, 
 keywords =  {Radon transforms;regression analysis;GR2T;L2E;generalized relaxed Radon transform;nuisance scale;regression analysis;robust parameter estimation;scale parameter;Equations;Estimation;Mathematical model;Noise;Pattern recognition;Robustness;Transforms},
- doi =  {10.1109/ICPR.2014.662},
+doi =  {10.1109/ICPR.2014.662},
 abstract = {We compare the objective functions used by GR2T and the L2E estimator  
 that have both been proposed for robust parameter estimation. We show their similarity when estimating location parameters.
- Of particular interest is their ability for dealing with the scale parameter that is often unknown and acts as a nuisance parameter. 
+Of particular interest is their ability for dealing with the scale parameter that is often unknown and acts as a nuisance parameter. 
 Both techniques are tested experimentally for regression (e.g. to find patterns such as line 
 and circle in noisy datasets) and for registration between datasets.}, 
- ISSN =  {1051-4651}, month =  {Aug}}
+ISSN =  {1051-4651}, 
+month =  {Aug}}
 
 ,
 @inproceedings{GroganIMVIP2014, 
@@ -1283,141 +1340,158 @@ inference that is very suitable for parallel architecture. The cost function als
 a goodness of fit for each element of the mesh which is correlated to the distance to the
 ground truth, hence providing informative feedback to users.},
 keywords = {3D reconstruction, Depth images, Generalised Relaxed Radon Transform},
-pages =  {15-20}, month =  {27-29 August},
- year =  {2014},
- note = {URI: http://hdl.handle.net/2262/71411},
- url =  {http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf}}
+pages =  {15-20}, 
+month =  {27-29 August},
+year =  {2014},
+note = {URI: http://hdl.handle.net/2262/71411},
+url =  {http://www.tara.tcd.ie/bitstream/handle/2262/71411/IMVIP2014_Proceedings.pdf}}
 
 ,
 @inproceedings{graisearchCIMU2014, 
 title =  {On summarising the 'here and now' of social videos for smart mobile browsing}, 
 abstract = {The amount of media that is being uploaded to social sites (such as Twitter, Facebook and Instagram)
- is providing a wealth of visual data (images and videos) augmented with additional information such as keywords, timestamps and GPS coordinates. 
- Tapastreet  provides access in real-time to this visual content by harvesting social networks for visual media associated with particular locations, 
- time and hashtags [1]. Browsing efficiently through harvested videos requires smart processing to give users a quick overview of their 
- content in particular when using mobile platforms with limited bandwidth. 
+is providing a wealth of visual data (images and videos) augmented with additional information such as keywords, timestamps and GPS coordinates. 
+Tapastreet  provides access in real-time to this visual content by harvesting social networks for visual media associated with particular locations, 
+time and hashtags [1]. Browsing efficiently through harvested videos requires smart processing to give users a quick overview of their 
+content in particular when using mobile platforms with limited bandwidth. 
 This paper aims at presenting an architecture for testing several strategies for processing summaries of videos collected on social 
 networks to tackle this issue.},
-address =  {Paris, France}, month =  {1-2 Nov.}, 
+address =  {Paris, France}, 
+month =  {1-2 Nov.}, 
 year =  {2014}, 
 author =  {Z. Zdziarski and C. Bourgès and J. Mitchell and P. Houdyer and D. Johnson and R. Dahyot},
- booktitle =  {2014 International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM)}, 
- keywords =  {mobile computing;social networking (online);video retrieval;video signal processing;Tapastreet;mobile platforms;smart mobile browsing;smart processing;social networks;social sites;social video summarisation;visual content;visual data;visual media;Media;Pipelines;Social network services;Streaming media;Transform coding;Videos;Visualization;Blur Detection;MPEG Codec;Social Media;Video Summarisation;Web Harvesting},
- doi =  {10.1109/IWCIM.2014.7008797}, ISSN =  {}}
+booktitle =  {2014 International Workshop on Computational Intelligence for Multimedia Understanding (IWCIM)}, 
+keywords =  {mobile computing;social networking (online);video retrieval;video signal processing;Tapastreet;mobile platforms;smart mobile browsing;smart processing;social networks;social sites;social video summarisation;visual content;visual data;visual media;Media;Pipelines;Social network services;Streaming media;Transform coding;Videos;Visualization;Blur Detection;MPEG Codec;Social Media;Video Summarisation;Web Harvesting},
+doi =  {10.1109/IWCIM.2014.7008797}, ISSN =  {}}
 
 ,
 @article{RuttlePRL2014, 
 title =  {Robust shape from depth images with GR2T}, 
 journal =  {Pattern Recognition Letters}, 
-volume =  {50}, pages =  {43 - 54}, year =  {2014}, 
-note =  {Depth Image Analysis}, issn =  {0167-8655},
- doi =  {10.1016/j.patrec.2014.01.016}, 
- abstract = {This paper proposes to infer accurately a 3D shape of an object captured by a depth camera from multiple view points. 
- The Generalised Relaxed Radon Transform (GR2T) [1] is used here to merge all depth images in a robust kernel density estimate 
- that models the surface of an object in the 3D space. The kernel is tailored to capture the uncertainty associated with each pixel 
- in the depth images. The resulting cost function is suitable for stochastic exploration with gradient ascent algorithms when the 
- noise of the observations is modelled with a differentiable distribution. When merging several depth images captured from several view points, 
- extrinsic camera parameters need to be known accurately, and we extend GR2T to also estimate these nuisance parameters. 
- We illustrate qualitatively the performance of our modelling and we assess quantitatively
- the accuracy of our 3D shape reconstructions computed from depth images captured with a Kinect camera.},
- url =  {http://www.tara.tcd.ie/bitstream/handle/2262/68177/Ruttle%2D%2DRobust%20shape%20from%20de.pdf},
- note = {URI: http://hdl.handle.net/2262/68177},
- author =  {Jonathan Ruttle and Claudia Arellano and Rozenn Dahyot}, 
- keywords =  {Shape from depth, Generalised Relaxed Radon Transform (GRT), Noise modelling}}
+volume =  {50}, 
+pages =  {43 - 54}, 
+year =  {2014}, 
+note =  {Depth Image Analysis}, 
+issn =  {0167-8655},
+doi =  {10.1016/j.patrec.2014.01.016}, 
+abstract = {This paper proposes to infer accurately a 3D shape of an object captured by a depth camera from multiple view points. 
+The Generalised Relaxed Radon Transform (GR2T) [1] is used here to merge all depth images in a robust kernel density estimate 
+that models the surface of an object in the 3D space. The kernel is tailored to capture the uncertainty associated with each pixel 
+in the depth images. The resulting cost function is suitable for stochastic exploration with gradient ascent algorithms when the 
+noise of the observations is modelled with a differentiable distribution. When merging several depth images captured from several view points, 
+extrinsic camera parameters need to be known accurately, and we extend GR2T to also estimate these nuisance parameters. 
+We illustrate qualitatively the performance of our modelling and we assess quantitatively
+the accuracy of our 3D shape reconstructions computed from depth images captured with a Kinect camera.},
+url =  {http://www.tara.tcd.ie/bitstream/handle/2262/68177/Ruttle%2D%2DRobust%20shape%20from%20de.pdf},
+note = {URI: http://hdl.handle.net/2262/68177},
+author =  {Jonathan Ruttle and Claudia Arellano and Rozenn Dahyot}, 
+keywords =  {Shape from depth, Generalised Relaxed Radon Transform (GRT), Noise modelling}}
 
 ,
 @article{DSP2013Dahyot,
- title =  {Bayesian 3D shape from silhouettes},
- journal =  {Digital Signal Processing}, 
- volume =  {23}, number =  {6}, pages =  {1844 - 1855}, year =  {2013}, 
- issn =  {1051-2004}, 
- doi =  {10.1016/j.dsp.2013.06.007}, 
- abstract = {This paper introduces a smooth posterior density function for inferring shapes from silhouettes. 
- Both the likelihood and the prior are modelled using kernel density functions and optimisation is performed using gradient ascent algorithms.
- Adding a prior allows for the recovery of concave areas of the shape that are usually lost when estimating the visual hull. 
- This framework is also extended to use colour information when it is available in addition to the silhouettes. 
- In these cases, the modelling not only allows for the shape to be recovered but also its colour information.
- Our new algorithms are assessed by reconstructing 2D shapes from 1D silhouettes and 3D faces from 2D silhouettes.
- Experimental results show that using the prior can assist in reconstructing 
- concave areas and also illustrate the benefits of using colour information even when only small numbers of silhouettes are available.},
- url =  {https://roznn.github.io/PDF/RzDDSP2013.pdf}, 
- author =  {Donghoon Kim and Jonathan Ruttle and Rozenn Dahyot}, 
- keywords =  {3D reconstruction from multiple view images, Shape-from-silhouettes, Kernel density estimates, K-nearest neighbours, Principal component analysis}}
+title =  {Bayesian 3D shape from silhouettes},
+journal =  {Digital Signal Processing}, 
+volume =  {23}, 
+number =  {6}, 
+pages =  {1844 - 1855}, 
+year =  {2013}, 
+issn =  {1051-2004}, 
+doi =  {10.1016/j.dsp.2013.06.007}, 
+abstract = {This paper introduces a smooth posterior density function for inferring shapes from silhouettes. 
+Both the likelihood and the prior are modelled using kernel density functions and optimisation is performed using gradient ascent algorithms.
+Adding a prior allows for the recovery of concave areas of the shape that are usually lost when estimating the visual hull. 
+This framework is also extended to use colour information when it is available in addition to the silhouettes. 
+In these cases, the modelling not only allows for the shape to be recovered but also its colour information.
+Our new algorithms are assessed by reconstructing 2D shapes from 1D silhouettes and 3D faces from 2D silhouettes.
+Experimental results show that using the prior can assist in reconstructing 
+concave areas and also illustrate the benefits of using colour information even when only small numbers of silhouettes are available.},
+url =  {https://roznn.github.io/PDF/RzDDSP2013.pdf}, 
+author =  {Donghoon Kim and Jonathan Ruttle and Rozenn Dahyot}, 
+keywords =  {3D reconstruction from multiple view images, Shape-from-silhouettes, Kernel density estimates, K-nearest neighbours, Principal component analysis}}
 
 ,
 @article{PR2012Dahyot,
- title =  {Generalised relaxed Radon transform (GR2T) for robust inference}, 
- journal =  {Pattern Recognition}, 
- volume =  {46}, number =  {3},
- pages =  {788 - 794}, 
- year =  {2013}, 
- issn =  {0031-3203}, 
- url = {https://roznn.github.io/PDF/RzDPR2013.pdf},
- doi =  {10.1016/j.patcog.2012.09.026}, 
- abstract = {This paper introduces the generalised relaxed Radon transform (GR2T) as an extension to the generalised radon transform (GRT) .
- This new modelling allows us to define a new framework for robust inference. The resulting objective functions are probability density functions 
- that can be chosen differentiable and that can be optimised using gradient methods. One of this cost function is already widely used in the 
- forms of the Hough transform and generalised projection based M-estimator, and it is interpreted as a conditional density function on the latent variables
- of interest. In addition the joint density function of the latent variables is also proposed as a cost function and it has the advantage of including
- a prior about the latent variable. Several applications, including lines detection in images and volume reconstruction 
- from silhouettes captured from multiple views, are presented to underline the versatility of this framework.},
-  author =  {Rozenn Dahyot and Jonathan Ruttle}, 
- keywords =  {Generalised Radon transform, Hough transform, Robust inference, M-estimator, Generalised projection based M-estimator}}
+title =  {Generalised relaxed Radon transform (GR2T) for robust inference}, 
+journal =  {Pattern Recognition}, 
+volume =  {46}, 
+number =  {3},
+pages =  {788 - 794}, 
+year =  {2013}, 
+issn =  {0031-3203}, 
+url = {https://roznn.github.io/PDF/RzDPR2013.pdf},
+doi =  {10.1016/j.patcog.2012.09.026}, 
+abstract = {This paper introduces the generalised relaxed Radon transform (GR2T) as an extension to the generalised radon transform (GRT) .
+This new modelling allows us to define a new framework for robust inference. The resulting objective functions are probability density functions 
+that can be chosen differentiable and that can be optimised using gradient methods. One of this cost function is already widely used in the 
+forms of the Hough transform and generalised projection based M-estimator, and it is interpreted as a conditional density function on the latent variables
+of interest. In addition the joint density function of the latent variables is also proposed as a cost function and it has the advantage of including
+a prior about the latent variable. Several applications, including lines detection in images and volume reconstruction 
+from silhouettes captured from multiple views, are presented to underline the versatility of this framework.},
+author =  {Rozenn Dahyot and Jonathan Ruttle}, 
+keywords =  {Generalised Radon transform, Hough transform, Robust inference, M-estimator, Generalised projection based M-estimator}}
 
 
 ,
 @inproceedings{Zdziarski:2013:ACM:SAP, 
 author =  {Zdziarski, Z. and Dahyot, R.},
- title =  {On Creating a 2D \& 3D Visual Saliency Dataset}, 
- booktitle =  {Proceedings of the ACM Symposium on Applied Perception}, 
- series =  {SAP '13}, year =  {2013}, isbn =  {978-1-4503-2262-1}, 
- location =  {Dublin, Ireland}, pages =  {132--132}, numpages =  {1}, 
- url =  {http://doi.acm.org/10.1145/2492494.2501889}, 
- doi =  {http://doi.org/10.1145/2492494.2501889}, 
- acmid =  {2501889}, 
- publisher =  {ACM},
- address =  {New York, NY, USA}}
+title =  {On Creating a 2D \& 3D Visual Saliency Dataset}, 
+booktitle =  {Proceedings of the ACM Symposium on Applied Perception}, 
+series =  {SAP '13}, 
+year =  {2013}, 
+isbn =  {978-1-4503-2262-1}, 
+location =  {Dublin, Ireland}, 
+pages =  {132--132}, 
+numpages =  {1}, 
+url =  {http://doi.acm.org/10.1145/2492494.2501889}, 
+doi =  {http://doi.org/10.1145/2492494.2501889}, 
+acmid =  {2501889}, 
+publisher =  {ACM},
+address =  {New York, NY, USA}}
 ,
 @inproceedings{CVMP2013Arellano, 
 author =  {C. Arellano and R. Dahyot}, 
 title =  {Robust Bayesian Fitting of 3D Morphable Model}, 
 booktitle =  {Proceedings of the 10th European Conference on Visual Media Production},
- series =  {CVMP '13}, year =  {2013}, 
- isbn =  {978-1-4503-2589-9}, location =  {London, United Kingdom}, 
- pages =  {9:1--9:10}, articleno =  {9}, numpages =  {10}, 
- note =  {http://doi.acm.org/10.1145/2534008.2534013},
- url = {https://roznn.github.io/PDF/RzDCVMP2013.pdf},
- doi =  {10.1145/2534008.2534013}, 
- abstract = {We propose to fit automatically a 3D morphable face model to a point cloud captured with a RGB-D sensor. 
- Both data sets, the shape model and the target point cloud are modelled as two probability density functions (pdfs). 
- Rigid registration (rotation and translation) and reconstruction on the model is performed by minimising the Euclidean distance 
- between these two pdfs augmented with a multivariate Gaussian prior. Our resulting process is robust and it does not require point to point correspondence.
- Experimental results on synthetic and real data illustrates the performance of this novel approach.},
- acmid =  {2534013}, publisher =  {ACM}, address =  {New York, NY, USA}, 
- keywords =  {3D face reconstruction, L2E, RGB-D sensor, computer vision, divergence, morphable models, registration, shape fitting}}
+series =  {CVMP '13}, 
+year =  {2013}, 
+isbn =  {978-1-4503-2589-9}, 
+location =  {London, United Kingdom}, 
+pages =  {9:1--9:10}, 
+articleno =  {9}, 
+numpages =  {10}, 
+note =  {http://doi.acm.org/10.1145/2534008.2534013},
+url = {https://roznn.github.io/PDF/RzDCVMP2013.pdf},
+doi =  {10.1145/2534008.2534013}, 
+abstract = {We propose to fit automatically a 3D morphable face model to a point cloud captured with a RGB-D sensor. 
+Both data sets, the shape model and the target point cloud are modelled as two probability density functions (pdfs). 
+Rigid registration (rotation and translation) and reconstruction on the model is performed by minimising the Euclidean distance 
+between these two pdfs augmented with a multivariate Gaussian prior. Our resulting process is robust and it does not require point to point correspondence.
+Experimental results on synthetic and real data illustrates the performance of this novel approach.},
+acmid =  {2534013}, 
+publisher =  {ACM}, 
+address =  {New York, NY, USA}, 
+keywords =  {3D face reconstruction, L2E, RGB-D sensor, computer vision, divergence, morphable models, registration, shape fitting}}
 
 ,
 @InProceedings{KimMuscle2011, 
-author =  {Kim, Donghoon
-and Dahyot, Rozenn}, 
-editor =  {Salerno, Emanuele
-and {\c{C}}etin, A. Enis
-and Salvetti, Ovidio},
- title =  {Bayesian Shape from Silhouettes}, 
- booktitle =  {Computational Intelligence for Multimedia Understanding}, 
- year =  {2012}, 
- publisher =  {Springer Berlin Heidelberg}, address =  {Berlin, Heidelberg},
- pages =  {78--89},
- abstract =  {This paper extends the likelihood kernel density estimate of the visual hull proposed by Kim et al [1] by introducing a prior.
- Inference of the shape is performed using a meanshift algorithm over a posterior kernel density function that is refined iteratively using
- both a multiresolution framework (to avoid local maxima) and using KNN for selecting the best reconstruction basis at each iteration. 
- This approach allows us to recover concave areas of the shape that are usually lost when estimating the visual hull.}, 
- isbn =  {978-3-642-32436-9}, 
- doi =  {10.1007/978-3-642-32436-9_7}}
+author =  {Kim, Donghoon and Dahyot, Rozenn}, 
+editor =  {Salerno, Emanuele and {\c{C}}etin, A. Enis and Salvetti, Ovidio},
+title =  {Bayesian Shape from Silhouettes}, 
+booktitle =  {Computational Intelligence for Multimedia Understanding}, 
+year =  {2012}, 
+publisher =  {Springer Berlin Heidelberg}, 
+address =  {Berlin, Heidelberg},
+pages =  {78--89},
+abstract =  {This paper extends the likelihood kernel density estimate of the visual hull proposed by Kim et al [1] by introducing a prior.
+Inference of the shape is performed using a meanshift algorithm over a posterior kernel density function that is refined iteratively using
+both a multiresolution framework (to avoid local maxima) and using KNN for selecting the best reconstruction basis at each iteration. 
+This approach allows us to recover concave areas of the shape that are usually lost when estimating the visual hull.}, 
+isbn =  {978-3-642-32436-9}, 
+doi =  {10.1007/978-3-642-32436-9_7}}
 
 ,
 @INPROCEEDINGS{6334154, 
-author =  {J. {Ruttle} and C. {Arellano} and R. {Dahyot}}, 
+author =  {J. Ruttle and C. Arellano and R. Dahyot}, 
 booktitle =  {2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)}, 
 title =  {Extrinsic camera parameters estimation for shape-from-depths}, 
 url = {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2012/Conference/papers/1569583097.pdf},
@@ -1429,87 +1503,101 @@ Using the Kinect depth camera, we propose to estimate camera parameters by minim
 density functions modelled for each recorded depth images.
 We illustrate experimentally how this improves the modelling
 for estimating 3D shape from Depths.},
-year =  {2012}, volume =  {}, number =  {}, pages =  {1985-1989}, 
+year =  {2012}, 
+volume =  {}, 
+number =  {}, 
+pages =  {1985-1989}, 
 keywords =  {calibration;cameras;correlation methods;image reconstruction;parameter estimation;extrinsic camera parameter estimation;shape-from-depths;3D reconstruction;multiple view images;standard camera calibration techniques;kinect depth camera;recorded depth images;Cameras;Calibration;Cost function;Shape;Probability density function;Computational modeling;Correlation;Shape-from-Silhouettes (SfS);Shape-from-Depths (SfD);Multiview geometry},
- ISSN =  {2219-5491}, month =  {Aug}}
+ISSN =  {2219-5491},
+month =  {Aug}}
 
 ,
 @Inproceedings{ISSC2012Ziggy,
- title =  {Feature Selection Using Visual Saliency for Content-Based Image Retrieval},
- author =  {Z. Zdziarski and R. Dahyot}, 
- booktitle =  {23nd IET Irish Signals and Systems Conference},
- month =  {June, 28-29}, year =  {2012}, 
- address =  {Maynooth, Ireland}, 
- doi =  {10.1049/ic.2012.0194}, 
- abstract = {Saliency algorithms in content-based image retrieval are employed to retrieve the most important regions of an image 
- with the idea that these regions hold the essence of representative information. Such regions are then typically analysed and 
- described for future retrieval/classification tasks rather than the entire image itself - thus minimising computational resources required.
- We show that we can select a small number
- of features for indexing using a visual saliency measure without reducing the performance of classifiers trained to find objects.},
- url =  {https://ieeexplore.ieee.org/document/6621173/}}
+title =  {Feature Selection Using Visual Saliency for Content-Based Image Retrieval},
+author =  {Z. Zdziarski and R. Dahyot}, 
+booktitle =  {23nd IET Irish Signals and Systems Conference},
+month =  {June, 28-29}, 
+year =  {2012}, 
+address =  {Maynooth, Ireland}, 
+doi =  {10.1049/ic.2012.0194}, 
+abstract = {Saliency algorithms in content-based image retrieval are employed to retrieve the most important regions of an image 
+with the idea that these regions hold the essence of representative information. Such regions are then typically analysed and 
+described for future retrieval/classification tasks rather than the entire image itself - thus minimising computational resources required.
+We show that we can select a small number
+of features for indexing using a visual saliency measure without reducing the performance of classifiers trained to find objects.},
+url =  {https://ieeexplore.ieee.org/document/6621173/}}
 
 ,
 @INPROCEEDINGS{6334159, 
 author =  {C. {Arellano} and R. {Dahyot}}, 
 booktitle =  {2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)},
- title =  {Mean shift algorithm for robust rigid registration between Gaussian Mixture Models}, 
- year =  {2012}, volume =  {}, number =  {}, 
- url = {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2012/Conference/papers/1569583125.pdf},
- eprint = {https://ieeexplore.ieee.org/document/6334159},
- abstract = {We present a Mean shift (MS) algorithm for solving the rigid point set transformation estimation [1]. 
- Our registration algorithm minimises exactly the Euclidean distance between Gaussian Mixture Models (GMMs). 
- We show experimentally that our algorithm is more robust than previous implementations [1], thanks to both using an annealing 
- framework (to avoid local extrema) and using variable bandwidths in our density estimates. 
- Our approach is applied to 3D real data sets captured with a Lidar scanner and Kinect sensor.},
- pages =  {1154-1158},
- keywords =  {Gaussian processes;image registration;image sensors;optical radar;optical scanners;mean shift algorithm;robust rigid registration algorithm;Gaussian mixture models;MS algorithm;rigid point set transformation estimation;Euclidean distance;GMM;annealing framework;density estimation;3D real data sets;lidar scanner;Kinect sensor;Bandwidth;Density functional theory;Robustness;Kernel;Estimation;Annealing;Cost function;Mean Shift;Registration;Gaussian Mixture Models;Rigid Transformation}, 
- ISSN =  {2219-5491},
- month =  {Aug}}
+title =  {Mean shift algorithm for robust rigid registration between Gaussian Mixture Models}, 
+year =  {2012}, 
+volume =  {}, 
+number =  {}, 
+url = {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2012/Conference/papers/1569583125.pdf},
+eprint = {https://ieeexplore.ieee.org/document/6334159},
+abstract = {We present a Mean shift (MS) algorithm for solving the rigid point set transformation estimation [1]. 
+Our registration algorithm minimises exactly the Euclidean distance between Gaussian Mixture Models (GMMs). 
+We show experimentally that our algorithm is more robust than previous implementations [1], thanks to both using an annealing 
+framework (to avoid local extrema) and using variable bandwidths in our density estimates. 
+Our approach is applied to 3D real data sets captured with a Lidar scanner and Kinect sensor.},
+pages =  {1154-1158},
+keywords =  {Gaussian processes;image registration;image sensors;optical radar;optical scanners;mean shift algorithm;robust rigid registration algorithm;Gaussian mixture models;MS algorithm;rigid point set transformation estimation;Euclidean distance;GMM;annealing framework;density estimation;3D real data sets;lidar scanner;Kinect sensor;Bandwidth;Density functional theory;Robustness;Kernel;Estimation;Annealing;Cost function;Mean Shift;Registration;Gaussian Mixture Models;Rigid Transformation}, 
+ISSN =  {2219-5491},
+month =  {Aug}}
 
 ,
 @article{IJCV2012Cem, 
-author =  {Direkoglu, Cem
-and Dahyot, Rozenn
-and Manzke, Michael},
- title =  {On Using Anisotropic Diffusion for Skeleton Extraction}, 
- journal =  {International Journal of Computer Vision}, 
- year =  {2012}, 
- month =  {Nov}, day =  {01}, volume =  {100}, number =  {2}, pages =  {170--189}, 
- abstract =  {We present a novel and effective skeletonization algorithm for binary and gray-scale images, 
- based on the anisotropic heat diffusion analogy. We diffuse the image in the direction normal to the feature 
- boundaries and also allow tangential diffusion (curvature decreasing diffusion) to contribute slightly. 
- The proposed anisotropic diffusion provides a high quality medial function in the image: it removes noise and preserves 
- prominent curvatures of the shape along the level-sets (skeleton features). The skeleton strength map, which provides the 
- likelihood of a point to be part of the skeleton, is defined by the mean curvature measure. Finally, thin and binary skeleton
- is obtained by non-maxima suppression and hysteresis thresholding of the skeleton strength map. Our method outperforms the most
- related and the popular methods in skeleton extraction especially in noisy conditions. Results show that the proposed approach 
- is better at handling noise in images and preserving the skeleton features at the centerline of the shape.},
- issn =  {1573-1405}, 
- doi =  {10.1007/s11263-012-0540-9},
- url =  {https://roznn.github.io/PDF/2012IJCV.pdf}}
+author =  {Direkoglu, Cem and Dahyot, Rozenn and Manzke, Michael},
+title =  {On Using Anisotropic Diffusion for Skeleton Extraction}, 
+journal =  {International Journal of Computer Vision}, 
+year =  {2012}, 
+month =  {Nov}, 
+day =  {01}, 
+volume =  {100}, 
+number =  {2}, 
+pages =  {170--189}, 
+abstract =  {We present a novel and effective skeletonization algorithm for binary and gray-scale images, 
+based on the anisotropic heat diffusion analogy. We diffuse the image in the direction normal to the feature 
+boundaries and also allow tangential diffusion (curvature decreasing diffusion) to contribute slightly. 
+The proposed anisotropic diffusion provides a high quality medial function in the image: it removes noise and preserves 
+prominent curvatures of the shape along the level-sets (skeleton features). The skeleton strength map, which provides the 
+likelihood of a point to be part of the skeleton, is defined by the mean curvature measure. Finally, thin and binary skeleton
+is obtained by non-maxima suppression and hysteresis thresholding of the skeleton strength map. Our method outperforms the most
+related and the popular methods in skeleton extraction especially in noisy conditions. Results show that the proposed approach 
+is better at handling noise in images and preserving the skeleton features at the centerline of the shape.},
+issn =  {1573-1405}, 
+doi =  {10.1007/s11263-012-0540-9},
+url =  {https://roznn.github.io/PDF/2012IJCV.pdf}}
 
 ,
 @Inproceedings{ISSC2012Claudia,
- title =  {Shape Model Fitting Using non-Isotropic GMM},
- author =  {C. Arellano and R. Dahyot}, 
- booktitle =  {IET Irish Signals and Systems Conference (ISSC 2012)},
- year =  {2012}, month =  {June, 28-29}, 
- pages =  {1-6}, address =  {Maynooth, Ireland},
- url =  {https://ieeexplore.ieee.org/document/6621175/}, 
- doi =  {10.1049/ic.2012.0196}, 
- abstract = {We present a Mean Shift algorithm for fitting shape models. This algorithm maximises a posterior density function 
- where the likelihood is defined as the Euclidean distance between two Gaussian mixture density functions, one modelling the observations 
- while the other corresponds to the shape model. We explore the role of the covariance matrix in the Gaussian kernel for encoding the shape 
- of the model in the density function. Results show that using non-isotropic covariance matrices improve the efficiency of 
- the algorithm and allow to reduce the number of kernels to use in the mixture without compromising the robustness of the algorithm.},
- keywords =  {Gaussian processes;covariance matrices;solid modelling;Euclidean distance;Gaussian kernel;Gaussian mixture density functions;mean shift algorithm;nonisotropic GMM;nonisotropic covariance matrices;posterior density function;shape model fitting;Fitting Algorithm;Gaussian Mixture Models;Mean Shift;Morphable Models}}
+title =  {Shape Model Fitting Using non-Isotropic GMM},
+author =  {C. Arellano and R. Dahyot}, 
+booktitle =  {IET Irish Signals and Systems Conference (ISSC 2012)},
+year =  {2012}, 
+month =  {June, 28-29}, 
+pages =  {1-6}, 
+address =  {Maynooth, Ireland},
+url =  {https://ieeexplore.ieee.org/document/6621175/}, 
+doi =  {10.1049/ic.2012.0196}, 
+abstract = {We present a Mean Shift algorithm for fitting shape models. This algorithm maximises a posterior density function 
+where the likelihood is defined as the Euclidean distance between two Gaussian mixture density functions, one modelling the observations 
+while the other corresponds to the shape model. We explore the role of the covariance matrix in the Gaussian kernel for encoding the shape 
+of the model in the density function. Results show that using non-isotropic covariance matrices improve the efficiency of 
+the algorithm and allow to reduce the number of kernels to use in the mixture without compromising the robustness of the algorithm.},
+keywords =  {Gaussian processes;covariance matrices;solid modelling;Euclidean distance;Gaussian kernel;Gaussian mixture density functions;mean shift algorithm;nonisotropic GMM;nonisotropic covariance matrices;posterior density function;shape model fitting;Fitting Algorithm;Gaussian Mixture Models;Mean Shift;Morphable Models}}
 
 ,
 @Inproceedings{Eusipco2012Arellano1, 
 author =  {C. Arellano and R. Dahyot}, 
 booktitle =  {2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)}, 
 title =  {Shape model fitting algorithm without point correspondence}, 
-year =  {2012}, volume =  {}, number =  {}, pages =  {934-938}, 
+year =  {2012}, 
+volume =  {}, 
+number =  {}, 
+pages =  {934-938}, 
 abstract = {In this paper, we present a Mean Shift algorithm that does
 not require point correspondence to fit shape models. The observed data and the shape model are represented as mixtures
 of Gaussians. Using a Bayesian framework, we propose to
@@ -1518,7 +1606,10 @@ the two Gaussian mixture density functions while the latent
 variables are modelled with a Gaussian prior. We show the
 performance of our MS algorithm for fitting a 2D hand model
 and a 3D Morphable Model of faces to point clouds.},
-keywords =  {Gaussian processes;shape recognition;2D hand model;3D morphable model;Bayesian framework;Euclidean distance;Gaussian mixture density functions;Gaussian prior;Gaussians mixtures;MS algorithm;mean shift algorithm;shape model fitting algorithm;Computational modeling;Data models;Euclidean distance;Robustness;Shape;Signal processing algorithms;Solid modeling;Gaussian Mixture Models;Mean Shift;Morphable Models;Shape Fitting}, doi =  {}, ISSN =  {2219-5491}, month =  {Aug},
+keywords =  {Gaussian processes;shape recognition;2D hand model;3D morphable model;Bayesian framework;Euclidean distance;Gaussian mixture density functions;Gaussian prior;Gaussians mixtures;MS algorithm;mean shift algorithm;shape model fitting algorithm;Computational modeling;Data models;Euclidean distance;Robustness;Shape;Signal processing algorithms;Solid modeling;Gaussian Mixture Models;Mean Shift;Morphable Models;Shape Fitting}, 
+doi =  {}, 
+ISSN =  {2219-5491}, 
+month =  {Aug},
 url =  {https://www.eurasip.org/Proceedings/Eusipco/Eusipco2012/Conference/papers/1569582293.pdf}, 
 eprint =  {https://ieeexplore.ieee.org/document/6333999/}}
 
@@ -1527,48 +1618,64 @@ eprint =  {https://ieeexplore.ieee.org/document/6333999/}}
 author =  {Risser, Eric and Han, Charles and Dahyot, Rozenn and Grinspun, Eitan}, 
 title =  {Synthesizing Structured Image Hybrids}, 
 journal =  {ACM Trans. Graph.},
- issue_date =  {July 2010}, volume =  {29}, number =  {4}, month =  {jul}, year =  {2010},
- issn =  {0730-0301}, pages =  {85:1--85:6}, articleno =  {85}, numpages =  {6}, 
- eprint =  {http://doi.acm.org/10.1145/1778765.1778822},
- url = {http://www.cs.columbia.edu/cg/hybrids/hybrids.pdf},
- doi =  {10.1145/1778765.1778822}, 
- abstract = {Example-based texture synthesis algorithms generate novel texture images from example data.
- A popular hierarchical pixel-based approach uses spatial jitter to introduce diversity, at the risk of breaking coarse structure beyond repair. 
- We propose a multiscale descriptor that enables appearance-space jitter, which retains structure. 
- This idea enables repurposing of existing texture synthesis
- implementations for a qualitatively different problem statement and class of inputs: generating hybrids of structured images.},
- acmid =  {1778822}, publisher =  {ACM}, address =  {New York, NY, USA}}
+issue_date =  {July 2010}, 
+volume =  {29}, 
+number =  {4}, 
+month =  {jul}, 
+year =  {2010},
+issn =  {0730-0301}, 
+pages =  {85:1--85:6}, 
+articleno =  {85}, 
+numpages =  {6}, 
+eprint =  {http://doi.acm.org/10.1145/1778765.1778822},
+url = {http://www.cs.columbia.edu/cg/hybrids/hybrids.pdf},
+doi =  {10.1145/1778765.1778822}, 
+abstract = {Example-based texture synthesis algorithms generate novel texture images from example data.
+A popular hierarchical pixel-based approach uses spatial jitter to introduce diversity, at the risk of breaking coarse structure beyond repair. 
+We propose a multiscale descriptor that enables appearance-space jitter, which retains structure. 
+This idea enables repurposing of existing texture synthesis
+implementations for a qualitatively different problem statement and class of inputs: generating hybrids of structured images.},
+acmid =  {1778822}, 
+publisher =  {ACM}, address =  {New York, NY, USA}}
 
 ,
 @INPROCEEDINGS{Kim2010Icassp, 
 author =  {D. Kim and  J. Ruttle and R. Dahyot}, 
 booktitle =  {IEEE International Conference on Acoustics Speech and Signal Processing (ICASSP 2010) }, 
 title =  {3D shape estimation from silhouettes using Mean-shift}, 
-year =  {2010}, month =  {March}, volume =  {}, number =  {}, pages =  {1430 -1433}, keywords =  {},
- doi =  {10.1109/ICASSP.2010.5495474}, 
- abstract = {In this article, a novel method to accurately estimate 3D surface of objects of interest is proposed. 
- Each ray projected from 2D image plane to 3D space is modelled with the Gaussian kernel function. 
- Then a mean shift algorithm with an annealing scheme is used to find maximums of the probability density function and recovers the 3D surface. 
- Experimental results show that our method is more accurate to estimate 3D surface than the Radon transform-based approach.},
- ISSN =  {1520-6149}}
+year =  {2010}, 
+month =  {March}, 
+volume =  {}, 
+number =  {}, 
+pages =  {1430 -1433}, 
+keywords =  {},
+doi =  {10.1109/ICASSP.2010.5495474}, 
+abstract = {In this article, a novel method to accurately estimate 3D surface of objects of interest is proposed. 
+Each ray projected from 2D image plane to 3D space is modelled with the Gaussian kernel function. 
+Then a mean shift algorithm with an annealing scheme is used to find maximums of the probability density function and recovers the 3D surface. 
+Experimental results show that our method is more accurate to estimate 3D surface than the Radon transform-based approach.},
+ISSN =  {1520-6149}}
 
 ,
 @inbook{LCPC2010, 
 Chapter =  {D\'{e}tection et Reconnaissance de la signalisation verticale par analyse d'images}, 
 author =  {P. Charbonnier and R. Dahyot and T. Vik and F. Heitz},
- title =  {Detection et reconnaissance de la signalisation verticale par analyse d’images (Ed: P. Foucher)},
- publisher =  {Etudes et Recherches des laboratoires des Ponts et Chaussées, CR53 ( ISBN 978-2-7208-2578-1)},
- month =  {July}, year =  {2010}, }
+title =  {Detection et reconnaissance de la signalisation verticale par analyse d’images (Ed: P. Foucher)},
+publisher =  {Etudes et Recherches des laboratoires des Ponts et Chaussées, CR53 ( ISBN 978-2-7208-2578-1)},
+month =  {July},
+year =  {2010}, }
 ,
 @inproceedings{Direkoglu2010,
- title =  {Skeleton Extraction via Anisotropic Heat Flow},
- author =  {Direkoglu, Cem and Dahyot, Rozenn and Manzke, Michael}, 
- year =  {2010}, pages =  {61.1--61.11},
- booktitle =  {Proceedings of the British Machine Vision Conference},
- publisher =  {BMVA Press},
- editors =  {Labrosse, Fr\'ed\'eric and Zwiggelaar, Reyer and Liu, Yonghuai and Tiddeman, Bernie}, isbn =  {1-901725-40-5},
- url = {http://www.bmva.org/bmvc/2010/conference/paper61/paper61.pdf},
- abstract = {We introduce a novel skeleton extraction algorithm in binary and gray-scale images,
+title =  {Skeleton Extraction via Anisotropic Heat Flow},
+author =  {Direkoglu, Cem and Dahyot, Rozenn and Manzke, Michael}, 
+year =  {2010}, 
+pages =  {61.1--61.11},
+booktitle =  {Proceedings of the British Machine Vision Conference},
+publisher =  {BMVA Press},
+editors =  {Labrosse, Fr\'ed\'eric and Zwiggelaar, Reyer and Liu, Yonghuai and Tiddeman, Bernie}, 
+isbn =  {1-901725-40-5},
+url = {http://www.bmva.org/bmvc/2010/conference/paper61/paper61.pdf},
+abstract = {We introduce a novel skeleton extraction algorithm in binary and gray-scale images,
 based on the anisotropic heat diffusion analogy. We propose to diffuse image in the dominance of direction normal to the feature boundaries and also allow tangential diffusion
 to contribute slightly. The proposed anisotropic diffusion provides a high quality medial function in the image, since it removes noise and preserves prominent curvatures
 of the shape along the level-sets (skeleton locations). Then the skeleton strength map,
@@ -1577,23 +1684,24 @@ curvature of level-sets. The overall process is completed by non-maxima suppress
 and hysteresis thresholding to obtain thin and binary skeleton. Results indicate that this
 approach has advantages in handling noise in the image and in obtaining smooth shape
 skeleton because of the directional averaging inherent of our new anisotropic heat flow.},
- doi =  {10.5244/C.24.61}}
+doi =  {10.5244/C.24.61}}
 
 ,
 @inproceedings{Ruttle2010CVMP, 
 title =  {Smooth Kernel Density Estimate for Multiple View Reconstruction}, 
 author =  {J. Ruttle and M. Manzke and R. Dahyot},
- booktitle =  {proceedings of The 7th European Conference for Visual Media Production, CVMP 2010}, 
- location =  {London UK}, month =  {17 - 18 November}, 
- pages =  {74 -81}, 
- year =  {2010},
- abstract = {We present a statistical framework to merge the information from silhouettes segmented in multiple view images to infer the 3D shape of an object. 
- The approach is generalising the robust but discrete modelling of the visual hull by using the concept of averaged likelihoods.
- One resulting advantage of our framework is that the objective function is continuous and therefore an iterative gradient ascent algorithm
- can be defined to efficiently search the space. Moreover this results in a method which is less memory demanding and one that is very suitable 
- to a parallel processing architecture.
- Experimental results shows that this approach is efficient for getting a robust initial guess to the 3D shape of an object in view.},
- doi =  {10.1109/CVMP.2010.17}}
+booktitle =  {proceedings of The 7th European Conference for Visual Media Production, CVMP 2010}, 
+location =  {London UK}, 
+month =  {17 - 18 November}, 
+pages =  {74 -81}, 
+year =  {2010},
+abstract = {We present a statistical framework to merge the information from silhouettes segmented in multiple view images to infer the 3D shape of an object. 
+The approach is generalising the robust but discrete modelling of the visual hull by using the concept of averaged likelihoods.
+One resulting advantage of our framework is that the objective function is continuous and therefore an iterative gradient ascent algorithm
+can be defined to efficiently search the space. Moreover this results in a method which is less memory demanding and one that is very suitable 
+to a parallel processing architecture.
+Experimental results shows that this approach is efficient for getting a robust initial guess to the 3D shape of an object in view.},
+doi =  {10.1109/CVMP.2010.17}}
 
 ,
 @inproceedings{Arellano2010, 
@@ -1601,242 +1709,267 @@ title =  {Stereo Images for 3D Face Applications: A Literature Review},
 author =  {C. Arellano and R. Dahyot}, 
 booktitle =  {International Machine Vision and Image Processing Conference (IMVIP 2010)}, 
 address =  {Limerick Ireland}, 
-month =  {September}, year =  {2010}, 
+month =  {September}, 
+year =  {2010}, 
 url =  {http://citeseerx.ist.psu.edu/viewdoc/download?doi = 10.1.1.394.4985&rep = rep1&type = pdf}}
 
 ,
 @inproceedings{Kim09IMVIP,
- title =  {3D Head Reconstruction using Multi-camera Stream},
- author =  {D. Kim and R. Dahyot},
- booktitle =  {International Machine Vision and Image Processing conference (IMVIP 2009)}, 
- pages =  {156-161}, address =  {Dublin, Ireland}, month =  {September},
- year =  {2009},
- abstract = {Given information from many cameras, one can hope to get a complete 3D representation of an object. 
- Pintavirooj and Sangworasil exploit this idea and present a system that records sequentially images from multiple view points
- to reconstruct a 3D shape of a static object of interest [1]. For instance, using a 60 angle of view on the image, 
- they manage to get its accurate 3D reconstruction [1]. Unfortunately, when considering application such as video surveillance,
- it is not reasonable to expect that 60 cameras will give simultaneous images of a person of interest. However, we can expect that 
- the person will move over time and show sequentially different poses of her/his head to at least one or a few cameras.
- This article proposes a technique for recovering an accurate 3D shape by combining views recorded at different times.},
- url =  {https://ieeexplore.ieee.org/document/5319298/}, 
- doi =  {10.1109/IMVIP.2009.35}}
+title =  {3D Head Reconstruction using Multi-camera Stream},
+author =  {D. Kim and R. Dahyot},
+booktitle =  {International Machine Vision and Image Processing conference (IMVIP 2009)}, 
+pages =  {156-161}, 
+address =  {Dublin, Ireland}, 
+month =  {September},
+year =  {2009},
+abstract = {Given information from many cameras, one can hope to get a complete 3D representation of an object. 
+Pintavirooj and Sangworasil exploit this idea and present a system that records sequentially images from multiple view points
+to reconstruct a 3D shape of a static object of interest [1]. For instance, using a 60 angle of view on the image, 
+they manage to get its accurate 3D reconstruction [1]. Unfortunately, when considering application such as video surveillance,
+it is not reasonable to expect that 60 cameras will give simultaneous images of a person of interest. However, we can expect that 
+the person will move over time and show sequentially different poses of her/his head to at least one or a few cameras.
+This article proposes a technique for recovering an accurate 3D shape by combining views recorded at different times.},
+url =  {https://ieeexplore.ieee.org/document/5319298/}, 
+doi =  {10.1109/IMVIP.2009.35}}
 
 ,
 @inproceedings{Ruttle09Imvip, 
 title =  {Estimating 3D Scene Flow from Multiple 2D Optical Flows}, 
 author =  {J. Ruttle and M. Manzke and R. Dahyot}, 
 booktitle =  {International Machine Vision and Image Processing Conference (IMVIP 2009)}, 
-pages =  {6-11}, address =  {Dublin, Ireland}, month =  {September},
+pages =  {6-11}, 
+address =  {Dublin, Ireland}, 
+month =  {September},
 year =  {2009}, 
 abstract = {Scene flow is the motion of the surface points in the 3D world. For a camera,
- it is seen as a 2D optical flow in the image plane. Knowing the scene flow can be very useful as it gives an idea of 
- the surface geometry of the objects in the scene and how those objects are moving. Four methods for calculating the scene 
- flow given multiple optical flows have been explored and detailed in this paper along with the basic mathematics surrounding 
- multi-view geometry. It was found that given multiple optical flows
- it is possible to estimate the scene flow to different levels of detail depending on the level of prior information present.},
+it is seen as a 2D optical flow in the image plane. Knowing the scene flow can be very useful as it gives an idea of 
+the surface geometry of the objects in the scene and how those objects are moving. Four methods for calculating the scene 
+flow given multiple optical flows have been explored and detailed in this paper along with the basic mathematics surrounding 
+multi-view geometry. It was found that given multiple optical flows
+it is possible to estimate the scene flow to different levels of detail depending on the level of prior information present.},
 url =  {http://www.tara.tcd.ie/bitstream/handle/2262/30634/3DSceneFlow.pdf},
 note = {URI: http://hdl.handle.net/2262/30634},
- doi =  {10.1109/IMVIP.2009.8}},
- 
+doi =  {10.1109/IMVIP.2009.8}},
+
 @techreport{Dahyot09TR, 
 title =  {Mean-shift for Statistical Hough Transform},
- author =  {R. Dahyot},
- number =  {01/09}, 
- institution =  {School of Computer Science and Statistics, Trinity College Dublin},
- month =  {April}, 
- year =  {2009},
- url =  {https://www.scss.tcd.ie/disciplines/statistics/tech-reports/09-01.pdf}}
+author =  {R. Dahyot},
+number =  {01/09}, 
+institution =  {School of Computer Science and Statistics, Trinity College Dublin},
+month =  {April}, 
+year =  {2009},
+url =  {https://www.scss.tcd.ie/disciplines/statistics/tech-reports/09-01.pdf}}
 
 
 ,
 @inproceedings{Zdziarski09Imvip,
- title =  {Robust Panning Analysis for Slideshow Detection in Video Databases}, 
- author =  {Z. Zdziarski and R. Dahyot}, 
- booktitle =  {International Machine Vision and Image Processing Conference (IMVIP 2009)}, 
- pages =  {89-93}, 
- address =  {Dublin, Ireland}, 
- month =  {September}, year =  {2009}, 
- abstract = {We present an algorithm for slideshow detection in video databases such as YouTube or Blip.TV.
- Our solution is based around feature tracking to extract movement between sequentially captured frames.
- This movement is then analysed through the use of the Hough transform and compared against behaviour commonly exhibited 
- by slideshows: still and panning static images.
- We show experimentally the effectiveness of this novel idea and approach.},
- url =  {https://ieeexplore.ieee.org/document/5319322/},
- doi =  {10.1109/IMVIP.2009.23}}
+title =  {Robust Panning Analysis for Slideshow Detection in Video Databases}, 
+author =  {Z. Zdziarski and R. Dahyot}, 
+booktitle =  {International Machine Vision and Image Processing Conference (IMVIP 2009)}, 
+pages =  {89-93}, 
+address =  {Dublin, Ireland}, 
+month =  {September}, 
+year =  {2009}, 
+abstract = {We present an algorithm for slideshow detection in video databases such as YouTube or Blip.TV.
+Our solution is based around feature tracking to extract movement between sequentially captured frames.
+This movement is then analysed through the use of the Hough transform and compared against behaviour commonly exhibited 
+by slideshows: still and panning static images.
+We show experimentally the effectiveness of this novel idea and approach.},
+url =  {https://ieeexplore.ieee.org/document/5319322/},
+doi =  {10.1109/IMVIP.2009.23}}
 
 ,
 @article{Dahyot08pami, 
 author =  {R. Dahyot}, 
 journal =  {IEEE Transactions on Pattern Analysis and Machine Intelligence},
- title =  {Statistical Hough Transform},
- year =  {2009}, volume =  {31}, number =  {8},
- pages =  {1502-1509}, 
- note = {URI: http://hdl.handle.net/2262/31106 - Github: https://github.com/Roznn/Statistical-Hough-Transform},
- url = {http://www.tara.tcd.ie/bitstream/handle/2262/31106/Statistical%20Hough%20Transform.pdf},
- abstract = {The standard Hough transform is a popular method in image processing and is traditionally estimated using histograms.
- Densities modeled with histograms in high dimensional space and/or with few observations, can be very sparse and highly demanding in memory.
- In this paper, we propose first to extend the formulation to continuous kernel estimates. Second, when dependencies in between variables are well
- taken into account, the estimated density is also robust to noise and insensitive to the choice of the origin of the spatial coordinates.
- Finally, our new statistical framework is unsupervised (all needed parameters are automatically estimated) and flexible
- (priors can easily be attached to the observations). We show experimentally that our new modeling encodes better the alignment content of images.},
- keywords =  {Hough transforms;object detection;statistical analysis;continuous kernel estimate;image processing;line detection;spatial domain coordinate;statistical Hough transform;Hough transform;Image Processing and Computer Vision;Radon transform;Transform methods;kernel probability density function;line detection.;uncertainty},
- doi =  {10.1109/TPAMI.2008.288},
- eprint = {http://www.tara.tcd.ie/handle/2262/31106},
- ISSN =  {0162-8828}, month =  {Aug}}
+title =  {Statistical Hough Transform},
+year =  {2009}, 
+olume =  {31}, 
+number =  {8},
+pages =  {1502-1509}, 
+note = {URI: http://hdl.handle.net/2262/31106 - Github: https://github.com/Roznn/Statistical-Hough-Transform},
+url = {http://www.tara.tcd.ie/bitstream/handle/2262/31106/Statistical%20Hough%20Transform.pdf},
+abstract = {The standard Hough transform is a popular method in image processing and is traditionally estimated using histograms.
+Densities modeled with histograms in high dimensional space and/or with few observations, can be very sparse and highly demanding in memory.
+In this paper, we propose first to extend the formulation to continuous kernel estimates. Second, when dependencies in between variables are well
+taken into account, the estimated density is also robust to noise and insensitive to the choice of the origin of the spatial coordinates.
+Finally, our new statistical framework is unsupervised (all needed parameters are automatically estimated) and flexible
+(priors can easily be attached to the observations). We show experimentally that our new modeling encodes better the alignment content of images.},
+keywords =  {Hough transforms;object detection;statistical analysis;continuous kernel estimate;image processing;line detection;spatial domain coordinate;statistical Hough transform;Hough transform;Image Processing and Computer Vision;Radon transform;Transform methods;kernel probability density function;line detection.;uncertainty},
+doi =  {10.1109/TPAMI.2008.288},
+eprint = {http://www.tara.tcd.ie/handle/2262/31106},
+ISSN =  {0162-8828}, 
+month =  {Aug}}
 
 ,
 @inproceedings{Ruttle09Siggraph, 
 author =  {J. Ruttle and M. Manzke and M. Prazak and R. Dahyot}, 
 title =  {Synchronized real-time multi-sensor motion capture system},
- booktitle =  {SIGGRAPH ASIA '09: ACM SIGGRAPH ASIA 2009 Posters},
- year =  {2009}, pages =  {1--1}, location =  {Yokohama, Japan}, 
- abstract = {This work addresses the challenge of synchronizing multiple sources of visible and audible information from a variety of devices,
- while capturing human motion in realtime. Video and audio data will be used to augment and enrich a motion capture database
- that will be released to the research community. While other such augmented motion capture databases exist [Black and Sigal 2006], 
- the goal of this work is to build on these previous works. Critical areas of improvement are in the synchronization between cameras 
- and synchronization between devices. Adding an array of audio recording devices to the setup will greatly expand the research
- potential of the database, and the positioning of the cameras will be varied to give greater flexibility. The augmented database will 
- facilitate the testing and validation of human pose estimation and motion tracking techniques, among other applications. 
- This sketch briefly describes some of the interesting
- challenges faced in setting up the pipeline for capturing the synchronized data and the novel approaches proposed to solve them.},
- doi =  {10.1145/1666778.1666828}, 
- publisher =  {ACM}, address =  {New York, NY, USA}}
+booktitle =  {SIGGRAPH ASIA '09: ACM SIGGRAPH ASIA 2009 Posters},
+year =  {2009}, 
+pages =  {1--1}, 
+location =  {Yokohama, Japan}, 
+abstract = {This work addresses the challenge of synchronizing multiple sources of visible and audible information from a variety of devices,
+while capturing human motion in realtime. Video and audio data will be used to augment and enrich a motion capture database
+that will be released to the research community. While other such augmented motion capture databases exist [Black and Sigal 2006], 
+the goal of this work is to build on these previous works. Critical areas of improvement are in the synchronization between cameras 
+and synchronization between devices. Adding an array of audio recording devices to the setup will greatly expand the research
+potential of the database, and the positioning of the cameras will be varied to give greater flexibility. The augmented database will 
+facilitate the testing and validation of human pose estimation and motion tracking techniques, among other applications. 
+This sketch briefly describes some of the interesting
+challenges faced in setting up the pipeline for capturing the synchronized data and the novel approaches proposed to solve them.},
+doi =  {10.1145/1666778.1666828}, 
+publisher =  {ACM}, 
+address =  {New York, NY, USA}}
 
 ,
 @inproceedings{KearneyAES08,
- title =  {Audio-Visual Processing Tools for Auditory Scene Synthesis}, 
+title =  {Audio-Visual Processing Tools for Auditory Scene Synthesis}, 
 author =  {G. Kearney and R. Dahyot and F. Boland}, 
 booktitle =  {Audio Engineering Society 134th Convention}, 
-month =  {May}, year =  {2008}, 
+month =  {May}, 
+year =  {2008}, 
 abstract = {We present an integrated set of audio-visual tracking and synthesis tools to aid matching of the audio to the video position
- in both horizontal and periphonic sound reinforcement systems. Compensation for screen size and loudspeaker layout for high definition formats 
- is incorporated and the spatial localisation of the source is rendered using advanced spatialisation techniques. A subjective comparison 
- of several original and enhanced film sequences using the Vector Base Amplitude Panning (VBAP) method is presented. The results show that
- the encoding of non-contradictory audio-visual spatial information,
- for presentation on different loudspeaker layouts significantly improves the naturalness of the listening/viewing experience.},
+in both horizontal and periphonic sound reinforcement systems. Compensation for screen size and loudspeaker layout for high definition formats 
+is incorporated and the spatial localisation of the source is rendered using advanced spatialisation techniques. A subjective comparison 
+of several original and enhanced film sequences using the Vector Base Amplitude Panning (VBAP) method is presented. The results show that
+the encoding of non-contradictory audio-visual spatial information,
+for presentation on different loudspeaker layouts significantly improves the naturalness of the listening/viewing experience.},
 url =  {http://www.aes.org/e-lib/browse.cfm?elib = 14495}}
 
 ,
 @inproceedings{Dahyoticpr08,
- title =  {Bayesian Classification for the Statistical Hough Transform}, 
- author =  {R. Dahyot},
- booktitle =  {2008 19th International Conference on Pattern Recognition},
- month =  {December}, 
- address =  {Tampa, Florida}, 
- year =  {2008},
- keywords =  {Bayes methods;Hough transforms;Radon transforms;image classification;image segmentation;statistical analysis;2D accumulator histogram;Bayesian classification scheme;image space;inverse Radon transform;kernel mixture;statistical Hough transform;Bandwidth;Bayesian methods;Computer science;Discrete transforms;Educational institutions;Histograms;Image segmentation;Kernel;Robustness;Statistics}, 
- pages =  {1 -4}, 
- abstract = {We have introduced the statistical Hough transform that extends the standard Hough transform by using a kernel mixture 
- as a robust alternative to the 2 dimensional accumulator histogram. This work develops further this framework by proposing a 
- Bayesian classification scheme to associate the spatial coordinates (x, y) to one particular class defined in the Hough space. 
- In a first step, we segment the Hough space into meaningful classes. Then using the inverse Radon transform,
- we backproject the different classes into the image space. We illustrate our approach on a synthetic image and on real images.},
- doi =  {10.1109/ICPR.2008.4761109},
- ISSN =  {1051-4651}}
+title =  {Bayesian Classification for the Statistical Hough Transform}, 
+author =  {R. Dahyot},
+booktitle =  {2008 19th International Conference on Pattern Recognition},
+month =  {December}, 
+address =  {Tampa, Florida}, 
+year =  {2008},
+keywords =  {Bayes methods;Hough transforms;Radon transforms;image classification;image segmentation;statistical analysis;2D accumulator histogram;Bayesian classification scheme;image space;inverse Radon transform;kernel mixture;statistical Hough transform;Bandwidth;Bayesian methods;Computer science;Discrete transforms;Educational institutions;Histograms;Image segmentation;Kernel;Robustness;Statistics}, 
+pages =  {1 -4}, 
+abstract = {We have introduced the statistical Hough transform that extends the standard Hough transform by using a kernel mixture 
+as a robust alternative to the 2 dimensional accumulator histogram. This work develops further this framework by proposing a 
+Bayesian classification scheme to associate the spatial coordinates (x, y) to one particular class defined in the Hough space. 
+In a first step, we segment the Hough space into meaningful classes. Then using the inverse Radon transform,
+we backproject the different classes into the image space. We illustrate our approach on a synthetic image and on real images.},
+doi =  {10.1109/ICPR.2008.4761109},
+ISSN =  {1051-4651}}
 
 ,
 @inproceedings{Donghoon08imvip, 
 author =  {D. Kim and R. Dahyot},
- title =  {Face components detection using SURF descriptor and SVMs},
- booktitle =  {International Machine Vision and Image Processing conference (IMVIP 2008)},
- year =  {2008}, 
- abstract = {We present a feature-based method to classify salient points as belonging to objects in the face or background classes.
- We use SURF local descriptors (speeded up robust features) to generate feature vectors and use SVMs (support vector machines) as classifiers. Our system consists of a two-layer hierarchy of SVMs classifiers. On the first layer, a single classifier checks whether feature vectors are from face images or not. On the second layer, component labeling is operated using each component classifier of eye, mouth, and nose. This approach has the advantage about operating time because windows scanning procedure is not needed. 
- Finally, this system performs the procedure to apply geometrical constraints to labeled descriptors.
- We show experimentally the efficiency of our approach.},
- doi =  {10.1109/IMVIP.2008.15}, 
- url =  {https://roznn.github.io/PDF/IMVIP2008_Final.pdf}}
+title =  {Face components detection using SURF descriptor and SVMs},
+booktitle =  {International Machine Vision and Image Processing conference (IMVIP 2008)},
+year =  {2008}, 
+abstract = {We present a feature-based method to classify salient points as belonging to objects in the face or background classes.
+We use SURF local descriptors (speeded up robust features) to generate feature vectors and use SVMs (support vector machines) as classifiers. Our system consists of a two-layer hierarchy of SVMs classifiers. On the first layer, a single classifier checks whether feature vectors are from face images or not. On the second layer, component labeling is operated using each component classifier of eye, mouth, and nose. This approach has the advantage about operating time because windows scanning procedure is not needed. 
+Finally, this system performs the procedure to apply geometrical constraints to labeled descriptors.
+We show experimentally the efficiency of our approach.},
+doi =  {10.1109/IMVIP.2008.15}, 
+url =  {https://roznn.github.io/PDF/IMVIP2008_Final.pdf}}
 
 ,
 @article{Dahyot08,
- author =  {Dahyot, Rozenn 
+author =  {Dahyot, Rozenn 
 and Vilari{\~{n}}o, Fernando
 and Lacey, Gerard}, 
 title =  {Improving the Quality of Color Colonoscopy Videos}, 
 journal =  {EURASIP Journal on Image and Video Processing},
- year =  {2008}, month =  {Jan}, day =  {22},
- ume =  {2008}, number =  {1},
- pages =  {139429},
- abstract =  {Colonoscopy is currently one of the best methods to detect colorectal cancer. 
- Nowadays, one of the widely used colonoscopes has a monochrome chipset recording successively at 60Hz  and 
- components merged into one color video stream. Misalignments of the channels occur each time the camera moves, 
- and this artefact impedes both online visual inspection by doctors and offline computer analysis of the image data.
- We propose to restore this artefact by first equalizing the color channels and then performing a robust camera motion estimation and compensation.},
- issn =  {1687-5281}, 
- doi =  {10.1155/2008/139429},
- url = {https://jivp-eurasipjournals.springeropen.com/track/pdf/10.1155/2008/139429.pdf},
- eprint =  {https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2008/139429}}
+year =  {2008}, 
+month =  {Jan}, 
+day =  {22},
+ume =  {2008}, 
+number =  {1},
+pages =  {139429},
+abstract =  {Colonoscopy is currently one of the best methods to detect colorectal cancer. 
+Nowadays, one of the widely used colonoscopes has a monochrome chipset recording successively at 60Hz  and 
+components merged into one color video stream. Misalignments of the channels occur each time the camera moves, 
+and this artefact impedes both online visual inspection by doctors and offline computer analysis of the image data.
+We propose to restore this artefact by first equalizing the color channels and then performing a robust camera motion estimation and compensation.},
+issn =  {1687-5281}, 
+doi =  {10.1155/2008/139429},
+url = {https://jivp-eurasipjournals.springeropen.com/track/pdf/10.1155/2008/139429.pdf},
+eprint =  {https://jivp-eurasipjournals.springeropen.com/articles/10.1155/2008/139429}}
 
 ,
 @Inbook{Wilson2008, author =  {Wilson, Simon P. and Dahyot, Rozenn
 and Cunningham, P{\'a}draig}, 
 chapter =  {Introduction to Bayesian Methods and Decision Theory}, 
 title =  {Machine Learning Techniques for Multimedia: Case Studies on Organization and Retrieval },
- year =  {2008}, publisher =  {Springer Berlin Heidelberg (Eds: Cord, Matthieu
-and Cunningham, P{\'a}draig)}, 
-address =  {Berlin, Heidelberg}, pages =  {3--19}, 
+year =  {2008},
+publisher =  {Springer Berlin Heidelberg (Eds: Cord, Matthieu and Cunningham, P{\'a}draig)}, 
+address =  {Berlin, Heidelberg}, 
+pages =  {3--19}, 
 abstract =  {Bayesian methods are a class of statistical methods that have some appealing properties for solving problems in machine learning, 
 particularly when the process being modelled has uncertain or random aspects. In this chapter we look at the mathematical and philosophical basis
- for Bayesian methods and how they relate to machine learning problems in multimedia. We also discuss the notion of decision theory, for making decisions 
- under uncertainty, that is closely related to Bayesian methods. The numerical methods needed to implement Bayesian solutions are also discussed.
- Two specific applications of the Bayesian approach that are often used in machine learning -- na{\"i}ve Bayes and Bayesian networks -- are then described
- in more detail.}, isbn =  {978-3-540-75171-7}, 
- doi =  {10.1007/978-3-540-75171-7{\_1}}, 
- url =  {https://doi.org/10.1007/978-3-540-75171-7_1}}
+for Bayesian methods and how they relate to machine learning problems in multimedia. We also discuss the notion of decision theory, for making decisions 
+under uncertainty, that is closely related to Bayesian methods. The numerical methods needed to implement Bayesian solutions are also discussed.
+Two specific applications of the Bayesian approach that are often used in machine learning -- na{\"i}ve Bayes and Bayesian networks -- are then described
+in more detail.}, 
+isbn =  {978-3-540-75171-7}, 
+doi =  {10.1007/978-3-540-75171-7{\_1}}, 
+url =  {https://doi.org/10.1007/978-3-540-75171-7_1}}
 
 ,
-@Inbook{DahyotChapter2008, author =  {Dahyot, Rozenn
+@Inbook{DahyotChapter2008, 
+author =  {Dahyot, Rozenn
 and Pitie, Fran{\c{c}}ois
 and Lennon, Daire
 and Harte, Naomi
 and Kokaram, Anil},
- chapter =  {Action Recognition in Multimedia Streams},
- title =  {Multimodal Processing and Interaction: Audio, Video, Text}, 
- year =  {2008}, 
- publisher =  {Springer US (Eds: Maragos, Petros and Potamianos, Alexandros and Gros, Patrick)}, address =  {Boston, MA}, 
- isbn =  {978-0-387-76316-3},
- doi =  {10.1007/978-0-387-76316-3{\_}5}, 
- url =  {https://doi.org/10.1007/978-0-387-76316-3_5}}
+chapter =  {Action Recognition in Multimedia Streams},
+title =  {Multimodal Processing and Interaction: Audio, Video, Text}, 
+year =  {2008}, 
+publisher =  {Springer US (Eds: Maragos, Petros and Potamianos, Alexandros and Gros, Patrick)},
+address =  {Boston, MA}, 
+isbn =  {978-0-387-76316-3},
+doi =  {10.1007/978-0-387-76316-3{\_}5}, 
+url =  {https://doi.org/10.1007/978-0-387-76316-3_5}}
 
 ,
 @Inbook{PitieCRC2008, 
 title =  {Single-Sensor Imaging: Methods and Applications for Digital Cameras}, 
 chapter =  {Enhancement of Digital Photographs Using Color Transfer Techniques},
- author =  {F. Pitie and A. Kokaram and R. Dahyot}, 
- publisher =  {CRC Press Image Processing Series, Rastislav Lukac (Ed.) ISBN: 9781420054521}, 
- month =  {October}, 
- year =  {2008}, 
- note = {Github: https://github.com/frcs/colour-transfer },
- url = {https://github.com/frcs/colour-transfer/blob/master/publications/pitie08bookchapter.pdf},
- doi =  {10.1201/9781420054538.ch11}}
+author =  {F. Pitie and A. Kokaram and R. Dahyot}, 
+publisher =  {CRC Press Image Processing Series, Rastislav Lukac (Ed.) ISBN: 9781420054521}, 
+month =  {October}, 
+year =  {2008}, 
+note = {Github: https://github.com/frcs/colour-transfer },
+url = {https://github.com/frcs/colour-transfer/blob/master/publications/pitie08bookchapter.pdf},
+doi =  {10.1201/9781420054538.ch11}}
 
 ,
 @article{Pitie_CVIU2007, 
 title =  {Automated colour grading using colour distribution transfer}, 
 journal =  {Computer Vision and Image Understanding},
- volume =  {107}, number =  {1}, pages =  {123 - 137},
- year =  {2007}, note =  {Special issue on color image processing},
- issn =  {1077-3142}, 
- doi =  {10.1016/j.cviu.2006.11.011}, 
-  note = {Github: https://github.com/frcs/colour-transfer },
- abstract = {This article proposes an original method for grading the colours between different images or shots.
- The first stage of the method is to find a one-to-one colour mapping that transfers the palette of an example target picture to the original picture.
- This is performed using an original and parameter free algorithm that is able to transform any N-dimensional probability density function into another one.
- The proposed algorithm is iterative, non-linear and has a low computational cost. Applying the colour mapping on the original picture allows reproducing
- the same ‘feel’ as the target picture, but can also increase the graininess of the original picture, especially if the colour dynamic of the two pictures
- is very different. The second stage of the method is to reduce
- this grain artefact through an efficient post-processing algorithm that intends to preserve the gradient field of the original picture.},
- url = {https://github.com/frcs/colour-transfer/blob/master/publications/pitie07cviu.pdf},
- eprint =  {http://www.sciencedirect.com/science/article/pii/S1077314206002189},
- author =  {François Pitie and Anil C. Kokaram and Rozenn Dahyot}, 
- keywords =  {Colour grading, Colour transfer, Re-colouring, Distribution transfer}}
+volume =  {107}, 
+number =  {1}, 
+pages =  {123 - 137},
+year =  {2007}, 
+note =  {Special issue on color image processing},
+issn =  {1077-3142}, 
+doi =  {10.1016/j.cviu.2006.11.011}, 
+note = {Github: https://github.com/frcs/colour-transfer },
+abstract = {This article proposes an original method for grading the colours between different images or shots.
+The first stage of the method is to find a one-to-one colour mapping that transfers the palette of an example target picture to the original picture.
+This is performed using an original and parameter free algorithm that is able to transform any N-dimensional probability density function into another one.
+The proposed algorithm is iterative, non-linear and has a low computational cost. Applying the colour mapping on the original picture allows reproducing
+the same ‘feel’ as the target picture, but can also increase the graininess of the original picture, especially if the colour dynamic of the two pictures
+is very different. The second stage of the method is to reduce
+this grain artefact through an efficient post-processing algorithm that intends to preserve the gradient field of the original picture.},
+url = {https://github.com/frcs/colour-transfer/blob/master/publications/pitie07cviu.pdf},
+eprint =  {http://www.sciencedirect.com/science/article/pii/S1077314206002189},
+author =  {François Pitie and Anil C. Kokaram and Rozenn Dahyot}, 
+keywords =  {Colour grading, Colour transfer, Re-colouring, Distribution transfer}}
 
 ,
 @techreport{Dahyot07, 
 title =  {Statistical Hough Transform}, 
-author =  {R. Dahyot}, number =  {TCD-CS-2007-37}, 
-institution =  {School of Computer Science and Statistics, 
-Trinity College Dublin Ireland}, month =  {July}, year =  {2007}, 
+author =  {R. Dahyot}, 
+number =  {TCD-CS-2007-37}, 
+institution =  {School of Computer Science and Statistics, Trinity College Dublin Ireland}, 
+month =  {July}, 
+year =  {2007}, 
 url =  {https://www.cs.tcd.ie/publications/tech-reports/reports.07/TCD-CS-2007-37.pdf}}
 
 
@@ -1844,8 +1977,7 @@ url =  {https://www.cs.tcd.ie/publications/tech-reports/reports.07/TCD-CS-2007-3
 @techreport{DahyotPIYRA07, 
 title =  {Optimal Mass Transport for Understanding and Synthesis of Visual Data}, 
 author =  {R. Dahyot}, 
-institution =  {School of Computer Science and Statistics, 
-Trinity College Dublin Ireland}, 
+institution =  {School of Computer Science and Statistics, Trinity College Dublin Ireland}, 
 year =  {2007}, 
 note = {First stage proposal TCD selection to PIYRA (not funded)},
 url =  {https://roznn.github.io/PDF/RzDPIYRA2007.pdf}}
@@ -1865,24 +1997,28 @@ url =  {http://www.tara.tcd.ie/bitstream/handle/2262/90913/TCD-CS-2007-27.pdf}}
 ,
 @inproceedings{Kelly2007, 
 author =  {R. Dahyot and C. Kelly and G. Kearney},
- title =  {Visual enhancement using multiple audio streams in live music performance}, 
- abstract = {The use of multiple audio streams from digital mixing consoles is presented for application to real-time 
- enhancement of synchronised visual effects in live music performances. The audio streams are processed simultaneously 
- and their temporal and spectral characteristics can be used to control the intensity, duration and colour of the lights.
- The efficiency of the approach is tested on rock and jazz pieces. 
- The result of the analysis is illustrated by a visual OpenGL 3-D animation illustrating the synchronous audio-visual events occurring in the musical piece.},
- booktitle =  {31st International Conference Audio Engineering Society }, 
- eprint = {https://www.aes.org/e-lib/browse.cfm?elib = 13947},
+title =  {Visual enhancement using multiple audio streams in live music performance}, 
+abstract = {The use of multiple audio streams from digital mixing consoles is presented for application to real-time 
+enhancement of synchronised visual effects in live music performances. The audio streams are processed simultaneously 
+and their temporal and spectral characteristics can be used to control the intensity, duration and colour of the lights.
+The efficiency of the approach is tested on rock and jazz pieces. 
+The result of the analysis is illustrated by a visual OpenGL 3-D animation illustrating the synchronous audio-visual events occurring in the musical piece.},
+booktitle =  {31st International Conference Audio Engineering Society }, 
+eprint = {https://www.aes.org/e-lib/browse.cfm?elib = 13947},
 url = {https://www.aes.org/e-lib/browse.cfm?elib = 13947},
- year =  {2007}, address =  {London, UK}, month =  {June}}
+year =  {2007}, 
+address =  {London, UK}, 
+month =  {June}}
 
 ,
 @INPROCEEDINGS{Dahyot_IWSM2006,
- title =  {Bayesian Inferences for Object Detection}, 
- author =  {R. Dahyot},
- booktitle =  {21st International Workshop on Statistical Modelling}, 
- address =  {Galway, Ireland}, 
- month =  {July 3-7}, pages =  {127-130}, year =  {2006}}
+title =  {Bayesian Inferences for Object Detection}, 
+author =  {R. Dahyot},
+booktitle =  {21st International Workshop on Statistical Modelling}, 
+address =  {Galway, Ireland}, 
+month =  {July 3-7}, 
+pages =  {127-130}, 
+year =  {2006}}
 
 ,
 @ARTICLE{Kokaram2006, 
@@ -1891,12 +2027,15 @@ journal =  {IEEE Signal Processing Magazine},
 title =  {Browsing sports video: trends in sports-related indexing and retrieval work}, 
 abstract = {This paper aims to identify the current trends in sports-based indexing and retrieval work. 
 It discusses the essential building blocks for any semantic-level retrieval system and acts as a case study in content
- analysis system design. While one of the major benefits of digital media and digital television in particular has been to provide 
- users with more choices and a more interactive viewing experience, the freedom to choose has in fact manifested as the freedom to choose 
- from the options the broadcaster provides. It is only through the use of automated content-based analysis that sports 
+analysis system design. While one of the major benefits of digital media and digital television in particular has been to provide 
+users with more choices and a more interactive viewing experience, the freedom to choose has in fact manifested as the freedom to choose 
+from the options the broadcaster provides. It is only through the use of automated content-based analysis that sports 
 viewers will be given a chance to manipulate content at a much deeper level than that intended by broadcasters, 
 and hence put true meaning into interactivity},
-year =  {2006}, volume =  {23}, number =  {2}, pages =  {47-58}, 
+year =  {2006}, 
+volume =  {23}, 
+number =  {2}, 
+pages =  {47-58}, 
 keywords =  {content-based retrieval;indexing;sport;video retrieval;automated content-based analysis;content analysis system design;digital media;digital television;interactive viewing experience;retrieval work;semantic-level retrieval system;sports video;sports-based indexing;sports-related indexing;Broadcasting;Cameras;Educational institutions;Games;Image analysis;Indexing;Information retrieval;Multimedia communication;Packaging;Tagging}, 
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/1998/01621448.pdf},
 note = {URI: http://hdl.handle.net/2262/1998},
@@ -1967,7 +2106,9 @@ author =  {N. Rea and R. Dahyot and A. Kokaram},
 booktitle =  {IEEE International Conference on Image Processing 2005}, 
 title =  {Classification and representation of semantic content in broadcast tennis videos}, 
 year =  {2005},
-volume =  {3}, number =  {}, pages =  {III-1204-7}, 
+volume =  {3}, 
+number =  {}, 
+pages =  {III-1204-7}, 
 keywords =  {image classification;image colour analysis;image representation;image sequences;particle filtering (numerical methods);video signal processing;broadcast tennis videos;particle filter;semantic analysis;spatio-temporal behaviour;video classification;video representation;video sequence;Content based retrieval;Educational institutions;Hidden Markov models;Histograms;Multimedia communication;Particle filters;Particle tracking;Streaming media;TV broadcasting;Videos}, 
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/19779/01530614.pdf},
 note = {URI: http://hdl.handle.net/2262/19779},
@@ -2001,11 +2142,13 @@ title =  {Exploiting Temporal Discontinuities for Event Detection and Manipulati
 year =  {2005},
 isbn =  {1595932445},
 abstract = {Discontinuities in any information bearing signal serve to represent much of the vital or interesting content in that signal. A sharp loud noise in a movie could be a gun, or something breaking. In sports like tennis, cricket or snooker/pool it would indicate a point scoring event. In both cases the discontinuity is likely to be semantically relevant without further inference being necessary, once a particular domain is adopted. This paper discusses the importance of temporal motion discontinuities in inferring events in visual media. Two particular application domains are considered: content based audio/video synchronisation and event spotting in observational Psychology.},
-publisher =  {Association for Computing Machinery}, address =  {New York, NY, USA}, 
+publisher =  {Association for Computing Machinery}, 
+address =  {New York, NY, USA}, 
 url =  {https://doi.org/10.1145/1101826.1101857}, 
 doi =  {10.1145/1101826.1101857}, 
 booktitle =  {Proceedings of the 7th ACM SIGMM International Workshop on Multimedia Information Retrieval}, 
-pages =  {183-192}, numpages =  {10}, 
+pages =  {183-192}, 
+numpages =  {10}, 
 keywords =  {event spotting, video retrieval, motion tracking, information retrieval, bayesian inference}, location =  {Hilton, Singapore}, series =  {MIR 05}}
 
 ,
@@ -2013,8 +2156,10 @@ keywords =  {event spotting, video retrieval, motion tracking, information retri
 author =  {F. Pitie and A. C. Kokaram and R. Dahyot}, 
 booktitle =  {Tenth IEEE International Conference on Computer Vision (ICCV'05) Volume 1}, 
 title =  {N-dimensional probability density function transfer and its application to color transfer}, 
-year =  {2005}, volume =  {2}, number =  {},
-pages =  {1434-1439 Vol. 2},
+year =  {2005}, 
+volume =  {2}, 
+number =  {},
+pages =  {1434-1439},
 keywords =  {image colour analysis;probability;1D marginal distribution;automated color grading;color transfer;continuous transformation;probability density function;Color;Computational efficiency;Density functional theory;Distributed computing;Educational institutions;Image converters;Iterative methods;Rendering (computer graphics);Statistical distributions;Statistics},
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/19800/01544887.pdf},
 note = {URI: http://hdl.handle.net/2262/19800 -  Github: https://github.com/frcs/colour-transfer},
@@ -2037,7 +2182,10 @@ month =  {Oct}}
 author =  {F. Pitie  and S. A. Berrani and A. Kokaram and R. Dahyot}, 
 booktitle =  {IEEE International Conference on Image Processing 2005}, 
 title =  {Off-line multiple object tracking using candidate selection and the Viterbi algorithm}, 
-year =  {2005}, volume =  {3}, number =  {}, pages =  {III-109-12}, 
+year =  {2005}, 
+volume =  {3}, 
+number =  {}, 
+pages =  {III-109-12}, 
 keywords =  {maximum likelihood estimation;object detection;particle filtering (numerical methods);Viterbi algorithm;candidate selection;deterministic solution;off-line multiple object tracking;particle filter methods;probabilistic framework;Data mining;Feature extraction;Image sequences;Indexing;Information retrieval;Particle filters;Particle tracking;Performance analysis;Surveillance;Viterbi algorithm},
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/19821/01530340.pdf},
 note = {URI: http://hdl.handle.net/2262/19821},
@@ -2052,7 +2200,8 @@ few candidates and results in a deterministic solution. Moreover, we consider he
 future information is exploited. This paper shows that, although basic and very simple, this candidate selection allows the solution of many tracking problems in different
 real-world applications and offers a good alternative to particle filter methods for off-line applications.},
 doi =  {10.1109/ICIP.2005.1530340}, 
-ISSN =  {1522-4880}, month =  {Sept}}
+ISSN =  {1522-4880}, 
+month =  {Sept}}
 ,
 
 @ARTICLE{Dahyot_PAA, 
@@ -2061,8 +2210,21 @@ and Charbonnier, Pierre
 and Heitz, Fabrice}, 
 title =  {A Bayesian approach to object detection using probabilistic appearance-based models},
 journal =  {Pattern Analysis and Applications},
-year =  {2004}, month =  {Dec}, day =  {01}, volume =  {7}, number =  {3}, pages =  {317--332}, 
-abstract =  {In this paper, we introduce a Bayesian approach, inspired by probabilistic principal component analysis (PPCA) (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999), to detect objects in complex scenes using appearance-based models. The originality of the proposed framework is to explicitly take into account general forms of the underlying distributions, both for the in-eigenspace distribution and for the observation model. The approach combines linear data reduction techniques (to preserve computational efficiency), non-linear constraints on the in-eigenspace distribution (to model complex variabilities) and non-linear (robust) observation models (to cope with clutter, outliers and occlusions). The resulting statistical representation generalises most existing PCA-based models (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999; Black and Jepson in Int J Comput Vis 26(1):63--84, 1998; Moghaddam and Pentland in IEEE Trans Pattern Anal Machine Intell 19(7):696--710, 1997) and leads to the definition of a new family of non-linear probabilistic detectors. The performance of the approach is assessed using receiver operating characteristic (ROC) analysis on several representative databases, showing a major improvement in detection performances with respect to the standard methods that have been the references up to now.}, issn =  {1433-755X},
+year =  {2004}, 
+month =  {Dec}, 
+day =  {01}, 
+volume =  {7}, 
+number =  {3}, 
+pages =  {317--332}, 
+abstract =  {In this paper, we introduce a Bayesian approach, inspired by 
+probabilistic principal component analysis (PPCA) (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999),
+ to detect objects in complex scenes using appearance-based models. The originality of the proposed framework is to explicitly 
+ take into account general forms of the underlying distributions, both for the in-eigenspace distribution and for the observation model. 
+ The approach combines linear data reduction techniques (to preserve computational efficiency), non-linear constraints on the in-eigenspace 
+ distribution (to model complex variabilities) and non-linear (robust) observation models (to cope with clutter, outliers and occlusions). 
+ The resulting statistical representation generalises most existing PCA-based models
+  (Tipping and Bishop in J Royal Stat Soc Ser B 61(3):611--622, 1999; Black and Jepson in Int J Comput Vis 26(1):63--84, 1998; Moghaddam and Pentland in IEEE Trans Pattern Anal Machine Intell 19(7):696--710, 1997) and leads to the definition of a new family of non-linear probabilistic detectors. The performance of the approach is assessed using receiver operating characteristic (ROC) analysis on several representative databases, showing a major improvement in detection performances with respect to the standard methods that have been the references up to now.}, 
+issn =  {1433-755X},
 doi =  {10.1007/s10044-004-0230-5}, 
 url =  {https://roznn.github.io/PDF/article2333.pdf}}
 
@@ -2107,7 +2269,9 @@ author =  {R. Dahyot and N. Rea and A. Kokaram and N. Kingsbury},
 booktitle =  {IEEE 6th Workshop on Multimedia Signal Processing, 2004.},
 title =  {Inlier modeling for multimedia data analysis}, 
 year =  {2004},
-volume =  {}, number =  {}, pages =  {482-485}, 
+volume =  {}, 
+number =  {}, 
+pages =  {482-485}, 
 keywords =  {audio signal processing;multimedia communication;normal distribution;audio data segmentation;centred normal distribution;colour class parameter extraction;multimedia data analysis;signal processing;Data analysis;Distributed computing;Educational institutions;Gaussian distribution;Parameter estimation;Parameter extraction;Random variables;Robustness;Signal processing;Statistical distributions}, 
 abstract = {This paper presents a robust method to estimate the unknown standard deviation of a centred normal distribution from a mixture density. This method is applied to different signal processing problems. The first one concerns silence segmentation from audio data. The second application deals with colour class parameter extraction. In this later case, the mean is also estimated from the observations.},
 doi =  {10.1109/MMSP.2004.1436600}, 
@@ -2137,7 +2301,9 @@ ISSN =  {1520-6149}, month =  {May}}
 author =  {F. Pitie and A. Kokaram and R. Dahyot }, 
 title =  {Oriented Particle Spray: A New Probabilistic Contour Tracing with Directional Information}, 
 booktitle =  {Irish Machine Vision and Image Processing conference (IMVIP 2004)}, 
-month =  {September}, year =  {2004}, pages =  {158-165},
+month =  {September}, 
+year =  {2004}, 
+pages =  {158-165},
 url =  {http://iprcs.org/pdf/IMVIP2004_Proceedings.pdf}, 
 address =  {Dublin, Ireland}}
 
@@ -2179,7 +2345,8 @@ author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 journal =  {Traitement du Signal}, 
 volume =  {20},
 abstract = {In this paper, methods are proposed to detect objects in complex scenes using statistical global appearance based models. In our approach, the standard eigenspace representation of a training image database and a priori non- Gaussian hypotheses are brought together in a Bayesian framework. This work unifies standard (appearancebased) detection methods already proposed in the literature and leads naturally to the definition of a new family of probabilistic detectors. It allows the use of more general a priori assumptions about the distribution on the eigenspace and its orthogonal. Experimental results are illustrated with ROC (Receiver Operating Characteristic) curves and show the major improvement of our Bayesian approach in comparison to the standard methods that have been the reference up to now [2, 14].},
-number =  {2}, pages =  {101-117}, 
+number =  {2}, 
+pages =  {101-117}, 
 year =  {2003}, 
 note = {HANDLE: http://hdl.handle.net/2042/2221},
 url =  {http://documents.irevues.inist.fr/bitstream/handle/2042/2221/Charbonnier.pdf}}
@@ -2190,7 +2357,8 @@ author =  {R. Dahyot and A. Kokaram and N. Rea and H. Denman},
 booktitle =  {Acoustics, Speech, and Signal Processing, 2003. Proceedings. (ICASSP '03). 2003 IEEE International Conference on}, 
 title =  {Joint audio visual retrieval for tennis broadcasts}, 
 year =  {2003}, 
-volume =  {3}, number =  {}, 
+volume =  {3}, 
+number =  {}, 
 pages =  {III-561-4 vol.3}, 
 keywords =  {audio coding;content-based retrieval;feature extraction;image retrieval;maximum likelihood estimation;principal component analysis;sport;stochastic processes;video coding;PCA;audio features;content retrieval;image features;image moments;joint audio visual retrieval;key episode identification;likelihood approach;scene geometry;sports;stochastic processes;tennis broadcasts;Broadcasting;Content based retrieval;Geometry;Layout;Multimedia communication;Principal component analysis;Robustness;Solid modeling;Stochastic processes;Streaming media},
 doi =  {10.1109/ICASSP.2003.1199536}, 
@@ -2204,7 +2372,10 @@ ISSN =  {1520-6149}, month =  {April}}
 title =  {Simultaneous Luminance and Position Stabilization for Film and Video},
 author =  {A. C. Kokaram and R. Dahyot and F. Pitie and H. Denman},
 booktitle =  {Proc.SPIE Visual Communications and Image Processing}, 
-volume =  {5022}, number =  {}, pages =  {5022 - 5022 - 12}, year =  {2003},
+volume =  {5022}, 
+number =  {}, 
+pages =  {5022 - 5022 - 12}, 
+year =  {2003},
 doi =  {10.1117/12.476584}, 
 abstract = {Temporal and spatial random variation of luminance in images, or 'flicker' is a typical degradation observed in archived film and video. The underlying premise in typical flicker reduction algorithms is that each image must be corrected for a spatially varying gain and offset. These parameters are estimated in the stationary region of the image. Hence the performance of that algorithm depends crucially on the identification of stationary image regions. Position fluctuations are also a common artefact resulting in a random 'shake' of each film frame. For removing both, the key is to reject regions showing local motion or other outlier activity. Parameters are then estimated mostly on that part of the image undergoing the dominant motion. A new algorithm that simultaneously deals with global motion estimation and flicker is presented. The final process is based on a robust application of weighted least-squares, in which the weights also classify portions of the image as local or global. The paper presents results on severely degraded sequences showing evidence of both Flicker and random shake.},
 url =  {https://roznn.github.io/PDF/vcip2003_kokaram_pitie.pdf}, 
@@ -2215,18 +2386,23 @@ eprint =  {}}
 author =  {Rozenn  Dahyot and Niall  Rea and Anil C. Kokaram}, 
 title =  {Sport video shot segmentation and classification}, 
 booktitle =  {Proc. SPIE Visual Communications and Image Processing 2003},
-volume =  {5150}, number =  {}, pages =  {5150 - 5150 - 10}, year =  {2003},
+volume =  {5150}, 
+number =  {}, 
+pages =  {5150 - 5150 - 10}, 
+year =  {2003},
 doi =  {10.1117/12.503127}, 
 abstract = {This paper considers the statistics of local appearance based measures that are suitable for the visual parsing of sport events. The moments of the colour information are computed, and the shape content in the frames is characterised by the moments of local shape measures. Their generation process is very low cost. The temporal evolution of the features then is modelled with a Hidden Markov Model. The HMM is used to generate higher level information by classifying the shots as close ups, court views, crowd shots and so on. The paper illustrates how those simple features, coupled with the HMM, can be used for parsing snooker and tennis footages. },
-URL =  {http://www.tara.tcd.ie/bitstream/handle/2262/37046/Sport%20Video%20Shot.pdf}, 
-eprint =  {}}
+eprint =  {},
+URL =  {http://www.tara.tcd.ie/bitstream/handle/2262/37046/Sport%20Video%20Shot.pdf} 
+}
 
 ,
 @INPROCEEDINGS{PitieGRETSI2003, 
 title =  {Suppression du bruit de pompage dans les videos}, 
 author =  {F. Pitie and R. Dahyot and A. Kokaram},
 booktitle =  {proceedings of GRETSI conference on signal and image processing}, 
-month =  {September}, year =  {2003},
+month =  {September}, 
+year =  {2003},
 abstract = {La variation temporelle de la luminance dans les sequences d'images, ou effet de pompage, est une dégradation typique des archives videos et cinematographiques. Nous proposons ici un nouveau procede qui vise à supprimer ces perturbations visuellement désagréables. Plusieurs améliorations sont proposées à la fois sur le modèle de pompage, l'estimation des paramètres correspondants et sur la méthode de compensation des images. Les expériences menées sur des videos, dont l'une est particulièrement dégradée, permettent de montrer l'apport de notre système de restauration par rapport aux méthodes existantes.},
 address =  {Paris, France},
 doi =  {2042/13630}, 
@@ -2238,13 +2414,16 @@ author =  {P. Delacourt and A. Kokaram and R. Dahyot},
 title =  {Comparison of Global motion estimators }, 
 booktitle =  {proceedings of Irish Signals and Systems Conference}, 
 month =  {June},
-year =  {2002}, address =  {Cork, Ireland}}
+year =  {2002}, 
+address =  {Cork, Ireland}}
 
 ,
 @PHDTHESIS{Dahyot01, 
 author =  {Rozenn Dahyot}, 
 title =  {Analyse d'images s\'{e}quentielles de sc\`{e}nes routi\`{e}res par mod\`{e}les d'apparence pour la gestion du r\'{e}seau routier (Appearance based road scene video analysis for the management of the road network)}, 
-school =  {University of Strasbourg I}, address =  {France}, year =  {2001}, 
+school =  {University of Strasbourg I}, 
+address =  {France}, 
+year =  {2001}, 
 month =  {November}, 
 note =  {(published in French)}, 
 url = {https://publication-theses.unistra.fr/public/theses_doctorat/2001/DAHYOT_Rozenn_2001.pdf},
@@ -2254,10 +2433,12 @@ eprint =  {http://theses.fr/2001STR13130}}
 @INPROCEEDINGS{Dahyota_gretsi01_event, 
 author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 title =  {D\'{e}tection d'\'{e}v\'{e}nements dans les s\'{e}quences d'images avec cam\'{e}ra  en mouvement},
-booktitle =  {proceedings of GRETSI conference on signal and image processing}, month =  {September},
+booktitle =  {proceedings of GRETSI conference on signal and image processing}, 
+month =  {September},
 abstract = {La détection de changements dans les séquences d'images s'est principalement intéressée à la détection d'objets mobiles quand le système d'acquisition est statique, ou à la détection d'effets de production, comme les changements de plans. Lorsque la caméra est mobile, son mouvement est classiquement géré par compensation du mouvement dominant, ce qui met en oeuvre des techniques d'estimation de mouvement et/ou de segmentation. Dans cet article, nous proposons une nouvelle méthode de détection de changements statistiques capable de gérer des événements complexes tels que l'entrée ou la sortie d'objets, et le changement d'apparence d'objets quand la caméra est en mouvement. Les changements temporels sont extraits en analysant les distributions statistiques d'images successives. Si l'on considère des mesures appropriées, nous montrons comment extraire les statistiques des objets changeants en utilisant deux histogrammes d'images successives. Ces objets sont ensuite localisés par une technique de rétroprojection. La méthode est complètement non supervisée et ne nécessite ni estimation, ni compensation du mouvement. Elle est illustrée sur des images de scènes routières présentant de grands mouvements de caméra.},
 url = {http://documents.irevues.inist.fr/bitstream/handle/2042/13333/PAPER188.pdf},
-year =  {2001}, address =  {Toulouse, France},
+year =  {2001}, 
+address =  {Toulouse, France},
 doi =  {2042/13333}}
 
 ,
@@ -2266,7 +2447,8 @@ author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 title =  {D\'{e}tection robuste d'objets : une approche par modele d'apparence}, 
 booktitle =  {proceedings of GRETSI conference on signal and image processing}, 
 abstract = {Les méthodes classiques de détection basées sur la représentation de l'apparence par espace propre sont sensibles à la présence d'erreurs grossières dans les observations, induites, par exemple, par des occultations. Récemment, l'utilisation de techniques issues des statistiques robustes, les M-estimateurs, ont permis de gérer la présence de ces données erronées dans le cadre de la reconnaissance d'objets. Nous proposons dans cet article d'étendre cette approche robuste pour définir deux nouveaux détecteurs, capables de localiser les occurrences dégradées ou occultées d'objets d'intérêt dans des scènes texturées.},
-month =  {September}, year =  {2001}, 
+month =  {September}, 
+year =  {2001}, 
 address =  {Toulouse, France},
 url = {http://documents.irevues.inist.fr/bitstream/handle/2042/13335/PAPER191.pdf},
 doi =  {2042/13335}}
@@ -2276,7 +2458,10 @@ doi =  {2042/13335}}
 author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 booktitle =  {Proceedings 2001 International Conference on Image Processing}, 
 title =  {Unsupervised statistical detection of changing objects in camera-in-motion video},
-year =  {2001}, volume =  {1}, number =  {}, pages =  {638-641}, 
+year =  {2001}, 
+volume =  {1}, 
+number =  {}, 
+pages =  {638-641}, 
 keywords =  {feature extraction;image sequences;statistical analysis;backprojection;camera motion;camera-in-motion video;change detection;entering objects;exiting objects;image features;image histograms;image sequences;moving objects;object appearance;road scenes;unsupervised statistical detection;Cameras;Event detection;Gunshot detection systems;Image analysis;Image segmentation;Image sequences;Layout;Motion estimation;Object detection;Production systems}, 
 doi =  {10.1109/ICIP.2001.959126}, 
 url = {https://github.com/Roznn/Detection-of-Changing-Objects-in-Camera-in-Motion-Video/blob/master/paper/htm_icip2001.pdf},
@@ -2288,7 +2473,10 @@ ISSN =  {}, month =  {}}
 author =  {R. Dahyot and P. Charbonnier and F. Heitz}, 
 booktitle =  {Proceedings IEEE Conference on Computer Vision and Pattern Recognition. CVPR 2000 (Cat. No.PR00662)},
 title =  {Robust visual recognition of colour images}, 
-year =  {2000}, volume =  {1}, number =  {}, pages =  {685-690 vol.1},
+year =  {2000}, 
+volume =  {1}, 
+number =  {}, 
+pages =  {685-690 vol.1},
 keywords =  {estimation theory;image recognition;image representation;appearance-based representation;colour images;pattern recognition;robust estimation;visual recognition;weighted least squares;Databases;Electrical capacitance tomography;Equations;Image recognition;Image reconstruction;Image segmentation;Least squares methods;Parameter estimation;Pattern recognition;Robustness}, 
 doi =  {10.1109/CVPR.2000.855886}, 
 url = {https://roznn.github.io/PDF/htm_Cvpr00.pdf},
@@ -2311,7 +2499,10 @@ author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 title =  {Reconnaissance robuste non supervis\'{e}e d'images en couleur utilisant la th\'{e}orie semi-quadratique},
 abstract = {Cet article décrit un système robuste de reconnaissance d'objets à partir d'images en couleur. Les méthodes usuelles basées sur l'apparence sont sensibles aux données erronées occasionnées par des occlusions ou des erreurs de segmentation. L'approche proposée ici utilise les M-estimateurs mettant en oeuvre des fonctions d'énergies non-quadratiques voire non-convexes. Pour minimiser ces fonctions non-convexes, nous présentons un système d'estimation utilisant les M-estimateurs en continuation, d'une fonction convexe vers des estimateurs non-convexes. À chaque étape de cette chaîne robuste, un critère non-quadratique est minimisé grâce à la théorie semi-quadratique. Ceci conduit à un algorithme de moindres carrés pondérés facile à implémenter, peu coûteux et non supervisé (tous les paramètres étant estimés automatiquement). Cette méthode est illustrée ici dans un problème de reconnaissance de panneaux routiers.},
 booktitle =  {proceedings of GRETSI conference on signal and image processing}, 
-volume =  {2}, pages =  {295-298}, month =  {September}, year =  {1999}, 
+volume =  {2}, 
+pages =  {295-298},
+month =  {September}, 
+year =  {1999}, 
 url = {http://documents.irevues.inist.fr/bitstream/handle/2042/12964/ARTI1293.pdf},
 address =  {Vannes, France}, 
 doi =  {2042/12964}}
