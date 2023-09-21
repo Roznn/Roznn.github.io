@@ -371,13 +371,13 @@ doi =  {10.3390/rs12172719},
 url =  {https://www.mdpi.com/2072-4292/12/17/2719/pdf}, 
 year =  {2020}, 
 month =  {August}, 
-publisher =  {{MDPI} {AG}}, 
 volume =  {12}, 
 number =  {17}, 
 pages =  {2719},
 author =  {C.-J. Liu and V. A. Krylov and P. Kane and G. Kavanagh and R. Dahyot}, 
 title =  {IM2ELEVATION: Building Height Estimation from Single-View Aerial Imagery}, 
-journal =  {Remote Sensing}}
+journal =  {Remote Sensing},
+publisher =  {{MDPI} {AG}}}
 ,
 
 @inproceedings{10.1145/3424636.3426904, 
@@ -793,7 +793,6 @@ url  =  {https://arxiv.org/pdf/1708.08417.pdf},
 note = {Github: https://github.com/vlkryl/streetview_objectmapping - URI: http://hdl.handle.net/2262/89654},
 abstract = {Many applications such as autonomous navigation, urban planning and asset monitoring, rely on the availability of accurate information about objects and their geolocations. In this paper we propose to automatically detect and compute the GPS coordinates of recurring stationary objects of interest using street view imagery. Our processing pipeline relies on two fully convolutional neural networks: the first segments objects in the images while the second estimates their distance from the camera. To geolocate all the detected objects coherently we propose a novel custom Markov Random Field model to perform objects triangulation. The novelty of the resulting pipeline is the combined use of monocular depth estimation and triangulation to enable automatic mapping of complex scenes with multiple visually similar objects of interest. We validate experimentally the effectiveness of our approach on two object classes: traffic lights and telegraph poles. The experiments report high object recall rates and GPS accuracy within 2 meters, which is comparable with the precision of single-frequency GPS receivers.},
 year  =  2018,
-month  =  {April},
 publisher  =  {{MDPI} {AG}},
 volume  =  {10},
 number  =  {5},
@@ -801,6 +800,7 @@ pages  =  {661},
 author  =  {Vladimir Krylov and Eamonn Kenny and Rozenn Dahyot},
 title  =  {Automatic Discovery and Geotagging of Objects from Street View Imagery},
 journal  =  {Remote Sensing},
+month  =  {April},
 },
 
 @inproceedings{LiuIMVIP2018, 
@@ -2034,7 +2034,8 @@ keywords =  {content-based retrieval;indexing;sport;video retrieval;automated co
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/1998/01621448.pdf},
 note = {URI: http://hdl.handle.net/2262/1998},
 doi =  {10.1109/MSP.2006.1621448}, 
-ISSN =  {1053-5888}, month =  {March}}
+ISSN =  {1053-5888}, 
+month =  {March}}
 
 ,
 @inproceedings{Rea2006, 
@@ -2048,7 +2049,8 @@ pages =  {106-114},
 keywords =  {}, 
 doi =  {10.1049/cp:20061978}, 
 eprint =  {https://ieeexplore.ieee.org/document/4156017/}, 
-ISSN =  {0537-9989}, month =  {Nov}}
+ISSN =  {0537-9989}, 
+month =  {Nov}}
 
 ,
 @ARTICLE{Dahyot_MZ2006, 
@@ -2288,7 +2290,8 @@ doi =  {10.1109/ICASSP.2004.1326621},
 note = {URI: http://hdl.handle.net/2262/24562},
 url = {http://www.tara.tcd.ie/bitstream/handle/2262/24562/01326621.pdf},
 abstract = {In this paper, we investigate the retrieval of dynamic events that occur in broadcast sports footage. Dynamic events in sports are important in so far as they are related to the game semantics. Thus far, the temporal interleaving of camera views has been used to infer these types of events. We propose the use of the spatio-temporal behaviour of an object in the footage as an embodiment of a semantic event. This is accomplished by modeling the evolution of the position of the object with a hidden Markov model (HMM). Snooker is used as an example for the purpose of this research. The system firstly parses the video sequence based on the geometry of the content in the camera view and classifies the footage as a particular view type. Secondly, we consider the relative position of the white ball on the snooker table over the duration of a clip to embody semantic events. A colour based particle filter is employed to robustly track the snooker balls. The temporal behaviour of the white ball is modeled using a HMM where each model is representative of a particular semantic episode. Upon collision of the white ball with another coloured ball, a separate track is instantiated.},
-ISSN =  {1520-6149}, month =  {May}}
+ISSN =  {1520-6149}, 
+month =  {May}}
 
 ,
 @INPROCEEDINGS{PITIE_IMVIP04, 
@@ -2466,7 +2469,7 @@ month =  {}}
 ,
 @INPROCEEDINGS{Dahyot_cvpr00, 
 author =  {R. Dahyot and P. Charbonnier and F. Heitz}, 
-booktitle =  {Proceedings IEEE Conference on Computer Vision and Pattern Recognition. CVPR 2000 (Cat. No.PR00662)},
+booktitle =  {Proceedings IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
 title =  {Robust visual recognition of colour images}, 
 year =  {2000}, 
 volume =  {1}, 
@@ -2493,7 +2496,14 @@ address =  {Toulouse, France}}
 @INPROCEEDINGS{Dahyot_gretsi99,
 author =  {R. Dahyot and P. Charbonnier and F. Heitz},
 title =  {Reconnaissance robuste non supervis\'{e}e d'images en couleur utilisant la th\'{e}orie semi-quadratique},
-abstract = {Cet article décrit un système robuste de reconnaissance d'objets à partir d'images en couleur. Les méthodes usuelles basées sur l'apparence sont sensibles aux données erronées occasionnées par des occlusions ou des erreurs de segmentation. L'approche proposée ici utilise les M-estimateurs mettant en oeuvre des fonctions d'énergies non-quadratiques voire non-convexes. Pour minimiser ces fonctions non-convexes, nous présentons un système d'estimation utilisant les M-estimateurs en continuation, d'une fonction convexe vers des estimateurs non-convexes. À chaque étape de cette chaîne robuste, un critère non-quadratique est minimisé grâce à la théorie semi-quadratique. Ceci conduit à un algorithme de moindres carrés pondérés facile à implémenter, peu coûteux et non supervisé (tous les paramètres étant estimés automatiquement). Cette méthode est illustrée ici dans un problème de reconnaissance de panneaux routiers.},
+abstract = {Cet article décrit un système robuste de reconnaissance d'objets à partir d'images en couleur. 
+Les méthodes usuelles basées sur l'apparence sont sensibles aux données erronées occasionnées par des occlusions 
+ou des erreurs de segmentation. L'approche proposée ici utilise les M-estimateurs mettant en oeuvre des fonctions d'énergies 
+non-quadratiques voire non-convexes. Pour minimiser ces fonctions non-convexes, nous présentons un système d'estimation 
+utilisant les M-estimateurs en continuation, d'une fonction convexe vers des estimateurs non-convexes. 
+À chaque étape de cette chaîne robuste, un critère non-quadratique est minimisé grâce à la théorie semi-quadratique. 
+Ceci conduit à un algorithme de moindres carrés pondérés facile à implémenter, peu coûteux et non supervisé (tous les paramètres 
+étant estimés automatiquement). Cette méthode est illustrée ici dans un problème de reconnaissance de panneaux routiers.},
 booktitle =  {proceedings of GRETSI conference on signal and image processing}, 
 volume =  {2}, 
 pages =  {295-298},
