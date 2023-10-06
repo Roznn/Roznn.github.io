@@ -9,6 +9,7 @@ maxWidth: 600
 - Texture
 - Appearance
 - Shape
+  
 ## Histogram 
 ### Backprojection
 - Slides
