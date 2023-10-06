@@ -2,14 +2,59 @@
 maxWidth: 600
 ---
 
+# Statistics
+
+## [Forecasting](https://roznn.github.io/Forecasting-with-R/)
+
+### HoltWinters algorithms
+
+### ARIMA models
+
+- [Demo: AR(1) in R](https://roznn.github.io/SLIDES/AR1D1.html)
+
+## [Generalised Linear Models](https://roznn.github.io/GLM/index.html)
+
+- Poisson regression
+- linear regression [Demo in R](https://roznn.github.io/SLIDES/ExampleRegression.html)
+- logistic regression
+- Survival analysis
+
+
+
+## [Resampling techniques](https://roznn.github.io/Bootstrap/)
+
+- jackknife
+- bootstrap
+- cross validation
+
+
 # Computer vision
 
 ## Visual attributes
-- Colour
-- Texture
-- Appearance
-- Shape
-  
+
+### Colour 
+- [Demo:Colour spaces](https://github.com/zumbov2/colorfindr#different-color-spaces)
+
+
+
+### Shape
+
+- Lines [Matlab Demo (PAMI 2009)](https://roznn.github.io/Statistical-Hough-Transform/)
+- Ellipses [Matlab Demo (PR 2016)](https://github.com/clarella/L2-Ellipse-Fitting)
+
+### Appearance
+
+- Template matching
+- [Eigenface](https://en.wikipedia.org/wiki/Eigenface)
+
+### Texture
+
+- Examples: [Brodatz](https://multibandtexture.recherche.usherbrooke.ca/original_brodatz.html) 
+
+### Spatial relations
+
+### Motion
+
 ## Histogram 
 ### Backprojection
 - Slides
@@ -21,7 +66,7 @@ maxWidth: 600
 ## Kernel Density Estimation
 - [Slides](https://roznn.github.io/SLIDES/Slides_Meanshift.html#4)
 - [Reading p.123](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) 
-
+- [Reading p.380](https://www.webpages.uidaho.edu/~stevel/517/Data%20Mining%20and%20Analysis%20by%20Zaki.pdf)
 ## Meanshift
 - [Reading]()
 - [Slides]()
