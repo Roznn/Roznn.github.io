@@ -1453,30 +1453,35 @@ margin-left: 0 !important;
         <nav role="navigation" id="toc">
           <ul>
           <li><a href="#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
-          <li><a href="#maximum-variance-formulation" id="toc-maximum-variance-formulation"><span class="toc-section-number">2</span> Maximum variance
-          formulation</a>
+          <li><a href="#definitions" id="toc-definitions"><span class="toc-section-number">2</span> Definitions</a>
           <ul>
           <li><a href="#data" id="toc-data"><span class="toc-section-number">2.1</span> Data</a></li>
           <li><a href="#mean" id="toc-mean"><span class="toc-section-number">2.2</span> Mean</a></li>
           <li><a href="#covariance-matrix" id="toc-covariance-matrix"><span class="toc-section-number">2.3</span> Covariance
           matrix</a></li>
-          <li><a href="#maximum-variance-formulation-1" id="toc-maximum-variance-formulation-1"><span class="toc-section-number">2.4</span> Maximum variance
-          formulation</a></li>
           </ul></li>
-          <li><a href="#principal-components" id="toc-principal-components"><span class="toc-section-number">3</span> Principal components</a>
+          <li><a href="#maximum-variance-formulation" id="toc-maximum-variance-formulation"><span class="toc-section-number">3</span> Maximum variance
+          formulation</a>
           <ul>
-          <li><a href="#computing-pca" id="toc-computing-pca"><span class="toc-section-number">3.1</span> Computing PCA</a></li>
-          <li><a href="#using-pca" id="toc-using-pca"><span class="toc-section-number">3.2</span> Using PCA</a></li>
-          <li><a href="#applications" id="toc-applications"><span class="toc-section-number">3.3</span> Applications</a></li>
+          <li><a href="#finding-the-first-principal-component" id="toc-finding-the-first-principal-component"><span class="toc-section-number">3.1</span> Finding the first
+          principal component</a></li>
+          <li><a href="#how-to-find-the-direction-with-second-most-maximum-variance" id="toc-how-to-find-the-direction-with-second-most-maximum-variance"><span class="toc-section-number">3.2</span> How to find the
+          direction with second most maximum variance?</a></li>
           </ul></li>
-          <li><a href="#questions" id="toc-questions"><span class="toc-section-number">4</span> Questions</a></li>
+          <li><a href="#principal-components" id="toc-principal-components"><span class="toc-section-number">4</span> Principal components</a>
+          <ul>
+          <li><a href="#computing-pca" id="toc-computing-pca"><span class="toc-section-number">4.1</span> Computing PCA</a></li>
+          <li><a href="#using-pca" id="toc-using-pca"><span class="toc-section-number">4.2</span> Using PCA</a></li>
+          </ul></li>
+          <li><a href="#applications" id="toc-applications"><span class="toc-section-number">5</span> Applications</a></li>
+          <li><a href="#questions" id="toc-questions"><span class="toc-section-number">6</span> Questions</a></li>
           </ul>
         </nav>
         <ul class="authors">
           <li class="divider"></li>
                                 <li><span><i class="glyphicon glyphicon-user"></i> Prof. Rozenn
 Dahyot</span></li>
-                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 06
+                                         <li><span><i class="glyphicon glyphicon-calendar"></i> 11
 February, 2024</span></li>
                   </ul>     
       </div>
@@ -1502,26 +1507,37 @@ February, 2024</span></li>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
 <ul>
-<li><p>These notes follow notations used in this recommended reading:
-Section 12.1.1. of <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern
+<li><p>These notes follow notations used in this <strong>recommended
+reading</strong>: Section 12.1.1. of <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern
 Recognition and Machine Learning</a> by Christopher Bishop.</p></li>
 <li><p><strong>Appendix C</strong> of that same book also provides a
 reminder on Linear Algebra (e.g. eigenvectors of matrices etc.)</p></li>
-<li><p>Some of the results presented here are using these Linear Algebra
-Formula showing how to differentiate w.r.t. a vector <span class="math inline">\(\mathbf{x}\)</span> , where <span class="math inline">\(\mathrm{A}\)</span> is a matrix: <span class="math display">\[\frac{\partial (\mathrm{A}\mathbf{x})}{\partial
-\mathbf{x}}=\mathrm{A}^{T}\]</span> <span class="math display">\[\frac{\partial
-(\mathbf{x}^{T}\mathrm{A})}{\partial \mathbf{x}}=\mathrm{A}\]</span>
-<span class="math display">\[\frac{\partial
-(\mathbf{x}^{T}\mathbf{x})}{\partial \mathbf{x}}=2
-\mathbf{x}\]</span></p></li>
+<li><p>Some of the results presented here are using the following
+<strong>Linear Algebra Formula</strong> showing how to differentiate
+w.r.t. a vector <span class="math inline">\(\mathbf{x}\)</span>, where
+<span class="math inline">\(\mathrm{A}\)</span> is a matrix not
+depending on <span class="math inline">\(\mathbf{x}\)</span>:</p></li>
 </ul>
 <p><span class="math display">\[\frac{\partial
+(\mathrm{A}\mathbf{x})}{\partial \mathbf{x}}=\mathrm{A}^{T} \quad
+(\diamond)
+\]</span></p>
+<p><span class="math display">\[\frac{\partial
+(\mathbf{x}^{T}\mathrm{A})}{\partial \mathbf{x}}=\mathrm{A}\quad
+(\diamond^2) \]</span> <span class="math display">\[\frac{\partial
+(\mathbf{x}^{T}\mathbf{x})}{\partial \mathbf{x}}=2 \mathbf{x} \quad
+(\diamond^3) \]</span></p>
+<p><span class="math display">\[\frac{\partial
 (\mathbf{x}^{T}\mathrm{A}\mathbf{x})}{\partial \mathbf{x}}=\mathrm{A}
-\mathbf{x}+\mathrm{A}^{T} \mathbf{x}\]</span></p>
+\mathbf{x}+\mathrm{A}^{T} \mathbf{x}\quad (\diamond^4)\]</span></p>
+<ul>
+<li>In addition
+<a href="https://en.wikipedia.org/wiki/Lagrange_multiplier" target="_blank">Lagrange
+multipliers</a> are also used for computing PCA.</li>
+</ul>
 </div>
-<div id="maximum-variance-formulation" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Maximum variance
-formulation</h1>
+<div id="definitions" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Definitions</h1>
 <div id="data" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Data</h2>
 <p>Consider that we have a set of vectors <span class="math inline">\(\lbrace \mathbf{x}_n \rbrace _{n=1,\cdots
@@ -1543,9 +1559,10 @@ x_n[D]\\
 <h2><span class="header-section-number">2.2</span> Mean</h2>
 <p>We can define the mean <span class="math inline">\(\overline{\mathbf{x}}\)</span> such that <span class="math display">\[
 \overline{\mathbf{x}}=\frac{1}{N}\sum_{n=1}^{N} \mathbf{x}_n
-\]</span> Spatially, the mean can be understood as the <a href="https://en.wikipedia.org/wiki/Center_of_mass">center of
-gravity</a> of the clouds of points <span class="math inline">\(\lbrace
-\mathbf{x}_n \rbrace _{n=1\cdots N}\)</span>.</p>
+\]</span> Spatially, the mean can be understood as the
+<a href="https://en.wikipedia.org/wiki/Center_of_mass" target="_blank">center
+of gravity</a> of the clouds of points <span class="math inline">\(\lbrace \mathbf{x}_n \rbrace _{n=1\cdots
+N}\)</span>.</p>
 <p><span class="math inline">\(\overline{\mathbf{x}}\)</span> is a also
 vector of dimension <span class="math inline">\(D\)</span>: <span class="math display">\[
 \overline{\mathbf{x}} =
@@ -1580,7 +1597,7 @@ is defined as: <span class="math display">\[
 &amp;\cdots
 &amp;(\tilde{x}_{n}[1] \times \tilde{x}_{n}[D])\\
 &amp;&amp;&amp;\\
-(\tilde{x}_{n}[1]\times \tilde{x}_{n}[2])&amp;
+(\tilde{x}_{n}[2]\times \tilde{x}_{n}[1])&amp;
 (\tilde{x}_{n}[2])^2  &amp;&amp;\\
 &amp;&amp;&amp;\\
 &amp;&amp;\ddots&amp;\\
@@ -1595,9 +1612,10 @@ then the covariance matrix is <span class="math display">\[
 \mathrm{S}=\frac{1}{N} \mathrm{\tilde{X}}\mathrm{\tilde{X}}^T
 \]</span> The covariance matrix <span class="math inline">\(\mathrm{S}\)</span> is of size <span class="math inline">\(D\times D\)</span>.</p>
 </div>
-<div id="maximum-variance-formulation-1" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Maximum variance
-formulation</h2>
+</div>
+<div id="maximum-variance-formulation" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Maximum variance
+formulation</h1>
 <p>Consider unit vector <span class="math inline">\(\mathbf{u}_1\)</span> (i.e. such that <span class="math inline">\(\|\mathbf{u}_1\|^2=\mathbf{u}_1^T\mathbf{u}_1=1\)</span>).</p>
 <p>The variance of the projected data is: <span class="math display">\[
 \frac{1}{N}\sum_{n=1}^N \left( \mathbf{u}_1^T\mathbf{x}_n -
@@ -1617,8 +1635,9 @@ optimising:<br />
 \mathbf{u}_1 +\lambda_{1} \ (1-\mathbf{u}_1^T\mathbf{u}_1 ) \  \rbrace
 \]</span> This means that we are looking for the vector <span class="math inline">\(\mathbf{u}_1\)</span> that maximizes the energy
 function <span class="math inline">\(\mathcal{E}\)</span>.</p>
-<div id="finding-mathbfu_1-and-lambda_1" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Finding <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\lambda_1\)</span></h3>
+<div id="finding-the-first-principal-component" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Finding the first
+principal component</h2>
 <p>The solution is such that the derivatives of <span class="math inline">\(\mathcal{E}\)</span> are zeros, so we need to find
 <span class="math inline">\((\mathbf{u}_1,\lambda_1)\)</span> such
 that:</p>
@@ -1627,9 +1646,8 @@ that:</p>
 \]</span> and <span class="math display">\[
 \frac{\partial\mathcal{E}}{\partial \lambda_1}=0   \quad (\star \star)
 \]</span></p>
-</div>
-<div id="solving-starstar" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Solving <span class="math inline">\((\star\star)\)</span></h3>
+<div id="solving-starstar" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Solving <span class="math inline">\((\star\star)\)</span></h3>
 <p><span class="math inline">\(\lambda_1\)</span> is a scalar so : <span class="math display">\[
 \frac{\partial\mathcal{E}}{\partial \lambda_1}=
 (1-\mathbf{u}_1^T\mathbf{u}_1 )=0
@@ -1638,10 +1656,10 @@ constraint <span class="math display">\[
 \mathbf{u}_1^T\mathbf{u}_1=\|\mathbf{u}_1\|^2=1
 \]</span></p>
 </div>
-<div id="solving-star" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> Solving <span class="math inline">\((\star)\)</span></h3>
-<p>The derivative w.r.t. vector <span class="math inline">\(\mathbf{u}_1\)</span> can be computed using <a href="https://roznn.github.io/SLIDES/Slides_Formula.html">Linear Algebra
-Formula</a> <span class="math display">\[
+<div id="solving-star" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Solving <span class="math inline">\((\star)\)</span></h3>
+<p>The derivative w.r.t. vector <span class="math inline">\(\mathbf{u}_1\)</span> can be computed using the
+Linear Algebra Formula provided in introduction: <span class="math display">\[
 \frac{\partial\mathcal{E}}{\partial
 \mathbf{u}_1}=\underbrace{\frac{\partial (\mathbf{u}_1^T \mathrm{S}\
 \mathbf{u}_1 )}{\partial \mathbf{u}_1}}_{(a)}
@@ -1649,21 +1667,21 @@ Formula</a> <span class="math display">\[
 )}{\partial \mathbf{u}_1}}_{(b)}+\lambda_{1} \
 \underbrace{\frac{\partial (1)}{\partial \mathbf{u}_1}}_{=0}
 \]</span></p>
-<p>For (a) using the last <a href="https://roznn.github.io/SLIDES/Slides_Formula.html#2">formula</a>
-<span class="math display">\[
+<p>For computing (a) use the last formula <span class="math inline">\((\diamond^4)\)</span></p>
+<p><span class="math display">\[
 \frac{\partial (\mathbf{u}_1^T \mathrm{S}\ \mathbf{u}_1 )}{\partial
 \mathbf{u}_1}
 = \mathrm{S}\ \mathbf{u}_1 +\mathrm{S}^T\ \mathbf{u}_1=2\ \mathrm{S}\
 \mathbf{u}_1
-\]</span> because the convariance matrix <span class="math inline">\(\mathrm{S}\)</span> is a <span class="math inline">\(D\times D\)</span> symmetric matrix hence <span class="math inline">\(\mathrm{S}^T=\mathrm{S}\)</span>.</p>
-<p>For (b) using the third <a href="https://roznn.github.io/SLIDES/Slides_Formula.html#2">formula</a>
-<span class="math display">\[
+\]</span> because the covariance matrix <span class="math inline">\(\mathrm{S}\)</span> is a <span class="math inline">\(D\times D\)</span> symmetric matrix hence <span class="math inline">\(\mathrm{S}^T=\mathrm{S}\)</span>.</p>
+<p>For computing (b) use the third formula <span class="math inline">\((\diamond^3)\)</span></p>
+<p><span class="math display">\[
 \frac{\partial (\mathbf{u}_1^T\mathbf{u}_1 )}{\partial \mathbf{u}_1}=2\
 \mathbf{u}_1
 \]</span></p>
 </div>
-<div id="solution" class="section level3" number="2.4.4">
-<h3><span class="header-section-number">2.4.4</span> Solution</h3>
+<div id="solution" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Solution</h3>
 <p>The vector <span class="math inline">\(\mathbf{u}_1\)</span> that
 maximizes the variance is the eigenvector of the covariance matrix <span class="math inline">\(\mathrm{S}\)</span> with eigenvalue <span class="math inline">\(\lambda_1\)</span>: <span class="math display">\[
 \mathrm{S}\ \mathbf{u}_1=\lambda_1\ \mathbf{u}_1
@@ -1674,28 +1692,29 @@ variance of the projections: <span class="math display">\[
 \]</span> <span class="math inline">\(\lambda_1\)</span> is the highest
 eigenvalue of <span class="math inline">\(\mathrm{S}\)</span>.</p>
 </div>
-<div id="how-to-find-the-direction-with-second-most-maximum-variance" class="section level3" number="2.4.5">
-<h3><span class="header-section-number">2.4.5</span> How to find the
-direction with second most maximum variance?</h3>
+</div>
+<div id="how-to-find-the-direction-with-second-most-maximum-variance" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> How to find the
+direction with second most maximum variance?</h2>
 <p>Once we have the direction <span class="math inline">\(\mathbf{u}_1\)</span> with its associated
 eigenvalue <span class="math inline">\(\lambda_1\)</span> (variance of
 the projections of centered data on <span class="math inline">\(\mathbf{u}_1\)</span>), the direction <span class="math inline">\(\mathbf{u}_2\)</span> with second maximum variance
 can be found such that: <span class="math display">\[
 \mathbf{u}_2^T\mathrm{S}\mathbf{u}_2
-\]</span> in maximised with constraints <span class="math inline">\(\|\mathbf{u}_2\|=1\)</span> and <span class="math inline">\(\mathbf{u}_2^T\mathbf{u}_1=0\)</span> (<span class="math inline">\(\mathbf{u}_2\)</span> is orthogonal to <span class="math inline">\(\mathbf{u}_1\)</span>).</p>
+\]</span> is maximised with the constraints <span class="math inline">\(\|\mathbf{u}_2\|=1\)</span> and <span class="math inline">\(\mathbf{u}_2^T\mathbf{u}_1=0\)</span> (<span class="math inline">\(\mathbf{u}_2\)</span> is orthogonal to <span class="math inline">\(\mathbf{u}_1\)</span>).</p>
 </div>
 </div>
-</div>
-<div id="principal-components" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Principal
+<div id="principal-components" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Principal
 components</h1>
-<div id="computing-pca" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Computing PCA</h2>
+<div id="computing-pca" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Computing PCA</h2>
 <p>From a set of vectors <span class="math inline">\(\lbrace
 \mathbf{x}_n \rbrace_{n=1,\cdots,N}\)</span></p>
 <ol style="list-style-type: decimal">
-<li>Compute the mean <span class="math inline">\(\overline{\mathbf{x}}\)</span></li>
-<li>Center each observations <span class="math inline">\(\mathbf{\tilde{x}}_n=\mathbf{x}_n-\overline{\mathbf{x}}\)</span></li>
+<li>Compute the mean vector <span class="math inline">\(\overline{\mathbf{x}}\in
+\mathbb{R}^D\)</span></li>
+<li>Center each vector observation <span class="math inline">\(\mathbf{\tilde{x}}_n=\mathbf{x}_n-\overline{\mathbf{x}}\)</span></li>
 <li>Compute the covariance matrix <span class="math display">\[
 \mathrm{S}=\frac{1}{N} \sum_{n=1}^{N} \mathbf{\tilde{x}}_n
 \mathbf{\tilde{x}}_n^T
@@ -1707,36 +1726,50 @@ lowest eigenvalue.</li>
 <p><span class="math display">\[
 \text{eigenvectors} \quad \equiv \quad \text{Principal components}
 \]</span></p>
+<p>Note the <span class="math inline">\(D\)</span> principal components
+<span class="math inline">\(\mathrm{U}=\lbrack\mathbf{u}_1,
+\mathbf{u}_2, \cdots, \mathbf{u}_D\rbrack\)</span> of the covariance
+matrix <span class="math inline">\(\mathrm{S}\)</span> are sorted such
+that:<br />
+<span class="math display">\[
+\lambda_{1}\geq \lambda_{2} \geq \cdots \geq \lambda_{D} \geq 0
+\]</span> with <span class="math inline">\(\lambda_n\)</span> the
+eigenvalue associated with eigenvector <span class="math inline">\(\mathbf{u}_n\)</span>, <span class="math inline">\(\forall n\)</span>.</p>
 </div>
-<div id="using-pca" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Using PCA</h2>
+<div id="using-pca" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Using PCA</h2>
 <p>Each vector in the set can be written as a linear combination of the
 mean and the eigenvectors: <span class="math display">\[
 \mathbf{x} = \overline{\mathbf{x}} +\sum_{j=1}^D \alpha_j\  \mathbf{u}_j
-\]</span> How many eigenvectors are really needed for a good
-reconstruction?</p>
+\]</span> Principal components associated with highest <span class="math inline">\(d\)</span> eigenvalues provide a good
+reconstruction: <span class="math display">\[
+\mathbf{x} = \overline{\mathbf{x}} +\underbrace{\sum_{j=1}^d
+\alpha_j\  \mathbf{u}_j}_{\text{reconstruction}}
++\underbrace{\sum_{j=d+1}^D
+\alpha_j\  \mathbf{u}_j}_{\text{reconstruction error} }
+\]</span></p>
 </div>
-<div id="applications" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Applications</h2>
+</div>
+<div id="applications" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Applications</h1>
 <ul>
 <li>Compression / Dimensionality reduction</li>
 <li>Visualisation of data distribution</li>
-<li>etc.</li>
+<li>Example PCA applied to images of faces : <a href="https://en.wikipedia.org/wiki/Eigenface" class="uri">https://en.wikipedia.org/wiki/Eigenface</a></li>
+<li>see Python examples
+<ul>
+<li><a href="https://scikit-learn.org/stable/auto_examples/decomposition/plot_faces_decomposition.html#sphx-glr-auto-examples-decomposition-plot-faces-decomposition-py" class="uri">https://scikit-learn.org/stable/auto_examples/decomposition/plot_faces_decomposition.html#sphx-glr-auto-examples-decomposition-plot-faces-decomposition-py</a></li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html#sphx-glr-auto-examples-datasets-plot-iris-dataset-py" class="uri">https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html#sphx-glr-auto-examples-datasets-plot-iris-dataset-py</a></li>
+</ul></li>
 </ul>
-<p>Example PCA applied to images of faces : <a href="https://en.wikipedia.org/wiki/Eigenface" class="uri">https://en.wikipedia.org/wiki/Eigenface</a></p>
 <p><img src="data:image/png;base64,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pZcJF88rEijOC42WiWHQ+5gyZNYymCgFLf9cIze7nL3mnbbn+t24Cm5OJvpg8HVIb875Yzz2N0Mb3Vko9fHy5cvLBrqo1bfeaXkRHxgZcLkvHIlJagW6jVOSY0iodI0flabAEav2YwajFOwonfbUviilbOn3opSyZatHNI+NZm2mbMd8h5jwPpOpu1qZk2uiWMids59iLnSGKSHzIoesu7mglluGQualm9ZpM6MlicufbusWyXs5qChTcfhR5b/QyPEJfFUt0DvyvCrpa/ArS0Er2QquN8MBlkDIbX8AACAASURBVGoUI1bnBY1+5ZTVs/fEURv0H/T1Zlkbze+bHehyr+vNSimvkX4vSilb3nhN9XhLKf/7qH1RStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStnS70UpZUu/F6WULf1elFK29HtRStny5vJ377///nD0H//4x2XjW9/6nw/Qt7/9bR3VzjfeeOOy8fe//z3PFf/85z+1rVN0kXPOd7/73cvG9773vTs/84t/5zvfedUtHKxQr1PwqFroV9Y2nqvGvPnmm/lEuqAexM/NNvjzzufizs8++ywf6ip++tOfDke9edrGB9e2NvROzzk//OEPLxvf//7372z4dv7s2AjUhhqAO7HD8e3rVWbPn1cMNu3885//fGfDt//0pz9dNv74xz/qqHZqw/8+amH+y+5s32mz88tf/jJ3IrUvSilb+r0opWzp96KUsmU7f5FCyKVdqlBkFvba6TpTR70BuouO+nSJrpM685j208/wyvkz39bt/Mp/+ctfLht/+9vf8lzhTc0r64LeCXgdkTMU+bJetfPB+NVS7fsz6kFw/kKzFdrpcxA/+MEPLhvvvvvuZUNTV4emsd5++20d1dufh1D+/tCkwDwF5lfWY/opuqDGxl//+lcd1bYmMr788ksdffny5WVDz6uRdmxSYzlI5n/ovdS+KKVs6feilLJlq0fE7LRDa0c2dlrdforMLbdI/91Qs8+1rV+ibxI9TLLl0HpPOYAeU+FGbHrmvFUy0WV8+tVkiMpe9aP4IGL2mc0i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" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-</div>
-<div id="questions" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Questions</h1>
+<div id="questions" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Questions</h1>
 <ul>
 <li><p>What is the dimension of the matrix <span class="math inline">\(\tilde{\mathrm{X}}\)</span>?</p></li>
 <li><p>What is the dimension of the covariance matrix <span class="math inline">\(\mathrm{S}\)</span>?</p></li>
 <li><p>What are the properties of the covariance matrix <span class="math inline">\(\mathrm{S}\)</span>?</p></li>
-<li><p>Using these <a href="https://roznn.github.io/SLIDES/Slides_Formula.html">Linear Algebra
-Formula</a>, show that the solution is such that: <span class="math display">\[
-\mathrm{S}\ \mathbf{u}_1 = \lambda_1\ \mathbf{u}_1
-\]</span></p></li>
 </ul>
 </div>
 
