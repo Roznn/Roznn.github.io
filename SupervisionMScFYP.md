@@ -18,7 +18,7 @@ format:
 ## Introduction
 
 I  supervise  Final Year Projects (FYP)  and taught MSc Dissertations on topics related 
-to **Computer Vision** and **Data Science** e.g. **Machine learning**, Neural Networks, **Deep Learning**, AI, Data Visualisation and Statistics.
+to **Computer Vision** and **Data Science** e.g. **Machine learning**, Neural Networks, **Deep Learning**, AI, Data Visualisation and Statistics (log in at [portal.cs.nuim.ie/fyp/](https://portal.cs.nuim.ie/fyp/) to see list of projects).
 In the following, the word `project` refers to either a FYP (<a href="https://apps.maynoothuniversity.ie/courses/?TARGET=MODULE&MODE=VIEW&MODULE_CODE=CS440" target="_blank">CS440</a>, <a href="https://apps.maynoothuniversity.ie/courses/?TARGET=MODULE&MODE=VIEW&MODULE_CODE=CS450" target="_blank">CS450</a>, <a href="https://apps.maynoothuniversity.ie/courses/?TARGET=MODULE&MODE=VIEW&MODULE_CODE=CS460" target="_blank">CS460</a>)  or taught MSc dissertation (e.g. <a href="https://apps.maynoothuniversity.ie/courses/?TARGET=MODULE&MODE=VIEW&MODULE_CODE=CS648">CS648 MSc Data Science</a>,  CS640 MSc Soft. Eng.). 
 
 
