@@ -8,7 +8,7 @@
 
 
 - [Introduction to Computer Vision](https://github.com/Roznn/Roznn.github.io/blob/master/SLIDES/CV-Introduction.md) (Markdown) 
-- <a href="https://github.com/Roznn/Roznn.github.io/blob/master/SLIDES/CV-Introduction.md" target="_blank">Introduction to Computer Vision</a>
+
 
 - [Computer Vision with Deep Learning](https://roznn.github.io/SLIDES/RzDTimeLinesComputerVisionDeepLearning.html) : somes notes and references (html)
 - [Linear Algebra Formulas](https://roznn.github.io/SLIDES/Slides_Formula.html) : slides (html)
