@@ -6,8 +6,11 @@
 
 ## Computer Vision and Machine Learning
 
-- [Computer Vision with Deep Learning](https://roznn.github.io/SLIDES/RzDTimeLinesComputerVisionDeepLearning.html) : somes notes and references
-- [Linear Algebra Formulas](https://roznn.github.io/SLIDES/Slides_Formula.html) : slides
+
+- [Introduction to Computer Vision](CV-Introduction.md) (Markdown)
+
+- [Computer Vision with Deep Learning](https://roznn.github.io/SLIDES/RzDTimeLinesComputerVisionDeepLearning.html) : somes notes and references (html)
+- [Linear Algebra Formulas](https://roznn.github.io/SLIDES/Slides_Formula.html) : slides (html)
 
 
 - [Histogram Equalisation](https://roznn.github.io/SLIDES/Slides_HistogramEqualisation.html) : slides
