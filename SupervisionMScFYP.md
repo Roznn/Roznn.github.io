@@ -13,8 +13,6 @@ format:
 
 
 
-
-
 ## Introduction
 
 I  supervise  Final Year Projects (FYP)  and taught MSc Dissertations on topics related 
